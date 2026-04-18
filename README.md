@@ -21,9 +21,9 @@ As the director, you can always `set` the stage directly.
 const { stage, set, prospero, fool, puck } = Unkind
 
 const sky   = stage(container)               // mount the canvas renderer
-prospero(sky, wx.passage)                    // conjure weather from text
+const weather   = await puck(51.5, -0.1)         // fetch real weather for London
+prospero(sky, weather.passage)                    // conjure weather from text
 const verse = fool(sky)                       // find words for the weather
-const wx    = await puck(51.5, -0.1)         // fetch real weather for London
 set(sky, { rain: 0.7, mood: 'despair' })     // direct the weather
 ```
 
