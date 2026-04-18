@@ -1,0 +1,44 @@
+{
+  "name": "unkind",
+  "version": "0.1.0",
+  "description": "Gives to airy nothing a local habitation — translates weather into Shakespeare.",
+  "main": "src/unkind.js",
+  "files": [
+    "src/",
+    "concordance/shakespeare-weather-merged.json",
+    "README.md",
+    "LICENSE"
+  ],
+  "exports": {
+    ".": "./src/unkind.js",
+    "./indifferent": "./src/indifferent.js",
+    "./concordance": "./concordance/shakespeare-weather-merged.json"
+  },
+  "scripts": {
+    "test": "echo \"No tests yet. See TASKS.md t-007.\" && exit 0"
+  },
+  "keywords": [
+    "shakespeare",
+    "weather",
+    "canvas",
+    "animation",
+    "literary",
+    "concordance",
+    "atmosphere",
+    "no-dependencies",
+    "vanilla-js"
+  ],
+  "author": "Kelly Dinneen",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kellydinneen/unkind.git"
+  },
+  "homepage": "https://github.com/kellydinneen/unkind#readme",
+  "bugs": {
+    "url": "https://github.com/kellydinneen/unkind/issues"
+  },
+  "engines": {
+    "node": ">=14"
+  }
+}

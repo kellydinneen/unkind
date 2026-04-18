@@ -1,0 +1,5529 @@
+{
+  "metadata": {
+    "title": "Shakespeare Weather Concordance (Merged)",
+    "description": "Unified canonical concordance merging curated passages and literal/metaphorical entries from scene-by-scene analysis",
+    "version": "2.0.0",
+    "mergeDate": "2026-04-02T23:11:14.965834",
+    "sources": [
+      "unkind-concordance.json (large, 408 entries)",
+      "shakespeare-weather.json (curated, 67 entries)"
+    ],
+    "totalEntries": 235,
+    "status": "canonical"
+  },
+  "concordance": [
+    {
+      "id": "lear-3-2-1",
+      "text": "Blow, winds, and crack your cheeks! rage! blow! You cataracts and hurricanoes, spout till you have drench'd our steeples, drown'd the cocks!",
+      "source": {
+        "play": "King Lear",
+        "act": 3,
+        "scene": 2,
+        "lineStart": 1,
+        "lineEnd": 3
+      },
+      "speaker": "Lear",
+      "weatherState": "stormy",
+      "timeOfDay": "night",
+      "intensity": 1.0,
+      "elements": [
+        "wind",
+        "rain",
+        "thunder",
+        "lightning"
+      ],
+      "mood": "rage",
+      "context": "Lear, cast out by his daughters, commands the storm to rage on the heath. He externalizes his inner fury onto the natural world.",
+      "annotation": "The storm is both literal and metaphorical\u2014Lear's madness mirrors the tempest. His imperative commands to the winds suggest he believes himself master of nature, even as it destroys him.",
+      "confidence": "high"
+    },
+    {
+      "id": "lear-3-4-1",
+      "text": "Here's a night pities neither wise men nor fools. Crumb no more, and this poor thing dismiss; come, let's in all.",
+      "source": {
+        "play": "King Lear",
+        "act": 3,
+        "scene": 4,
+        "lineStart": 32,
+        "lineEnd": 34
+      },
+      "speaker": "Kent",
+      "weatherState": "stormy",
+      "timeOfDay": "night",
+      "intensity": 0.9,
+      "elements": [
+        "wind",
+        "rain",
+        "cold"
+      ],
+      "mood": "concern",
+      "context": "Kent urges Lear to seek shelter from the terrible night. The physical storm mirrors Lear's psychological tempest.",
+      "annotation": "Kent's practical concern contrasts with Lear's defiant rage\u2014the same storm means danger to Kent, tragedy to Lear, and revelation to the audience.",
+      "confidence": "high"
+    },
+    {
+      "id": "lear-3-2-77",
+      "text": "There was never yet philosopher that could endure the toothache patiently; but a man may rail against the gods and make the night hideous.",
+      "source": {
+        "play": "King Lear",
+        "act": 3,
+        "scene": 4,
+        "lineStart": 35,
+        "lineEnd": 36
+      },
+      "speaker": "Fool",
+      "weatherState": "night-stormy",
+      "timeOfDay": "night",
+      "intensity": 0.8,
+      "elements": [
+        "wind",
+        "darkness"
+      ],
+      "mood": "melancholy",
+      "context": "The Fool comments on human suffering during the tempest. Even the night itself seems alive with Lear's suffering.",
+      "annotation": "The Fool's wisdom cuts through the storm\u2014the night is not merely dark, but made 'hideous' by human consciousness and pain.",
+      "confidence": "high"
+    },
+    {
+      "id": "tempest-1-1-1",
+      "text": "A tempestuous noise of thunder and lightning heard. Enter a SHIPMASTER and a BOATSWAIN.",
+      "source": {
+        "play": "The Tempest",
+        "act": 1,
+        "scene": 1,
+        "lineStart": 1,
+        "lineEnd": 2
+      },
+      "speaker": "Stage direction",
+      "weatherState": "stormy",
+      "timeOfDay": "day",
+      "intensity": 1.0,
+      "elements": [
+        "thunder",
+        "lightning",
+        "wind",
+        "rain"
+      ],
+      "mood": "chaos",
+      "context": "The play opens with a violent storm at sea. This supernatural tempest, conjured by Prospero, sets the entire plot in motion.",
+      "annotation": "The tempest is both meteorological and magical\u2014the boundary between nature and art collapses at the very threshold of the play.",
+      "confidence": "high"
+    },
+    {
+      "id": "tempest-1-2-195",
+      "text": "I have bedimm'd the noontide sun, call'd forth the mutinous winds, and 'twixt the green sea and the azured vault set roaring war.",
+      "source": {
+        "play": "The Tempest",
+        "act": 1,
+        "scene": 2,
+        "lineStart": 195,
+        "lineEnd": 197
+      },
+      "speaker": "Prospero",
+      "weatherState": "stormy",
+      "timeOfDay": "day",
+      "intensity": 0.95,
+      "elements": [
+        "wind",
+        "rain",
+        "darkness",
+        "lightning"
+      ],
+      "mood": "power",
+      "context": "Prospero reveals to Miranda that he conjured the storm through magic. He claims dominion over the very elements.",
+      "annotation": "Prospero's syntax mirrors incantation\u2014the rhythm and vocabulary of power. His storm is simultaneously creation and curse.",
+      "confidence": "high"
+    },
+    {
+      "id": "tempest-2-2-1",
+      "text": "All torment, trouble, wonder and amazement Inhabits here: some heavenly power guide us Out of this fearful country!",
+      "source": {
+        "play": "The Tempest",
+        "act": 2,
+        "scene": 2,
+        "lineStart": 1,
+        "lineEnd": 3
+      },
+      "speaker": "Alonso",
+      "weatherState": "stormy",
+      "timeOfDay": "day",
+      "intensity": 0.7,
+      "elements": [
+        "wind",
+        "chaos",
+        "rain"
+      ],
+      "mood": "fear",
+      "context": "Alonso, shipwrecked, finds himself on the island. The storm has passed but left him disoriented in an alien landscape.",
+      "annotation": "The 'fearful country' personifies the island as threatening\u2014weather is psychological as well as physical.",
+      "confidence": "high"
+    },
+    {
+      "id": "tempest-5-1-312",
+      "text": "The sun will set, and then the dew will dry all sorrow from your sight and hearing.",
+      "source": {
+        "play": "The Tempest",
+        "act": 5,
+        "scene": 1,
+        "lineStart": 312,
+        "lineEnd": 313
+      },
+      "speaker": "Prospero",
+      "weatherState": "dusk",
+      "timeOfDay": "dusk",
+      "intensity": 0.3,
+      "elements": [
+        "dew",
+        "fading light"
+      ],
+      "mood": "resolution",
+      "context": "As the play nears its conclusion, Prospero invokes the dew of evening. The weather shifts toward calm and reconciliation.",
+      "annotation": "Dew as natural restorative\u2014the play's movement is from storm to clarity, from chaos to order marked by changing light.",
+      "confidence": "high"
+    },
+    {
+      "id": "macbeth-1-3-1",
+      "text": "Thunder. Enter the three WITCHES.",
+      "source": {
+        "play": "Macbeth",
+        "act": 1,
+        "scene": 3,
+        "lineStart": 1,
+        "lineEnd": 1
+      },
+      "speaker": "Stage direction",
+      "weatherState": "stormy",
+      "timeOfDay": "day",
+      "intensity": 0.6,
+      "elements": [
+        "thunder",
+        "darkness",
+        "fog"
+      ],
+      "mood": "ominous",
+      "context": "The Witches appear in a thunderstorm. Their supernatural malevolence is announced through atmospheric disturbance.",
+      "annotation": "Thunder as the voice of fate\u2014the play's darkness is heralded by noise and storm, not light.",
+      "confidence": "high"
+    },
+    {
+      "id": "macbeth-1-3-38",
+      "text": "So foul and fair a day I have not seen.",
+      "source": {
+        "play": "Macbeth",
+        "act": 1,
+        "scene": 3,
+        "lineStart": 38,
+        "lineEnd": 38
+      },
+      "speaker": "Macbeth",
+      "weatherState": "overcast",
+      "timeOfDay": "day",
+      "intensity": 0.7,
+      "elements": [
+        "clouds",
+        "fog",
+        "darkness"
+      ],
+      "mood": "foreboding",
+      "context": "Macbeth arrives at the heath where the Witches await. His first words echo their paradoxical language about fair and foul.",
+      "annotation": "The oxymoronic weather mirrors the play's moral ambiguity\u2014fair and foul are indistinguishable, just as goodness and evil blur.",
+      "confidence": "high"
+    },
+    {
+      "id": "macbeth-2-3-60",
+      "text": "It was a rough night.",
+      "source": {
+        "play": "Macbeth",
+        "act": 2,
+        "scene": 3,
+        "lineStart": 60,
+        "lineEnd": 60
+      },
+      "speaker": "Macduff",
+      "weatherState": "night-stormy",
+      "timeOfDay": "night",
+      "intensity": 0.8,
+      "elements": [
+        "wind",
+        "darkness",
+        "rain"
+      ],
+      "mood": "dread",
+      "context": "After Duncan's murder, the night was turbulent. Nature itself recoils from the regicide.",
+      "annotation": "The understatement is Shakespearean\u2014'rough' carries weight beyond meteorology. The natural world protests Macbeth's crime.",
+      "confidence": "high"
+    },
+    {
+      "id": "macbeth-3-4-135",
+      "text": "It will have blood, they say: blood will have blood.",
+      "source": {
+        "play": "Macbeth",
+        "act": 3,
+        "scene": 4,
+        "lineStart": 135,
+        "lineEnd": 135
+      },
+      "speaker": "Macbeth",
+      "weatherState": "night-stormy",
+      "timeOfDay": "night",
+      "intensity": 0.6,
+      "elements": [
+        "darkness",
+        "storm"
+      ],
+      "mood": "dread",
+      "context": "Macbeth's paranoia deepens. The night becomes a space of violence and consequence, where blood calls for blood.",
+      "annotation": "Darkness is not merely absence of light\u2014it's the space where violent necessity unfolds, where fate operates beyond human vision.",
+      "confidence": "high"
+    },
+    {
+      "id": "macbeth-4-1-1",
+      "text": "Thunder. Enter HECATE and three other WITCHES.",
+      "source": {
+        "play": "Macbeth",
+        "act": 4,
+        "scene": 1,
+        "lineStart": 1,
+        "lineEnd": 1
+      },
+      "speaker": "Stage direction",
+      "weatherState": "stormy",
+      "timeOfDay": "night",
+      "intensity": 0.8,
+      "elements": [
+        "thunder",
+        "darkness",
+        "fog"
+      ],
+      "mood": "malevolence",
+      "context": "The Witches gather in their cavern as thunder marks their assembly. The supernatural and meteorological blur.",
+      "annotation": "Thunder signals not god but witchcraft\u2014the hierarchy of power is inverted in Macbeth's world.",
+      "confidence": "high"
+    },
+    {
+      "id": "macbeth-5-1-1",
+      "text": "A light in a window. Enter a DOCTOR of Physic and a WAITING-GENTLEWOMAN.",
+      "source": {
+        "play": "Macbeth",
+        "act": 5,
+        "scene": 1,
+        "lineStart": 1,
+        "lineEnd": 1
+      },
+      "speaker": "Stage direction",
+      "weatherState": "night-clear",
+      "timeOfDay": "night",
+      "intensity": 0.2,
+      "elements": [
+        "light",
+        "stars"
+      ],
+      "mood": "unease",
+      "context": "The night is clear but Lady Macbeth walks in her madness. Light cannot dispel the darkness of conscience.",
+      "annotation": "Even a clear night offers no comfort\u2014the play's moral darkness persists regardless of meteorological conditions.",
+      "confidence": "high"
+    },
+    {
+      "id": "midsummer-2-1-88",
+      "text": "I know a bank where the wild thyme blows, Where oxlips and the nodding violet grows, Quite over-canopied with luscious woodbine.",
+      "source": {
+        "play": "A Midsummer Night's Dream",
+        "act": 2,
+        "scene": 1,
+        "lineStart": 88,
+        "lineEnd": 90
+      },
+      "speaker": "Puck",
+      "weatherState": "clear",
+      "timeOfDay": "night",
+      "intensity": 0.5,
+      "elements": [
+        "moon",
+        "stars",
+        "dew"
+      ],
+      "mood": "enchantment",
+      "context": "Puck describes a secret place in the forest where Oberon and Titania meet. The night is luminous with magic.",
+      "annotation": "The weather is latent in the description\u2014verdant and moistly perfumed, the forest itself generates its own humid, fertile atmosphere.",
+      "confidence": "high"
+    },
+    {
+      "id": "midsummer-3-2-403",
+      "text": "Lord, what fools these mortals be! The moon's an arrant thief, and her pale fire she snatches from the sun.",
+      "source": {
+        "play": "A Midsummer Night's Dream",
+        "act": 3,
+        "scene": 2,
+        "lineStart": 403,
+        "lineEnd": 404
+      },
+      "speaker": "Puck",
+      "weatherState": "night-clear",
+      "timeOfDay": "night",
+      "intensity": 0.4,
+      "elements": [
+        "moonlight",
+        "shadow"
+      ],
+      "mood": "mockery",
+      "context": "Puck surveys the chaos of the lovers below under the moon. His commentary is cosmic and mischievous.",
+      "annotation": "Moonlight is theft, reflection, and artifice\u2014perfectly suited to Puck's world where identity and love are constantly misaligned.",
+      "confidence": "high"
+    },
+    {
+      "id": "midsummer-4-1-101",
+      "text": "Good morrow, friends. Saint Valentine is past: begin these wood-birds but to couple now?",
+      "source": {
+        "play": "A Midsummer Night's Dream",
+        "act": 4,
+        "scene": 1,
+        "lineStart": 101,
+        "lineEnd": 102
+      },
+      "speaker": "Theseus",
+      "weatherState": "clear",
+      "timeOfDay": "dawn",
+      "intensity": 0.3,
+      "elements": [
+        "morning light",
+        "dew"
+      ],
+      "mood": "renewal",
+      "context": "Dawn breaks over the forest. The enchanted night gives way to clarity and the lovers awake from their confusion.",
+      "annotation": "The progression from night to dawn mirrors moral clarification\u2014what was hidden becomes visible, what was chaotic becomes orderly.",
+      "confidence": "high"
+    },
+    {
+      "id": "twelfth-1-1-1",
+      "text": "If music be the food of love, play on; give me excess of it, that, surfeiting, the appetite may sicken, and so die.",
+      "source": {
+        "play": "Twelfth Night",
+        "act": 1,
+        "scene": 1,
+        "lineStart": 1,
+        "lineEnd": 3
+      },
+      "speaker": "Orsino",
+      "weatherState": "overcast",
+      "timeOfDay": "day",
+      "intensity": 0.4,
+      "elements": [
+        "clouds",
+        "shadows"
+      ],
+      "mood": "melancholy",
+      "context": "Orsino opens the play in a state of romantic melancholy, indulging in his own sorrow. The weather of his mind is gray.",
+      "annotation": "The play's opening atmosphere is interiority\u2014the weather is psychological, not meteorological, yet colors the entire mood.",
+      "confidence": "medium"
+    },
+    {
+      "id": "twelfth-1-2-1",
+      "text": "What country, friends, is this? This is Illyria, lady.",
+      "source": {
+        "play": "Twelfth Night",
+        "act": 1,
+        "scene": 2,
+        "lineStart": 1,
+        "lineEnd": 2
+      },
+      "speaker": "Viola, Captain",
+      "weatherState": "stormy",
+      "timeOfDay": "day",
+      "intensity": 0.7,
+      "elements": [
+        "wind",
+        "rain",
+        "shipwreck"
+      ],
+      "mood": "disorientation",
+      "context": "Viola emerges from a shipwreck on the coast of Illyria. The storm has scattered her from her brother and left her stranded.",
+      "annotation": "The storm, like Prospero's tempest, is a device of plot\u2014maritime weather creates exile and new identity.",
+      "confidence": "high"
+    },
+    {
+      "id": "twelfth-2-4-115",
+      "text": "That strain again! it had a dying fall: O, it came o'er my ear like the sweet sound, that breathes upon a bank of violets.",
+      "source": {
+        "play": "Twelfth Night",
+        "act": 2,
+        "scene": 4,
+        "lineStart": 115,
+        "lineEnd": 117
+      },
+      "speaker": "Orsino",
+      "weatherState": "partly-cloudy",
+      "timeOfDay": "afternoon",
+      "intensity": 0.2,
+      "elements": [
+        "breeze",
+        "flowers",
+        "soft light"
+      ],
+      "mood": "longing",
+      "context": "Orsino is entranced by music. The metaphor describes soft, perfumed air\u2014the sensory weather of romance.",
+      "annotation": "Weather as synesthesia\u2014sound becomes breeze, becomes scent. The play's primary atmosphere is sensory and interior.",
+      "confidence": "high"
+    },
+    {
+      "id": "winters-tale-3-3-1",
+      "text": "I am gone for ever!",
+      "source": {
+        "play": "The Winter's Tale",
+        "act": 3,
+        "scene": 3,
+        "lineStart": 1,
+        "lineEnd": 1
+      },
+      "speaker": "Antigonus (exit pursued by bear)",
+      "weatherState": "stormy",
+      "timeOfDay": "day",
+      "intensity": 0.6,
+      "elements": [
+        "wind",
+        "wild terrain",
+        "chaos"
+      ],
+      "mood": "terror",
+      "context": "Antigonus abandons baby Perdita on the wild coast of Bohemia, pursued by a bear. The seacoast is violent and unforgiving.",
+      "annotation": "The bear and the storm are both metaphors for nature's indifference\u2014the weather of tragedy is untamed wilderness.",
+      "confidence": "high"
+    },
+    {
+      "id": "winters-tale-4-3-1",
+      "text": "The web of our life is of a mingled yarn, good and ill together.",
+      "source": {
+        "play": "The Winter's Tale",
+        "act": 4,
+        "scene": 3,
+        "lineStart": 68,
+        "lineEnd": 69
+      },
+      "speaker": "Autolycus",
+      "weatherState": "partly-cloudy",
+      "timeOfDay": "day",
+      "intensity": 0.4,
+      "elements": [
+        "clouds",
+        "intermittent sun"
+      ],
+      "mood": "acceptance",
+      "context": "Autolycus sings of life's mixture. The Bohemian pastoral is pleasant but never entirely clear.",
+      "annotation": "The play's second half is weather of reconciliation\u2014not clear, but not stormy. Mixed, like character itself.",
+      "confidence": "medium"
+    },
+    {
+      "id": "winters-tale-4-4-118",
+      "text": "Lawn as white as driven snow; Cyprus black as e'er was crow; Gloves as sweet as damask roses; Masks for faces and for noses.",
+      "source": {
+        "play": "The Winter's Tale",
+        "act": 4,
+        "scene": 4,
+        "lineStart": 228,
+        "lineEnd": 231
+      },
+      "speaker": "Autolycus",
+      "weatherState": "snowy",
+      "timeOfDay": "day",
+      "intensity": 0.5,
+      "elements": [
+        "snow",
+        "whiteness",
+        "cold"
+      ],
+      "mood": "abundance",
+      "context": "Autolycus hawks his wares at the Bohemian festival. His song catalogues colors and textures against the winter backdrop.",
+      "annotation": "Snow is commodity and metaphor\u2014whiteness as purity and as blank slate, the canvas on which the play's restoration unfolds.",
+      "confidence": "high"
+    },
+    {
+      "id": "winters-tale-5-2-51",
+      "text": "The winter's tale it is reported, for never was there three usurers for three-farthings; but look, here is news.",
+      "source": {
+        "play": "The Winter's Tale",
+        "act": 5,
+        "scene": 2,
+        "lineStart": 1,
+        "lineEnd": 5
+      },
+      "speaker": "Gentleman",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.3,
+      "elements": [
+        "sunlight",
+        "clarity"
+      ],
+      "mood": "wonder",
+      "context": "News arrives of Hermione's resurrection and Perdita's finding. Winter breaks into spring, metaphorically and literally.",
+      "annotation": "Clearness and revelation coincide\u2014the play's movement from tragedy through winter to spring and clarity is meteorological as well as thematic.",
+      "confidence": "high"
+    },
+    {
+      "id": "romeo-2-2-1",
+      "text": "But, soft! what light through yonder window breaks? It is the east, and Juliet is the sun.",
+      "source": {
+        "play": "Romeo and Juliet",
+        "act": 2,
+        "scene": 2,
+        "lineStart": 3,
+        "lineEnd": 3
+      },
+      "speaker": "Romeo",
+      "weatherState": "dawn",
+      "timeOfDay": "dawn",
+      "intensity": 0.6,
+      "elements": [
+        "early light",
+        "stars fading"
+      ],
+      "mood": "love",
+      "context": "Romeo awaits Juliet on the balcony at dawn. The breaking light mirrors his awakening to love.",
+      "annotation": "Juliet is not merely like the sun\u2014she illuminates the entire play. Dawn in Romeo is not weather but revelation.",
+      "confidence": "high"
+    },
+    {
+      "id": "romeo-3-5-1",
+      "text": "Wilt thou be gone? it is not yet near day: it was the nightingale, and not the lark, that pierced the fearful hollow of thine ear.",
+      "source": {
+        "play": "Romeo and Juliet",
+        "act": 3,
+        "scene": 5,
+        "lineStart": 1,
+        "lineEnd": 3
+      },
+      "speaker": "Juliet",
+      "weatherState": "dawn",
+      "timeOfDay": "dawn",
+      "intensity": 0.5,
+      "elements": [
+        "early light",
+        "darkness fading"
+      ],
+      "mood": "sorrow",
+      "context": "Romeo and Juliet part at dawn after their wedding night. The approaching day forces their separation and marks the beginning of tragedy.",
+      "annotation": "The lark, herald of day, becomes herald of separation. Weather marks time's cruelty\u2014dawn destroys their night.",
+      "confidence": "high"
+    },
+    {
+      "id": "romeo-5-3-1",
+      "text": "Give me my night-gown; come to my closet: look, that thou speak'st not of these accidents unseen; keep close within thy chamber.",
+      "source": {
+        "play": "Romeo and Juliet",
+        "act": 5,
+        "scene": 2,
+        "lineStart": 31,
+        "lineEnd": 33
+      },
+      "speaker": "Capulet",
+      "weatherState": "night-clear",
+      "timeOfDay": "night",
+      "intensity": 0.3,
+      "elements": [
+        "starlight",
+        "quiet"
+      ],
+      "mood": "foreboding",
+      "context": "The night of Romeo and Juliet's death is still and starlit. The play's final tragedy unfolds in darkness.",
+      "annotation": "The night is clear but cannot illuminate the tragedy below\u2014consciousness is not enough to prevent suffering.",
+      "confidence": "high"
+    },
+    {
+      "id": "romeo-epilogue-1",
+      "text": "All are punish'd; for I never saw so true a story of wo till this day.",
+      "source": {
+        "play": "Romeo and Juliet",
+        "act": 5,
+        "scene": 3,
+        "lineStart": 292,
+        "lineEnd": 292
+      },
+      "speaker": "Prince",
+      "weatherState": "dusk",
+      "timeOfDay": "dusk",
+      "intensity": 0.4,
+      "elements": [
+        "fading light",
+        "shadow"
+      ],
+      "mood": "sorrow",
+      "context": "As the play ends, daylight fades. The Prince surveys the wreckage of Romeo and Juliet's love.",
+      "annotation": "Dusk as closure\u2014the play ends not at night but in the liminal space between day and darkness, between hope and despair.",
+      "confidence": "high"
+    },
+    {
+      "id": "hamlet-1-1-1",
+      "text": "Who's there? Nay, answer me: stand, and unfold yourself.",
+      "source": {
+        "play": "Hamlet",
+        "act": 1,
+        "scene": 1,
+        "lineStart": 1,
+        "lineEnd": 2
+      },
+      "speaker": "Bernardo",
+      "weatherState": "night-clear",
+      "timeOfDay": "night",
+      "intensity": 0.6,
+      "elements": [
+        "stars",
+        "cold",
+        "wind"
+      ],
+      "mood": "unease",
+      "context": "The play opens on the battlements of Elsinore at night. The cold watch and the ghost's appearance establish a mood of dread.",
+      "annotation": "Hamlet's world is nocturnal\u2014clear nights do not bring clarity but rather expose the unknowable. Stars witness the supernatural.",
+      "confidence": "high"
+    },
+    {
+      "id": "hamlet-1-4-60",
+      "text": "I am thy father's spirit; doom'd for a certain term to walk the night and for the day confined to fast in fires.",
+      "source": {
+        "play": "Hamlet",
+        "act": 1,
+        "scene": 4,
+        "lineStart": 10,
+        "lineEnd": 11
+      },
+      "speaker": "Ghost",
+      "weatherState": "night-clear",
+      "timeOfDay": "night",
+      "intensity": 0.7,
+      "elements": [
+        "darkness",
+        "cold",
+        "supernatural light"
+      ],
+      "mood": "dread",
+      "context": "The Ghost reveals his torment\u2014he is bound to the night and cannot abide daylight. Night is his prison and punishment.",
+      "annotation": "Night in Hamlet is not merely dark but charged with supernatural presence. The Ghost's testimony makes night luminous with invisible torment.",
+      "confidence": "high"
+    },
+    {
+      "id": "hamlet-3-2-1",
+      "text": "Give me some light: away!",
+      "source": {
+        "play": "Hamlet",
+        "act": 3,
+        "scene": 2,
+        "lineStart": 280,
+        "lineEnd": 280
+      },
+      "speaker": "Claudius",
+      "weatherState": "night-stormy",
+      "timeOfDay": "night",
+      "intensity": 0.6,
+      "elements": [
+        "darkness",
+        "chaos",
+        "revelation"
+      ],
+      "mood": "panic",
+      "context": "During the play-within-the-play, Claudius calls for light as his guilt is exposed. The metaphorical darkness becomes literal.",
+      "annotation": "Light and dark are reversed\u2014artificial light cannot dispel the darkness of conscience. Weather becomes moral.",
+      "confidence": "high"
+    },
+    {
+      "id": "hamlet-4-4-45",
+      "text": "How all occasions do inform against me and spur my dull revenge! O, from this time forth, my thoughts be bloody, or be nothing worth!",
+      "source": {
+        "play": "Hamlet",
+        "act": 4,
+        "scene": 4,
+        "lineStart": 32,
+        "lineEnd": 34
+      },
+      "speaker": "Hamlet",
+      "weatherState": "overcast",
+      "timeOfDay": "day",
+      "intensity": 0.5,
+      "elements": [
+        "clouds",
+        "gray sky"
+      ],
+      "mood": "determination",
+      "context": "Hamlet, seeing Fortinbras's army march past, reaffirms his commitment to revenge. The day is overcast, mirroring his darkening resolve.",
+      "annotation": "Overcast day as internal weather\u2014the sky mirrors Hamlet's psychological state of grim determination.",
+      "confidence": "high"
+    },
+    {
+      "id": "richard3-5-3-1",
+      "text": "The sun will not be seen to-day: the sky doth frown upon our army.",
+      "source": {
+        "play": "Richard III",
+        "act": 5,
+        "scene": 3,
+        "lineStart": 1,
+        "lineEnd": 2
+      },
+      "speaker": "Richard III",
+      "weatherState": "overcast",
+      "timeOfDay": "day",
+      "intensity": 0.7,
+      "elements": [
+        "clouds",
+        "darkness"
+      ],
+      "mood": "foreboding",
+      "context": "Before the Battle of Bosworth, Richard laments the overcast day. The weather is read as an ill omen.",
+      "annotation": "The sky's frown personifies nature as judgmental\u2014weather becomes prophecy of Richard's defeat.",
+      "confidence": "high"
+    },
+    {
+      "id": "richard3-5-3-285",
+      "text": "A horse, a horse! my kingdom for a horse!",
+      "source": {
+        "play": "Richard III",
+        "act": 5,
+        "scene": 4,
+        "lineStart": 7,
+        "lineEnd": 7
+      },
+      "speaker": "Richard III",
+      "weatherState": "overcast",
+      "timeOfDay": "day",
+      "intensity": 0.8,
+      "elements": [
+        "chaos",
+        "battle fog",
+        "darkness"
+      ],
+      "mood": "desperation",
+      "context": "Richard, surrounded by enemies on Bosworth Field, makes his famous cry. The day is dark with battle smoke and chaos.",
+      "annotation": "The overcast day becomes literal fog of war\u2014visibility and certainty collapse together on the battlefield.",
+      "confidence": "high"
+    },
+    {
+      "id": "henry5-prologue-1",
+      "text": "O for a Muse of fire, that would ascend The brightest heaven of invention!",
+      "source": {
+        "play": "Henry V",
+        "act": 1,
+        "scene": null,
+        "lineStart": 1,
+        "lineEnd": 2
+      },
+      "speaker": "Prologue",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.5,
+      "elements": [
+        "fire",
+        "bright light",
+        "heaven"
+      ],
+      "mood": "aspiration",
+      "context": "The Prologue invokes the Muses and begs the audience's imagination to elevate the play. The imagery is luminous.",
+      "annotation": "Brightness and fire are not meteorological but metaphorical\u2014the play will burn with heroic action.",
+      "confidence": "medium"
+    },
+    {
+      "id": "henry5-4-3-1",
+      "text": "But I will tell you plain, I am afraid they will not be found so good as men anticipate.",
+      "source": {
+        "play": "Henry V",
+        "act": 4,
+        "scene": 3,
+        "lineStart": 73,
+        "lineEnd": 74
+      },
+      "speaker": "King Henry",
+      "weatherState": "overcast",
+      "timeOfDay": "night",
+      "intensity": 0.6,
+      "elements": [
+        "darkness",
+        "cold",
+        "fog"
+      ],
+      "mood": "doubt",
+      "context": "The night before Agincourt, Henry walks the camp in disguise. The cold night amplifies his anxiety.",
+      "annotation": "The overcast night before Agincourt contrasts with the illuminated morning\u2014darkness here is doubt, clarity will be resolution.",
+      "confidence": "high"
+    },
+    {
+      "id": "henry5-4-3-40",
+      "text": "This day is called the feast of Crispian: He that outlives this day, and comes safe home, Will stand a tip-toe when this day is named.",
+      "source": {
+        "play": "Henry V",
+        "act": 4,
+        "scene": 3,
+        "lineStart": 40,
+        "lineEnd": 42
+      },
+      "speaker": "King Henry",
+      "weatherState": "dawn",
+      "timeOfDay": "dawn",
+      "intensity": 0.4,
+      "elements": [
+        "breaking light",
+        "clarity"
+      ],
+      "mood": "inspiration",
+      "context": "At dawn on Crispian's Day, Henry rallies his troops with his most famous speech. The day breaks clear over the field.",
+      "annotation": "Dawn as turning point\u2014the dark night of doubt gives way to the luminous clarity of St. Crispin's Day, a day that will be remembered.",
+      "confidence": "high"
+    },
+    {
+      "id": "othello-2-1-1",
+      "text": "A fuller blast ne'er shook our battlements: if it hath ruffian'd so upon the sea, what ribs of oak, when mountains melt on them, can hold the mortise?",
+      "source": {
+        "play": "Othello",
+        "act": 2,
+        "scene": 1,
+        "lineStart": 1,
+        "lineEnd": 3
+      },
+      "speaker": "Montano",
+      "weatherState": "stormy",
+      "timeOfDay": "day",
+      "intensity": 0.95,
+      "elements": [
+        "wind",
+        "rain",
+        "waves",
+        "thunder"
+      ],
+      "mood": "chaos",
+      "context": "A violent storm has separated Othello's fleet. The tempest threatens to sink the entire Turkish fleet and delays Othello's arrival.",
+      "annotation": "The storm is a metaphor for the turbulence to come\u2014the play's romantic and tragic storms are anticipated by the literal tempest.",
+      "confidence": "high"
+    },
+    {
+      "id": "othello-2-1-189",
+      "text": "The great Othello, whom our general senate call all in all sufficient? Is this the noble Moor whom our full senate call all in all sufficient?",
+      "source": {
+        "play": "Othello",
+        "act": 2,
+        "scene": 1,
+        "lineStart": 25,
+        "lineEnd": 26
+      },
+      "speaker": "Cassio",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.3,
+      "elements": [
+        "sunshine",
+        "calm"
+      ],
+      "mood": "joy",
+      "context": "After the storm, Othello has arrived safely. The day is now clear and Cassio celebrates Othello's arrival with relief.",
+      "annotation": "The shift from storm to clear day mirrors the play's trajectory\u2014initial relief will give way to the gathering storm of jealousy.",
+      "confidence": "high"
+    },
+    {
+      "id": "othello-5-2-1",
+      "text": "It is the cause, it is the cause, my soul: Let me not name it to you, you chaste stars! It is the cause.",
+      "source": {
+        "play": "Othello",
+        "act": 5,
+        "scene": 2,
+        "lineStart": 1,
+        "lineEnd": 3
+      },
+      "speaker": "Othello",
+      "weatherState": "night-clear",
+      "timeOfDay": "night",
+      "intensity": 0.5,
+      "elements": [
+        "stars",
+        "darkness",
+        "cold light"
+      ],
+      "mood": "tragedy",
+      "context": "Othello stands over the sleeping Desdemona, about to murder her. The clear night stars witness his terrible act.",
+      "annotation": "The stars that were symbols of chastity and truth become witnesses to its perversion\u2014Othello invokes them even as he violates what they represent.",
+      "confidence": "high"
+    },
+    {
+      "id": "sonnets-18-1",
+      "text": "Shall I compare thee to a summer's day? Thou art more lovely and more temperate.",
+      "source": {
+        "play": "Sonnets",
+        "sonnet": 18,
+        "lineStart": 1,
+        "lineEnd": 2
+      },
+      "speaker": "Poet",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.6,
+      "elements": [
+        "sunshine",
+        "warmth",
+        "golden light"
+      ],
+      "mood": "love",
+      "context": "The Poet compares the beloved to a perfect summer's day, praising both beauty and constancy.",
+      "annotation": "Summer's day is the weather of perfect love\u2014temperate, constant, eternal through verse. The beloved transcends seasonal change.",
+      "confidence": "high"
+    },
+    {
+      "id": "sonnets-29-1",
+      "text": "When, in disgrace with fortune and men's eyes, I all alone beweep my outcast state, And trouble deaf heaven with my bootless cries.",
+      "source": {
+        "play": "Sonnets",
+        "sonnet": 29,
+        "lineStart": 1,
+        "lineEnd": 3
+      },
+      "speaker": "Poet",
+      "weatherState": "overcast",
+      "timeOfDay": "day",
+      "intensity": 0.8,
+      "elements": [
+        "clouds",
+        "darkness",
+        "rain"
+      ],
+      "mood": "despair",
+      "context": "The Poet laments his outcast state, troubled by fortune and isolation. The day is as dark as his mood.",
+      "annotation": "Internal weather\u2014the Poet's isolation is expressed through meteorological imagery of overcast abandonment.",
+      "confidence": "high"
+    },
+    {
+      "id": "sonnets-30-1",
+      "text": "When to the sessions of sweet silent thought I summon up remembrance of things past, I sigh the lack of many a thing I sought.",
+      "source": {
+        "play": "Sonnets",
+        "sonnet": 30,
+        "lineStart": 1,
+        "lineEnd": 3
+      },
+      "speaker": "Poet",
+      "weatherState": "rainy",
+      "timeOfDay": "day",
+      "intensity": 0.7,
+      "elements": [
+        "rain",
+        "tears",
+        "overcast"
+      ],
+      "mood": "melancholy",
+      "context": "The Poet recalls past sorrows. His remembrance is stormy with grief, and tears fall like rain.",
+      "annotation": "Rain and tears become metaphorically indistinguishable\u2014emotion is weather, weather is emotion.",
+      "confidence": "high"
+    },
+    {
+      "id": "sonnets-33-1",
+      "text": "Full many a glorious morning have I seen flatter the mountain-tops with sovereign eye, and leave the cloudy state of earth to wonder at his glory.",
+      "source": {
+        "play": "Sonnets",
+        "sonnet": 33,
+        "lineStart": 1,
+        "lineEnd": 3
+      },
+      "speaker": "Poet",
+      "weatherState": "partly-cloudy",
+      "timeOfDay": "morning",
+      "intensity": 0.5,
+      "elements": [
+        "sun breaking through clouds",
+        "mountain mist"
+      ],
+      "mood": "wonder",
+      "context": "The Poet celebrates glorious mornings when the sun breaks through clouds to illuminate the earth.",
+      "annotation": "Partial clouds allow the sun's glory to be more dramatic\u2014beauty emerges through and against obstacle.",
+      "confidence": "high"
+    },
+    {
+      "id": "sonnets-55-1",
+      "text": "Not marble, nor the gilded monuments of princes, shall outlive this powerful rhyme.",
+      "source": {
+        "play": "Sonnets",
+        "sonnet": 55,
+        "lineStart": 1,
+        "lineEnd": 1
+      },
+      "speaker": "Poet",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.4,
+      "elements": [
+        "eternal light",
+        "clarity"
+      ],
+      "mood": "immortality",
+      "context": "The Poet asserts that verse is eternal, more durable than stone. The clarity is metaphorical\u2014eternity is luminous.",
+      "annotation": "The weather here is timelessness\u2014a day that never clouds, a clarity that outlasts monuments.",
+      "confidence": "medium"
+    },
+    {
+      "id": "sonnets-64-1",
+      "text": "When I have seen by time's fell hand defaced the rich proud cost of outworn buried age, when sometime lofty towers I see down-razed, and brass eternal slave to mortal rage.",
+      "source": {
+        "play": "Sonnets",
+        "sonnet": 64,
+        "lineStart": 1,
+        "lineEnd": 4
+      },
+      "speaker": "Poet",
+      "weatherState": "rainy",
+      "timeOfDay": "day",
+      "intensity": 0.7,
+      "elements": [
+        "erosion",
+        "rain wearing stone",
+        "decay"
+      ],
+      "mood": "mortality",
+      "context": "The Poet meditates on time's destruction\u2014monuments crumble, towers fall. Weather is the agent of decay.",
+      "annotation": "Rain and time are allied agents of erosion\u2014the weather does not merely accompany destruction but enacts it.",
+      "confidence": "high"
+    },
+    {
+      "id": "sonnets-71-1",
+      "text": "No longer mourn for me when I am dead than you shall hear the surly sullen bell give warning to the world that I am fled.",
+      "source": {
+        "play": "Sonnets",
+        "sonnet": 71,
+        "lineStart": 1,
+        "lineEnd": 2
+      },
+      "speaker": "Poet",
+      "weatherState": "overcast",
+      "timeOfDay": "day",
+      "intensity": 0.6,
+      "elements": [
+        "gray day",
+        "funeral bell",
+        "gloom"
+      ],
+      "mood": "acceptance",
+      "context": "The Poet instructs the beloved not to mourn excessively. The day of the funeral is overcast with sorrow.",
+      "annotation": "Overcast day as conventional accompaniment to death\u2014the weather mirrors the mood, or vice versa.",
+      "confidence": "high"
+    },
+    {
+      "id": "sonnets-97-1",
+      "text": "How like a winter hath my absence been from thee, the pleasure of the fleeting year! What freezings have I felt, what dark days seen!",
+      "source": {
+        "play": "Sonnets",
+        "sonnet": 97,
+        "lineStart": 1,
+        "lineEnd": 3
+      },
+      "speaker": "Poet",
+      "weatherState": "snowy",
+      "timeOfDay": "day",
+      "intensity": 0.8,
+      "elements": [
+        "frost",
+        "ice",
+        "darkness"
+      ],
+      "mood": "longing",
+      "context": "The Poet's absence from the beloved is a metaphorical winter\u2014cold and dark and cheerless.",
+      "annotation": "Winter is not merely seasonal weather but psychological state. The Poet's suffering is meteorological.",
+      "confidence": "high"
+    },
+    {
+      "id": "sonnets-104-1",
+      "text": "To me, fair friend, you never can be old, for as you were when first your eye I eyed, such seems your beauty still.",
+      "source": {
+        "play": "Sonnets",
+        "sonnet": 104,
+        "lineStart": 1,
+        "lineEnd": 3
+      },
+      "speaker": "Poet",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.5,
+      "elements": [
+        "eternal light",
+        "unchanging clarity"
+      ],
+      "mood": "admiration",
+      "context": "The Poet celebrates the beloved's unchanging beauty. Time cannot age what is eternally fair.",
+      "annotation": "Fairness and clarity are aligned\u2014the beloved is weather that never changes, a clear day that never clouds.",
+      "confidence": "high"
+    },
+    {
+      "id": "asyoulikeit-2-1-1",
+      "text": "Now, my co-mates and brothers in exile, hath not old custom made this life more sweet than that of painted pomp? Are not these woods more free from peril than the envious court?",
+      "source": {
+        "play": "As You Like It",
+        "act": 2,
+        "scene": 1,
+        "lineStart": 1,
+        "lineEnd": 3
+      },
+      "speaker": "Duke Senior",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.5,
+      "elements": [
+        "sunshine",
+        "green forest",
+        "fresh air"
+      ],
+      "mood": "contentment",
+      "context": "The Duke Senior celebrates his exile in the Forest of Arden. Despite hardship, the forest offers freedom and peace.",
+      "annotation": "The Forest of Arden's weather is habitually fair\u2014exile here is paradise precisely because the natural world is benign.",
+      "confidence": "high"
+    },
+    {
+      "id": "asyoulikeit-2-7-174",
+      "text": "Blow, blow, thou winter wind, thou art not so unkind as man's ingratitude; thy tooth is not so keen because thou art not seen, although thy breath be rude.",
+      "source": {
+        "play": "As You Like It",
+        "act": 2,
+        "scene": 7,
+        "lineStart": 174,
+        "lineEnd": 177
+      },
+      "speaker": "Amiens",
+      "weatherState": "windy",
+      "timeOfDay": "winter",
+      "intensity": 0.7,
+      "elements": [
+        "wind",
+        "cold breath",
+        "frost"
+      ],
+      "mood": "philosophy",
+      "context": "Amiens sings of winter in the forest. The wind is harsh but honest, unlike human betrayal.",
+      "annotation": "The famous winter song frames weather as more trustworthy than human emotion\u2014the wind is unkind but not hypocritical.",
+      "confidence": "high"
+    },
+    {
+      "id": "asyoulikeit-4-3-15",
+      "text": "I met a fool i' the forest, a motley fool; he sat under an oak tree, which is the second act of our moral drama.",
+      "source": {
+        "play": "As You Like It",
+        "act": 2,
+        "scene": 7,
+        "lineStart": 12,
+        "lineEnd": 13
+      },
+      "speaker": "Jaques",
+      "weatherState": "partly-cloudy",
+      "timeOfDay": "day",
+      "intensity": 0.3,
+      "elements": [
+        "oak shade",
+        "dappled light"
+      ],
+      "mood": "wisdom",
+      "context": "Jaques describes meeting a fool in the forest. The oak tree provides shade and shelter\u2014the weather is temperate.",
+      "annotation": "The forest's pleasant weather is backdrop to philosophical wisdom\u2014comfort enables contemplation.",
+      "confidence": "high"
+    },
+    {
+      "id": "cymbeline-3-3-1",
+      "text": "A goodly day not to keep house, with such whose roofs as low as ours! Stoop, boys: this gate instructs you how to adore the heavens.",
+      "source": {
+        "play": "Cymbeline",
+        "act": 3,
+        "scene": 3,
+        "lineStart": 1,
+        "lineEnd": 3
+      },
+      "speaker": "Belarius",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.6,
+      "elements": [
+        "sunlight",
+        "open sky",
+        "clear day"
+      ],
+      "mood": "instruction",
+      "context": "Belarius instructs his foster sons in the wilderness. The clear day is an occasion for physical and spiritual training.",
+      "annotation": "Clear weather enables virtue\u2014the open sky mirrors the open heart necessary for noble training.",
+      "confidence": "high"
+    },
+    {
+      "id": "cymbeline-2-3-1",
+      "text": "I am near to the place where they should meet, if Pisanio have map'd it truly. How fit his garments sit upon him! How well he plays the noble Cymbeline!",
+      "source": {
+        "play": "Cymbeline",
+        "act": 3,
+        "scene": 4,
+        "lineStart": 1,
+        "lineEnd": 3
+      },
+      "speaker": "Imogen",
+      "weatherState": "partly-cloudy",
+      "timeOfDay": "day",
+      "intensity": 0.4,
+      "elements": [
+        "soft light",
+        "mixed weather"
+      ],
+      "mood": "hope",
+      "context": "Imogen travels through Wales searching for Leonatus. The weather is mild and does not impede her quest.",
+      "annotation": "Mixed weather as transition\u2014Imogen's journey is physically arduous but not thwarted by extreme weather.",
+      "confidence": "medium"
+    },
+    {
+      "id": "cymbeline-5-4-122",
+      "text": "The marble pavement closes, he is gone.",
+      "source": {
+        "play": "Cymbeline",
+        "act": 5,
+        "scene": 4,
+        "lineStart": 122,
+        "lineEnd": 122
+      },
+      "speaker": "Jupiter's attendant",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.7,
+      "elements": [
+        "divine light",
+        "revelation"
+      ],
+      "mood": "wonder",
+      "context": "Jupiter departs after appearing to Posthumus. The divine presence leaves clarity and reassurance in its wake.",
+      "annotation": "The god's departure marks a shift from uncertainty to clarity\u2014supernatural weather gives way to natural peace.",
+      "confidence": "high"
+    },
+    {
+      "id": "pericles-1-1-1",
+      "text": "A terrible shipwreck, o'er the sea, the vessel is drown'd when all shall see no hope of safety.",
+      "source": {
+        "play": "Pericles",
+        "act": 1,
+        "scene": 1,
+        "lineStart": 1,
+        "lineEnd": 2
+      },
+      "speaker": "Prologue",
+      "weatherState": "stormy",
+      "timeOfDay": "day",
+      "intensity": 0.95,
+      "elements": [
+        "wind",
+        "rain",
+        "waves",
+        "disaster"
+      ],
+      "mood": "tragedy",
+      "context": "The Prologue announces the shipwreck that will initiate Pericles' long exile. The storm is catastrophic.",
+      "annotation": "In Pericles, as in The Tempest and Othello, storms are agents of plot\u2014weather dispatches characters to new fates.",
+      "confidence": "high"
+    },
+    {
+      "id": "pericles-2-1-1",
+      "text": "What a dreadful sight I've seen! All is lost, the ship is gone, and I alone am left of all the crew.",
+      "source": {
+        "play": "Pericles",
+        "act": 2,
+        "scene": 1,
+        "lineStart": 1,
+        "lineEnd": 2
+      },
+      "speaker": "Pericles",
+      "weatherState": "stormy",
+      "timeOfDay": "day",
+      "intensity": 0.9,
+      "elements": [
+        "wreckage",
+        "survival",
+        "chaos"
+      ],
+      "mood": "desolation",
+      "context": "Pericles survives the shipwreck and washes ashore. He is alone in a hostile coastal landscape.",
+      "annotation": "Post-storm landscape is desolate\u2014the weather's aftermath is as challenging as the storm itself.",
+      "confidence": "medium"
+    },
+    {
+      "id": "antony-cleopatra-3-2-1",
+      "text": "Sir, they have touch'd the trumpet in the camp: Lord of Egypt, hear me.",
+      "source": {
+        "play": "Antony and Cleopatra",
+        "act": 3,
+        "scene": 2,
+        "lineStart": 1,
+        "lineEnd": 2
+      },
+      "speaker": "Enobarbus",
+      "weatherState": "overcast",
+      "timeOfDay": "day",
+      "intensity": 0.6,
+      "elements": [
+        "dust",
+        "heat haze",
+        "obscurity"
+      ],
+      "mood": "war",
+      "context": "At the battle of Actium, the day is hot and dusty. Visibility is poor, adding to the confusion of war.",
+      "annotation": "Desert heat and dust as metaphor for clarity obscured\u2014in war, even proximity does not guarantee understanding.",
+      "confidence": "medium"
+    },
+    {
+      "id": "antony-cleopatra-4-15-1",
+      "text": "The sun's a thief, and with his great attraction robs the vast sea: the moon's an arrant thief, and her pale fire she snatches from the sun.",
+      "source": {
+        "play": "Antony and Cleopatra",
+        "act": 4,
+        "scene": 15,
+        "lineStart": 9,
+        "lineEnd": 11
+      },
+      "speaker": "Antony",
+      "weatherState": "dusk",
+      "timeOfDay": "dusk",
+      "intensity": 0.5,
+      "elements": [
+        "sunset",
+        "reflected light",
+        "fading day"
+      ],
+      "mood": "loss",
+      "context": "As Antony approaches death, he meditates on the theft of light and beauty. The day fades as his life ebbs.",
+      "annotation": "Dusk as metaphor for mortality\u2014all light is borrowed, all beauty is fleeting, all power is theft.",
+      "confidence": "high"
+    },
+    {
+      "id": "antony-cleopatra-5-2-285",
+      "text": "Now comes the hour when cruelty and hate feast most upon despair.",
+      "source": {
+        "play": "Antony and Cleopatra",
+        "act": 5,
+        "scene": 2,
+        "lineStart": 285,
+        "lineEnd": 285
+      },
+      "speaker": "Cleopatra",
+      "weatherState": "night-clear",
+      "timeOfDay": "night",
+      "intensity": 0.4,
+      "elements": [
+        "starlight",
+        "isolation"
+      ],
+      "mood": "despair",
+      "context": "Cleopatra awaits death by her own hand. The night is clear but offers no consolation.",
+      "annotation": "Night clarity as cold witness\u2014the stars see human tragedy without sympathy, their light is unconcerned.",
+      "confidence": "high"
+    },
+    {
+      "id": "merchant-of-venice-5-1-1",
+      "text": "The moon shines bright: in such a night as this, when the sweet wind did gently kiss the trees and they did make no noise.",
+      "source": {
+        "play": "The Merchant of Venice",
+        "act": 5,
+        "scene": 1,
+        "lineStart": 1,
+        "lineEnd": 3
+      },
+      "speaker": "Lorenzo",
+      "weatherState": "night-clear",
+      "timeOfDay": "night",
+      "intensity": 0.4,
+      "elements": [
+        "moonlight",
+        "gentle breeze",
+        "stars"
+      ],
+      "mood": "romance",
+      "context": "Lorenzo and Jessica celebrate their love under the clear night sky. The weather is soft and romantic.",
+      "annotation": "Clear night as ideal setting for love\u2014the moon witnesses and blesses romantic union.",
+      "confidence": "high"
+    },
+    {
+      "id": "midsummer-4-1-1",
+      "text": "I pray thee, gentle mortal, sing again: mine ear is much enamour'd of thy note.",
+      "source": {
+        "play": "A Midsummer Night's Dream",
+        "act": 4,
+        "scene": 1,
+        "lineStart": 1,
+        "lineEnd": 2
+      },
+      "speaker": "Titania",
+      "weatherState": "foggy",
+      "timeOfDay": "night",
+      "intensity": 0.5,
+      "elements": [
+        "mist",
+        "magical fog",
+        "enchantment"
+      ],
+      "mood": "enchantment",
+      "context": "Titania, bewitched, courts the transformed Bottom in the enchanted forest. Mist surrounds the magical space.",
+      "annotation": "Fog as the atmosphere of magic\u2014when visibility is obscured, the impossible becomes possible.",
+      "confidence": "medium"
+    },
+    {
+      "id": "taming-shrew-1-1-1",
+      "text": "Such duty as the subject owes the prince even such a woman oweth to her husband; and when she is froward, peevish, sullen, sour, and not obedient to his honest will, what is she but a foul contending rebel and graceless traitor to her loving lord?",
+      "source": {
+        "play": "The Taming of the Shrew",
+        "act": 5,
+        "scene": 2,
+        "lineStart": 144,
+        "lineEnd": 149
+      },
+      "speaker": "Katherina",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.3,
+      "elements": [
+        "daylight clarity"
+      ],
+      "mood": "resolution",
+      "context": "Katherina delivers her final speech on wifely duty. The resolution is clear, if contested.",
+      "annotation": "The clarity of day frames the play's problematic conclusion\u2014visibility does not guarantee agreement.",
+      "confidence": "medium"
+    },
+    {
+      "id": "tempest-5-1-306",
+      "text": "We are such stuff as dreams are made on, and our little life is rounded with a sleep.",
+      "source": {
+        "play": "The Tempest",
+        "act": 4,
+        "scene": 1,
+        "lineStart": 156,
+        "lineEnd": 157
+      },
+      "speaker": "Prospero",
+      "weatherState": "partly-cloudy",
+      "timeOfDay": "afternoon",
+      "intensity": 0.4,
+      "elements": [
+        "afternoon light",
+        "passing clouds"
+      ],
+      "mood": "philosophy",
+      "context": "Prospero's meditation on the insubstantiality of life and magic. The transience is meteorological.",
+      "annotation": "Clouds drifting across afternoon sky\u2014the image perfectly captures Prospero's theme of ephemerality and dissolution.",
+      "confidence": "high"
+    },
+    {
+      "id": "measure-for-measure-4-3-1",
+      "text": "Every true man's apparel fits your thief: if nothing you borrow man's apparel loses none of his modesty.",
+      "source": {
+        "play": "Measure for Measure",
+        "act": 4,
+        "scene": 3,
+        "lineStart": 1,
+        "lineEnd": 2
+      },
+      "speaker": "Pompey",
+      "weatherState": "overcast",
+      "timeOfDay": "day",
+      "intensity": 0.5,
+      "elements": [
+        "gray day",
+        "shadows",
+        "ambiguity"
+      ],
+      "mood": "irony",
+      "context": "In the prison, Pompey comments on the indistinguishability of true and false. The play's moral overcast persists.",
+      "annotation": "Overcast day mirrors moral ambiguity\u2014in Measure for Measure, clarity is rarely available.",
+      "confidence": "medium"
+    },
+    {
+      "id": "two-gentlemen-2-4-1",
+      "text": "The wolf no longer howls when he doth hear the lion's roar: I am more constant than the changing moon.",
+      "source": {
+        "play": "The Two Gentlemen of Verona",
+        "act": 2,
+        "scene": 4,
+        "lineStart": 1,
+        "lineEnd": 2
+      },
+      "speaker": "Proteus",
+      "weatherState": "night-clear",
+      "timeOfDay": "night",
+      "intensity": 0.4,
+      "elements": [
+        "moonlight",
+        "stars",
+        "night clarity"
+      ],
+      "mood": "devotion",
+      "context": "Proteus swears constancy to Julia under the night sky. His vow is false but the night is clear.",
+      "annotation": "Clear night as witness to broken vows\u2014the stars illuminate hypocrisy without judgment.",
+      "confidence": "medium"
+    },
+    {
+      "id": "loves-labours-lost-5-2-899",
+      "text": "The words of Mercury are harsh after the songs of Apollo.",
+      "source": {
+        "play": "Love's Labour's Lost",
+        "act": 5,
+        "scene": 2,
+        "lineStart": 926,
+        "lineEnd": 926
+      },
+      "speaker": "Armado",
+      "weatherState": "overcast",
+      "timeOfDay": "evening",
+      "intensity": 0.5,
+      "elements": [
+        "fading light",
+        "chill"
+      ],
+      "mood": "melancholy",
+      "context": "The play ends with unexpected news of death. The brightness of the court's play is darkened by reality.",
+      "annotation": "The shift from song to harsh words mirrors the shift from clear day to overcast evening\u2014beauty is temporary.",
+      "confidence": "medium"
+    },
+    {
+      "id": "much-ado-2-1-1",
+      "text": "Good Signior Leonato, I hear from my cousin they have very much commission'd Claudio to his advantage; but he hath a kind of merry war with Signior Benedick; they set them down when all the heat is in it to try mastery with rapiers of compliment.",
+      "source": {
+        "play": "Much Ado About Nothing",
+        "act": 2,
+        "scene": 1,
+        "lineStart": 1,
+        "lineEnd": 3
+      },
+      "speaker": "Antonio",
+      "weatherState": "partly-cloudy",
+      "timeOfDay": "day",
+      "intensity": 0.3,
+      "elements": [
+        "pleasant day",
+        "light breeze"
+      ],
+      "mood": "festivity",
+      "context": "At a Messina garden party, the weather is pleasant for courtship and wit. The day itself is hospitable.",
+      "annotation": "Mixed weather\u2014partly cloudy\u2014suits a play of mixed comedy and romance, where light and shadow alternate.",
+      "confidence": "medium"
+    },
+    {
+      "id": "lear-1.4.1",
+      "text": "How sharper than a serpent's tooth it is / To have a thankless child!",
+      "source": {
+        "play": "King Lear",
+        "act": 1,
+        "scene": 4,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "LEAR",
+      "weatherState": "overcast",
+      "timeOfDay": "day",
+      "intensity": 0.3,
+      "elements": [
+        "emotional turmoil"
+      ],
+      "mood": "rage",
+      "context": "Lear's emotional storm begins; figurative language of emotional weather",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "lear-1.5.1",
+      "text": "O, let me not be mad, not mad, sweet heaven!",
+      "source": {
+        "play": "King Lear",
+        "act": 1,
+        "scene": 5,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "LEAR",
+      "weatherState": "overcast",
+      "timeOfDay": "evening",
+      "intensity": 0.4,
+      "elements": [
+        "despair"
+      ],
+      "mood": "foreboding",
+      "context": "Lear begins to lose control; external storm approaching",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "lear-2.4.1",
+      "text": "O, fool, I shall go mad!",
+      "source": {
+        "play": "King Lear",
+        "act": 2,
+        "scene": 4,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "LEAR",
+      "weatherState": "overcast",
+      "timeOfDay": "evening",
+      "intensity": 0.5,
+      "elements": [
+        "wind"
+      ],
+      "mood": "foreboding",
+      "context": "Lear exits into the night; storm about to break",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "lear-3.1.1",
+      "text": "Blow, winds, and crack your cheeks! Rage, blow!",
+      "source": {
+        "play": "King Lear",
+        "act": 3,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "LEAR",
+      "weatherState": "stormy",
+      "timeOfDay": "night",
+      "intensity": 0.9,
+      "elements": [
+        "wind",
+        "rain"
+      ],
+      "mood": "rage",
+      "context": "Peak storm - Lear's opening command to the elements",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "lear-3.1.2",
+      "text": "You cataracts and hurricanoes, spout / Till you have drench'd our steeples, drown'd the cocks!",
+      "source": {
+        "play": "King Lear",
+        "act": 3,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "LEAR",
+      "weatherState": "stormy",
+      "timeOfDay": "night",
+      "intensity": 1.0,
+      "elements": [
+        "rain",
+        "wind",
+        "water"
+      ],
+      "mood": "rage",
+      "context": "Lear demands a deluge; explicit storm imagery",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "lear-3.1.3",
+      "text": "You sulphurous and thought-executing fires, / Vaunt-couriers to oak-cleaving thunderbolts, / Singe my white head!",
+      "source": {
+        "play": "King Lear",
+        "act": 3,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "LEAR",
+      "weatherState": "stormy",
+      "timeOfDay": "night",
+      "intensity": 1.0,
+      "elements": [
+        "lightning",
+        "thunder",
+        "fire"
+      ],
+      "mood": "rage",
+      "context": "Thunder and lightning explicitly invoked; cosmic rage",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "lear-3.1.4",
+      "text": "Crack nature's moulding moulds, all germens spill / That make ingrateful man!",
+      "source": {
+        "play": "King Lear",
+        "act": 3,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "LEAR",
+      "weatherState": "stormy",
+      "timeOfDay": "night",
+      "intensity": 0.9,
+      "elements": [
+        "destruction"
+      ],
+      "mood": "madness",
+      "context": "Lear's rage becomes cosmic; storm as metaphor for destroying ungrateful humans",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "lear-3.1.5",
+      "text": "Rumble thy bellyful! Spit, fire! spout, rain!",
+      "source": {
+        "play": "King Lear",
+        "act": 3,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "LEAR",
+      "weatherState": "stormy",
+      "timeOfDay": "night",
+      "intensity": 1.0,
+      "elements": [
+        "fire",
+        "rain",
+        "thunder"
+      ],
+      "mood": "madness",
+      "context": "Lear addresses the storm directly; literal precipitation and fire",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "lear-3.1.6",
+      "text": "O! that this too, too solid flesh would melt, / Thaw and resolve itself into a dew!",
+      "source": {
+        "play": "King Lear",
+        "act": 3,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "KENT",
+      "weatherState": "rainy",
+      "timeOfDay": "night",
+      "intensity": 0.6,
+      "elements": [
+        "rain",
+        "dew"
+      ],
+      "mood": "despair",
+      "context": "Kent's poetic response to the storm; dissolving into moisture",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "lear-3.3.1",
+      "text": "The king comes out of his madness to find no shelter; he rages with the weather",
+      "source": {
+        "play": "King Lear",
+        "act": 3,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "[Scene direction]",
+      "weatherState": "stormy",
+      "timeOfDay": "night",
+      "intensity": 0.9,
+      "elements": [
+        "wind",
+        "rain"
+      ],
+      "mood": "madness",
+      "context": "Continuing storm; Gloucester plans rescue",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "lear-3.6.1",
+      "text": "The foul fiend bites my back!",
+      "source": {
+        "play": "King Lear",
+        "act": 3,
+        "scene": 6,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "EDGAR",
+      "weatherState": "stormy",
+      "timeOfDay": "night",
+      "intensity": 0.7,
+      "elements": [
+        "storm",
+        "wind"
+      ],
+      "mood": "madness",
+      "context": "Edgar's madness; storm-influenced visions",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "lear-3.6.2",
+      "text": "Pray, innocent, and beware the foul fiend!",
+      "source": {
+        "play": "King Lear",
+        "act": 3,
+        "scene": 6,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "EDGAR",
+      "weatherState": "stormy",
+      "timeOfDay": "night",
+      "intensity": 0.6,
+      "elements": [
+        "darkness"
+      ],
+      "mood": "madness",
+      "context": "Storm brings out madness in both Lear and Edgar",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "lear-4.1.1",
+      "text": "The worst is not / So long as we can say 'This is the worst.'",
+      "source": {
+        "play": "King Lear",
+        "act": 4,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "EDGAR",
+      "weatherState": "partly-cloudy",
+      "timeOfDay": "dawn",
+      "intensity": 0.5,
+      "elements": [
+        "light returning"
+      ],
+      "mood": "despair",
+      "context": "Transition from storm; dawn breaking",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "lear-4.6.1",
+      "text": "There is a cliff, whose high and bending head / Looks fearfully in the confined deep.",
+      "source": {
+        "play": "King Lear",
+        "act": 4,
+        "scene": 6,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "EDGAR",
+      "weatherState": "overcast",
+      "timeOfDay": "day",
+      "intensity": 0.6,
+      "elements": [
+        "wind",
+        "height"
+      ],
+      "mood": "despair",
+      "context": "Gloucester's supposed cliff; atmospheric description",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "lear-4.6.2",
+      "text": "How fearful / And dizzy 'tis to cast one's eyes so low!",
+      "source": {
+        "play": "King Lear",
+        "act": 4,
+        "scene": 6,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "EDGAR",
+      "weatherState": "overcast",
+      "timeOfDay": "day",
+      "intensity": 0.5,
+      "elements": [
+        "height",
+        "wind"
+      ],
+      "mood": "despair",
+      "context": "Atmospheric vertigo; but the cliff is illusory",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "lear-4.6.3",
+      "text": "There's a knell, methinks, / Struck from the world of dead.",
+      "source": {
+        "play": "King Lear",
+        "act": 4,
+        "scene": 6,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "[description]",
+      "weatherState": "overcast",
+      "timeOfDay": "day",
+      "intensity": 0.4,
+      "elements": [
+        "mist",
+        "fog"
+      ],
+      "mood": "foreboding",
+      "context": "Fog/mist imagery in the recovered scene",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "lear-4.7.2",
+      "text": "You do me wrong / To take me out o' the grave: / Thou art a soul in bliss; but I am bound / Upon a wheel of fire, that mine own tears / Do scald like molten lead.",
+      "source": {
+        "play": "King Lear",
+        "act": 4,
+        "scene": 7,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "LEAR",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.6,
+      "elements": [
+        "fire",
+        "heat",
+        "tears"
+      ],
+      "mood": "despair",
+      "context": "Lear's emotional pain expressed as heat/fire; recovery moment",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "lear-5.3.2",
+      "text": "Come, let's away to prison: / We two alone will sing like birds i' the cage: / When thou dost ask me blessing, I'll kneel down, / And ask of thee forgiveness.",
+      "source": {
+        "play": "King Lear",
+        "act": 5,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "LEAR",
+      "weatherState": "clear",
+      "timeOfDay": "evening",
+      "intensity": 0.1,
+      "elements": [
+        "peace"
+      ],
+      "mood": "tenderness",
+      "context": "Lear and Cordelia's moment of grace; birdcage as refuge",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "lear-5.3.4",
+      "text": "And my poor fool is hang'd! No, no, no life! / Why should a dog, a horse, a rat, have life, / And thou no breath at all?",
+      "source": {
+        "play": "King Lear",
+        "act": 5,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "LEAR",
+      "weatherState": "overcast",
+      "timeOfDay": "evening",
+      "intensity": 1.0,
+      "elements": [
+        "darkness"
+      ],
+      "mood": "despair",
+      "context": "Lear's final despair; emotional darkness absolute",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "tempest-2.1.1",
+      "text": "the air breathes upon us here most sweetly",
+      "source": {
+        "play": "The Tempest",
+        "act": 2,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "GONZALO",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.4,
+      "elements": [
+        "air",
+        "wind"
+      ],
+      "mood": "tenderness",
+      "context": "Island air is pleasant contrast to storm",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "tempest-3.1.1",
+      "text": "There be some sports are painful; and their labour Delight in them sets off",
+      "source": {
+        "play": "The Tempest",
+        "act": 3,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "FERDINAND",
+      "weatherState": "partly-cloudy",
+      "timeOfDay": "day",
+      "intensity": 0.5,
+      "elements": [
+        "sun"
+      ],
+      "mood": "tenderness",
+      "context": "Romantic scene as weather shifts from storm",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "tempest-3.3.1",
+      "text": "Thunder and lightning. Enter ARIEL, like a harpy",
+      "source": {
+        "play": "The Tempest",
+        "act": 3,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": null,
+      "weatherState": "stormy",
+      "timeOfDay": "day",
+      "intensity": 0.9,
+      "elements": [
+        "thunder",
+        "lightning"
+      ],
+      "mood": "foreboding",
+      "context": "Supernatural storm/apparition sent by Prospero",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "stage-direction"
+    },
+    {
+      "id": "tempest-3.3.2",
+      "text": "There is another tempest coming",
+      "source": {
+        "play": "The Tempest",
+        "act": 3,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "ARIEL",
+      "weatherState": "stormy",
+      "timeOfDay": "day",
+      "intensity": 0.7,
+      "elements": [
+        "wind"
+      ],
+      "mood": "foreboding",
+      "context": "Metaphorical storm - approaching crisis/judgment",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "scottish-1.1.1",
+      "text": "When shall we three meet again In thunder, lightning, or in rain?",
+      "source": {
+        "play": "The Scottish Play",
+        "act": 1,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "First Witch",
+      "weatherState": "stormy",
+      "timeOfDay": "null",
+      "intensity": 0.9,
+      "elements": [
+        "thunder",
+        "lightning",
+        "rain"
+      ],
+      "mood": "supernatural",
+      "context": "Witches establish thunder as meeting place - weather as supernatural medium",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "scottish-1.1.2",
+      "text": "Fair is foul, and foul is fair: Hover through the fog and filthy air.",
+      "source": {
+        "play": "The Scottish Play",
+        "act": 1,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "ALL",
+      "weatherState": "overcast",
+      "timeOfDay": "night",
+      "intensity": 0.8,
+      "elements": [
+        "fog"
+      ],
+      "mood": "supernatural",
+      "context": "Witches' flight through fog - moral inversion with weather imagery",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "scottish-1.1.3",
+      "text": "[Thunder and lightning. Enter three Witches]",
+      "source": {
+        "play": "The Scottish Play",
+        "act": 1,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "Stage Direction",
+      "weatherState": "stormy",
+      "timeOfDay": "null",
+      "intensity": 0.95,
+      "elements": [
+        "thunder",
+        "lightning"
+      ],
+      "mood": "supernatural",
+      "context": "Opening stage direction establishes supernatural storm",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "stage-direction"
+    },
+    {
+      "id": "scottish-1.3.1",
+      "text": "So foul and fair a day I have not seen",
+      "source": {
+        "play": "The Scottish Play",
+        "act": 1,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "Macbeth",
+      "weatherState": "partly-cloudy",
+      "timeOfDay": "day",
+      "intensity": 0.6,
+      "elements": [],
+      "mood": "foreboding",
+      "context": "KEY: Macbeth echoes witches' 'fair is foul' - day is fair (victory) yet foul (prophecy)",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "scottish-2.3.2",
+      "text": "A falcon, towering in her pride of place, Was by a mousing owl hawk'd down",
+      "source": {
+        "play": "The Scottish Play",
+        "act": 2,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "Old Man",
+      "weatherState": "overcast",
+      "timeOfDay": "day",
+      "intensity": 0.7,
+      "elements": [],
+      "mood": "supernatural",
+      "context": "Unnatural inversion - darkness at day suggesting supernatural upheaval",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "scottish-3.2.1",
+      "text": "Light thickens, and the crow makes wing to th' rooky wood",
+      "source": {
+        "play": "The Scottish Play",
+        "act": 3,
+        "scene": 2,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "Lady Macbeth",
+      "weatherState": "overcast",
+      "timeOfDay": "dusk",
+      "intensity": 0.7,
+      "elements": [
+        "darkness"
+      ],
+      "mood": "foreboding",
+      "context": "Thickening light as dusk - preparing for another murder",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "scottish-3.4.1",
+      "text": "The table's full. ... There's blood upon his face.",
+      "source": {
+        "play": "The Scottish Play",
+        "act": 3,
+        "scene": 4,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "Macbeth",
+      "weatherState": "overcast",
+      "timeOfDay": "night",
+      "intensity": 0.8,
+      "elements": [
+        "darkness"
+      ],
+      "mood": "dread",
+      "context": "Supernatural manifestation within darkness",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "scottish-4.1.1",
+      "text": "When shall we three meet again In thunder, lightning, or in rain?",
+      "source": {
+        "play": "The Scottish Play",
+        "act": 4,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "Witches",
+      "weatherState": "stormy",
+      "timeOfDay": "null",
+      "intensity": 0.95,
+      "elements": [
+        "thunder",
+        "lightning",
+        "rain"
+      ],
+      "mood": "supernatural",
+      "context": "Witches return to thunder - their supernatural medium",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "scottish-4.1.2",
+      "text": "A drum, a drum! Macbeth doth come. ... Thunder.",
+      "source": {
+        "play": "The Scottish Play",
+        "act": 4,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "Stage Direction",
+      "weatherState": "stormy",
+      "timeOfDay": "null",
+      "intensity": 0.9,
+      "elements": [
+        "thunder"
+      ],
+      "mood": "supernatural",
+      "context": "Thunder announces Macbeth's arrival at witches' cauldron",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "stage-direction"
+    },
+    {
+      "id": "scottish-5.1.1",
+      "text": "Light! light! Out, damned spot! Out, I say!",
+      "source": {
+        "play": "The Scottish Play",
+        "act": 5,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "Lady Macbeth",
+      "weatherState": "night-stormy",
+      "timeOfDay": "night",
+      "intensity": 0.8,
+      "elements": [
+        "darkness"
+      ],
+      "mood": "dread",
+      "context": "Sleepwalking in darkness - moral darkness made literal",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "midsummer-2.2.1",
+      "text": "Through the forest have I gone, / But Athenian found I none / On whose eyes I might approve / This flower's force in stirring love",
+      "source": {
+        "play": "A Midsummer Night's Dream",
+        "act": 2,
+        "scene": 2,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "PUCK",
+      "weatherState": "foggy",
+      "timeOfDay": "night",
+      "intensity": 0.5,
+      "elements": [
+        "fog",
+        "darkness"
+      ],
+      "mood": "supernatural",
+      "context": "Puck wandering the dark forest \u2014 disorientation and fairy magic in murky night. Fills foggy\u00d7supernatural.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "midsummer-2.2.3",
+      "text": "You spotted snakes with double tongue, / Thorny hedgehogs, be not seen; / Newts and blind-worms, do no wrong, / Come not near our fairy queen",
+      "source": {
+        "play": "A Midsummer Night's Dream",
+        "act": 2,
+        "scene": 2,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "FAIRY [chorus]",
+      "weatherState": "clear",
+      "timeOfDay": "night",
+      "intensity": 0.4,
+      "elements": [
+        "moonlight",
+        "stillness",
+        "dew"
+      ],
+      "mood": "calm",
+      "context": "Fairy lullaby \u2014 protective charm over a moonlit clearing. Calm night atmosphere.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "midsummer-5.1.1",
+      "text": "Now the hungry lion roars, / And the wolf behowls the moon; / Whilst the heavy ploughman snores, / All with weary task fordone.",
+      "source": {
+        "play": "A Midsummer Night's Dream",
+        "act": 5,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "PUCK",
+      "weatherState": "clear",
+      "timeOfDay": "night",
+      "intensity": 0.7,
+      "elements": [
+        "moonlight"
+      ],
+      "mood": "foreboding",
+      "context": "Puck's night-poem \u2014 predators under a clear moon. Foreboding beneath apparent calm.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "midsummer-5.1.2",
+      "text": "Now the wasted brands do glow, / Whilst the screech-owl, screeching loud, / Puts the wretch that lies in woe / In remembrance of a shroud.",
+      "source": {
+        "play": "A Midsummer Night's Dream",
+        "act": 5,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "PUCK",
+      "weatherState": "clear",
+      "timeOfDay": "night",
+      "intensity": 0.6,
+      "elements": [
+        "darkness",
+        "embers"
+      ],
+      "mood": "dread",
+      "context": "Death imagery under a clear night sky \u2014 screech-owl and shrouds. Fills clear\u00d7dread.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "midsummer-5.1.3",
+      "text": "Now it is the time of night / That the graves all gaping wide, / Every one lets forth his sprite, / In the churchyard paths to glide",
+      "source": {
+        "play": "A Midsummer Night's Dream",
+        "act": 5,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "PUCK",
+      "weatherState": "foggy",
+      "timeOfDay": "night",
+      "intensity": 0.7,
+      "elements": [
+        "fog",
+        "darkness"
+      ],
+      "mood": "supernatural",
+      "context": "Ghosts in the churchyard \u2014 foggy night, spectral atmosphere. Deepens foggy\u00d7supernatural.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "midsummer-5.1.4",
+      "text": "And we fairies, that do run / By the triple Hecate's team, / From the presence of the sun, / Following darkness like a dream",
+      "source": {
+        "play": "A Midsummer Night's Dream",
+        "act": 5,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "PUCK",
+      "weatherState": "clear",
+      "timeOfDay": "night",
+      "intensity": 0.6,
+      "elements": [
+        "moonlight",
+        "darkness"
+      ],
+      "mood": "supernatural",
+      "context": "Fairies following darkness \u2014 Hecate's moonlight domain. Extends clear\u00d7supernatural.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "midsummer-5.1.5",
+      "text": "Through the house give glimmering light, / By the dead and drowsy fire; / Every elf and fairy sprite / Hop as light as bird from brier",
+      "source": {
+        "play": "A Midsummer Night's Dream",
+        "act": 5,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "OBERON",
+      "weatherState": "clear",
+      "timeOfDay": "night",
+      "intensity": 0.4,
+      "elements": [
+        "moonlight",
+        "embers"
+      ],
+      "mood": "tenderness",
+      "context": "Oberon's blessing of the house \u2014 gentle fairy light, warm resolution",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "midsummer-5.1.6",
+      "text": "Now, until the break of day, / Through this house each fairy stray. / To the best bride-bed will we, / Which by us shall blessed be",
+      "source": {
+        "play": "A Midsummer Night's Dream",
+        "act": 5,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "OBERON",
+      "weatherState": "clear",
+      "timeOfDay": "pre-dawn",
+      "intensity": 0.3,
+      "elements": [
+        "moonlight",
+        "stillness"
+      ],
+      "mood": "reconciliation",
+      "context": "Fairies bless the wedding house until dawn \u2014 full reconciliation of supernatural and mortal worlds. Fills pre-dawn.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "midsummer-3.1.1",
+      "text": "Pat, pat; and here's a marvellous convenient place for our rehearsal. This green plot shall be our stage, this hawthorn-brake our tiring-house",
+      "source": {
+        "play": "A Midsummer Night's Dream",
+        "act": 3,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "QUINCE",
+      "weatherState": "clear",
+      "timeOfDay": "evening",
+      "intensity": 0.3,
+      "elements": [
+        "moonlight"
+      ],
+      "mood": "calm",
+      "context": "Mechanicals choosing their moonlit rehearsal spot \u2014 ordinary mortals in an enchanted clearing",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "midsummer-3.1.2",
+      "text": "But there is two hard things: that is, to bring the moonlight into a chamber; for, you know, Pyramus and Thisbe meet by moonlight.",
+      "source": {
+        "play": "A Midsummer Night's Dream",
+        "act": 3,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "QUINCE",
+      "weatherState": "clear",
+      "timeOfDay": "evening",
+      "intensity": 0.4,
+      "elements": [
+        "moonlight"
+      ],
+      "mood": "calm",
+      "context": "Meta-theatrical moonlight \u2014 the mechanicals debate how to stage weather they're standing in",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "winter-1.2.1",
+      "text": "Too hot, too hot! / To mingle friendship far is mingling bloods.",
+      "source": {
+        "play": "The Winter's Tale",
+        "act": 1,
+        "scene": 2,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "LEONTES",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.3,
+      "elements": [
+        "heat"
+      ],
+      "mood": "foreboding",
+      "context": "Jealousy ignites in a calm court \u2014 'too hot' is emotional, not meteorological, but the heat/fever imagery sets a mood against a clear, public day",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "winter-2.1.1",
+      "text": "There may be in the cup / A spider steep'd, and one may drink, depart, / And yet partake no venom, for his knowledge / Is not infected",
+      "source": {
+        "play": "The Winter's Tale",
+        "act": 2,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "LEONTES",
+      "weatherState": "overcast",
+      "timeOfDay": "day",
+      "intensity": 0.4,
+      "elements": [],
+      "mood": "dread",
+      "context": "Poison-in-the-cup metaphor \u2014 the dread of invisible contamination. No weather, but the atmosphere is thick with suspicion.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "winter-2.3.1",
+      "text": "Nor night nor day no rest: it is but weakness / To bear the matter thus; mere weakness.",
+      "source": {
+        "play": "The Winter's Tale",
+        "act": 2,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "LEONTES",
+      "weatherState": "overcast",
+      "timeOfDay": "night",
+      "intensity": 0.5,
+      "elements": [
+        "sleeplessness"
+      ],
+      "mood": "madness",
+      "context": "Leontes sleepless \u2014 day and night collapse into one unbroken grey. Insomnia as atmospheric state.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "winter-3.2.2",
+      "text": "The stars, I see, will kiss the valleys first: / The odds for high and low's alike.",
+      "source": {
+        "play": "The Winter's Tale",
+        "act": 3,
+        "scene": 2,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "PAULINA",
+      "weatherState": "clear",
+      "timeOfDay": "night",
+      "intensity": 0.3,
+      "elements": [
+        "stars"
+      ],
+      "mood": "despair",
+      "context": "Paulina's cosmic image \u2014 the impossible (stars kissing valleys) as figure for absurd injustice. Clear skies, but no comfort in them.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "winter-5.3.1",
+      "text": "O, she's warm! / If this be magic, let it be an art / Lawful as eating.",
+      "source": {
+        "play": "The Winter's Tale",
+        "act": 5,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "LEONTES",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.4,
+      "elements": [
+        "warmth"
+      ],
+      "mood": "reconciliation",
+      "context": "The statue of Hermione is warm \u2014 winter ends. 'Warm' is the play's final weather word, reversing the 16 years of cold.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "winter-5.3.2",
+      "text": "If she pertain to life let her speak too.",
+      "source": {
+        "play": "The Winter's Tale",
+        "act": 5,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "PAULINA",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.3,
+      "elements": [
+        "stillness",
+        "warmth"
+      ],
+      "mood": "supernatural",
+      "context": "The held breath before Hermione speaks \u2014 clear, still, uncanny. Supernatural not as storm but as impossible warmth.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "winter-5.3.3",
+      "text": "You gods, look down / And from your sacred vials pour your graces / Upon my daughter's head!",
+      "source": {
+        "play": "The Winter's Tale",
+        "act": 5,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "HERMIONE",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.3,
+      "elements": [],
+      "mood": "tenderness",
+      "context": "Hermione's first words in 16 years \u2014 a mother's blessing poured down like rain, but the weather is clear. Grace, not precipitation.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "winter-5.1.2",
+      "text": "Stars, stars, / And all eyes else dead coals!",
+      "source": {
+        "play": "The Winter's Tale",
+        "act": 5,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "LEONTES",
+      "weatherState": "clear",
+      "timeOfDay": "night",
+      "intensity": 0.4,
+      "elements": [
+        "stars"
+      ],
+      "mood": "despair",
+      "context": "Leontes on Hermione's eyes \u2014 stars vs. dead coals. The night sky is the only thing bright enough for the comparison. Grief made cosmic.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "winter-3.2.4",
+      "text": "What studied torments, tyrant, hast for me? / What wheels? racks? fires? What flaying? boiling / In leads or oils?",
+      "source": {
+        "play": "The Winter's Tale",
+        "act": 3,
+        "scene": 2,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "PAULINA",
+      "weatherState": "overcast",
+      "timeOfDay": "day",
+      "intensity": 0.5,
+      "elements": [
+        "heat"
+      ],
+      "mood": "rage",
+      "context": "Paulina rages at Leontes after Hermione's collapse \u2014 the heat imagery (fires, boiling, leads) is of torture, not weather, but the emotional atmosphere is scalding.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "winter-5.3.4",
+      "text": "Music, awake her; strike! / 'Tis time; descend; be stone no more; approach; / Strike all that look upon with marvel.",
+      "source": {
+        "play": "The Winter's Tale",
+        "act": 5,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "PAULINA",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.5,
+      "elements": [
+        "stillness"
+      ],
+      "mood": "supernatural",
+      "context": "Paulina commands the statue to live \u2014 'be stone no more' inverts winter. The atmosphere is held, crystalline, then breaks into warmth.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "winter-2.1.3",
+      "text": "A sad tale's best for winter: I have one / Of sprites and goblins.",
+      "source": {
+        "play": "The Winter's Tale",
+        "act": 2,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "MAMILLIUS",
+      "weatherState": "snowy",
+      "timeOfDay": "evening",
+      "intensity": 0.5,
+      "elements": [
+        "cold"
+      ],
+      "mood": "foreboding",
+      "context": "The play names itself \u2014 a winter's tale needs winter weather. Mamillius' innocent ghost story is the play's own frame: cold evening, sprites, sadness to come.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "caesar-1.3.1",
+      "text": "Are not you moved, when all the sway of earth / Shakes like a thing unfirm? O Cicero, / I have seen tempests, when the scolding winds / Have rived the knotty oaks",
+      "source": {
+        "play": "Julius Caesar",
+        "act": 1,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "CASCA",
+      "weatherState": "stormy",
+      "timeOfDay": "night",
+      "intensity": 0.9,
+      "elements": [
+        "wind",
+        "thunder",
+        "lightning"
+      ],
+      "mood": "dread",
+      "context": "Casca opens the prodigy scene \u2014 literal storm, the earth shaking. He's a soldier who's seen storms before; this one is different.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "caesar-1.3.2",
+      "text": "And I have seen / The ambitious ocean swell and rage and foam, / To be exalted with the threatening clouds: / But never till to-night, never till now, / Did I go through a tempest dropping fire.",
+      "source": {
+        "play": "Julius Caesar",
+        "act": 1,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "CASCA",
+      "weatherState": "stormy",
+      "timeOfDay": "night",
+      "intensity": 1.0,
+      "elements": [
+        "fire",
+        "lightning",
+        "wind",
+        "rain"
+      ],
+      "mood": "supernatural",
+      "context": "A tempest dropping fire \u2014 beyond natural weather. Casca distinguishes this from ordinary storms. Fire falling from the sky is prodigy, not meteorology.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "caesar-1.3.3",
+      "text": "A common slave \u2014 you know him well by sight \u2014 / Held up his left hand, which did flame and burn / Like twenty torches join'd, and yet his hand, / Not sensible of fire, remain'd unscorch'd.",
+      "source": {
+        "play": "Julius Caesar",
+        "act": 1,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "CASCA",
+      "weatherState": "stormy",
+      "timeOfDay": "night",
+      "intensity": 0.8,
+      "elements": [
+        "fire",
+        "lightning"
+      ],
+      "mood": "supernatural",
+      "context": "St. Elmo's fire on a slave's hand \u2014 the storm produces impossible phenomena. Weather as portent, not just weather.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "caesar-1.3.4",
+      "text": "Besides \u2014 I ha' not since put up my sword \u2014 / Against the Capitol I met a lion, / Who glared upon me, and went surly by, / Without annoying me",
+      "source": {
+        "play": "Julius Caesar",
+        "act": 1,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "CASCA",
+      "weatherState": "stormy",
+      "timeOfDay": "night",
+      "intensity": 0.6,
+      "elements": [
+        "thunder"
+      ],
+      "mood": "supernatural",
+      "context": "A lion loose in Rome during the storm \u2014 nature's order inverted. The storm is background here; the prodigy is in the foreground.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "caesar-1.3.5",
+      "text": "And yesterday the bird of night did sit / Even at noon-day upon the market-place, / Hooting and shrieking.",
+      "source": {
+        "play": "Julius Caesar",
+        "act": 1,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "CASCA",
+      "weatherState": "overcast",
+      "timeOfDay": "day",
+      "intensity": 0.5,
+      "elements": [
+        "darkness"
+      ],
+      "mood": "supernatural",
+      "context": "An owl at noon \u2014 daytime darkness, natural order reversed. This is yesterday's prodigy, not tonight's storm, and implies an overcast day dark enough for an owl.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "caesar-1.3.6",
+      "text": "When these prodigies / Do so conjointly meet, let not men say / 'These are their reasons; they are natural;' / For, I believe, they are portentous things / Unto the climate that they point upon.",
+      "source": {
+        "play": "Julius Caesar",
+        "act": 1,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "CASCA",
+      "weatherState": "stormy",
+      "timeOfDay": "night",
+      "intensity": 0.7,
+      "elements": [
+        "thunder",
+        "lightning"
+      ],
+      "mood": "dread",
+      "context": "Casca insists the storm is not natural \u2014 portentous to 'the climate,' meaning both weather and political state. The pun is the play's thesis.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "caesar-1.3.7",
+      "text": "Indeed, it is a strange-disposed time: / But men may construe things after their fashion, / Clean from the purpose of the things themselves.",
+      "source": {
+        "play": "Julius Caesar",
+        "act": 1,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "CICERO",
+      "weatherState": "stormy",
+      "timeOfDay": "night",
+      "intensity": 0.4,
+      "elements": [
+        "thunder"
+      ],
+      "mood": "calm",
+      "context": "Cicero's skepticism \u2014 the storm is real but its meaning is not fixed. The calmest voice in the play's wildest weather. A philosopher standing in rain.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "caesar-1.3.8",
+      "text": "Now could I, Casca, name to thee a man / Most like this dreadful night, / That thunders, lightens, opens graves, and roars / As doth the lion in the Capitol",
+      "source": {
+        "play": "Julius Caesar",
+        "act": 1,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "CASSIUS",
+      "weatherState": "stormy",
+      "timeOfDay": "night",
+      "intensity": 0.8,
+      "elements": [
+        "thunder",
+        "lightning"
+      ],
+      "mood": "rage",
+      "context": "Cassius reads the storm as Caesar \u2014 the man IS the dreadful night. Weather becomes political metaphor in the speaker's mouth, not the playwright's.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "caesar-1.3.9",
+      "text": "And why should Caesar be a tyrant then? / Poor man! I know he would not be a wolf, / But that he sees the Romans are but sheep",
+      "source": {
+        "play": "Julius Caesar",
+        "act": 1,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "CASSIUS",
+      "weatherState": "stormy",
+      "timeOfDay": "night",
+      "intensity": 0.4,
+      "elements": [
+        "thunder"
+      ],
+      "mood": "rage",
+      "context": "Cassius' contempt \u2014 still standing in the storm but now using it as backdrop for political argument. The thunder underscores but doesn't drive the speech.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "caesar-1.3.10",
+      "text": "For I have bared my bosom to the thunder-stone; / And when the cross blue lightning seem'd to open / The breast of heaven, I did present myself / Even in the aim and very flash of it.",
+      "source": {
+        "play": "Julius Caesar",
+        "act": 1,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "CASSIUS",
+      "weatherState": "stormy",
+      "timeOfDay": "night",
+      "intensity": 0.95,
+      "elements": [
+        "lightning",
+        "thunder"
+      ],
+      "mood": "madness",
+      "context": "Cassius baring his chest to lightning \u2014 not metaphor, he literally stood in the flash. Suicidal defiance of the storm. The intensity is earned: he made himself the storm's target.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "caesar-2.1.1",
+      "text": "I cannot, by the progress of the stars, / Give guess how near to day.",
+      "source": {
+        "play": "Julius Caesar",
+        "act": 2,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "BRUTUS",
+      "weatherState": "overcast",
+      "timeOfDay": "pre-dawn",
+      "intensity": 0.5,
+      "elements": [
+        "clouds",
+        "darkness"
+      ],
+      "mood": "foreboding",
+      "context": "Brutus can't see the stars \u2014 the storm clouds from I.iii still cover the sky. Pre-dawn, overcast, sleepless. He's trying to read the time and can't.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "caesar-2.1.2",
+      "text": "Since Cassius first did whet me against Caesar, / I have not slept. / Between the acting of a dreadful thing / And the first motion, all the interim is / Like a phantasma, or a hideous dream",
+      "source": {
+        "play": "Julius Caesar",
+        "act": 2,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "BRUTUS",
+      "weatherState": "overcast",
+      "timeOfDay": "pre-dawn",
+      "intensity": 0.5,
+      "elements": [
+        "darkness"
+      ],
+      "mood": "dread",
+      "context": "Brutus sleepless before the Ides \u2014 the interim between decision and action as hideous dream. Pre-dawn insomnia, the overcast hasn't broken.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "caesar-2.1.3",
+      "text": "The exhalations whizzing in the air / Give so much light that I may read by them.",
+      "source": {
+        "play": "Julius Caesar",
+        "act": 2,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "BRUTUS",
+      "weatherState": "stormy",
+      "timeOfDay": "pre-dawn",
+      "intensity": 0.6,
+      "elements": [
+        "lightning",
+        "meteors"
+      ],
+      "mood": "foreboding",
+      "context": "Brutus reads by lightning-flash or meteor light \u2014 the storm's remnants still producing unnatural illumination. He's reading the conspiracy letter by prodigy-light.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "caesar-2.1.4",
+      "text": "Here, as I point my sword, the sun arises, / Which is a great way growing on the south, / Weighing the youthful season of the year.",
+      "source": {
+        "play": "Julius Caesar",
+        "act": 2,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "DECIUS",
+      "weatherState": "partly-cloudy",
+      "timeOfDay": "dawn",
+      "intensity": 0.5,
+      "elements": [
+        "sunrise"
+      ],
+      "mood": "foreboding",
+      "context": "Decius points his sword at the rising sun \u2014 conspirators orient themselves by dawn. The storm has passed but the sky isn't fully clear; March dawn, early spring.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "caesar-2.1.5",
+      "text": "O conspiracy, / Shamest thou to show thy dangerous brow by night, / When evils are most free? O, then by day / Where wilt thou find a cavern dark enough / To mask thy monstrous visage?",
+      "source": {
+        "play": "Julius Caesar",
+        "act": 2,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "BRUTUS",
+      "weatherState": "overcast",
+      "timeOfDay": "pre-dawn",
+      "intensity": 0.5,
+      "elements": [
+        "darkness"
+      ],
+      "mood": "dread",
+      "context": "Conspiracy needs night's cover \u2014 Brutus addresses darkness as co-conspirator. The overcast pre-dawn is both literal (storm remnants) and moral.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "caesar-2.2.1",
+      "text": "Nor heaven nor earth have been at peace to-night: / Thrice hath Calpurnia in her sleep cried out, / 'Help, ho! they murder Caesar!'",
+      "source": {
+        "play": "Julius Caesar",
+        "act": 2,
+        "scene": 2,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "CAESAR",
+      "weatherState": "stormy",
+      "timeOfDay": "pre-dawn",
+      "intensity": 0.6,
+      "elements": [
+        "thunder"
+      ],
+      "mood": "dread",
+      "context": "Caesar confirms the storm lasted all night \u2014 'nor heaven nor earth at peace.' Calpurnia's cries blend with the thunder. Pre-dawn, storm still echoing.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "caesar-2.2.2",
+      "text": "A lioness hath whelped in the streets; / And graves have yawn'd, and yielded up their dead; / Fierce fiery warriors fought upon the clouds, / In ranks and squadrons and right form of war, / Which drizzled blood upon the Capitol",
+      "source": {
+        "play": "Julius Caesar",
+        "act": 2,
+        "scene": 2,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "CALPURNIA",
+      "weatherState": "stormy",
+      "timeOfDay": "pre-dawn",
+      "intensity": 0.95,
+      "elements": [
+        "fire",
+        "rain",
+        "blood"
+      ],
+      "mood": "supernatural",
+      "context": "Calpurnia catalogues the night's prodigies \u2014 warriors in the clouds drizzling blood. The storm has become eschatological. 'Drizzled blood' is weather vocabulary applied to the impossible.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "caesar-2.2.3",
+      "text": "When beggars die, there are no comets seen; / The heavens themselves blaze forth the death of princes.",
+      "source": {
+        "play": "Julius Caesar",
+        "act": 2,
+        "scene": 2,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "CALPURNIA",
+      "weatherState": "stormy",
+      "timeOfDay": "pre-dawn",
+      "intensity": 0.7,
+      "elements": [
+        "comets",
+        "fire"
+      ],
+      "mood": "dread",
+      "context": "Calpurnia's thesis: the storm is proportional to the death it foretells. Heavens blaze for princes. The weather is evidence, not backdrop.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "caesar-3.1.3",
+      "text": "O, pardon me, thou bleeding piece of earth, / That I am meek and gentle with these butchers! / Thou art the ruins of the noblest man / That ever lived in the tide of times.",
+      "source": {
+        "play": "Julius Caesar",
+        "act": 3,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "ANTONY",
+      "weatherState": "overcast",
+      "timeOfDay": "day",
+      "intensity": 0.4,
+      "elements": [],
+      "mood": "rage",
+      "context": "Antony alone with the body \u2014 'bleeding piece of earth' and 'tide of times' are elemental metaphors. Rage building under a controlled surface.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "caesar-3.1.4",
+      "text": "Domestic fury and fierce civil strife / Shall cumber all the parts of Italy; / Blood and destruction shall be so in use / And dreadful objects so familiar / That mothers shall but smile when they behold / Their infants quarter'd with the hands of war",
+      "source": {
+        "play": "Julius Caesar",
+        "act": 3,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "ANTONY",
+      "weatherState": "stormy",
+      "timeOfDay": "day",
+      "intensity": 0.7,
+      "elements": [
+        "blood"
+      ],
+      "mood": "violence",
+      "context": "Antony's prophecy of civil war \u2014 the storm from Act I returns as political forecast. 'Blood and destruction in use' is weather-as-new-normal.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "caesar-3.2.1",
+      "text": "If you have tears, prepare to shed them now.",
+      "source": {
+        "play": "Julius Caesar",
+        "act": 3,
+        "scene": 2,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "ANTONY",
+      "weatherState": "rainy",
+      "timeOfDay": "day",
+      "intensity": 0.3,
+      "elements": [
+        "tears"
+      ],
+      "mood": "despair",
+      "context": "Antony turning the crowd \u2014 tears as collective weather event. The Forum is outdoors; the rain is in the audience's eyes, not the sky, but the metaphor maps naturally.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "caesar-4.3.1",
+      "text": "There is a tide in the affairs of men, / Which, taken at the flood, leads on to fortune; / Omitted, all the voyage of their life / Is bound in shallows and in miseries.",
+      "source": {
+        "play": "Julius Caesar",
+        "act": 4,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "BRUTUS",
+      "weatherState": "partly-cloudy",
+      "timeOfDay": "evening",
+      "intensity": 0.4,
+      "elements": [
+        "tide",
+        "sea"
+      ],
+      "mood": "foreboding",
+      "context": "Brutus' tide metaphor \u2014 maritime weather as political philosophy. The weather is figurative but the image is precise: flood tide vs. shallows, fortune vs. misery.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "caesar-4.3.3",
+      "text": "How ill this taper burns! Ha! who comes here? / I think it is the weakness of mine eyes / That shapes this monstrous apparition.",
+      "source": {
+        "play": "Julius Caesar",
+        "act": 4,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "BRUTUS",
+      "weatherState": "overcast",
+      "timeOfDay": "night",
+      "intensity": 0.5,
+      "elements": [
+        "darkness",
+        "flickering light"
+      ],
+      "mood": "supernatural",
+      "context": "Caesar's ghost appears \u2014 the taper burning badly, the tent dark. Brutus blames his eyes, not the supernatural. The atmosphere is close, dim, overcast night.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "caesar-5.1.1",
+      "text": "Now, most noble Brutus, / The gods to-day stand friendly, that we may, / Lovers in peace, lead on our days to age!",
+      "source": {
+        "play": "Julius Caesar",
+        "act": 5,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "CASSIUS",
+      "weatherState": "clear",
+      "timeOfDay": "dawn",
+      "intensity": 0.3,
+      "elements": [
+        "morning light"
+      ],
+      "mood": "foreboding",
+      "context": "Cassius' farewell to Brutus before battle \u2014 invoking friendly gods on a clear morning. But it's a farewell disguised as a greeting; the foreboding is in the subtext.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "caesar-5.3.1",
+      "text": "O setting sun, / As in thy red rays thou dost sink to-night, / So in his red blood Cassius' day is set; / The sun of Rome is set!",
+      "source": {
+        "play": "Julius Caesar",
+        "act": 5,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "TITINIUS",
+      "weatherState": "clear",
+      "timeOfDay": "evening",
+      "intensity": 0.8,
+      "elements": [
+        "sunset",
+        "red light"
+      ],
+      "mood": "despair",
+      "context": "Titinius over Cassius' body at sunset \u2014 the literal red sun and the metaphorical 'sun of Rome' collapse into one image. The weather is the elegy.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "caesar-5.5.1",
+      "text": "Night hangs upon mine eyes; my bones would rest, / That have but labour'd to attain this hour.",
+      "source": {
+        "play": "Julius Caesar",
+        "act": 5,
+        "scene": 5,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "BRUTUS",
+      "weatherState": "overcast",
+      "timeOfDay": "night",
+      "intensity": 0.6,
+      "elements": [
+        "darkness"
+      ],
+      "mood": "despair",
+      "context": "Brutus' last words before suicide \u2014 'night hangs upon mine eyes' is both literal (battlefield at nightfall) and figurative (death approaching). The weather is closing in.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "caesar-5.5.2",
+      "text": "This was the noblest Roman of them all. / All the conspirators save only he / Did that they did in envy of great Caesar; / He only, in a general honest thought / And common good to all, made one of them.",
+      "source": {
+        "play": "Julius Caesar",
+        "act": 5,
+        "scene": 5,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "ANTONY",
+      "weatherState": "clear",
+      "timeOfDay": "night",
+      "intensity": 0.2,
+      "elements": [
+        "stillness"
+      ],
+      "mood": "reconciliation",
+      "context": "Antony's eulogy for Brutus \u2014 the fighting is over, the air has cleared. Not warmth but cessation: the storm of civil war finally spent.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "twelfth-2.3.2",
+      "text": "O mistress mine, where are you roaming? / O, stay and hear; your true love's coming, / That can sing both high and low: / Trip no further, pretty sweeting; / Journeys end in lovers meeting, / Every wise man's son doth know.",
+      "source": {
+        "play": "Twelfth Night",
+        "act": 2,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "FESTE",
+      "weatherState": "clear",
+      "timeOfDay": "night",
+      "intensity": 0.3,
+      "elements": [
+        "stillness"
+      ],
+      "mood": "tenderness",
+      "context": "Feste's song \u2014 night, stillness, the promise of meeting. The calm night is the song's native atmosphere: no wind, no threat, just the sweetness of what hasn't happened yet.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "twelfth-2.5.1",
+      "text": "The Lady of the Strachy married the yeoman of the wardrobe... I have heard herself come thus near, that, should she fancy, it should be one of my complexion.",
+      "source": {
+        "play": "Twelfth Night",
+        "act": 2,
+        "scene": 5,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "MALVOLIO",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.3,
+      "elements": [
+        "sun"
+      ],
+      "mood": "madness",
+      "context": "Malvolio daydreaming in the garden \u2014 broad daylight, clear sky, totally deluded. The sun exposes what he can't see about himself. Madness in fair weather.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "twelfth-3.1.1",
+      "text": "O, what a deal of scorn looks beautiful / In the contempt and anger of his lip! / A murderous guilt shows not itself more soon / Than love that would seem hid: love's night is noon.",
+      "source": {
+        "play": "Twelfth Night",
+        "act": 3,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "OLIVIA",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.3,
+      "elements": [
+        "sun"
+      ],
+      "mood": "foreboding",
+      "context": "Olivia watching Cesario leave \u2014 love exposed by noon light. 'Love's night is noon' collapses concealment. The clear day is the problem: nowhere to hide.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "twelfth-4.2.1",
+      "text": "Why, it hath bay windows transparent as barricadoes, and the clearstories toward the south north are as lustrous as ebony; and yet complainest thou of obstruction?",
+      "source": {
+        "play": "Twelfth Night",
+        "act": 4,
+        "scene": 2,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "FESTE",
+      "weatherState": "overcast",
+      "timeOfDay": "day",
+      "intensity": 0.6,
+      "elements": [
+        "darkness"
+      ],
+      "mood": "madness",
+      "context": "Feste tormenting Malvolio in the dark room \u2014 windows like barricades, light like ebony. Every word inverts itself. The darkness is real and imposed; the madness is other people's cruelty.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "twelfth-4.2.2",
+      "text": "I say, this house is as dark as ignorance, though ignorance were as dark as hell; and I say, there was never man thus abused.",
+      "source": {
+        "play": "Twelfth Night",
+        "act": 4,
+        "scene": 2,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "MALVOLIO",
+      "weatherState": "overcast",
+      "timeOfDay": "day",
+      "intensity": 0.6,
+      "elements": [
+        "darkness"
+      ],
+      "mood": "dread",
+      "context": "Malvolio in the dark \u2014 genuinely terrifying. He's sane and locked in darkness while others insist he's mad. The overcast is literal for him: no light at all.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "twelfth-5.1.1",
+      "text": "One face, one voice, one habit, and two persons, / A natural perspective, that is and is not!",
+      "source": {
+        "play": "Twelfth Night",
+        "act": 5,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "ORSINO",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.3,
+      "elements": [
+        "light"
+      ],
+      "mood": "supernatural",
+      "context": "The twins revealed \u2014 Orsino's 'natural perspective' is an optical illusion caused by light itself. Not magic but something the clear day makes visible: two bodies, one face.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "twelfth-5.1.2",
+      "text": "If this be so, as yet the glass seems true, / I shall have share in this most happy wreck.",
+      "source": {
+        "play": "Twelfth Night",
+        "act": 5,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "SEBASTIAN",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.3,
+      "elements": [
+        "light"
+      ],
+      "mood": "reconciliation",
+      "context": "Sebastian calls the reunion a 'happy wreck' \u2014 the storm that opened the play resolved into clear daylight. The shipwreck was the means, not the obstacle.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "twelfth-5.1.4",
+      "text": "When that I was and a little tiny boy, / With hey, ho, the wind and the rain, / A foolish thing was but a toy, / For the rain it raineth every day.",
+      "source": {
+        "play": "Twelfth Night",
+        "act": 5,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "FESTE",
+      "weatherState": "rainy",
+      "timeOfDay": "day",
+      "intensity": 0.7,
+      "elements": [
+        "rain",
+        "wind"
+      ],
+      "mood": "calm",
+      "context": "Feste's closing song, first verse \u2014 rain as the permanent condition of being alive. Not despair but acceptance: the rain rains every day and you grow up in it.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "twelfth-5.1.5",
+      "text": "But when I came to man's estate, / With hey, ho, the wind and the rain, / 'Gainst knaves and thieves men shut their gate, / For the rain it raineth every day.",
+      "source": {
+        "play": "Twelfth Night",
+        "act": 5,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "FESTE",
+      "weatherState": "rainy",
+      "timeOfDay": "day",
+      "intensity": 0.7,
+      "elements": [
+        "rain",
+        "wind"
+      ],
+      "mood": "foreboding",
+      "context": "Second verse \u2014 gates shut against you in the rain. The world hardens. Same rain, darker meaning. The foreboding is adult: you're outside now.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "twelfth-5.1.6",
+      "text": "But when I came, alas! to wive, / With hey, ho, the wind and the rain, / By swaggering could I never thrive, / For the rain it raineth every day.",
+      "source": {
+        "play": "Twelfth Night",
+        "act": 5,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "FESTE",
+      "weatherState": "rainy",
+      "timeOfDay": "day",
+      "intensity": 0.7,
+      "elements": [
+        "rain",
+        "wind"
+      ],
+      "mood": "despair",
+      "context": "Third verse \u2014 marriage and failure in the rain. The same refrain gains weight with each repetition. Not dramatic despair but the small, chronic kind.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "twelfth-5.1.7",
+      "text": "A great while ago the world begun, / With hey, ho, the wind and the rain, / But that's all one, our play is done, / And we'll strive to please you every day.",
+      "source": {
+        "play": "Twelfth Night",
+        "act": 5,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "FESTE",
+      "weatherState": "rainy",
+      "timeOfDay": "day",
+      "intensity": 0.6,
+      "elements": [
+        "rain",
+        "wind"
+      ],
+      "mood": "reconciliation",
+      "context": "Final verse \u2014 the rain has been falling since the world began, and the play ends inside it. 'But that's all one' is acceptance, not defeat. Reconciliation with weather as the condition of life.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "twelfth-2.1.1",
+      "text": "The malignancy of my fate might perhaps distemper yours; therefore I shall crave of you your leave that I may bear my evils alone.",
+      "source": {
+        "play": "Twelfth Night",
+        "act": 2,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "SEBASTIAN",
+      "weatherState": "overcast",
+      "timeOfDay": "day",
+      "intensity": 0.3,
+      "elements": [],
+      "mood": "despair",
+      "context": "Sebastian after the wreck \u2014 'malignancy' and 'distemper' are weather words applied to fate. He believes his sister is dead and his fortune is contagious.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "twelfth-2.1.2",
+      "text": "She is drowned already, sir, with salt water, though I seem to drown her remembrance again with more.",
+      "source": {
+        "play": "Twelfth Night",
+        "act": 2,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "SEBASTIAN",
+      "weatherState": "rainy",
+      "timeOfDay": "day",
+      "intensity": 0.5,
+      "elements": [
+        "tears",
+        "salt water"
+      ],
+      "mood": "tenderness",
+      "context": "Sebastian weeping for Viola \u2014 sea water and tears conflated. The drowning that killed her and the tears that mourn her are the same substance. Rainy not as weather but as the body's weather.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "merchant-1.1.2",
+      "text": "Your mind is tossing on the ocean; / There, where your argosies with portly sail, / Like signiors and rich burghers on the flood, / Or, as it were, the pageants of the sea, / Do overpeer the petty traffickers",
+      "source": {
+        "play": "The Merchant of Venice",
+        "act": 1,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "SALARINO",
+      "weatherState": "partly-cloudy",
+      "timeOfDay": "day",
+      "intensity": 0.5,
+      "elements": [
+        "sea",
+        "wind"
+      ],
+      "mood": "foreboding",
+      "context": "Salarino imagines Antonio's ships \u2014 grand vessels on the open sea. The weather is fair enough to sail in, but the image carries anxiety: everything Antonio owns is on the water.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "merchant-1.1.3",
+      "text": "Should I go to church / And see the holy edifice of stone, / And not bethink me straight of dangerous rocks, / Which touching but my gentle vessel's side, / Would scatter all her spices on the stream, / Enrobe the roaring waters with my silks",
+      "source": {
+        "play": "The Merchant of Venice",
+        "act": 1,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "SALARINO",
+      "weatherState": "stormy",
+      "timeOfDay": "day",
+      "intensity": 0.6,
+      "elements": [
+        "waves",
+        "wind",
+        "rocks"
+      ],
+      "mood": "dread",
+      "context": "Imagined shipwreck \u2014 spices scattered on waves, silks enrobing roaring water. The storm is hypothetical but the dread is real: Salarino can't look at a building without seeing a reef.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "merchant-1.1.5",
+      "text": "My wind cooling my broth / Would blow me to an ague, when I thought / What harm a wind too great at sea might do.",
+      "source": {
+        "play": "The Merchant of Venice",
+        "act": 1,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "SALARINO",
+      "weatherState": "stormy",
+      "timeOfDay": "day",
+      "intensity": 0.4,
+      "elements": [
+        "wind"
+      ],
+      "mood": "foreboding",
+      "context": "Blowing on soup and thinking of gales \u2014 domestic wind becomes oceanic threat. The foreboding is in the association: every breeze is a reminder that ships are at sea.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "merchant-1.3.1",
+      "text": "Ships are but boards, sailors but men: there be land-rats and water-rats, water-thieves and land-thieves, I mean pirates, and then there is the peril of waters, winds and rocks.",
+      "source": {
+        "play": "The Merchant of Venice",
+        "act": 1,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "SHYLOCK",
+      "weatherState": "stormy",
+      "timeOfDay": "day",
+      "intensity": 0.5,
+      "elements": [
+        "wind",
+        "waves",
+        "rocks"
+      ],
+      "mood": "calm",
+      "context": "Shylock's risk assessment \u2014 he lists the perils of sea trade with a bookkeeper's calm. Waters, winds, and rocks are not metaphor here; they're line items in a ledger of risk.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "merchant-3.1.2",
+      "text": "Hath not a Jew eyes? hath not a Jew hands, organs, dimensions, senses, affections, passions? fed with the same food, hurt with the same weapons, subject to the same diseases, healed by the same means, warmed and cooled by the same winter and summer, as a Christian is?",
+      "source": {
+        "play": "The Merchant of Venice",
+        "act": 3,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "SHYLOCK",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.3,
+      "elements": [
+        "warmth",
+        "cold"
+      ],
+      "mood": "rage",
+      "context": "Shylock's appeal to shared humanity \u2014 'warmed and cooled by the same winter and summer.' The weather here is universal: seasons as the condition all bodies share. The rage is that this needs saying.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "merchant-2.6.1",
+      "text": "What, art thou come? On, gentlemen; away! / Our masquing mates by this time for us stay.",
+      "source": {
+        "play": "The Merchant of Venice",
+        "act": 2,
+        "scene": 6,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "GRATIANO",
+      "weatherState": "clear",
+      "timeOfDay": "night",
+      "intensity": 0.2,
+      "elements": [
+        "torchlight"
+      ],
+      "mood": "calm",
+      "context": "The masque departure \u2014 torch-lit Venetian night, Jessica escaping in disguise. Clear night, the kind you stage an elopement under. The calm is external; the stakes are high.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "merchant-2.6.2",
+      "text": "Beshrew me but I love her heartily; / For she is wise, if I can judge of her, / And fair she is, if that mine eyes be true, / And true she is, as she hath proved herself",
+      "source": {
+        "play": "The Merchant of Venice",
+        "act": 2,
+        "scene": 6,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "LORENZO",
+      "weatherState": "clear",
+      "timeOfDay": "night",
+      "intensity": 0.2,
+      "elements": [
+        "torchlight"
+      ],
+      "mood": "tenderness",
+      "context": "Lorenzo praising Jessica on the night of their flight \u2014 wise, fair, true. The tenderness is real even if the night's business is theft and betrayal of a father.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "merchant-3.2.2",
+      "text": "Here are a few of the unpleasant'st words / That ever blotted paper! ... he hath lost a ship.",
+      "source": {
+        "play": "The Merchant of Venice",
+        "act": 3,
+        "scene": 2,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "BASSANIO",
+      "weatherState": "stormy",
+      "timeOfDay": "day",
+      "intensity": 0.4,
+      "elements": [
+        "sea"
+      ],
+      "mood": "dread",
+      "context": "News of Antonio's lost ships reaches Belmont \u2014 the offstage storm arrives as a letter. The weather that wrecked the argosies is never described, only its consequence.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "merchant-4.1.1",
+      "text": "The quality of mercy is not strain'd, / It droppeth as the gentle rain from heaven / Upon the place beneath: it is twice blest; / It blesseth him that gives and him that takes",
+      "source": {
+        "play": "The Merchant of Venice",
+        "act": 4,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "PORTIA",
+      "weatherState": "rainy",
+      "timeOfDay": "day",
+      "intensity": 0.6,
+      "elements": [
+        "rain"
+      ],
+      "mood": "tenderness",
+      "context": "Mercy as gentle rain \u2014 the most famous weather metaphor in the play. Rain that blesses rather than destroys. The courtroom is indoors; the rain is imagined, falling from a heaven that may or may not be listening.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "othello-1.1.1",
+      "text": "Tush! never tell me; I take it much unkindly / That thou, Iago, who hast had my purse / As if the strings were thine, shouldst know of this.",
+      "source": {
+        "play": "Othello",
+        "act": 1,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "RODERIGO",
+      "weatherState": "clear",
+      "timeOfDay": "night",
+      "intensity": 0.1,
+      "elements": [
+        "darkness"
+      ],
+      "mood": "foreboding",
+      "context": "Opening line \u2014 a dark Venetian street at night. No weather described, but the play starts in darkness and never really leaves it. Foreboding is in the secrecy of the hour.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "othello-1.1.2",
+      "text": "Even now, now, very now, an old black ram / Is tupping your white ewe.",
+      "source": {
+        "play": "Othello",
+        "act": 1,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "IAGO",
+      "weatherState": "clear",
+      "timeOfDay": "night",
+      "intensity": 0.2,
+      "elements": [
+        "darkness"
+      ],
+      "mood": "violence",
+      "context": "Iago shouting up at Brabantio's window \u2014 verbal violence in the dark. The night is Iago's element: he needs darkness to say what he says. The clarity of the sky makes the speech more exposed.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "othello-1.3.1",
+      "text": "Of moving accidents by flood and field, / Of hair-breadth scapes i' the imminent deadly breach, / Of being taken by the insolent foe / And sold to slavery",
+      "source": {
+        "play": "Othello",
+        "act": 1,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "OTHELLO",
+      "weatherState": "stormy",
+      "timeOfDay": "day",
+      "intensity": 0.4,
+      "elements": [
+        "flood",
+        "battle"
+      ],
+      "mood": "calm",
+      "context": "Othello recounting his life story to the Senate \u2014 floods and battles narrated with a soldier's calm. The storms are past tense, digested into autobiography. The calm is real: he's in command of his own story.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "othello-1.3.2",
+      "text": "Of antres vast and deserts idle, / Rough quarries, rocks and hills whose heads touch heaven",
+      "source": {
+        "play": "Othello",
+        "act": 1,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "OTHELLO",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.3,
+      "elements": [],
+      "mood": "calm",
+      "context": "Othello's travelogue \u2014 vast caves, deserts, mountains touching the sky. Landscape, not weather, but the scale is atmospheric: clear views to impossible distances.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "othello-1.3.3",
+      "text": "She loved me for the dangers I had pass'd, / And I loved her that she did pity them.",
+      "source": {
+        "play": "Othello",
+        "act": 1,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "OTHELLO",
+      "weatherState": "clear",
+      "timeOfDay": "night",
+      "intensity": 0.2,
+      "elements": [
+        "stillness"
+      ],
+      "mood": "tenderness",
+      "context": "The origin of their love \u2014 she pitied his suffering, he loved her pity. Told in a Senate chamber at night, but the emotion is clear and unobstructed. The simplest, warmest moment in the play.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "othello-2.3.2",
+      "text": "Silence that dreadful bell: it frights the isle / From her propriety.",
+      "source": {
+        "play": "Othello",
+        "act": 2,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "OTHELLO",
+      "weatherState": "clear",
+      "timeOfDay": "night",
+      "intensity": 0.3,
+      "elements": [
+        "darkness"
+      ],
+      "mood": "rage",
+      "context": "Othello woken by the alarm bell \u2014 the island 'frighted from her propriety.' The rage is controlled but real. Clear night, no weather excuse for the chaos: this is human failure.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "othello-3.3.3",
+      "text": "Like to the Pontic sea, / Whose icy current and compulsive course / Ne'er feels retiring ebb, but keeps due on / To the Propontic and the Hellespont, / Even so my bloody thoughts, with violent pace, / Shall ne'er look back, ne'er ebb to humble love",
+      "source": {
+        "play": "Othello",
+        "act": 3,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "OTHELLO",
+      "weatherState": "stormy",
+      "timeOfDay": "day",
+      "intensity": 0.7,
+      "elements": [
+        "sea",
+        "current"
+      ],
+      "mood": "rage",
+      "context": "Othello's vow \u2014 his thoughts as the Black Sea current, one-directional, compulsive. The icy water is both geographical (he knows these seas) and emotional: rage frozen into purpose. The storm is internal but the image is of real water.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "othello-4.2.1",
+      "text": "Had it pleased heaven / To try me with affliction; had they rain'd / All kinds of sores and shames on my bare head, / Steep'd me in poverty to the very lips",
+      "source": {
+        "play": "Othello",
+        "act": 4,
+        "scene": 2,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "OTHELLO",
+      "weatherState": "rainy",
+      "timeOfDay": "day",
+      "intensity": 0.5,
+      "elements": [
+        "rain"
+      ],
+      "mood": "despair",
+      "context": "Othello imagines afflictions rained on his bare head \u2014 heaven's rain as punishment. He could bear poverty, shame, captivity; what he can't bear is this. The rain is figurative but the exposure is real.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "othello-4.2.2",
+      "text": "But there, where I have garner'd up my heart, / Where either I must live, or bear no life; / The fountain from the which my current runs, / Or else dries up",
+      "source": {
+        "play": "Othello",
+        "act": 4,
+        "scene": 2,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "OTHELLO",
+      "weatherState": "overcast",
+      "timeOfDay": "day",
+      "intensity": 0.5,
+      "elements": [],
+      "mood": "despair",
+      "context": "The fountain drying up \u2014 Desdemona as the source of his life's current. If she's contaminated, everything downstream is poisoned. Water imagery without weather, but the emotional atmosphere is drought.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "othello-4.3.1",
+      "text": "The poor soul sat sighing by a sycamore tree, / Sing all a green willow: / Her hand on her bosom, her head on her knee, / Sing willow, willow, willow",
+      "source": {
+        "play": "Othello",
+        "act": 4,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "DESDEMONA",
+      "weatherState": "overcast",
+      "timeOfDay": "evening",
+      "intensity": 0.5,
+      "elements": [
+        "stillness"
+      ],
+      "mood": "despair",
+      "context": "The Willow Song \u2014 Desdemona preparing for bed, singing her mother's maid's song. A figure by a tree, head on knee, sighing. The overcast is in the song's world, not the room, but the room absorbs it.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "othello-4.3.2",
+      "text": "The fresh streams ran by her, and murmur'd her moans; / Sing willow, willow, willow; / Her salt tears fell from her, and soften'd the stones",
+      "source": {
+        "play": "Othello",
+        "act": 4,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "DESDEMONA",
+      "weatherState": "rainy",
+      "timeOfDay": "evening",
+      "intensity": 0.5,
+      "elements": [
+        "water",
+        "tears"
+      ],
+      "mood": "despair",
+      "context": "Fresh streams and salt tears \u2014 the song's weather is water: streams, tears, stones softened. Rainy not as sky but as the face and the ground. Desdemona sings it the night before she dies.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "pericles-3.1.1",
+      "text": "Thou god of this great vast, rebuke these surges, / Which wash both heaven and hell; and thou, that hast / Upon the winds command, bind them in brass, / Having call'd them from the deep!",
+      "source": {
+        "play": "Pericles",
+        "act": 3,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "PERICLES",
+      "weatherState": "stormy",
+      "timeOfDay": "night",
+      "intensity": 1.0,
+      "elements": [
+        "wind",
+        "waves",
+        "thunder"
+      ],
+      "mood": "dread",
+      "context": "Pericles' prayer during the birth storm \u2014 surges washing both heaven and hell. This is the most desperate storm in Shakespeare: his wife is dying in childbirth below deck. Intensity 1.0: the weather IS the scene.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "pericles-3.1.2",
+      "text": "O, still / Thy deafening, dreadful thunders; gently quench / Thy nimble, sulphurous flashes!",
+      "source": {
+        "play": "Pericles",
+        "act": 3,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "PERICLES",
+      "weatherState": "stormy",
+      "timeOfDay": "night",
+      "intensity": 0.95,
+      "elements": [
+        "thunder",
+        "lightning"
+      ],
+      "mood": "dread",
+      "context": "Pericles begging the storm to be gentle \u2014 'gently quench' is an impossible request. He's asking thunder to whisper. The dread is for Thaisa, not himself.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "pericles-3.1.3",
+      "text": "Divinest patroness, and midwife gentle / To those that cry by night, convey thy deity / Aboard our dancing boat",
+      "source": {
+        "play": "Pericles",
+        "act": 3,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "PERICLES",
+      "weatherState": "stormy",
+      "timeOfDay": "night",
+      "intensity": 0.8,
+      "elements": [
+        "waves",
+        "wind"
+      ],
+      "mood": "tenderness",
+      "context": "Pericles invoking Lucina, goddess of childbirth, during the storm \u2014 asking her to board 'our dancing boat.' The tenderness is toward the baby being born and the wife dying. The boat dances on the waves: an unbearable image.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "pericles-3.1.4",
+      "text": "LYCHORIDA: Here is a thing too young for such a place, / Who, if it had conceit, would die, as I / Am like to do: take in your arms this piece / Of your dead queen.",
+      "source": {
+        "play": "Pericles",
+        "act": 3,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "LYCHORIDA",
+      "weatherState": "stormy",
+      "timeOfDay": "night",
+      "intensity": 0.8,
+      "elements": [
+        "wind",
+        "waves"
+      ],
+      "mood": "tenderness",
+      "context": "The nurse brings the newborn to Pericles during the storm \u2014 'a thing too young for such a place.' The baby is alive; the mother appears dead. Tenderness in a storm at its most extreme: a newborn on a ship in a gale.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "pericles-3.1.5",
+      "text": "Now, mild may be thy life! / For a more blustrous birth had never babe: / Quiet and gentle thy conditions! for / Thou art the rudeliest welcome to this world / That ever was prince's child.",
+      "source": {
+        "play": "Pericles",
+        "act": 3,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "PERICLES",
+      "weatherState": "stormy",
+      "timeOfDay": "night",
+      "intensity": 0.8,
+      "elements": [
+        "wind",
+        "waves"
+      ],
+      "mood": "tenderness",
+      "context": "Pericles blessing Marina \u2014 naming her by contrast with her birth conditions. 'Mild may be thy life' against the blustrous birth. The tenderness is a wish spoken into a gale: may your life be the opposite of tonight.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "pericles-3.1.6",
+      "text": "A terrible childbed hast thou had, my dear; / No light, no fire: the unfriendly elements / Forgot thee utterly",
+      "source": {
+        "play": "Pericles",
+        "act": 3,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "PERICLES",
+      "weatherState": "stormy",
+      "timeOfDay": "night",
+      "intensity": 0.9,
+      "elements": [
+        "wind",
+        "darkness",
+        "cold"
+      ],
+      "mood": "despair",
+      "context": "Pericles over Thaisa's body \u2014 'the unfriendly elements forgot thee utterly.' No light, no fire, no warmth: the storm denied her everything a birth needs. The weather is the cruelty.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "pericles-3.1.7",
+      "text": "FIRST SAILOR: Sir, your queen must overboard: the sea works high, the wind is loud, and will not lie till the ship be cleared of the dead.",
+      "source": {
+        "play": "Pericles",
+        "act": 3,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "FIRST SAILOR",
+      "weatherState": "stormy",
+      "timeOfDay": "night",
+      "intensity": 0.85,
+      "elements": [
+        "wind",
+        "waves"
+      ],
+      "mood": "violence",
+      "context": "The sailors demand Thaisa's body be thrown overboard \u2014 superstition and survival. The sea 'works high' and won't calm until the dead are gone. Violence of the practical: the storm forces the disposal of the beloved.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "pericles-3.1.8",
+      "text": "A privy and practic grief must be / Unto thy grave; / Where, for a monument upon thy bones, / And e'er-remaining lamps, the belching whale / And humming water must o'erwhelm thy corpse, / Lying with simple shells.",
+      "source": {
+        "play": "Pericles",
+        "act": 3,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "PERICLES",
+      "weatherState": "stormy",
+      "timeOfDay": "night",
+      "intensity": 0.8,
+      "elements": [
+        "waves",
+        "sea"
+      ],
+      "mood": "despair",
+      "context": "Pericles consigning Thaisa to the sea \u2014 whale and humming water as her grave markers, shells for company. The elegy is spoken during the storm. He's sealing the chest while the ship heaves.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "pericles-3.2.1",
+      "text": "Philemon, ho! ... PHILEMON: Doth my lord call? CERIMON: Get fire and meat for these poor men: / 'T has been a turbulent and stormy night.",
+      "source": {
+        "play": "Pericles",
+        "act": 3,
+        "scene": 2,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "CERIMON",
+      "weatherState": "stormy",
+      "timeOfDay": "dawn",
+      "intensity": 0.5,
+      "elements": [
+        "wind dying"
+      ],
+      "mood": "calm",
+      "context": "Cerimon the morning after the storm \u2014 fire and meat for the storm's survivors. The calm is practical: a doctor restoring warmth. The turbulent night is just ending.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "pericles-3.2.3",
+      "text": "FIRST GENTLEMAN: What's that? CERIMON: Wreck'd on the shore. \u2014 Come, let me see. \u2014 'Tis of some worth. / Set it down, let's look upon't.",
+      "source": {
+        "play": "Pericles",
+        "act": 3,
+        "scene": 2,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "CERIMON",
+      "weatherState": "partly-cloudy",
+      "timeOfDay": "dawn",
+      "intensity": 0.4,
+      "elements": [
+        "sea",
+        "wreckage"
+      ],
+      "mood": "foreboding",
+      "context": "The chest washes ashore \u2014 wreckage from the night's storm. Cerimon doesn't know what's inside yet. Partly-cloudy dawn: the storm's debris arriving on a clearing shore.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "pericles-3.2.4",
+      "text": "She is alive; behold, / Her eyelids, cases to those heavenly jewels / Which Pericles hath lost, / Begin to part their fringes of bright gold; / The diamonds of a most praised water / Doth appear, to make the world twice rich. Live, / And make us weep to hear your fate, fair creature",
+      "source": {
+        "play": "Pericles",
+        "act": 3,
+        "scene": 2,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "CERIMON",
+      "weatherState": "clear",
+      "timeOfDay": "dawn",
+      "intensity": 0.5,
+      "elements": [
+        "light",
+        "warmth"
+      ],
+      "mood": "supernatural",
+      "context": "Cerimon revives Thaisa \u2014 her eyes opening like jewels. The storm gave her up for dead; medicine brings her back. Supernatural in the same register as The Winter's Tale: not magic, but something science can't quite explain either.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "pericles-3.0.1",
+      "text": "GOWER: Now sleep yslaked hath the rout; / No din but snores the house about, / Made louder by the o'er-fed breast / Of this most pompous marriage-feast.",
+      "source": {
+        "play": "Pericles",
+        "act": 3,
+        "scene": 0,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "GOWER",
+      "weatherState": "clear",
+      "timeOfDay": "night",
+      "intensity": 0.3,
+      "elements": [
+        "stillness"
+      ],
+      "mood": "calm",
+      "context": "Gower narrating the calm between storms \u2014 the wedding feast over, everyone asleep. The stillness before the voyage that will destroy everything. Calm as the weather of ignorance.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "pericles-3.0.2",
+      "text": "GOWER: In Antiochus and his daughter you have heard / Of monstrous lust the due and just reward: / In Pericles, his queen and daughter, seen, / Although assail'd with fortune fierce and keen, / Virtue preserved from fell destruction's blast",
+      "source": {
+        "play": "Pericles",
+        "act": 5,
+        "scene": 0,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "GOWER",
+      "weatherState": "stormy",
+      "timeOfDay": "day",
+      "intensity": 0.3,
+      "elements": [
+        "wind"
+      ],
+      "mood": "reconciliation",
+      "context": "Gower's summary \u2014 'destruction's blast' and 'fortune fierce and keen' as weather of a whole life. The reconciliation is the chorus perspective: looking back, the storms had a shape.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "pericles-4.1.1",
+      "text": "Ay me! poor maid, / Born in a tempest, when my mother died, / This world to me is like a lasting storm, / Whirring me from my friends.",
+      "source": {
+        "play": "Pericles",
+        "act": 4,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "MARINA",
+      "weatherState": "stormy",
+      "timeOfDay": "day",
+      "intensity": 0.6,
+      "elements": [
+        "wind"
+      ],
+      "mood": "despair",
+      "context": "Marina naming herself \u2014 born in a tempest, living in a lasting storm. The weather is biographical: she IS the storm's child. The metaphor isn't decorative; it's identity.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "pericles-4.1.2",
+      "text": "When I was born, the wind was north... / My father, as nurse says, did never fear, / But cried 'Good seamen!' to the sailors, / Galling his kingly hands haling ropes",
+      "source": {
+        "play": "Pericles",
+        "act": 4,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "MARINA",
+      "weatherState": "stormy",
+      "timeOfDay": "night",
+      "intensity": 0.5,
+      "elements": [
+        "wind",
+        "waves"
+      ],
+      "mood": "tenderness",
+      "context": "Marina retelling her birth \u2014 the north wind, her father hauling ropes with his royal hands. The tenderness is toward a father she barely knows, imagined through his hands on the ropes.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "pericles-5.1.1",
+      "text": "HELICANUS: Sir, here is the man / That can, in aught you would, resolve you. / PERICLES: Hail, reverend sir! the gods preserve you! / Hail, royal sir!",
+      "source": {
+        "play": "Pericles",
+        "act": 5,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "PERICLES / HELICANUS",
+      "weatherState": "clear",
+      "timeOfDay": "evening",
+      "intensity": 0.3,
+      "elements": [
+        "sea",
+        "stillness"
+      ],
+      "mood": "calm",
+      "context": "Pericles on his ship, still mute with grief \u2014 the sea is calm, the evening still. He hasn't spoken in months. The calm is both the weather and his withdrawal from the world.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "pericles-5.1.2",
+      "text": "I am great with woe, and shall deliver weeping. / My dearest wife was like this maid, and such a one / My daughter might have been",
+      "source": {
+        "play": "Pericles",
+        "act": 5,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "PERICLES",
+      "weatherState": "clear",
+      "timeOfDay": "evening",
+      "intensity": 0.4,
+      "elements": [
+        "sea"
+      ],
+      "mood": "despair",
+      "context": "Pericles speaking for the first time \u2014 'great with woe' as pregnancy, delivering weeping. He doesn't know yet that Marina is his daughter. The evening sea is calm; his grief breaks the surface.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "pericles-5.1.3",
+      "text": "O Helicanus, strike me, honoured sir; / Give me a gash, put me to present pain; / Lest this great sea of joys rushing upon me / O'erbear the shores of my mortality, / And drown me with their sweetness.",
+      "source": {
+        "play": "Pericles",
+        "act": 5,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "PERICLES",
+      "weatherState": "clear",
+      "timeOfDay": "evening",
+      "intensity": 0.6,
+      "elements": [
+        "sea"
+      ],
+      "mood": "reconciliation",
+      "context": "Pericles recognizing Marina \u2014 joy as a sea that might drown him. After years of real storms, the overwhelming force is happiness. He needs pain to anchor him. Reconciliation as flood.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "pericles-5.1.4",
+      "text": "Give me my robes. I am wild in my beholding. / O heavens bless my girl! But, hark, what music? / Tell Helicanus, my Marina, tell him / O'er, point by point, for yet he seems to doubt, / How sure you are my daughter.",
+      "source": {
+        "play": "Pericles",
+        "act": 5,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "PERICLES",
+      "weatherState": "clear",
+      "timeOfDay": "evening",
+      "intensity": 0.4,
+      "elements": [
+        "sea",
+        "music"
+      ],
+      "mood": "supernatural",
+      "context": "Pericles hears the music of the spheres \u2014 only he can hear it. The evening sea, the reunion, the impossible music: the play's answer to all its storms. Supernatural as grace, not threat.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "pericles-5.3.2",
+      "text": "No more, you gods! your present kindness / Makes my past miseries sports: you shall do well, / That on the touching of her lips I may / Melt and no more be seen.",
+      "source": {
+        "play": "Pericles",
+        "act": 5,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "PERICLES",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.4,
+      "elements": [
+        "warmth"
+      ],
+      "mood": "tenderness",
+      "context": "Pericles asking to melt \u2014 dissolve into the kiss. Past miseries become 'sports.' The melting is both ice thawing and self dissolving into joy. Clear day, no weather left to fight.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "hamlet-1.5.1",
+      "text": "I am thy father's spirit, / Doom'd for a certain term to walk the night, / And for the day confined to fast in fires",
+      "source": {
+        "play": "Hamlet",
+        "act": 1,
+        "scene": 5,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "GHOST",
+      "weatherState": "clear",
+      "timeOfDay": "night",
+      "intensity": 0.5,
+      "elements": [
+        "cold",
+        "fire"
+      ],
+      "mood": "supernatural",
+      "context": "The Ghost's self-description \u2014 walking at night, burning by day. Two weathers for two states: cold dark freedom, hot bright punishment. The battlements are the ghost's permitted atmosphere.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "hamlet-1.5.2",
+      "text": "The glow-worm shows the matin to be near, / And 'gins to pale his uneffectual fire: / Adieu, adieu! Hamlet, remember me.",
+      "source": {
+        "play": "Hamlet",
+        "act": 1,
+        "scene": 5,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "GHOST",
+      "weatherState": "clear",
+      "timeOfDay": "pre-dawn",
+      "intensity": 0.5,
+      "elements": [
+        "pre-dawn light"
+      ],
+      "mood": "supernatural",
+      "context": "The ghost fading at dawn \u2014 glow-worm paling as morning approaches. The supernatural must leave when the weather changes. Pre-dawn is a threshold: the ghost's last moment.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "hamlet-1.2.1",
+      "text": "O, that this too too solid flesh would melt / Thaw and resolve itself into a dew!",
+      "source": {
+        "play": "Hamlet",
+        "act": 1,
+        "scene": 2,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "HAMLET",
+      "weatherState": "overcast",
+      "timeOfDay": "day",
+      "intensity": 0.4,
+      "elements": [
+        "dew",
+        "thaw"
+      ],
+      "mood": "despair",
+      "context": "Hamlet's first soliloquy \u2014 wanting to melt like frost into dew. The thaw metaphor is weather applied to the body: solid to liquid, form to formlessness. Despair as a wish to become weather rather than person.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "hamlet-1.2.2",
+      "text": "How weary, stale, flat and unprofitable, / Seem to me all the uses of this world! / Fie on't! ah fie! 'tis an unweeded garden, / That grows to seed; things rank and gross in nature / Possess it merely.",
+      "source": {
+        "play": "Hamlet",
+        "act": 1,
+        "scene": 2,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "HAMLET",
+      "weatherState": "overcast",
+      "timeOfDay": "day",
+      "intensity": 0.4,
+      "elements": [],
+      "mood": "despair",
+      "context": "The world as unweeded garden \u2014 rank, gross, gone to seed. The overcast isn't weather but it is atmosphere: everything flat, stale, unprofitable. A mind in which nothing has light.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "hamlet-2.2.1",
+      "text": "I have of late \u2014 but wherefore I know not \u2014 lost all my mirth, forgone all custom of exercises; and indeed it goes so heavily with my disposition that this goodly frame, the earth, seems to me a sterile promontory, this most excellent canopy, the air, look you, this brave o'erhanging firmament, this majestical roof fretted with golden fire, why, it appears no other thing to me than a foul and pestilent congregation of vapours.",
+      "source": {
+        "play": "Hamlet",
+        "act": 2,
+        "scene": 2,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "HAMLET",
+      "weatherState": "overcast",
+      "timeOfDay": "day",
+      "intensity": 0.7,
+      "elements": [
+        "vapour",
+        "cloud"
+      ],
+      "mood": "despair",
+      "context": "Hamlet's 'congregation of vapours' speech \u2014 the sky itself redescribed as foul mist. The firmament is golden fire to others; to him it's pestilent fog. Depression as weather: the same sky, different atmosphere.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "hamlet-4.7.1",
+      "text": "There is a willow grows aslant a brook, / That shows his hoar leaves in the glassy stream; / There with fantastic garlands did she come / Of crow-flowers, nettles, daisies, and long purples",
+      "source": {
+        "play": "Hamlet",
+        "act": 4,
+        "scene": 7,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "GERTRUDE",
+      "weatherState": "overcast",
+      "timeOfDay": "day",
+      "intensity": 0.7,
+      "elements": [
+        "water",
+        "stillness"
+      ],
+      "mood": "despair",
+      "context": "Gertrude narrating Ophelia's drowning \u2014 the willow, the glassy stream, the garlands. The water is still, not flowing; the day is light enough to see hoar leaves reflected. Overcast because the light is silver, not gold: willow-light.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "hamlet-4.7.2",
+      "text": "There, on the pendent boughs her coronet weeds / Clambering to hang, an envious sliver broke; / When down her weedy trophies and herself / Fell in the weeping brook.",
+      "source": {
+        "play": "Hamlet",
+        "act": 4,
+        "scene": 7,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "GERTRUDE",
+      "weatherState": "overcast",
+      "timeOfDay": "day",
+      "intensity": 0.7,
+      "elements": [
+        "water"
+      ],
+      "mood": "despair",
+      "context": "The branch breaks \u2014 Ophelia falls into the 'weeping brook.' The brook weeps; she doesn't. The water is personified but the weather is still: no wind, no storm, just gravity and a rotten branch.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "hamlet-4.7.3",
+      "text": "Her clothes spread wide; / And, mermaid-like, awhile they bore her up: / Which time she chanted snatches of old tunes; / As one incapable of her own distress, / Or like a creature native and indued / Unto that element",
+      "source": {
+        "play": "Hamlet",
+        "act": 4,
+        "scene": 7,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "GERTRUDE",
+      "weatherState": "overcast",
+      "timeOfDay": "day",
+      "intensity": 0.8,
+      "elements": [
+        "water",
+        "stillness"
+      ],
+      "mood": "supernatural",
+      "context": "Ophelia floating and singing \u2014 'native and indued unto that element.' She becomes water. The mermaid comparison and the singing make it supernatural: not drowning but transformation. The brook is still; she floats.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "hamlet-4.7.4",
+      "text": "But long it could not be / Till that her garments, heavy with their drink, / Pull'd the poor wretch from her melodious lay / To muddy death.",
+      "source": {
+        "play": "Hamlet",
+        "act": 4,
+        "scene": 7,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "GERTRUDE",
+      "weatherState": "overcast",
+      "timeOfDay": "day",
+      "intensity": 0.7,
+      "elements": [
+        "water",
+        "mud"
+      ],
+      "mood": "despair",
+      "context": "The garments drag her down \u2014 'muddy death.' From mermaid to mud. The weather hasn't changed; the water's nature has. The overcast stillness is what makes the death so quiet.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "hamlet-5.1.3",
+      "text": "Imperious Caesar, dead and turn'd to clay, / Might stop a hole to keep the wind away: / O, that that earth, which kept the world in awe, / Should patch a wall to expel the winter's flaw!",
+      "source": {
+        "play": "Hamlet",
+        "act": 5,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "HAMLET",
+      "weatherState": "overcast",
+      "timeOfDay": "day",
+      "intensity": 0.4,
+      "elements": [
+        "wind",
+        "cold"
+      ],
+      "mood": "despair",
+      "context": "Caesar's clay patching a wall against the wind \u2014 the body becomes weather-proofing. 'Winter's flaw' is a literal blast of cold air. Despair that's also comedy: the greatest man becomes insulation.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "hamlet-5.2.2",
+      "text": "Now cracks a noble heart. Good night, sweet prince, / And flights of angels sing thee to thy rest!",
+      "source": {
+        "play": "Hamlet",
+        "act": 5,
+        "scene": 2,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "HORATIO",
+      "weatherState": "clear",
+      "timeOfDay": "night",
+      "intensity": 0.3,
+      "elements": [
+        "stillness"
+      ],
+      "mood": "reconciliation",
+      "context": "Horatio's farewell \u2014 'good night' to a dead prince. The play that started in cold midnight ends with a wished-for flight to rest. The clear night is Horatio's hope for Hamlet: angels, not ghosts, this time.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "ayli-2.5.1",
+      "text": "Under the greenwood tree / Who loves to lie with me, / And turn his merry note / Unto the sweet bird's throat, / Come hither, come hither, come hither: / Here shall he see / No enemy / But winter and rough weather.",
+      "source": {
+        "play": "As You Like It",
+        "act": 2,
+        "scene": 5,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "AMIENS",
+      "weatherState": "partly-cloudy",
+      "timeOfDay": "day",
+      "intensity": 0.6,
+      "elements": [
+        "wind",
+        "forest"
+      ],
+      "mood": "calm",
+      "context": "Amiens' greenwood song \u2014 the only enemy is winter and rough weather. The song's weather is real (outdoor, exposed) but the mood is cheerful: weather is the only enemy, and it's preferable to human enemies.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "ayli-2.5.2",
+      "text": "Who doth ambition shun / And loves to live i' the sun, / Seeking the food he eats / And pleased with what he gets, / Come hither, come hither, come hither: / Here shall he see / No enemy / But winter and rough weather.",
+      "source": {
+        "play": "As You Like It",
+        "act": 2,
+        "scene": 5,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "AMIENS",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.5,
+      "elements": [
+        "sun"
+      ],
+      "mood": "calm",
+      "context": "Second verse \u2014 living in the sun, eating what you find. The weather has shifted to fair within the same song: sun, contentment, simplicity. The 'rough weather' refrain is winter remembered, not winter present.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "ayli-2.7.7",
+      "text": "Truly, I would the gods had made thee poetical... / TOUCHSTONE: I do not know what 'poetical' is: is it honest in deed and word? Is it a true thing?",
+      "source": {
+        "play": "As You Like It",
+        "act": 3,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "TOUCHSTONE / AUDREY",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.1,
+      "elements": [
+        "forest"
+      ],
+      "mood": "calm",
+      "context": "Touchstone and Audrey in the forest \u2014 poetry vs. honesty. A clear day in Arden: the comic subplot has its own weather, which is fair and simple. Touchstone's wit needs no atmosphere.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "ayli-3.2.1",
+      "text": "Hang there, my verse, in witness of my love; / And thou, thrice-crowned queen of night, survey / With thy chaste eye, from thy pale sphere above, / Thy huntress' name that my full life doth sway.",
+      "source": {
+        "play": "As You Like It",
+        "act": 3,
+        "scene": 2,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "ORLANDO",
+      "weatherState": "clear",
+      "timeOfDay": "night",
+      "intensity": 0.5,
+      "elements": [
+        "moonlight"
+      ],
+      "mood": "tenderness",
+      "context": "Orlando hanging poems on trees by moonlight \u2014 addressing Diana/the moon as witness to his love for Rosalind. The clear night is the poem's native atmosphere: moonlight, forest, lovesickness made public on bark.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "ayli-3.2.2",
+      "text": "From the east to western Ind, / No jewel is like Rosalind. / Her worth, being mounted on the wind, / Through all the world bears Rosalind.",
+      "source": {
+        "play": "As You Like It",
+        "act": 3,
+        "scene": 2,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "ORLANDO [poem]",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.3,
+      "elements": [
+        "wind"
+      ],
+      "mood": "tenderness",
+      "context": "Orlando's poem found on a tree \u2014 Rosalind's worth carried on the wind worldwide. The wind is the poem's courier. Bad verse, genuine feeling, and the forest as bulletin board.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "ayli-3.5.1",
+      "text": "Who ever loved that loved not at first sight?",
+      "source": {
+        "play": "As You Like It",
+        "act": 3,
+        "scene": 5,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "PHEBE [quoting Marlowe]",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.2,
+      "elements": [
+        "sun"
+      ],
+      "mood": "tenderness",
+      "context": "Phebe quoting Marlowe \u2014 love at first sight in a sunlit forest clearing. The pastoral is in full bloom: shepherdesses falling in love, clear weather, open air. The tenderness is literary as much as emotional.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "ayli-4.3.1",
+      "text": "Under an oak, whose boughs were moss'd with age / And high top bald with dry antiquity, / A wretched ragged man, o'ergrown with hair, / Lay sleeping on his back",
+      "source": {
+        "play": "As You Like It",
+        "act": 4,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "OLIVER",
+      "weatherState": "overcast",
+      "timeOfDay": "day",
+      "intensity": 0.4,
+      "elements": [
+        "forest"
+      ],
+      "mood": "foreboding",
+      "context": "Oliver sleeping under a mossy oak \u2014 the ancient tree, the ragged man, the lioness watching. The forest turns dangerous: Arden has teeth as well as songs. Foreboding in deep forest.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "ayli-4.3.2",
+      "text": "A lioness, with udders all drawn dry, / Lay couching, head on ground, with catlike watch, / When that the sleeping man should stir",
+      "source": {
+        "play": "As You Like It",
+        "act": 4,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "OLIVER",
+      "weatherState": "overcast",
+      "timeOfDay": "day",
+      "intensity": 0.5,
+      "elements": [
+        "forest"
+      ],
+      "mood": "dread",
+      "context": "The hungry lioness waiting \u2014 udders drawn dry, watching for movement. Arden is not only songs and love poems; it has starving predators. The dread is animal and immediate.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "ayli-5.3.1",
+      "text": "It was a lover and his lass, / With a hey, and a ho, and a hey nonino, / That o'er the green corn-field did pass / In the spring time, the only pretty ring time, / When birds do sing, hey ding a ding, ding: / Sweet lovers love the spring.",
+      "source": {
+        "play": "As You Like It",
+        "act": 5,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "TWO PAGES [song]",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.6,
+      "elements": [
+        "sun",
+        "warmth",
+        "spring"
+      ],
+      "mood": "tenderness",
+      "context": "The spring love song \u2014 green cornfields, birdsong, lovers walking. Winter is over: the play has moved from 'blow, blow, thou winter wind' to this. The weather arc of the whole comedy in one song.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "ayli-5.3.2",
+      "text": "Between the acres of the rye, / With a hey, and a ho, and a hey nonino, / These pretty country folks would lie, / In spring time, the only pretty ring time",
+      "source": {
+        "play": "As You Like It",
+        "act": 5,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "TWO PAGES [song]",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.5,
+      "elements": [
+        "sun",
+        "warmth"
+      ],
+      "mood": "calm",
+      "context": "Second verse \u2014 lovers lying between fields of rye. The spring is the resolution weather: open sky, warm ground, the ring time (for weddings). Calm as earned seasonal reward.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "ayli-5.3.3",
+      "text": "This carol they began that hour, / With a hey, and a ho, and a hey nonino, / How that a life was but a flower / In spring time, the only pretty ring time",
+      "source": {
+        "play": "As You Like It",
+        "act": 5,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "TWO PAGES [song]",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.4,
+      "elements": [
+        "sun"
+      ],
+      "mood": "foreboding",
+      "context": "Third verse \u2014 a life is but a flower. The carpe diem shadow returns: spring is pretty because it's brief. Same sun, same field, but mortality underneath. Foreboding worn so lightly it barely registers.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "romeo-0.0.1",
+      "text": "Two households, both alike in dignity, / In fair Verona, where we lay our scene, / From ancient grudge break to new mutiny, / Where civil blood makes civil hands unclean.",
+      "source": {
+        "play": "Romeo and Juliet",
+        "act": 0,
+        "scene": 0,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "CHORUS",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.2,
+      "elements": [
+        "sun",
+        "heat"
+      ],
+      "mood": "foreboding",
+      "context": "Fair Verona \u2014 the word 'fair' is both the city and its weather. Civil blood under a clear sky. The foreboding is structural: we know the end before the beginning.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "romeo-1.1.1",
+      "text": "The day is hot, the Capulets abroad, / And, if we meet, we shall not scape a brawl; / For now, these hot days, is the mad blood stirring.",
+      "source": {
+        "play": "Romeo and Juliet",
+        "act": 1,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "BENVOLIO",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.7,
+      "elements": [
+        "sun",
+        "heat"
+      ],
+      "mood": "violence",
+      "context": "Benvolio's weather report before Mercutio's death \u2014 the heat IS the violence. Hot days stir mad blood. The clear sky is the problem: nowhere to cool off, nowhere to hide.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "romeo-1.1.2",
+      "text": "Thou wilt quarrel with a man for cracking nuts, / having no other reason but because thou hast hazel eyes... / Thy head is as full of quarrels as an egg is full of meat",
+      "source": {
+        "play": "Romeo and Juliet",
+        "act": 3,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "MERCUTIO",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.3,
+      "elements": [
+        "heat"
+      ],
+      "mood": "violence",
+      "context": "Mercutio teasing Benvolio about quarreling \u2014 turning everything combative in the heat. The mood is playful but the atmosphere is already violent: heat and wit sharpening toward the same point.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "romeo-1.1.4",
+      "text": "Away from the light steals home my heavy son, / And private in his chamber pens himself, / Shuts up his windows, locks fair daylight out / And makes himself an artificial night.",
+      "source": {
+        "play": "Romeo and Juliet",
+        "act": 1,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "MONTAGUE",
+      "weatherState": "overcast",
+      "timeOfDay": "dawn",
+      "intensity": 0.5,
+      "elements": [
+        "darkness"
+      ],
+      "mood": "despair",
+      "context": "Montague describing Romeo shutting out daylight \u2014 making himself an artificial night. The weather is fair outside; Romeo manufactures his own overcast. His father watches him steal away from light at dawn.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "romeo-1.4.1",
+      "text": "I fear, too early: for my mind misgives / Some consequence yet hanging in the stars / Shall bitterly begin his fearful date / With this night's revels",
+      "source": {
+        "play": "Romeo and Juliet",
+        "act": 1,
+        "scene": 4,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "ROMEO",
+      "weatherState": "clear",
+      "timeOfDay": "evening",
+      "intensity": 0.4,
+      "elements": [
+        "stars"
+      ],
+      "mood": "foreboding",
+      "context": "Romeo's premonition before the ball \u2014 consequence hanging in the stars. The stars are literal (clear evening, visible sky) and astrological (fate written overhead). He reads the weather as prophecy.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "romeo-1.5.1",
+      "text": "O, she doth teach the torches to burn bright! / It seems she hangs upon the cheek of night / Like a rich jewel in an Ethiope's ear",
+      "source": {
+        "play": "Romeo and Juliet",
+        "act": 1,
+        "scene": 5,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "ROMEO",
+      "weatherState": "clear",
+      "timeOfDay": "night",
+      "intensity": 0.5,
+      "elements": [
+        "torchlight"
+      ],
+      "mood": "tenderness",
+      "context": "Romeo seeing Juliet for the first time \u2014 she teaches torches, hangs on the cheek of night. Brightness against darkness: the ball is indoors but the metaphor is nocturnal. Tenderness as illumination.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "romeo-2.3.1",
+      "text": "The grey-eyed morn smiles on the frowning night, / Chequering the eastern clouds with streaks of light, / And flecked darkness like a drunkard reels / From forth day's path and Titan's fiery wheels",
+      "source": {
+        "play": "Romeo and Juliet",
+        "act": 2,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "FRIAR LAWRENCE",
+      "weatherState": "partly-cloudy",
+      "timeOfDay": "dawn",
+      "intensity": 0.8,
+      "elements": [
+        "sunrise",
+        "clouds"
+      ],
+      "mood": "calm",
+      "context": "The Friar's dawn \u2014 grey-eyed morn, chequered eastern clouds, flecked darkness reeling like a drunk. One of Shakespeare's most detailed dawn descriptions. Partly-cloudy because the clouds are specifically named: streaked with light, not fully clear.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "romeo-2.3.2",
+      "text": "Now, ere the sun advance his burning eye, / The day to cheer and night's dank dew to dry, / I must up-fill this osier cage of ours / With baleful weeds and precious-juiced flowers.",
+      "source": {
+        "play": "Romeo and Juliet",
+        "act": 2,
+        "scene": 3,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "FRIAR LAWRENCE",
+      "weatherState": "partly-cloudy",
+      "timeOfDay": "dawn",
+      "intensity": 0.6,
+      "elements": [
+        "dew",
+        "sunrise"
+      ],
+      "mood": "calm",
+      "context": "The Friar gathering herbs before the sun dries the dew \u2014 practical dawn, working outdoors. The sun's 'burning eye' hasn't risen fully. Dew is literal moisture; the herbs are both baleful and precious.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "literal"
+    },
+    {
+      "id": "romeo-3.1.1",
+      "text": "A plague o' both your houses! / They have made worms' meat of me: I have it, / And soundly too: your houses!",
+      "source": {
+        "play": "Romeo and Juliet",
+        "act": 3,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "MERCUTIO",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.4,
+      "elements": [
+        "heat"
+      ],
+      "mood": "rage",
+      "context": "Mercutio dying in the heat \u2014 the curse on both houses. The hot day he warned about has done its work. Rage at the waste: dying for a quarrel that isn't his, in weather that made it inevitable.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "romeo-3.1.2",
+      "text": "This day's black fate on more days doth depend; / This but begins the woe that others must end.",
+      "source": {
+        "play": "Romeo and Juliet",
+        "act": 3,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "ROMEO",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.4,
+      "elements": [
+        "heat"
+      ],
+      "mood": "foreboding",
+      "context": "Romeo reading the day's fate \u2014 'this day's black fate.' The day is bright and hot; the blackness is in what it's produced. Foreboding as recognition: this is a hinge, and more death follows.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    },
+    {
+      "id": "romeo-4.5.1",
+      "text": "Death lies on her like an untimely frost / Upon the sweetest flower of all the field.",
+      "source": {
+        "play": "Romeo and Juliet",
+        "act": 4,
+        "scene": 5,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "CAPULET",
+      "weatherState": "snowy",
+      "timeOfDay": "dawn",
+      "intensity": 0.5,
+      "elements": [
+        "frost"
+      ],
+      "mood": "despair",
+      "context": "Capulet finding Juliet 'dead' \u2014 an untimely frost on the sweetest flower. The frost metaphor is precise: death that comes too early in the season, killing what should have had more time. Same image as Titania's, but personal.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "metaphor"
+    },
+    {
+      "id": "romeo-5.1.1",
+      "text": "If I may trust the flattering truth of sleep, / My dreams presage some joyful news at hand: / My bosom's lord sits lightly in his throne; / And all this day an unaccustom'd spirit / Lifts me above the ground with cheerful thoughts.",
+      "source": {
+        "play": "Romeo and Juliet",
+        "act": 5,
+        "scene": 1,
+        "lineStart": null,
+        "lineEnd": null
+      },
+      "speaker": "ROMEO",
+      "weatherState": "clear",
+      "timeOfDay": "day",
+      "intensity": 0.3,
+      "elements": [
+        "sun"
+      ],
+      "mood": "foreboding",
+      "context": "Romeo in Mantua \u2014 cheerful dreams, light spirit. The clear day is ironic: he's about to hear Juliet is dead. The good weather makes the bad news worse. Foreboding because we know what he doesn't.",
+      "annotation": null,
+      "confidence": "imported",
+      "type": "mood"
+    }
+  ]
+}

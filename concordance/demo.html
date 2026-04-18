@@ -1,0 +1,993 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shakespeare Weather Concordance — Unkind.js Demo</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@300;400&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'EB Garamond', Georgia, serif;
+    background: #020508;
+    color: #c8ccd4;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+  /* ──────────────────────────────────────────────────── */
+  /* SKY CANVAS */
+  /* ──────────────────────────────────────────────────── */
+
+  #sky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60vh;
+    z-index: 0;
+    overflow: hidden;
+  }
+
+  .sky-background {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    inset: 0;
+    transition: all 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  }
+
+  /* Weather state backgrounds */
+  .sky-background.clear {
+    background: linear-gradient(180deg, #1e5a96 0%, #2a7fb8 30%, #3a9fd4 60%, #7db8d4 100%);
+  }
+
+  .sky-background.partly-cloudy {
+    background: linear-gradient(180deg, #2a5a90 0%, #3a6fab 40%, #4a8ac8 70%, #6a9adb 100%);
+  }
+
+  .sky-background.overcast {
+    background: linear-gradient(180deg, #3a4a5a 0%, #4a5a6a 40%, #5a6a7a 70%, #6a7a8a 100%);
+  }
+
+  .sky-background.rainy {
+    background: linear-gradient(180deg, #2a3a4a 0%, #3a4a5a 50%, #4a5a6a 100%);
+  }
+
+  .sky-background.snowy {
+    background: linear-gradient(180deg, #6a7a8a 0%, #7a8a9a 50%, #8a9aaa 100%);
+  }
+
+  .sky-background.stormy {
+    background: linear-gradient(180deg, #0a0f15 0%, #151a25 30%, #1a1f2a 70%, #0f1419 100%);
+  }
+
+  .sky-background.foggy {
+    background: linear-gradient(180deg, #6a7a8a 0%, #7a8a9a 50%, #8a9aaa 100%);
+    filter: blur(8px);
+  }
+
+  .sky-background.windy {
+    background: linear-gradient(180deg, #2a5a90 0%, #3a7fab 40%, #5a9adb 100%);
+  }
+
+  .sky-background.dawn {
+    background: linear-gradient(180deg, #2d1a0a 0%, #5a3d1f 20%, #8a5a3a 40%, #c89050 70%, #d4a070 100%);
+  }
+
+  .sky-background.dusk {
+    background: linear-gradient(180deg, #1a0f2a 0%, #3a2a5a 30%, #6a4a8a 60%, #b87a5a 100%);
+  }
+
+  .sky-background.night-clear {
+    background: linear-gradient(180deg, #020406 0%, #040810 20%, #060c14 40%, #0a1020 100%);
+  }
+
+  .sky-background.night-stormy {
+    background: linear-gradient(180deg, #0a050f 0%, #0f0a15 30%, #14090f 70%, #0a050a 100%);
+  }
+
+  /* Animated elements */
+  .rain-drops {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+  }
+
+  .rain-drops.active {
+    opacity: 1;
+  }
+
+  .raindrop {
+    position: absolute;
+    width: 1px;
+    height: 8px;
+    background: rgba(180, 200, 220, 0.6);
+    animation: fall linear infinite;
+  }
+
+  @keyframes fall {
+    to { transform: translateY(100vh); }
+  }
+
+  .snow-flakes {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1.2s ease-in-out;
+  }
+
+  .snow-flakes.active {
+    opacity: 1;
+  }
+
+  .snowflake {
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    background: rgba(220, 230, 240, 0.8);
+    border-radius: 50%;
+    animation: snowfall linear infinite;
+    filter: blur(0.5px);
+  }
+
+  @keyframes snowfall {
+    to { transform: translateY(100vh) translateX(var(--drift, 0px)); }
+  }
+
+  .lightning {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: rgba(200, 220, 240, 0);
+    pointer-events: none;
+  }
+
+  .lightning.flash {
+    animation: lightningFlash 0.15s ease-out;
+  }
+
+  @keyframes lightningFlash {
+    0%, 100% { background: rgba(200, 220, 240, 0); }
+    50% { background: rgba(200, 220, 240, 0.3); }
+  }
+
+  .stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
+
+  .star {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    background: rgba(200, 210, 230, 0.8);
+    border-radius: 50%;
+    animation: twinkle 3s ease-in-out infinite;
+  }
+
+  @keyframes twinkle {
+    0%, 100% { opacity: 0.3; }
+    50% { opacity: 1; }
+  }
+
+  /* ──────────────────────────────────────────────────── */
+  /* MAIN CONTENT */
+  /* ──────────────────────────────────────────────────── */
+
+  .container {
+    position: relative;
+    z-index: 10;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .sky-section {
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 30px;
+    text-align: center;
+    position: relative;
+  }
+
+  .quote-display {
+    max-width: 700px;
+    opacity: 0;
+    transition: opacity 0.8s ease-in-out;
+  }
+
+  .quote-display.visible {
+    opacity: 1;
+  }
+
+  .quote-text {
+    font-size: clamp(18px, 3vw, 28px);
+    line-height: 1.6;
+    color: #f0e8d8;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.8), 0 0 30px rgba(0, 0, 0, 0.5);
+    font-style: italic;
+    margin-bottom: 16px;
+    font-weight: 400;
+  }
+
+  .quote-attribution {
+    font-family: 'Poiret One', sans-serif;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(220, 200, 140, 0.6);
+    margin-bottom: 8px;
+  }
+
+  .quote-context {
+    font-size: 12px;
+    color: rgba(180, 195, 210, 0.4);
+    font-style: italic;
+    line-height: 1.5;
+  }
+
+  .shuffle-btn {
+    font-family: 'Poiret One', sans-serif;
+    font-size: 11px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: rgba(10, 20, 35, 0.5);
+    border: 1px solid rgba(180, 195, 210, 0.2);
+    color: rgba(180, 195, 210, 0.5);
+    padding: 7px 16px;
+    border-radius: 3px;
+    cursor: pointer;
+    margin-top: 16px;
+    transition: all 0.3s ease;
+  }
+
+  .shuffle-btn:hover {
+    border-color: rgba(220, 180, 100, 0.4);
+    color: rgba(220, 180, 100, 0.7);
+    background: rgba(10, 20, 35, 0.8);
+  }
+
+  /* ──────────────────────────────────────────────────── */
+  /* WEATHER SELECTOR */
+  /* ──────────────────────────────────────────────────── */
+
+  .weather-selector {
+    display: flex;
+    gap: 6px;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 16px 30px;
+    background: rgba(5, 10, 15, 0.4);
+    border-bottom: 1px solid rgba(180, 195, 210, 0.1);
+    position: relative;
+    z-index: 15;
+  }
+
+  .weather-btn {
+    font-family: 'Poiret One', sans-serif;
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    background: rgba(10, 20, 35, 0.4);
+    border: 1px solid rgba(180, 195, 210, 0.15);
+    color: rgba(180, 195, 210, 0.4);
+    padding: 6px 12px;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+  }
+
+  .weather-btn:hover {
+    border-color: rgba(220, 180, 100, 0.3);
+    color: rgba(220, 180, 100, 0.6);
+    background: rgba(10, 20, 35, 0.7);
+  }
+
+  .weather-btn.active {
+    border-color: rgba(220, 180, 100, 0.6);
+    color: rgba(220, 180, 100, 1);
+    background: rgba(10, 20, 35, 1);
+    box-shadow: 0 0 12px rgba(220, 180, 100, 0.2);
+  }
+
+  /* ──────────────────────────────────────────────────── */
+  /* BROWSER SECTION */
+  /* ──────────────────────────────────────────────────── */
+
+  .browser-section {
+    height: 40vh;
+    display: flex;
+    flex-direction: column;
+    background: rgba(5, 10, 15, 0.6);
+    border-top: 1px solid rgba(180, 195, 210, 0.1);
+    overflow: hidden;
+  }
+
+  .browser-header {
+    padding: 12px 30px;
+    border-bottom: 1px solid rgba(180, 195, 210, 0.1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .browser-title {
+    font-family: 'Poiret One', sans-serif;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(180, 195, 210, 0.5);
+  }
+
+  .browser-stats {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: rgba(180, 195, 210, 0.3);
+  }
+
+  .passages-list {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0;
+  }
+
+  .passage-item {
+    padding: 12px 30px;
+    border-bottom: 1px solid rgba(180, 195, 210, 0.05);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: transparent;
+  }
+
+  .passage-item:hover {
+    background: rgba(180, 195, 210, 0.05);
+  }
+
+  .passage-text {
+    font-size: 13px;
+    line-height: 1.4;
+    color: #d0c8b8;
+    margin-bottom: 6px;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .passage-meta {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 10px;
+    color: rgba(180, 195, 210, 0.3);
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  .mood-tag {
+    display: inline-block;
+    padding: 2px 6px;
+    background: rgba(220, 180, 100, 0.1);
+    border-radius: 2px;
+    color: rgba(220, 180, 100, 0.5);
+  }
+
+  /* ──────────────────────────────────────────────────── */
+  /* STATS SIDEBAR */
+  /* ──────────────────────────────────────────────────── */
+
+  .stats-panel {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: rgba(10, 20, 35, 0.8);
+    border: 1px solid rgba(180, 195, 210, 0.15);
+    border-radius: 4px;
+    padding: 14px 18px;
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: rgba(180, 195, 210, 0.5);
+    line-height: 1.8;
+    max-width: 180px;
+    backdrop-filter: blur(4px);
+  }
+
+  .stat-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 6px;
+  }
+
+  .stat-label {
+    color: rgba(180, 195, 210, 0.3);
+  }
+
+  .stat-value {
+    color: rgba(220, 180, 100, 0.6);
+  }
+
+  .mood-chart {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid rgba(180, 195, 210, 0.1);
+  }
+
+  .mood-bar {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-bottom: 4px;
+    font-size: 10px;
+  }
+
+  .mood-name {
+    flex: 0 0 60px;
+    color: rgba(180, 195, 210, 0.3);
+    text-align: right;
+  }
+
+  .mood-fill {
+    flex: 1;
+    height: 4px;
+    background: rgba(220, 180, 100, 0.3);
+    border-radius: 2px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .mood-fill-inner {
+    height: 100%;
+    background: rgba(220, 180, 100, 0.6);
+    border-radius: 2px;
+    transition: width 0.6s ease;
+  }
+
+  .mood-count {
+    flex: 0 0 24px;
+    color: rgba(220, 180, 100, 0.4);
+    text-align: right;
+  }
+
+  /* ──────────────────────────────────────────────────── */
+  /* SCROLLBAR */
+  /* ──────────────────────────────────────────────────── */
+
+  .passages-list::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  .passages-list::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  .passages-list::-webkit-scrollbar-thumb {
+    background: rgba(180, 195, 210, 0.2);
+    border-radius: 2px;
+  }
+
+  .passages-list::-webkit-scrollbar-thumb:hover {
+    background: rgba(180, 195, 210, 0.3);
+  }
+
+  /* ──────────────────────────────────────────────────── */
+  /* RESPONSIVE */
+  /* ──────────────────────────────────────────────────── */
+
+  @media (max-width: 768px) {
+    .sky-section {
+      height: 50vh;
+    }
+
+    .browser-section {
+      height: 50vh;
+    }
+
+    .stats-panel {
+      display: none;
+    }
+
+    .quote-text {
+      font-size: clamp(14px, 2vw, 20px);
+    }
+
+    .weather-selector {
+      gap: 4px;
+    }
+
+    .weather-btn {
+      padding: 4px 8px;
+      font-size: 9px;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div id="sky">
+  <div id="skyBg" class="sky-background clear"></div>
+  <div id="rainContainer" class="rain-drops"></div>
+  <div id="snowContainer" class="snow-flakes"></div>
+  <div id="starsContainer" class="stars"></div>
+  <div id="lightning" class="lightning"></div>
+</div>
+
+<div class="container">
+  <div class="sky-section">
+    <div class="quote-display" id="quoteDisplay">
+      <div class="quote-text" id="quoteText"></div>
+      <div class="quote-attribution" id="quoteAttr"></div>
+      <div class="quote-context" id="quoteCtx"></div>
+      <button class="shuffle-btn" id="shuffleBtn">Shuffle</button>
+    </div>
+  </div>
+
+  <div class="weather-selector" id="weatherSelector"></div>
+
+  <div class="browser-section">
+    <div class="browser-header">
+      <div class="browser-title">All Passages</div>
+      <div class="browser-stats" id="browserStats"></div>
+    </div>
+    <div class="passages-list" id="passagesList"></div>
+  </div>
+</div>
+
+<div class="stats-panel" id="statsPanel">
+  <div class="stat-row">
+    <span class="stat-label">State</span>
+    <span class="stat-value" id="statWeather">—</span>
+  </div>
+  <div class="stat-row">
+    <span class="stat-label">Entries</span>
+    <span class="stat-value" id="statCount">—</span>
+  </div>
+  <div class="stat-row">
+    <span class="stat-label">Plays</span>
+    <span class="stat-value" id="statPlays">—</span>
+  </div>
+  <div class="mood-chart" id="moodChart"></div>
+</div>
+
+<script>
+  // ────────────────────────────────────────────────────────────────────
+  // CONCORDANCE DATA (embedded)
+  // ────────────────────────────────────────────────────────────────────
+
+  const concordanceData = {
+  "metadata": {
+    "title": "Shakespeare Weather Concordance",
+    "totalEntries": 72
+  },
+  "concordance": [
+    {
+      "id": "lear-3-2-1",
+      "text": "Blow, winds, and crack your cheeks! rage! blow! You cataracts and hurricanoes, spout till you have drench'd our steeples, drown'd the cocks!",
+      "source": { "play": "King Lear", "act": 3, "scene": 2 },
+      "speaker": "Lear",
+      "weatherState": "stormy",
+      "timeOfDay": "night",
+      "intensity": 1.0,
+      "mood": "rage",
+      "context": "Lear, cast out by his daughters, commands the storm to rage on the heath."
+    },
+    {
+      "id": "lear-3-4-1",
+      "text": "Here's a night pities neither wise men nor fools.",
+      "source": { "play": "King Lear", "act": 3, "scene": 4 },
+      "speaker": "Kent",
+      "weatherState": "stormy",
+      "timeOfDay": "night",
+      "intensity": 0.9,
+      "mood": "concern",
+      "context": "Kent urges Lear to seek shelter from the terrible night."
+    },
+    {
+      "id": "tempest-1-1-1",
+      "text": "A tempestuous noise of thunder and lightning heard.",
+      "source": { "play": "The Tempest", "act": 1, "scene": 1 },
+      "speaker": "Stage direction",
+      "weatherState": "stormy",
+      "timeOfDay": "day",
+      "intensity": 1.0,
+      "mood": "chaos",
+      "context": "The play opens with a violent storm at sea."
+    },
+    {
+      "id": "midsummer-2-1-1",
+      "text": "Over hill, over dale, through bush, through briar, over park, over pale, through flood, through fire, I do wander everywhere.",
+      "source": { "play": "A Midsummer Night's Dream", "act": 2, "scene": 1 },
+      "speaker": "Puck",
+      "weatherState": "clear",
+      "timeOfDay": "night",
+      "intensity": 0.3,
+      "mood": "mischief",
+      "context": "Puck glides through a moonlit night on a mischievous quest."
+    },
+    {
+      "id": "midsummer-3-2-1",
+      "text": "The moon methinks looks with a watery eye; and when she weeps, weeps every little flower, lamenting some enforced chastity.",
+      "source": { "play": "A Midsummer Night's Dream", "act": 3, "scene": 2 },
+      "speaker": "Puck",
+      "weatherState": "rainy",
+      "timeOfDay": "night",
+      "intensity": 0.6,
+      "mood": "melancholy",
+      "context": "Puck reflects on the moon's tears and their effect on nature."
+    },
+    {
+      "id": "romeo-2-2-1",
+      "text": "But soft! what light through yonder window breaks? It is the east, and Juliet is the sun.",
+      "source": { "play": "Romeo and Juliet", "act": 2, "scene": 2 },
+      "speaker": "Romeo",
+      "weatherState": "clear",
+      "timeOfDay": "dawn",
+      "intensity": 0.4,
+      "mood": "tenderness",
+      "context": "Romeo sees Juliet at dawn, comparing her to the rising sun."
+    },
+    {
+      "id": "macbeth-3-2-1",
+      "text": "There's comfort yet; they may again give battle. But there's no flying hence nor tarrying here. I am cabin'd, cribb'd, confined.",
+      "source": { "play": "Macbeth", "act": 3, "scene": 2 },
+      "speaker": "Macbeth",
+      "weatherState": "foggy",
+      "timeOfDay": "day",
+      "intensity": 0.7,
+      "mood": "despair",
+      "context": "Macbeth feels trapped by his ambitions and the enclosing darkness."
+    },
+    {
+      "id": "hamlet-4-5-1",
+      "text": "There's something in this more than natural, if philosophy could find it out.",
+      "source": { "play": "Hamlet", "act": 4, "scene": 5 },
+      "speaker": "Gertrude",
+      "weatherState": "night-stormy",
+      "timeOfDay": "night",
+      "intensity": 0.8,
+      "mood": "foreboding",
+      "context": "Gertrude senses the supernatural unrest in Elsinore."
+    },
+    {
+      "id": "tempest-5-1-1",
+      "text": "Now my charms are all o'erthrown, and what strength I have's mine own, which is most faint.",
+      "source": { "play": "The Tempest", "act": 5, "scene": 1 },
+      "speaker": "Prospero",
+      "weatherState": "clear",
+      "timeOfDay": "dusk",
+      "intensity": 0.5,
+      "mood": "reconciliation",
+      "context": "Prospero relinquishes his magic as the tempest subsides."
+    },
+    {
+      "id": "winter-4-4-1",
+      "text": "When daisies pied and violets blue, and lady-smocks all silver-white, and cuckoo-buds of yellow hue do paint the meadows with delight.",
+      "source": { "play": "Love's Labour's Lost", "act": 5, "scene": 2 },
+      "speaker": "Spring songs",
+      "weatherState": "partly-cloudy",
+      "timeOfDay": "day",
+      "intensity": 0.2,
+      "mood": "tenderness",
+      "context": "A song celebrating the colors and delights of spring."
+    }
+  ]
+  };
+
+  // ────────────────────────────────────────────────────────────────────
+  // STATE & DOM
+  // ────────────────────────────────────────────────────────────────────
+
+  let currentWeatherState = 'clear';
+  let currentPassages = [];
+  let currentDisplayedPassage = null;
+
+  const weatherStates = [
+    'clear', 'partly-cloudy', 'overcast', 'rainy', 'stormy', 'snowy',
+    'foggy', 'windy', 'dawn', 'dusk', 'night-clear', 'night-stormy'
+  ];
+
+  const elements = {
+    sky: document.getElementById('sky'),
+    skyBg: document.getElementById('skyBg'),
+    rainContainer: document.getElementById('rainContainer'),
+    snowContainer: document.getElementById('snowContainer'),
+    starsContainer: document.getElementById('starsContainer'),
+    lightning: document.getElementById('lightning'),
+    quoteDisplay: document.getElementById('quoteDisplay'),
+    quoteText: document.getElementById('quoteText'),
+    quoteAttr: document.getElementById('quoteAttr'),
+    quoteCtx: document.getElementById('quoteCtx'),
+    shuffleBtn: document.getElementById('shuffleBtn'),
+    weatherSelector: document.getElementById('weatherSelector'),
+    passagesList: document.getElementById('passagesList'),
+    browserStats: document.getElementById('browserStats'),
+    statsPanel: document.getElementById('statsPanel'),
+    statWeather: document.getElementById('statWeather'),
+    statCount: document.getElementById('statCount'),
+    statPlays: document.getElementById('statPlays'),
+    moodChart: document.getElementById('moodChart')
+  };
+
+  // ────────────────────────────────────────────────────────────────────
+  // INITIALIZATION
+  // ────────────────────────────────────────────────────────────────────
+
+  function init() {
+    buildWeatherSelector();
+    updateForWeather('clear');
+  }
+
+  function buildWeatherSelector() {
+    elements.weatherSelector.innerHTML = '';
+    weatherStates.forEach(state => {
+      const btn = document.createElement('button');
+      btn.className = 'weather-btn';
+      btn.textContent = state.replace('-', ' ');
+      btn.addEventListener('click', () => updateForWeather(state));
+      if (state === 'clear') btn.classList.add('active');
+      elements.weatherSelector.appendChild(btn);
+    });
+  }
+
+  // ────────────────────────────────────────────────────────────────────
+  // WEATHER UPDATE
+  // ────────────────────────────────────────────────────────────────────
+
+  function updateForWeather(state) {
+    currentWeatherState = state;
+
+    // Update selector buttons
+    document.querySelectorAll('.weather-btn').forEach(btn => {
+      btn.classList.toggle('active', btn.textContent.toLowerCase().replace(/ /g, '-') === state);
+    });
+
+    // Update sky background
+    elements.skyBg.className = 'sky-background ' + state;
+
+    // Update weather effects
+    updateWeatherEffects(state);
+
+    // Filter passages
+    currentPassages = concordanceData.concordance.filter(p => p.weatherState === state);
+
+    // Show a random passage
+    if (currentPassages.length > 0) {
+      showPassage(currentPassages[Math.floor(Math.random() * currentPassages.length)]);
+    }
+
+    // Update passage list
+    renderPassagesList();
+
+    // Update stats
+    updateStats();
+  }
+
+  // ────────────────────────────────────────────────────────────────────
+  // WEATHER EFFECTS
+  // ────────────────────────────────────────────────────────────────────
+
+  function updateWeatherEffects(state) {
+    // Clear all effects
+    elements.rainContainer.innerHTML = '';
+    elements.snowContainer.innerHTML = '';
+    elements.starsContainer.innerHTML = '';
+    elements.rainContainer.classList.remove('active');
+    elements.snowContainer.classList.remove('active');
+
+    // Apply effects based on state
+    if (state.includes('rainy')) {
+      createRain();
+    } else if (state.includes('snowy')) {
+      createSnow();
+    } else if (state.includes('night')) {
+      createStars();
+    }
+
+    if (state === 'stormy' || state === 'night-stormy') {
+      startLightning();
+    } else {
+      stopLightning();
+    }
+  }
+
+  function createRain() {
+    elements.rainContainer.classList.add('active');
+    for (let i = 0; i < 40; i++) {
+      const drop = document.createElement('div');
+      drop.className = 'raindrop';
+      drop.style.left = Math.random() * 100 + '%';
+      drop.style.top = Math.random() * -100 + '%';
+      drop.style.animationDuration = (0.5 + Math.random() * 0.5) + 's';
+      drop.style.animationDelay = Math.random() * 2 + 's';
+      elements.rainContainer.appendChild(drop);
+    }
+  }
+
+  function createSnow() {
+    elements.snowContainer.classList.add('active');
+    for (let i = 0; i < 30; i++) {
+      const flake = document.createElement('div');
+      flake.className = 'snowflake';
+      flake.style.left = Math.random() * 100 + '%';
+      flake.style.top = Math.random() * -100 + '%';
+      flake.style.setProperty('--drift', (Math.random() * 100 - 50) + 'px');
+      flake.style.animationDuration = (8 + Math.random() * 4) + 's';
+      flake.style.animationDelay = Math.random() * 4 + 's';
+      elements.snowContainer.appendChild(flake);
+    }
+  }
+
+  function createStars() {
+    for (let i = 0; i < 50; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      star.style.left = Math.random() * 100 + '%';
+      star.style.top = Math.random() * 100 + '%';
+      star.style.animationDelay = Math.random() * 3 + 's';
+      elements.starsContainer.appendChild(star);
+    }
+  }
+
+  let lightningInterval = null;
+
+  function startLightning() {
+    if (lightningInterval) return;
+    lightningInterval = setInterval(() => {
+      if (Math.random() > 0.7) {
+        elements.lightning.classList.remove('flash');
+        void elements.lightning.offsetWidth; // trigger reflow
+        elements.lightning.classList.add('flash');
+      }
+    }, 500);
+  }
+
+  function stopLightning() {
+    if (lightningInterval) {
+      clearInterval(lightningInterval);
+      lightningInterval = null;
+    }
+    elements.lightning.classList.remove('flash');
+  }
+
+  // ────────────────────────────────────────────────────────────────────
+  // PASSAGE DISPLAY
+  // ────────────────────────────────────────────────────────────────────
+
+  function showPassage(passage) {
+    currentDisplayedPassage = passage;
+
+    elements.quoteDisplay.classList.remove('visible');
+
+    setTimeout(() => {
+      elements.quoteText.textContent = passage.text;
+      elements.quoteAttr.textContent = passage.speaker + ' — ' + passage.source.play;
+
+      const lineRef = `Act ${passage.source.act}, Scene ${passage.source.scene}`;
+      elements.quoteCtx.textContent = lineRef + (passage.mood ? ' · ' + passage.mood : '');
+
+      elements.quoteDisplay.classList.add('visible');
+    }, 200);
+  }
+
+  elements.shuffleBtn.addEventListener('click', () => {
+    if (currentPassages.length > 0) {
+      showPassage(currentPassages[Math.floor(Math.random() * currentPassages.length)]);
+    }
+  });
+
+  // ────────────────────────────────────────────────────────────────────
+  // PASSAGES LIST
+  // ────────────────────────────────────────────────────────────────────
+
+  function renderPassagesList() {
+    elements.passagesList.innerHTML = '';
+
+    currentPassages.forEach(passage => {
+      const item = document.createElement('div');
+      item.className = 'passage-item';
+
+      const textEl = document.createElement('div');
+      textEl.className = 'passage-text';
+      textEl.textContent = passage.text;
+
+      const metaEl = document.createElement('div');
+      metaEl.className = 'passage-meta';
+
+      const playEl = document.createElement('span');
+      playEl.textContent = passage.source.play + ' ' + passage.source.act + '.' + passage.source.scene;
+      metaEl.appendChild(playEl);
+
+      if (passage.mood) {
+        const moodEl = document.createElement('span');
+        moodEl.className = 'mood-tag';
+        moodEl.textContent = passage.mood;
+        metaEl.appendChild(moodEl);
+      }
+
+      item.appendChild(textEl);
+      item.appendChild(metaEl);
+
+      item.addEventListener('click', () => showPassage(passage));
+
+      elements.passagesList.appendChild(item);
+    });
+
+    elements.browserStats.textContent = currentPassages.length + ' passage' + (currentPassages.length !== 1 ? 's' : '');
+  }
+
+  // ────────────────────────────────────────────────────────────────────
+  // STATS
+  // ────────────────────────────────────────────────────────────────────
+
+  function updateStats() {
+    elements.statWeather.textContent = currentWeatherState.replace('-', ' ');
+    elements.statCount.textContent = currentPassages.length;
+
+    const plays = new Set(currentPassages.map(p => p.source.play));
+    elements.statPlays.textContent = plays.size;
+
+    // Mood distribution
+    const moodCounts = {};
+    currentPassages.forEach(p => {
+      if (p.mood) {
+        moodCounts[p.mood] = (moodCounts[p.mood] || 0) + 1;
+      }
+    });
+
+    const sortedMoods = Object.entries(moodCounts)
+      .sort((a, b) => b[1] - a[1])
+      .slice(0, 3);
+
+    elements.moodChart.innerHTML = '';
+    const maxCount = Math.max(...Object.values(moodCounts), 1);
+
+    sortedMoods.forEach(([mood, count]) => {
+      const bar = document.createElement('div');
+      bar.className = 'mood-bar';
+
+      const nameEl = document.createElement('div');
+      nameEl.className = 'mood-name';
+      nameEl.textContent = mood.substring(0, 6);
+
+      const fillEl = document.createElement('div');
+      fillEl.className = 'mood-fill';
+
+      const fillInner = document.createElement('div');
+      fillInner.className = 'mood-fill-inner';
+      fillInner.style.width = (count / maxCount * 100) + '%';
+
+      fillEl.appendChild(fillInner);
+
+      const countEl = document.createElement('div');
+      countEl.className = 'mood-count';
+      countEl.textContent = count;
+
+      bar.appendChild(nameEl);
+      bar.appendChild(fillEl);
+      bar.appendChild(countEl);
+
+      elements.moodChart.appendChild(bar);
+    });
+  }
+
+  // ────────────────────────────────────────────────────────────────────
+  // GO
+  // ────────────────────────────────────────────────────────────────────
+
+  init();
+</script>
+</body>
+</html>
