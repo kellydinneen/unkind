@@ -61,23 +61,12 @@
     margin-bottom: 6px;
   }
 
-  /* ── Wry commentary ── */
-  .commentary {
-    font-size: 14px; font-style: italic;
-    color: rgba(186, 196, 210, 0.3);
-    min-height: 24px;
-    margin-bottom: 14px;
-    text-align: center;
-    max-width: 400px;
-    transition: opacity 1.2s ease-in-out;
-  }
-  .commentary.fading { opacity: 0; }
-
   /* ── Shakespeare passage display ── */
   .passage-container {
     max-width: 560px; width: 100%;
-    min-height: 100px; /* fixed min-height prevents layout shift between passages */
-    margin-bottom: 18px;
+    min-height: 120px;
+    margin-top: 10px;
+    margin-bottom: 4px;
     text-align: center;
     opacity: 0;
     transition: opacity 1.6s ease-in-out;
@@ -85,7 +74,7 @@
   .passage-container.visible { opacity: 1; }
 
   .passage-text {
-    font-size: clamp(18px, 3.5vw, 24px);
+    font-size: clamp(12px, 3.5vw, 18px);
     line-height: 1.55;
     color: #d8d0c0;
     text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 0, 0, 0.3);
@@ -123,7 +112,7 @@
     padding: 20px 24px;
     color: rgba(186, 196, 210, 0.6);
     white-space: pre; overflow-x: auto;
-    min-height: 110px; /* fixed height prevents resize jank between code states */
+    min-height: 200px; /* fixed height prevents resize jank between code states */
   }
   .code-inner {
     display: inline;
@@ -459,12 +448,7 @@
   <div class="content-layer">
     <div class="library-name">unkind.js</div>
     <div class="hero-title">Unkind Weather</div>
-    <!-- <div class="hero-sub">
-      Weather data becomes a living sky.<br>
-      A living sky becomes Shakespeare.
-    </div> -->
     <div class="state-badge" id="badge">night</div>
-    <div class="commentary" id="commentary"></div>
 
     <div class="passage-container" id="passageContainer">
       <div class="passage-text" id="passageText"></div>
