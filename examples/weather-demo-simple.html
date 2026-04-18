@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unkind.js — Live Weather</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@300;400&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'EB Garamond', Georgia, serif;
+    background: #020508;
+    color: #c8ccd4;
+    min-height: 100vh;
+    overflow: hidden;
+  }
+
+  #sky { position: fixed; inset: 0; z-index: 0; }
+
+  .content {
+    position: relative; z-index: 10;
+    height: 100vh;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 40px 30px;
+    text-align: center;
+  }
+
+  .library-name {
+    font-family: 'Poiret One', sans-serif;
+    font-size: 11px; letter-spacing: 6px;
+    text-transform: uppercase;
+    color: rgba(122, 160, 196, 0.35);
+    margin-bottom: 20px;
+  }
+
+  /* ── Quote display ── */
+  .quote-container {
+    max-width: 640px;
+    margin-bottom: 30px;
+    opacity: 0;
+    transition: opacity 2s ease-in-out;
+  }
+  .quote-container.visible { opacity: 1; }
+
+  .quote-text {
+    font-size: clamp(22px, 4vw, 32px);
+    line-height: 1.55;
+    color: #d8d0c0;
+    text-shadow: 0 1px 8px rgba(0, 0, 0, 0.7), 0 0 25px rgba(0, 0, 0, 0.4);
+    font-style: italic;
+    margin-bottom: 16px;
+  }
+
+  .quote-attribution {
+    font-family: 'Poiret One', sans-serif;
+    font-size: 13px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: rgba(196, 168, 112, 0.5);
+    margin-bottom: 4px;
+  }
+
+  .quote-context {
+    font-size: 14px;
+    color: rgba(186, 196, 210, 0.3);
+    font-style: italic;
+  }
+
+  /* ── Weather info ── */
+  .weather-info {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: rgba(122, 160, 196, 0.3);
+    max-width: 500px;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out 0.5s;
+  }
+  .weather-info.visible { opacity: 1; }
+
+  .weather-detail {
+    display: inline-block;
+    margin: 0 8px;
+  }
+  .weather-label {
+    color: rgba(122, 160, 196, 0.2);
+  }
+
+  /* ── State badge ── */
+  .state-badge {
+    font-family: 'Poiret One', sans-serif;
+    font-size: 10px; letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(122, 160, 196, 0.25);
+    border: 1px solid rgba(122, 160, 196, 0.08);
+    padding: 4px 14px; border-radius: 3px;
+    margin-bottom: 16px;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out 1s;
+  }
+  .state-badge.visible { opacity: 1; }
+
+  /* ── Loading / Error states ── */
+  .status-msg {
+    font-size: 15px;
+    color: rgba(186, 196, 210, 0.4);
+    font-style: italic;
+    line-height: 1.6;
+  }
+
+  .status-msg a {
+    color: rgba(196, 168, 112, 0.5);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(196, 168, 112, 0.2);
+  }
+  .status-msg a:hover {
+    color: rgba(196, 168, 112, 0.8);
+  }
+
+  /* ── Manual location input ── */
+  .manual-input {
+    margin-top: 16px;
+    display: none;
+  }
+  .manual-input.visible { display: block; }
+
+  .manual-input input {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 13px;
+    background: rgba(5, 17, 23, 0.6);
+    border: 1px solid rgba(122, 160, 196, 0.15);
+    border-radius: 4px;
+    color: #c8ccd4;
+    padding: 8px 14px;
+    width: 200px;
+    text-align: center;
+    outline: none;
+  }
+  .manual-input input::placeholder {
+    color: rgba(122, 160, 196, 0.25);
+  }
+  .manual-input input:focus {
+    border-color: rgba(122, 160, 196, 0.3);
+  }
+
+  .manual-input button {
+    font-family: 'Poiret One', sans-serif;
+    font-size: 12px; letter-spacing: 2px;
+    text-transform: uppercase;
+    background: rgba(5, 17, 23, 0.6);
+    border: 1px solid rgba(122, 160, 196, 0.15);
+    border-radius: 4px;
+    color: rgba(186, 196, 210, 0.5);
+    padding: 8px 18px;
+    cursor: pointer;
+    margin-left: 8px;
+    transition: all 0.3s ease;
+  }
+  .manual-input button:hover {
+    border-color: rgba(196, 168, 112, 0.3);
+    color: rgba(196, 168, 112, 0.7);
+  }
+
+  /* ── Alternatives ── */
+  .alternatives {
+    position: fixed;
+    bottom: 24px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out 2s;
+  }
+  .alternatives.visible { opacity: 1; }
+
+  .alt-btn {
+    font-family: 'Poiret One', sans-serif;
+    font-size: 10px; letter-spacing: 1px;
+    text-transform: uppercase;
+    background: rgba(5, 17, 23, 0.5);
+    border: 1px solid rgba(122, 160, 196, 0.08);
+    border-radius: 3px;
+    color: rgba(186, 196, 210, 0.3);
+    padding: 5px 12px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+    max-width: 180px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .alt-btn:hover {
+    border-color: rgba(196, 168, 112, 0.25);
+    color: rgba(196, 168, 112, 0.6);
+    background: rgba(5, 17, 23, 0.7);
+  }
+
+  /* ── Refresh button ── */
+  .refresh-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    font-family: 'Poiret One', sans-serif;
+    font-size: 10px; letter-spacing: 2px;
+    text-transform: uppercase;
+    background: rgba(5, 17, 23, 0.5);
+    border: 1px solid rgba(122, 160, 196, 0.1);
+    border-radius: 3px;
+    color: rgba(122, 160, 196, 0.3);
+    padding: 6px 14px;
+    cursor: pointer;
+    z-index: 20;
+    transition: all 0.3s ease;
+    opacity: 0;
+    transition: opacity 1s ease-in-out 2s, border-color 0.3s ease, color 0.3s ease;
+  }
+  .refresh-btn.visible { opacity: 1; }
+  .refresh-btn:hover {
+    border-color: rgba(196, 168, 112, 0.3);
+    color: rgba(196, 168, 112, 0.6);
+  }
+</style>
+</head>
+<body>
+
+<div id="sky"></div>
+
+<button class="refresh-btn" id="refreshBtn">Refresh</button>
+
+<div class="content">
+  <div class="library-name">UNKIND.JS</div>
+
+  <div id="statusArea">
+    <p class="status-msg" id="statusMsg">Locating you under these skies...</p>
+    <div class="manual-input" id="manualInput">
+      <input type="text" id="cityInput" placeholder="City name or lat,lon">
+      <button id="manualBtn">Go</button>
+    </div>
+  </div>
+
+  <div class="quote-container" id="quoteContainer">
+    <div class="quote-text" id="quoteText"></div>
+    <div class="quote-attribution" id="quoteAttribution"></div>
+    <div class="quote-context" id="quoteContext"></div>
+  </div>
+
+  <div class="state-badge" id="badge"></div>
+
+  <div class="weather-info" id="weatherInfo"></div>
+</div>
+
+<div class="alternatives" id="alternatives"></div>
+
+<script src="../src/unkind.js"></script>
+<script src="../src/indifferent.js"></script>
+<script>
+// Load concordance as a global so it works from file:// and http:// alike.
+// The script tag approach avoids fetch() CORS issues with file:// protocol.
+var _unkindConcordance = null;
+</script>
+<script>
+// Try loading concordance via XMLHttpRequest (works from http://, may fail from file://)
+(function () {
+  try {
+    var xhr = new XMLHttpRequest();
+    xhr.open('GET', './unkind-concordance.json', false);  // synchronous
+    xhr.send();
+    if (xhr.status === 200 || xhr.status === 0) {  // status 0 = file:// success in some browsers
+      _unkindConcordance = JSON.parse(xhr.responseText);
+    }
+  } catch (e) {
+    console.warn('Could not load concordance via XHR:', e.message);
+  }
+})();
+</script>
+<script id="concordance-fallback">
+// If XHR failed (e.g. strict file:// policy), try injecting a script tag.
+// This block also serves as documentation: to use from file://, you can convert
+// the JSON to a JS file: echo "var _unkindConcordance = " > concordance.js && cat unkind-concordance.json >> concordance.js
+// and add <script src="./concordance.js"> before this block.
+</script>
+<script>
+(function () {
+
+  var sky = Unkind.setStage(document.getElementById('sky'), { time: 'night' });
+  var bridge = new UnkindWeather(_unkindConcordance || []);
+  var currentResult = null;
+
+  if (!_unkindConcordance) {
+    console.warn('Concordance not loaded — passages will not be available. Serve via HTTP or see concordance-fallback comment.');
+  }
+
+  var statusMsg   = document.getElementById('statusMsg');
+  var statusArea  = document.getElementById('statusArea');
+  var manualInput = document.getElementById('manualInput');
+  var quoteContainer = document.getElementById('quoteContainer');
+  var quoteText   = document.getElementById('quoteText');
+  var quoteAttr   = document.getElementById('quoteAttribution');
+  var quoteCtx    = document.getElementById('quoteContext');
+  var badge       = document.getElementById('badge');
+  var weatherInfo = document.getElementById('weatherInfo');
+  var altsEl      = document.getElementById('alternatives');
+  var refreshBtn  = document.getElementById('refreshBtn');
+
+  // Also try async fetch as a second attempt if sync XHR didn't work
+  function ensureConcordance(callback) {
+    if (bridge._entries.length > 0) { callback(); return; }
+    fetch('./unkind-concordance.json')
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        bridge = new UnkindWeather(data);
+        callback();
+      })
+      .catch(function () {
+        console.warn('Concordance fetch also failed. Passages unavailable.');
+        callback();
+      });
+  }
+
+  ensureConcordance(function () {
+    startWeather();
+  });
+
+  function startWeather() {
+    statusMsg.textContent = 'Locating you under these skies...';
+
+    UnkindWeather.getLocation()
+      .then(function (loc) {
+        statusMsg.textContent = 'Reading the weather...';
+        return bridge.fetchWeather(loc.lat, loc.lon);
+      })
+      .then(applyResult)
+      .catch(function (err) {
+        console.warn('Location/weather error:', err);
+        statusMsg.innerHTML =
+          'Could not access your location.<br>' +
+          'Enter a city or coordinates below, or try a ' +
+          '<a href="#" id="fallbackLink">random sky</a>.';
+        manualInput.classList.add('visible');
+
+        document.getElementById('fallbackLink').addEventListener('click', function (e) {
+          e.preventDefault();
+          useFallback();
+        });
+      });
+  }
+
+  function applyResult(result) {
+    currentResult = result;
+
+    // Apply weather to sky
+    sky.set({
+      time:      result.primitives.time,
+      mood:      result.mood,
+      rain:      result.primitives.rain,
+      snow:      result.primitives.snow,
+      clouds:    result.primitives.clouds,
+      lightning: result.primitives.lightning,
+      wind:      result.primitives.wind,
+      fog:       result.primitives.fog,
+      transition: 4000,
+    });
+
+    // Hide status, show content
+    statusArea.style.display = 'none';
+
+    // Show passage
+    if (result.passage) {
+      quoteText.textContent = result.passage.text;
+      quoteAttr.textContent = result.passage.speaker + ' — ' + result.passage.play;
+      quoteCtx.textContent = result.passage.lineRef +
+        (result.passage.mood ? ' · ' + result.passage.mood : '');
+    } else {
+      quoteText.textContent = 'The sky speaks, but the concordance is silent.';
+      quoteAttr.textContent = '';
+      quoteCtx.textContent = '';
+    }
+
+    // Fade in elements
+    setTimeout(function () { quoteContainer.classList.add('visible'); }, 200);
+
+    // Badge
+    var state = sky.getState();
+    var parts = [state.time];
+    if (state.mood) parts.push(state.mood);
+    var primNames = ['rain', 'snow', 'clouds', 'lightning', 'wind', 'fog'];
+    for (var i = 0; i < primNames.length; i++) {
+      if (state[primNames[i]] > 0) parts.push(primNames[i] + ' ' + state[primNames[i]].toFixed(2));
+    }
+    badge.textContent = parts.join(' · ');
+    setTimeout(function () { badge.classList.add('visible'); }, 600);
+
+    // Weather details
+    if (result.raw) {
+      var r = result.raw;
+      var details = [];
+      if (r.temp != null) details.push('<span class="weather-label">temp</span> ' + r.temp + '°C');
+      if (r.cloudCover != null) details.push('<span class="weather-label">clouds</span> ' + Math.round(r.cloudCover * 100) + '%');
+      if (r.windSpeed != null) details.push('<span class="weather-label">wind</span> ' + r.windSpeed + ' m/s');
+      if (r.precipitation > 0) details.push('<span class="weather-label">precip</span> ' + r.precipitation + ' mm');
+      if (r.snowfall > 0) details.push('<span class="weather-label">snow</span> ' + r.snowfall + ' cm');
+      if (r.humidity != null) details.push('<span class="weather-label">humidity</span> ' + r.humidity + '%');
+      weatherInfo.innerHTML = details.map(function (d) {
+        return '<span class="weather-detail">' + d + '</span>';
+      }).join('');
+      setTimeout(function () { weatherInfo.classList.add('visible'); }, 800);
+    }
+
+    // Alternatives
+    if (result.alternatives && result.alternatives.length) {
+      altsEl.innerHTML = '';
+      result.alternatives.forEach(function (alt) {
+        var btn = document.createElement('button');
+        btn.className = 'alt-btn';
+        btn.textContent = truncate(alt.text, 30);
+        btn.title = alt.text + ' — ' + alt.speaker + ', ' + alt.play;
+        btn.addEventListener('click', function () {
+          showPassage(alt);
+        });
+        altsEl.appendChild(btn);
+      });
+      setTimeout(function () { altsEl.classList.add('visible'); }, 1200);
+    }
+
+    refreshBtn.classList.add('visible');
+  }
+
+  function showPassage(entry) {
+    quoteContainer.classList.remove('visible');
+    setTimeout(function () {
+      quoteText.textContent = entry.text;
+      quoteAttr.textContent = entry.speaker + ' — ' + entry.play;
+      quoteCtx.textContent = entry.lineRef +
+        (entry.mood ? ' · ' + entry.mood : '');
+
+      // Apply the entry's mood if different
+      if (entry.mood) {
+        sky.set({ mood: entry.mood });
+      }
+
+      quoteContainer.classList.add('visible');
+    }, 800);
+  }
+
+  function truncate(str, max) {
+    if (!str) return '';
+    if (str.length <= max) return str;
+    return str.slice(0, max - 1) + '…';
+  }
+
+  // Manual city/coords input
+  document.getElementById('manualBtn').addEventListener('click', doManualLookup);
+  document.getElementById('cityInput').addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') doManualLookup();
+  });
+
+  function doManualLookup() {
+    var val = document.getElementById('cityInput').value.trim();
+    if (!val) return;
+
+    // Check if it's lat,lon
+    var coords = val.match(/^(-?\d+\.?\d*)\s*,\s*(-?\d+\.?\d*)$/);
+    if (coords) {
+      statusMsg.textContent = 'Reading the weather...';
+      manualInput.classList.remove('visible');
+      bridge.fetchWeather(parseFloat(coords[1]), parseFloat(coords[2]))
+        .then(applyResult)
+        .catch(function () { statusMsg.textContent = 'Could not fetch weather for those coordinates.'; });
+    } else {
+      // Geocode via Open-Meteo
+      statusMsg.textContent = 'Looking up "' + val + '"...';
+      manualInput.classList.remove('visible');
+      fetch('https://geocoding-api.open-meteo.com/v1/search?name=' + encodeURIComponent(val) + '&count=1')
+        .then(function (res) { return res.json(); })
+        .then(function (data) {
+          if (data.results && data.results.length) {
+            var loc = data.results[0];
+            statusMsg.textContent = 'Weather for ' + loc.name + '...';
+            return bridge.fetchWeather(loc.latitude, loc.longitude);
+          } else {
+            throw new Error('City not found');
+          }
+        })
+        .then(applyResult)
+        .catch(function () {
+          statusMsg.textContent = 'Could not find that location. Try lat,lon format.';
+          manualInput.classList.add('visible');
+        });
+    }
+  }
+
+  function useFallback() {
+    // Pick random conditions for demonstration
+    var moods = Unkind.MOODS;
+    var times = Unkind.TIMES;
+    var mood = moods[Math.floor(Math.random() * moods.length)];
+    var time = times[Math.floor(Math.random() * times.length)];
+
+    var primitives = {
+      time: time,
+      rain:      Math.random() * 0.8,
+      snow:      Math.random() > 0.7 ? Math.random() * 0.6 : 0,
+      clouds:    Math.random() * 0.9,
+      lightning: Math.random() > 0.6 ? Math.random() * 0.7 : 0,
+      wind:      Math.random() * 0.5,
+      fog:       Math.random() > 0.6 ? Math.random() * 0.5 : 0,
+    };
+
+    var match = bridge.findPassage(primitives, mood);
+
+    applyResult({
+      primitives: primitives,
+      mood: mood,
+      passage: match.best,
+      alternatives: match.alternatives,
+      raw: null,
+    });
+  }
+
+  // Refresh
+  refreshBtn.addEventListener('click', function () {
+    // Reset visibility
+    quoteContainer.classList.remove('visible');
+    badge.classList.remove('visible');
+    weatherInfo.classList.remove('visible');
+    altsEl.classList.remove('visible');
+    refreshBtn.classList.remove('visible');
+
+    statusArea.style.display = '';
+    statusMsg.textContent = 'Reading the weather again...';
+
+    setTimeout(function () {
+      startWeather();
+    }, 800);
+  });
+
+})();
+</script>
+</body>
+</html>

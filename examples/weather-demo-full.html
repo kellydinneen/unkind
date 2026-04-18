@@ -1,0 +1,1232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Unkind.js — Demo</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Poiret+One&family=EB+Garamond:ital,wght@0,400;0,500;1,400&family=IBM+Plex+Mono:wght@300;400&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'EB Garamond', Georgia, serif;
+    background: #020508;
+    color: #c8ccd4;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  #sky { position: fixed; inset: 0; z-index: 0; }
+
+  /* ── Content ── */
+  .content-layer {
+    position: relative; z-index: 10;
+    min-height: 100vh;
+    display: flex; flex-direction: column;
+    align-items: center; justify-content: center;
+    padding: 40px 30px 260px;
+  }
+
+  .library-name {
+    font-family: 'Poiret One', sans-serif;
+    font-size: 11px; letter-spacing: 6px;
+    text-transform: uppercase;
+    color: rgba(122, 160, 196, 0.4);
+    margin-bottom: 16px;
+  }
+
+  .hero-title {
+    font-size: clamp(28px, 5vw, 42px);
+    color: #c4a870;
+    text-shadow: 0 0 30px rgba(196, 168, 112, 0.2);
+    margin-bottom: 10px; text-align: center;
+  }
+
+  .hero-sub {
+    font-size: 17px; font-style: italic;
+    color: rgba(186, 196, 210, 0.45);
+    max-width: 480px; text-align: center;
+    line-height: 1.6; margin-bottom: 20px;
+  }
+
+  .state-badge {
+    font-family: 'Poiret One', sans-serif;
+    font-size: 11px; letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(122, 160, 196, 0.35);
+    border: 1px solid rgba(122, 160, 196, 0.12);
+    padding: 4px 14px; border-radius: 3px;
+    margin-bottom: 6px;
+  }
+
+  /* ── Wry commentary ── */
+  .commentary {
+    font-size: 14px; font-style: italic;
+    color: rgba(186, 196, 210, 0.3);
+    min-height: 24px;
+    margin-bottom: 14px;
+    text-align: center;
+    max-width: 400px;
+    transition: opacity 1.2s ease-in-out;
+  }
+  .commentary.fading { opacity: 0; }
+
+  /* ── Shakespeare passage display ── */
+  .passage-container {
+    max-width: 560px; width: 100%;
+    min-height: 100px; /* fixed min-height prevents layout shift between passages */
+    margin-bottom: 18px;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 1.6s ease-in-out;
+  }
+  .passage-container.visible { opacity: 1; }
+
+  .passage-text {
+    font-size: clamp(18px, 3.5vw, 24px);
+    line-height: 1.55;
+    color: #d8d0c0;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 0, 0, 0.3);
+    font-style: italic;
+    margin-bottom: 8px;
+  }
+
+  .passage-attribution {
+    font-family: 'Poiret One', sans-serif;
+    font-size: 11px; letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(196, 168, 112, 0.4);
+  }
+
+  .passage-context {
+    font-size: 12px;
+    color: rgba(186, 196, 210, 0.25);
+    font-style: italic;
+  }
+
+  /* ── Code block with copy button ── */
+  .code-wrapper {
+    position: relative;
+    max-width: 560px; width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .code-block {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px; line-height: 1.7;
+    background: rgba(5, 17, 23, 0.6);
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(122, 160, 196, 0.1);
+    border-radius: 6px;
+    padding: 20px 24px;
+    color: rgba(186, 196, 210, 0.6);
+    white-space: pre; overflow-x: auto;
+    min-height: 110px; /* fixed height prevents resize jank between code states */
+  }
+  .code-inner {
+    display: inline;
+    transition: opacity 0.5s ease;
+  }
+  .code-inner.fading { opacity: 0; }
+  .code-block .kw { color: #8a9ab5; }
+  .code-block .str { color: #c4a870; }
+  .code-block .fn { color: #7a9ab0; }
+  .code-block .cm { color: rgba(122, 160, 196, 0.3); }
+
+  .copy-btn {
+    position: absolute; top: 10px; right: 10px;
+    width: 28px; height: 28px;
+    background: rgba(122, 160, 196, 0.06);
+    border: 1px solid rgba(122, 160, 196, 0.12);
+    border-radius: 4px; cursor: pointer;
+    display: flex; align-items: center; justify-content: center;
+    transition: all 0.3s;
+    color: rgba(122, 160, 196, 0.3);
+    padding: 0;
+  }
+  .copy-btn:hover {
+    background: rgba(122, 160, 196, 0.12);
+    color: rgba(122, 160, 196, 0.6);
+    border-color: rgba(122, 160, 196, 0.25);
+  }
+  .copy-btn svg { width: 14px; height: 14px; }
+  .copy-btn.copied { color: rgba(196, 168, 112, 0.6); border-color: rgba(196, 168, 112, 0.25); }
+
+  /* ── Controls ── */
+  .controls {
+    position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
+    background: rgba(5, 17, 23, 0.92);
+    backdrop-filter: blur(12px);
+    border-top: 1px solid rgba(122, 160, 196, 0.15);
+    padding: 14px 24px;
+    display: flex; flex-direction: column; gap: 10px;
+    max-height: 85vh;
+    overflow-y: auto;
+  }
+
+  /* ── Mode tabs ── */
+  .mode-tabs {
+    display: flex; gap: 0; margin-bottom: 4px;
+    border-bottom: 1px solid rgba(122, 160, 196, 0.1);
+  }
+  .mode-tab {
+    font-family: 'Poiret One', sans-serif;
+    font-size: 11px; letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 8px 18px;
+    background: none;
+    border: none;
+    color: rgba(122, 160, 196, 0.35);
+    cursor: pointer;
+    transition: all 0.3s;
+    border-bottom: 2px solid transparent;
+    margin-bottom: -1px;
+  }
+  .mode-tab:hover { color: rgba(122, 160, 196, 0.6); }
+  .mode-tab.active {
+    color: #c4a870;
+    border-bottom-color: rgba(196, 168, 112, 0.5);
+  }
+  .mode-tab:active { transform: translateY(1px); }
+
+  /* ── Mode panels ── */
+  .panels-container {
+    position: relative;
+    min-height: 180px; /* fixed height prevents jarring resize between tabs */
+  }
+  .mode-panel {
+    display: flex; flex-direction: column; gap: 10px;
+    opacity: 0;
+    visibility: hidden;
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    pointer-events: none;
+  }
+  .mode-panel.active {
+    opacity: 1;
+    visibility: visible;
+    position: relative;
+    pointer-events: auto;
+  }
+
+  .control-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+  .control-row label {
+    font-family: 'Poiret One', sans-serif;
+    font-size: 12px; letter-spacing: 2px;
+    text-transform: uppercase; color: #5a80a4; min-width: 80px;
+  }
+  .control-btn {
+    font-family: 'EB Garamond', serif; font-size: 14px;
+    padding: 5px 12px;
+    background: rgba(122, 160, 196, 0.08);
+    border: 1px solid rgba(122, 160, 196, 0.2);
+    color: #8a8d96; border-radius: 4px;
+    cursor: pointer; transition: all 0.3s;
+  }
+  .control-btn:hover { background: rgba(122, 160, 196, 0.15); color: #b8bcc6; }
+  .control-btn:active { transform: scale(0.97); }
+  .control-btn.active {
+    background: rgba(122, 160, 196, 0.18);
+    border-color: rgba(122, 160, 196, 0.4); color: #c4a870;
+  }
+  .api-btn {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px;
+    padding: 5px 12px;
+    background: rgba(196, 168, 112, 0.08);
+    border: 1px solid rgba(196, 168, 112, 0.2);
+    color: rgba(196, 168, 112, 0.6); border-radius: 4px;
+    cursor: pointer; transition: all 0.3s;
+  }
+  .api-btn:hover { background: rgba(196, 168, 112, 0.15); color: #c4a870; }
+
+  /* ── Progressive disclosure toggle ── */
+  .disclosure-toggle {
+    font-family: 'Poiret One', sans-serif;
+    font-size: 11px; letter-spacing: 2px;
+    text-transform: uppercase;
+    color: rgba(122, 160, 196, 0.25);
+    background: none; border: none;
+    cursor: pointer;
+    padding: 4px 0;
+    transition: color 0.3s;
+    display: flex; align-items: center; gap: 6px;
+  }
+  .disclosure-toggle:hover { color: rgba(122, 160, 196, 0.5); }
+  .disclosure-toggle .chevron {
+    display: inline-block;
+    transition: transform 0.3s ease;
+    font-size: 9px;
+  }
+  .disclosure-toggle.open .chevron { transform: rotate(90deg); }
+  .disclosure-toggle.open { color: rgba(122, 160, 196, 0.4); }
+
+  .disclosure-content {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+  }
+  .disclosure-content.open {
+    max-height: 200px;
+    opacity: 1;
+  }
+
+  /* ── Preset buttons visual distinction ── */
+  .control-btn.preset-btn {
+    background: rgba(196, 168, 112, 0.06);
+    border-color: rgba(196, 168, 112, 0.15);
+    color: rgba(196, 168, 112, 0.5);
+    font-size: 14px;
+    padding: 6px 14px;
+  }
+  .control-btn.preset-btn:hover {
+    background: rgba(196, 168, 112, 0.12);
+    color: rgba(196, 168, 112, 0.8);
+    border-color: rgba(196, 168, 112, 0.3);
+  }
+  .control-btn.preset-btn.active {
+    background: rgba(196, 168, 112, 0.15);
+    border-color: rgba(196, 168, 112, 0.5);
+    color: #c4a870;
+  }
+
+  /* ── Slider rows (2-column grid) ── */
+  .sliders-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px 16px;
+    width: 100%;
+    max-width: 600px;
+  }
+  .slider-item {
+    display: flex; align-items: center; gap: 8px;
+  }
+  .slider-item label {
+    font-family: 'Poiret One', sans-serif;
+    font-size: 11px; letter-spacing: 2px;
+    text-transform: uppercase; color: #5a80a4; min-width: 65px;
+  }
+  .slider-item input[type="range"] {
+    flex: 1;
+    accent-color: rgba(196, 168, 112, 0.6);
+    cursor: pointer;
+    height: 4px;
+  }
+  .slider-item .value {
+    font-family: 'IBM Plex Mono', monospace; font-size: 11px;
+    color: rgba(186, 196, 210, 0.4); min-width: 35px; text-align: right;
+  }
+
+  /* ── Weather panel ── */
+  .weather-status {
+    font-size: 14px; font-style: italic;
+    color: rgba(186, 196, 210, 0.4);
+    line-height: 1.6;
+  }
+  .weather-status a {
+    color: rgba(196, 168, 112, 0.5);
+    text-decoration: none;
+    border-bottom: 1px solid rgba(196, 168, 112, 0.2);
+    cursor: pointer;
+  }
+  .weather-status a:hover { color: rgba(196, 168, 112, 0.8); }
+
+  .weather-details {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 11px;
+    color: rgba(122, 160, 196, 0.3);
+    line-height: 1.8;
+  }
+  .weather-details .wlabel { color: rgba(122, 160, 196, 0.2); }
+
+  .location-input {
+    display: flex; align-items: center; gap: 8px;
+  }
+  .location-input input {
+    font-family: 'IBM Plex Mono', monospace;
+    font-size: 12px;
+    background: rgba(5, 17, 23, 0.6);
+    border: 1px solid rgba(122, 160, 196, 0.15);
+    border-radius: 4px;
+    color: #c8ccd4;
+    padding: 6px 12px;
+    width: 200px;
+    outline: none;
+  }
+  .location-input input::placeholder { color: rgba(122, 160, 196, 0.25); }
+  .location-input input:focus { border-color: rgba(122, 160, 196, 0.3); }
+
+  /* ── Shakespeare search panel ── */
+  .search-input {
+    display: flex; align-items: center; gap: 8px;
+  }
+  .search-input input {
+    font-family: 'EB Garamond', serif;
+    font-size: 15px;
+    background: rgba(5, 17, 23, 0.6);
+    border: 1px solid rgba(122, 160, 196, 0.15);
+    border-radius: 4px;
+    color: #c8ccd4;
+    padding: 8px 14px;
+    flex: 1;
+    max-width: 520px;
+    outline: none;
+    font-style: italic;
+  }
+  .search-input input::placeholder { color: rgba(122, 160, 196, 0.2); font-style: italic; }
+  .search-input input:focus { border-color: rgba(196, 168, 112, 0.3); }
+
+  .search-results {
+    display: flex; flex-direction: column; gap: 3px;
+    max-height: 160px;
+    overflow-y: auto;
+    padding-right: 4px;
+  }
+  .search-results::-webkit-scrollbar { width: 3px; }
+  .search-results::-webkit-scrollbar-thumb { background: rgba(122, 160, 196, 0.15); border-radius: 2px; }
+  .search-results.skeleton .skel-line {
+    height: 32px;
+    background: linear-gradient(90deg, rgba(122,160,196,0.04) 25%, rgba(122,160,196,0.08) 50%, rgba(122,160,196,0.04) 75%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s infinite;
+    border-radius: 4px;
+  }
+  @keyframes shimmer {
+    0% { background-position: 200% 0; }
+    100% { background-position: -200% 0; }
+  }
+  .search-result-btn {
+    font-family: 'EB Garamond', serif;
+    font-size: 14px; font-style: italic;
+    padding: 7px 12px;
+    background: rgba(122, 160, 196, 0.04);
+    border: 1px solid rgba(122, 160, 196, 0.08);
+    color: rgba(186, 196, 210, 0.5);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+    width: 100%;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 1.55;
+    flex-shrink: 0;
+  }
+  .search-result-btn .result-meta {
+    font-family: 'Poiret One', sans-serif;
+    font-size: 10px; letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(122, 160, 196, 0.25);
+    font-style: normal;
+    margin-left: 10px;
+  }
+  .search-result-btn:hover {
+    border-color: rgba(196, 168, 112, 0.3);
+    color: rgba(196, 168, 112, 0.7);
+    background: rgba(196, 168, 112, 0.04);
+    white-space: normal;
+    overflow: visible;
+  }
+  .search-result-btn:hover .result-meta { color: rgba(196, 168, 112, 0.35); }
+  .search-result-btn.active {
+    background: rgba(196, 168, 112, 0.08);
+    border-color: rgba(196, 168, 112, 0.4);
+    color: #c4a870;
+  }
+  /* ── Reduced motion ── */
+  @media (prefers-reduced-motion: reduce) {
+    .mode-panel,
+    .code-inner,
+    .passage-container,
+    .commentary,
+    .disclosure-content,
+    .disclosure-toggle .chevron,
+    .control-btn,
+    .search-result-btn {
+      transition-duration: 0.01ms !important;
+    }
+  }
+</style>
+</head>
+<body>
+
+  <div id="sky"></div>
+
+  <div class="content-layer">
+    <div class="library-name">unkind.js</div>
+    <div class="hero-title">Unkind Weather</div>
+    <!-- <div class="hero-sub">
+      Weather data becomes a living sky.<br>
+      A living sky becomes Shakespeare.
+    </div> -->
+    <div class="state-badge" id="badge">night</div>
+    <div class="commentary" id="commentary"></div>
+
+    <div class="passage-container" id="passageContainer">
+      <div class="passage-text" id="passageText"></div>
+      <div class="passage-attribution" id="passageAttr"></div>
+      <div class="passage-context" id="passageCtx"></div>
+    </div>
+
+    <div class="code-wrapper">
+      <div class="code-block"><span class="code-inner" id="liveCode"></span></div>
+      <button class="copy-btn" id="copyBtn" title="Copy to clipboard">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+          <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2-2v1"></path>
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- ── Controls ── -->
+  <div class="controls">
+    <!-- Mode tabs -->
+    <div class="mode-tabs">
+      <button class="mode-tab active" data-mode="controls">Sky → Verse</button>
+      <button class="mode-tab" data-mode="shakespeare">Verse → Sky</button>
+    </div>
+
+    <div class="panels-container">
+    <!-- ── Panel 1: Controls (manual sliders + presets) ── -->
+    <div class="mode-panel active" id="panel-controls">
+      <div class="control-row">
+        <label>Presets</label>
+        <button class="control-btn preset-btn" data-preset="clear">Clear</button>
+        <button class="control-btn preset-btn" data-preset="partly-cloudy">Partly Cloudy</button>
+        <button class="control-btn preset-btn" data-preset="overcast">Overcast</button>
+        <button class="control-btn preset-btn" data-preset="rainy">Rainy</button>
+        <button class="control-btn preset-btn" data-preset="snowy">Snowy</button>
+        <button class="control-btn preset-btn" data-preset="stormy">Stormy</button>
+        <button class="control-btn preset-btn" data-preset="foggy">Foggy</button>
+      </div>
+
+      <div class="control-row">
+        <label>Time</label>
+        <button class="control-btn active" data-time="night">Night</button>
+        <button class="control-btn" data-time="evening">Evening</button>
+        <button class="control-btn" data-time="pre-dawn">Pre-Dawn</button>
+        <button class="control-btn" data-time="dawn">Dawn</button>
+        <button class="control-btn" data-time="day">Day</button>
+      </div>
+
+      <div>
+        <button class="disclosure-toggle" id="moodToggle">
+          <span class="chevron">&#9654;</span> Mood
+        </button>
+        <div class="disclosure-content" id="moodPanel">
+          <div class="control-row" style="padding-top: 6px;">
+            <button class="control-btn mood-btn active" data-mood="">None</button>
+            <button class="control-btn mood-btn" data-mood="calm">Calm</button>
+            <button class="control-btn mood-btn" data-mood="tenderness">Tenderness</button>
+            <button class="control-btn mood-btn" data-mood="reconciliation">Reconciliation</button>
+            <button class="control-btn mood-btn" data-mood="foreboding">Foreboding</button>
+            <button class="control-btn mood-btn" data-mood="despair">Despair</button>
+            <button class="control-btn mood-btn" data-mood="dread">Dread</button>
+            <button class="control-btn mood-btn" data-mood="rage">Rage</button>
+            <button class="control-btn mood-btn" data-mood="violence">Violence</button>
+            <button class="control-btn mood-btn" data-mood="madness">Madness</button>
+            <button class="control-btn mood-btn" data-mood="supernatural">Supernatural</button>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button class="disclosure-toggle" id="slidersToggle">
+          <span class="chevron">&#9654;</span> Fine-tune primitives
+        </button>
+        <div class="disclosure-content" id="slidersPanel">
+          <div class="sliders-grid" style="padding-top: 6px;">
+            <div class="slider-item">
+              <label>Rain</label>
+              <input type="range" class="primitive-slider" data-primitive="rain" min="0" max="100" value="0">
+              <span class="value">0.00</span>
+            </div>
+            <div class="slider-item">
+              <label>Snow</label>
+              <input type="range" class="primitive-slider" data-primitive="snow" min="0" max="100" value="0">
+              <span class="value">0.00</span>
+            </div>
+            <div class="slider-item">
+              <label>Clouds</label>
+              <input type="range" class="primitive-slider" data-primitive="clouds" min="0" max="100" value="0">
+              <span class="value">0.00</span>
+            </div>
+            <div class="slider-item">
+              <label>Lightning</label>
+              <input type="range" class="primitive-slider" data-primitive="lightning" min="0" max="100" value="0">
+              <span class="value">0.00</span>
+            </div>
+            <div class="slider-item">
+              <label>Wind</label>
+              <input type="range" class="primitive-slider" data-primitive="wind" min="0" max="100" value="0">
+              <span class="value">0.00</span>
+            </div>
+            <div class="slider-item">
+              <label>Fog</label>
+              <input type="range" class="primitive-slider" data-primitive="fog" min="0" max="100" value="0">
+              <span class="value">0.00</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button class="disclosure-toggle" id="weatherToggle">
+          <span class="chevron">&#9654;</span> Live weather / Random sky
+        </button>
+        <div class="disclosure-content" id="weatherPanel">
+          <div style="padding-top: 6px; display: flex; flex-direction: column; gap: 8px;">
+            <div class="control-row">
+              <button class="api-btn" id="geolocateBtn">Use my location</button>
+              <button class="api-btn" id="randomSkyBtn">Random sky</button>
+              <span class="weather-status" id="weatherStatus"></span>
+            </div>
+            <div class="location-input">
+              <label style="font-family:'Poiret One',sans-serif;font-size:11px;letter-spacing:2px;text-transform:uppercase;color:#5a80a4;">City</label>
+              <input type="text" id="cityInput" placeholder="City name or lat,lon">
+              <button class="api-btn" id="cityGoBtn">Go</button>
+            </div>
+            <div class="weather-details" id="weatherDetails"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="control-row">
+        <button class="api-btn" id="apiReset">Reset</button>
+        <button class="api-btn" id="apiPalette">Toggle warm tint</button>
+      </div>
+    </div>
+
+    <!-- ── Panel 3: Shakespeare → Sky ── -->
+    <div class="mode-panel" id="panel-shakespeare">
+      <div class="search-input">
+        <label style="font-family:'Poiret One',sans-serif;font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#5a80a4;min-width:80px;">Search</label>
+        <input type="text" id="shakeSearch" placeholder="Blow winds, crack your cheeks...">
+      </div>
+      <div class="search-results" id="searchResults"></div>
+    </div>
+    </div><!-- end panels-container -->
+  </div>
+
+<script src="../src/unkind.js"></script>
+<script>
+(function () {
+
+  // ─────────────────────────────────────────────
+  // SETUP
+  // ─────────────────────────────────────────────
+
+  var sky = Unkind.stage(document.getElementById('sky'), { time: 'night' });
+  var concordanceEntries = [];
+
+  var badge        = document.getElementById('badge');
+  var codeEl       = document.getElementById('liveCode');
+  var commentaryEl = document.getElementById('commentary');
+  var passageContainer = document.getElementById('passageContainer');
+  var passageText  = document.getElementById('passageText');
+  var passageAttr  = document.getElementById('passageAttr');
+  var passageCtx   = document.getElementById('passageCtx');
+  var lastAction   = null;
+  var currentPlainCode = '';
+
+  // ─────────────────────────────────────────────
+  // CONCORDANCE LOADING
+  // ─────────────────────────────────────────────
+
+  function loadConcordanceData(callback) {
+    // Try synchronous XHR first (works from http server)
+    try {
+      var xhr = new XMLHttpRequest();
+      xhr.open('GET', './unkind-concordance.json', false);
+      xhr.send();
+      if (xhr.status === 200 || xhr.status === 0) {
+        var data = JSON.parse(xhr.responseText);
+        Unkind.loadConcordance(data);
+        concordanceEntries = data.entries || [];
+        callback();
+        return;
+      }
+    } catch (e) { /* fall through */ }
+
+    // Async fallback
+    fetch('./unkind-concordance.json')
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        Unkind.loadConcordance(data);
+        concordanceEntries = data.entries || [];
+      })
+      .catch(function () {
+        Unkind.loadConcordance([]);
+        concordanceEntries = [];
+        console.warn('Concordance not loaded. Serve via HTTP server.');
+      })
+      .then(callback);
+  }
+
+  // ─────────────────────────────────────────────
+  // COMMENTARY
+  // ─────────────────────────────────────────────
+
+  var commentary = {
+    'night·clear':           'The kind of sky that makes you confess things.',
+    'night·partly-cloudy':   'Clouds drifting through like half-remembered dreams.',
+    'night·overcast':        'A ceiling. The sky has a ceiling tonight.',
+    'night·rainy':           'Rain on a dark window. The oldest lullaby.',
+    'night·snowy':           'Snow falling into darkness — where does it go?',
+    'night·stormy':          'The electricity bill of the gods.',
+    'evening·clear':         'That hour when the streetlights argue with the sunset.',
+    'evening·partly-cloudy': 'Clouds blushing on the way out.',
+    'evening·overcast':      'Gray on gray. Even the sky is tired.',
+    'evening·rainy':         'Umbrellas bloom like dark flowers.',
+    'evening·snowy':         'Snowflakes in lamplight. Cheap magic, still magic.',
+    'evening·stormy':        'Something Shakespearean is happening out there.',
+    'pre-dawn·clear':        'Only insomniacs and bakers see this sky.',
+    'pre-dawn·partly-cloudy':'The clouds are early. Or very, very late.',
+    'pre-dawn·overcast':     'Dawn cancelled. Check back later.',
+    'pre-dawn·rainy':        'Rain before sunrise. Someone is being punished.',
+    'pre-dawn·snowy':        'Snow in the dark. The world is being gift-wrapped.',
+    'pre-dawn·stormy':       'A storm at 5 AM is a personal affront.',
+    'dawn·clear':            'The part of the movie where things start to turn around.',
+    'dawn·partly-cloudy':    'A few clouds — just enough to catch the color.',
+    'dawn·overcast':         'Sunrise by rumor only.',
+    'dawn·rainy':            'The sun and the rain arguing over who goes first.',
+    'dawn·snowy':            'First light on fresh snow. Criminally beautiful.',
+    'dawn·stormy':           'Where is it you live that thunders in the morning?',
+    'day·clear':             'Blue enough to sell real estate.',
+    'day·partly-cloudy':     'Postcard weather. Suspicious.',
+    'day·overcast':          'The official sky of getting work done.',
+    'day·rainy':             'Everyone suddenly has opinions about their umbrella.',
+    'day·snowy':             'Offices everywhere losing productivity to windows.',
+    'day·stormy':            'The sky doing its whole thing.',
+    'night·foggy':           'The world has been redacted.',
+    'evening·foggy':         'Streetlights become rumors of streetlights.',
+    'pre-dawn·foggy':        'Even the fog doesn\'t know what time it is.',
+    'dawn·foggy':            'The sun is in there somewhere. Allegedly.',
+    'day·foggy':             'Fair is foul, and foul is fair.',
+  };
+
+  // ─────────────────────────────────────────────
+  // UTILS
+  // ─────────────────────────────────────────────
+
+  function hl(code) {
+    return code
+      .replace(/\/\/.*/g, function (m) { return '<span class="cm">' + m + '</span>'; })
+      .replace(/'([^']*)'/g, function (_, s) { return "'<span class=\"str\">" + s + "</span>'"; })
+      .replace(/\b(const|let|var|import|from)\b/g, '<span class="kw">$1</span>')
+      .replace(/\.(stage|set|fool|prospero|puck|updatePalette|getState|getLegacyState|destroy|loadConcordance)\b/g, '.<span class="fn">$1</span>');
+  }
+
+  function truncate(str, max) {
+    if (!str) return '';
+    if (str.length <= max) return str;
+    return str.slice(0, max - 1) + '\u2026';
+  }
+
+  // ─────────────────────────────────────────────
+  // DISPLAY UPDATES
+  // ─────────────────────────────────────────────
+
+  function updateBadge() {
+    var state = sky.getState();
+    var parts = [state.time];
+    if (state.mood) parts.push(state.mood);
+    var primNames = ['rain', 'snow', 'clouds', 'lightning', 'wind', 'fog'];
+    for (var i = 0; i < primNames.length; i++) {
+      if (state[primNames[i]] > 0) parts.push(primNames[i] + ' ' + state[primNames[i]].toFixed(2));
+    }
+    badge.textContent = parts.join(' \u00b7 ');
+  }
+
+  function updateCommentary() {
+    var ls = sky.getLegacyState();
+    var text = commentary[ls.time + '\u00b7' + ls.weather] || '';
+    commentaryEl.classList.add('fading');
+    setTimeout(function () {
+      commentaryEl.textContent = text;
+      commentaryEl.classList.remove('fading');
+    }, 600);
+  }
+
+  function updateCode() {
+    var state = sky.getState();
+    var t = state.time;
+    var code;
+
+    if (lastAction === 'setFromWeather') {
+      code = "// Puck fetches the real weather\nconst mischief = await Unkind.puck(lat, lon)\nUnkind.set(sky, mischief.primitives)";
+    } else if (lastAction === 'palette-warm') {
+      code = "sky.updatePalette({\n  gradients: { /* warm tones */ },\n  stars: { color: { r: 230, g: 200, b: 180 } },\n});";
+    } else if (lastAction === 'palette-reset') {
+      code = "// Palette reset to Ghost Radio default\nsky.updatePalette(Unkind.DEFAULT_PALETTE);";
+    } else if (lastAction === 'concordance') {
+      code = "// Prospero speaks — the weather obeys\nUnkind.prospero(sky, entry)";
+    } else {
+      var hasPrimitives = state.rain > 0 || state.snow > 0 || state.clouds > 0 || state.lightning > 0 || state.wind > 0 || state.fog > 0;
+      if (hasPrimitives || state.mood) {
+        var prims = [];
+        if (state.mood) prims.push("  mood: '" + state.mood + "'");
+        if (state.rain > 0) prims.push('  rain: ' + state.rain.toFixed(2));
+        if (state.snow > 0) prims.push('  snow: ' + state.snow.toFixed(2));
+        if (state.clouds > 0) prims.push('  clouds: ' + state.clouds.toFixed(2));
+        if (state.lightning > 0) prims.push('  lightning: ' + state.lightning.toFixed(2));
+        if (state.wind > 0) prims.push('  wind: ' + state.wind.toFixed(2));
+        if (state.fog > 0) prims.push('  fog: ' + state.fog.toFixed(2));
+        code = "Unkind.set(sky, {\n  time: '" + t + "',\n" + prims.join(',\n') + ",\n})";
+      } else {
+        code = "Unkind.set(sky, { time: '" + t + "' })";
+      }
+    }
+
+    currentPlainCode = code;
+    codeEl.classList.add('fading');
+    setTimeout(function () {
+      codeEl.innerHTML = hl(code);
+      codeEl.classList.remove('fading');
+    }, 500);
+  }
+
+  var passageFadeTimer = null;
+  function showPassage(entry) {
+    clearTimeout(passageFadeTimer);
+
+    if (!entry) {
+      passageContainer.classList.remove('visible');
+      return;
+    }
+
+    var wasVisible = passageContainer.classList.contains('visible');
+
+    function swapAndFadeIn() {
+      passageText.textContent = entry.text;
+      passageAttr.textContent = entry.speaker + ' \u2014 ' + entry.play;
+      passageCtx.textContent = entry.lineRef + (entry.mood ? ' \u00b7 ' + entry.mood : '');
+      // Force a reflow so the browser registers opacity:0 before we transition to 1
+      void passageContainer.offsetHeight;
+      passageContainer.classList.add('visible');
+    }
+
+    if (!wasVisible) {
+      // Not currently showing — just populate and fade in
+      passageContainer.classList.remove('visible');
+      swapAndFadeIn();
+    } else {
+      // Currently visible — fade out, swap, fade in
+      // Temporarily shorten transition for the fade-out
+      passageContainer.style.transitionDuration = '1s';
+      passageContainer.classList.remove('visible');
+      passageFadeTimer = setTimeout(function () {
+        passageContainer.style.transitionDuration = ''; // restore CSS default (1.6s)
+        swapAndFadeIn();
+      }, 1000);
+    }
+  }
+
+  /** Find the best concordance passage for the current sky state */
+  function showPassageForCurrentSky() {
+    if (!concordanceEntries.length) return;
+    var wisdom = Unkind.fool(sky);
+    showPassage(wisdom.passage);
+  }
+
+  function refresh() {
+    updateBadge();
+    updateCommentary();
+    updateCode();
+    showPassageForCurrentSky();
+  }
+
+  function syncTimeButtons() {
+    var state = sky.getState();
+    document.querySelectorAll('[data-time]').forEach(function (b) {
+      b.classList.toggle('active', b.dataset.time === state.time);
+    });
+  }
+
+  function syncSliders() {
+    var state = sky.getState();
+    document.querySelectorAll('.primitive-slider').forEach(function (slider) {
+      var prim = slider.dataset.primitive;
+      var val = state[prim] || 0;
+      slider.value = Math.round(val * 100);
+      var valueSpan = slider.parentElement.querySelector('.value');
+      valueSpan.textContent = val.toFixed(2);
+    });
+  }
+
+  function syncMoodButtons() {
+    var state = sky.getState();
+    document.querySelectorAll('.mood-btn').forEach(function (b) {
+      if (state.mood) {
+        b.classList.toggle('active', b.dataset.mood === state.mood);
+      } else {
+        b.classList.toggle('active', !b.dataset.mood);
+      }
+    });
+  }
+
+  var currentPreset = null;
+  function syncPresetButtons(presetName) {
+    if (presetName !== undefined) currentPreset = presetName;
+    document.querySelectorAll('[data-preset]').forEach(function (b) {
+      b.classList.toggle('active', b.dataset.preset === currentPreset);
+    });
+  }
+
+  function syncAll() {
+    syncTimeButtons();
+    syncSliders();
+    syncMoodButtons();
+    syncPresetButtons();
+    refresh();
+  }
+
+  // ─────────────────────────────────────────────
+  // MODE TABS
+  // ─────────────────────────────────────────────
+
+  document.querySelectorAll('.mode-tab').forEach(function (tab) {
+    tab.addEventListener('click', function () {
+      document.querySelectorAll('.mode-tab').forEach(function (t) { t.classList.remove('active'); });
+      document.querySelectorAll('.mode-panel').forEach(function (p) { p.classList.remove('active'); });
+      tab.classList.add('active');
+      document.getElementById('panel-' + tab.dataset.mode).classList.add('active');
+    });
+  });
+
+  // ─────────────────────────────────────────────
+  // PANEL 1: CONTROLS
+  // ─────────────────────────────────────────────
+
+  document.querySelectorAll('[data-time]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      sky.set({ time: btn.dataset.time });
+      lastAction = 'set';
+      syncTimeButtons();
+      refresh();
+    });
+  });
+
+  document.querySelectorAll('[data-preset]').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      sky.set({ weather: btn.dataset.preset });
+      lastAction = 'set';
+      syncPresetButtons(btn.dataset.preset);
+      syncSliders();
+      refresh();
+    });
+  });
+
+  document.querySelectorAll('.mood-btn').forEach(function (btn) {
+    btn.addEventListener('click', function () {
+      var mood = btn.dataset.mood || null;
+      sky.set({ mood: mood });
+      lastAction = 'set';
+      syncMoodButtons();
+      refresh();
+    });
+  });
+
+  document.querySelectorAll('.primitive-slider').forEach(function (slider) {
+    slider.addEventListener('input', function () {
+      var val = parseInt(this.value) / 100;
+      this.parentElement.querySelector('.value').textContent = val.toFixed(2);
+      var updates = {};
+      updates[this.dataset.primitive] = val;
+      sky.set(updates);
+      lastAction = 'set';
+      syncPresetButtons(null); // manual slider = no preset active
+      refresh();
+    });
+  });
+
+  document.getElementById('apiReset').addEventListener('click', function () {
+    sky.set({ time: 'night', mood: null, rain: 0, snow: 0, clouds: 0, lightning: 0, wind: 0, fog: 0 });
+    lastAction = 'set';
+    syncPresetButtons(null);
+    syncAll();
+  });
+
+  var warmApplied = false;
+  document.getElementById('apiPalette').addEventListener('click', function () {
+    if (!warmApplied) {
+      sky.updatePalette({
+        gradients: {
+          night:      'linear-gradient(180deg, #080404 0%, #100808 30%, #140c08 60%, #0a0604 100%)',
+          evening:    'linear-gradient(180deg, #100a06 0%, #14100a 30%, #1a1610 60%, #12100a 100%)',
+          'pre-dawn': 'linear-gradient(180deg, #0e0a08 0%, #141010 25%, #1a1214 50%, #1e1418 70%, #141010 100%)',
+          dawn:       'linear-gradient(180deg, #0e0a08 0%, #141010 20%, #1a1214 40%, #201818 55%, #2a2018 70%, #342820 82%, #3a3028 92%, #423430 100%)',
+          day:        'linear-gradient(180deg, #1e1814 0%, #24201a 30%, #2a2620 60%, #201e18 100%)',
+        },
+        stars: { color: { r: 230, g: 200, b: 180 } },
+        dust:  { color: { r: 215, g: 190, b: 170 } },
+      });
+      lastAction = 'palette-warm';
+      warmApplied = true;
+    } else {
+      sky.updatePalette({
+        gradients: Unkind.DEFAULT_PALETTE.gradients,
+        stars: Unkind.DEFAULT_PALETTE.stars,
+        dust:  Unkind.DEFAULT_PALETTE.dust,
+      });
+      lastAction = 'palette-reset';
+      warmApplied = false;
+    }
+    sky.set({ time: sky.getState().time, force: true });
+    refresh();
+  });
+
+  // ─────────────────────────────────────────────
+  // LIVE WEATHER (inside Sky → Verse panel)
+  // ─────────────────────────────────────────────
+
+  var weatherStatus  = document.getElementById('weatherStatus');
+  var weatherDetails = document.getElementById('weatherDetails');
+
+  function applyWeatherResult(result) {
+    sky.set({
+      time:      result.primitives.time,
+      mood:      result.mood,
+      rain:      result.primitives.rain,
+      snow:      result.primitives.snow,
+      clouds:    result.primitives.clouds,
+      lightning: result.primitives.lightning,
+      wind:      result.primitives.wind,
+      fog:       result.primitives.fog,
+      transition: 4000,
+    });
+    lastAction = 'setFromWeather';
+
+    if (result.passage) showPassage(result.passage);
+
+    // Show raw weather
+    if (result.raw) {
+      var r = result.raw;
+      var bits = [];
+      if (r.temp != null) bits.push('<span class="wlabel">temp</span> ' + r.temp + '\u00b0C');
+      if (r.cloudCover != null) bits.push('<span class="wlabel">clouds</span> ' + Math.round(r.cloudCover * 100) + '%');
+      if (r.windSpeed != null) bits.push('<span class="wlabel">wind</span> ' + r.windSpeed + ' m/s');
+      if (r.precipitation > 0) bits.push('<span class="wlabel">precip</span> ' + r.precipitation + ' mm');
+      if (r.humidity != null) bits.push('<span class="wlabel">humidity</span> ' + r.humidity + '%');
+      weatherDetails.innerHTML = bits.join(' &nbsp;\u00b7&nbsp; ');
+    } else {
+      weatherDetails.textContent = 'random sky \u2014 no weather data';
+    }
+
+    syncAll();
+  }
+
+  document.getElementById('geolocateBtn').addEventListener('click', function () {
+    weatherStatus.textContent = 'Locating\u2026';
+    Unkind.puck()
+      .then(function (mischief) {
+        weatherStatus.textContent = '';
+        applyWeatherResult(mischief);
+      })
+      .catch(function (err) {
+        weatherStatus.textContent = 'Location denied. Try typing a city.';
+      });
+  });
+
+  document.getElementById('cityGoBtn').addEventListener('click', doLocationLookup);
+  document.getElementById('cityInput').addEventListener('keypress', function (e) {
+    if (e.key === 'Enter') doLocationLookup();
+  });
+
+  function doLocationLookup() {
+    var val = document.getElementById('cityInput').value.trim();
+    if (!val) return;
+
+    var coords = val.match(/^(-?\d+\.?\d*)\s*,\s*(-?\d+\.?\d*)$/);
+    if (coords) {
+      weatherStatus.textContent = 'Fetching\u2026';
+      Unkind.puck(parseFloat(coords[1]), parseFloat(coords[2]))
+        .then(function (mischief) { weatherStatus.textContent = ''; applyWeatherResult(mischief); })
+        .catch(function () { weatherStatus.textContent = 'Failed.'; });
+    } else {
+      weatherStatus.textContent = 'Looking up\u2026';
+      fetch('https://geocoding-api.open-meteo.com/v1/search?name=' + encodeURIComponent(val) + '&count=1')
+        .then(function (res) { return res.json(); })
+        .then(function (data) {
+          if (data.results && data.results.length) {
+            var loc = data.results[0];
+            weatherStatus.textContent = loc.name + '\u2026';
+            return Unkind.puck(loc.latitude, loc.longitude);
+          } else { throw new Error('not found'); }
+        })
+        .then(function (mischief) { weatherStatus.textContent = ''; applyWeatherResult(mischief); })
+        .catch(function () { weatherStatus.textContent = 'City not found.'; });
+    }
+  }
+
+  document.getElementById('randomSkyBtn').addEventListener('click', function () {
+    var moods = Unkind.MOODS;
+    var times = Unkind.TIMES;
+    var primitives = {
+      time:      times[Math.floor(Math.random() * times.length)],
+      rain:      Math.random() * 0.8,
+      snow:      Math.random() > 0.7 ? Math.random() * 0.6 : 0,
+      clouds:    Math.random() * 0.9,
+      lightning: Math.random() > 0.6 ? Math.random() * 0.7 : 0,
+      wind:      Math.random() * 0.5,
+      fog:       Math.random() > 0.6 ? Math.random() * 0.5 : 0,
+    };
+    var mood = moods[Math.floor(Math.random() * moods.length)];
+    primitives.mood = mood;
+    var wisdom = Unkind.fool(primitives);
+    applyWeatherResult({
+      primitives: primitives,
+      mood:       mood,
+      passage:    wisdom.passage,
+      alternatives: wisdom.alternatives,
+      raw:        null,
+    });
+  });
+
+  // ─────────────────────────────────────────────
+  // PANEL 2: VERSE → SKY (Shakespeare search)
+  // ─────────────────────────────────────────────
+
+  var searchInput   = document.getElementById('shakeSearch');
+  var searchResults = document.getElementById('searchResults');
+  var searchTimeout = null;
+
+  function showSearchSkeleton() {
+    searchResults.innerHTML = '';
+    searchResults.classList.add('skeleton');
+    for (var i = 0; i < 3; i++) {
+      var line = document.createElement('div');
+      line.className = 'skel-line';
+      // Vary widths slightly for visual interest
+      line.style.width = (70 + Math.random() * 30) + '%';
+      searchResults.appendChild(line);
+    }
+  }
+
+  function clearSearchSkeleton() {
+    searchResults.classList.remove('skeleton');
+  }
+
+  searchInput.addEventListener('input', function () {
+    clearTimeout(searchTimeout);
+    var query = searchInput.value.trim();
+    if (query.length >= 2) {
+      showSearchSkeleton();
+    }
+    searchTimeout = setTimeout(doSearch, 350);
+  });
+
+  function doSearch() {
+    var query = searchInput.value.trim().toLowerCase();
+    clearSearchSkeleton();
+    searchResults.innerHTML = '';
+
+    if (query.length < 2 || !concordanceEntries.length) return;
+
+    // Split into words for fuzzy matching
+    var words = query.split(/\s+/);
+
+    var results = concordanceEntries
+      .filter(function (e) {
+        if (!e.text || e.text[0] === '[') return false;  // skip stage directions
+        var t = e.text.toLowerCase();
+        // Must match ALL words (order-independent)
+        return words.every(function (w) { return t.indexOf(w) >= 0; });
+      })
+      .slice(0, 12);
+
+    // If exact substring match found few, also try speaker/play/mood
+    if (results.length < 4) {
+      var extras = concordanceEntries.filter(function (e) {
+        if (results.indexOf(e) >= 0) return false;
+        if (e.text && e.text[0] === '[') return false;
+        var blob = (e.speaker + ' ' + e.play + ' ' + e.mood + ' ' + (e.notes || '')).toLowerCase();
+        return words.some(function (w) { return blob.indexOf(w) >= 0; });
+      }).slice(0, 8 - results.length);
+      results = results.concat(extras);
+    }
+
+    results.forEach(function (entry) {
+      var btn = document.createElement('button');
+      btn.className = 'search-result-btn';
+      // Show more text (up to 90 chars) plus speaker/play as metadata
+      var textSpan = document.createElement('span');
+      textSpan.textContent = truncate(entry.text, 120);
+      var metaSpan = document.createElement('span');
+      metaSpan.className = 'result-meta';
+      metaSpan.textContent = entry.speaker + ' \u2014 ' + entry.play;
+      btn.appendChild(textSpan);
+      btn.appendChild(metaSpan);
+      btn.title = entry.text;
+      btn.addEventListener('click', function () {
+        applyConcordanceEntry(entry);
+        searchResults.querySelectorAll('.search-result-btn').forEach(function (b) { b.classList.remove('active'); });
+        btn.classList.add('active');
+      });
+      searchResults.appendChild(btn);
+    });
+  }
+
+  function applyConcordanceEntry(entry) {
+    // Prospero speaks the verse — the weather obeys
+    Unkind.prospero(sky, entry);
+    lastAction = 'concordance';
+    showPassage(entry);
+    syncAll();
+  }
+
+  // ─────────────────────────────────────────────
+  // PROGRESSIVE DISCLOSURE TOGGLES
+  // ─────────────────────────────────────────────
+
+  function setupDisclosure(toggleId, panelId) {
+    var toggle = document.getElementById(toggleId);
+    var panel = document.getElementById(panelId);
+    toggle.addEventListener('click', function () {
+      var isOpen = panel.classList.contains('open');
+      panel.classList.toggle('open');
+      toggle.classList.toggle('open');
+    });
+  }
+  setupDisclosure('moodToggle', 'moodPanel');
+  setupDisclosure('slidersToggle', 'slidersPanel');
+  setupDisclosure('weatherToggle', 'weatherPanel');
+
+  // ─────────────────────────────────────────────
+  // COPY BUTTON
+  // ─────────────────────────────────────────────
+
+  document.getElementById('copyBtn').addEventListener('click', function () {
+    var btn = this;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(currentPlainCode).then(function () {
+        btn.classList.add('copied');
+        btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>';
+        setTimeout(function () {
+          btn.classList.remove('copied');
+          btn.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg>';
+        }, 1500);
+      });
+    }
+  });
+
+  // ─────────────────────────────────────────────
+  // INIT
+  // ─────────────────────────────────────────────
+
+  loadConcordanceData(function () {
+    lastAction = 'set';
+    syncAll();
+  });
+
+  window.sky = sky;
+
+})();
+</script>
+</body>
+</html>

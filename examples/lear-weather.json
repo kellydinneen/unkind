@@ -1,0 +1,725 @@
+[
+  {
+    "id": "lear-1.1.0",
+    "text": "[COURT SCENE: formal gathering indoors]",
+    "play": "King Lear",
+    "act": 1,
+    "scene": 1,
+    "lineRef": "I.i.1-100",
+    "speaker": "[Stage direction]",
+    "type": "mood",
+    "weather": "clear",
+    "time": "day",
+    "elements": [],
+    "intensity": 0.0,
+    "mood": "calm",
+    "notes": "Opening court scene establishes order before the fall"
+  },
+  {
+    "id": "lear-1.2.0",
+    "text": "[Scene at Gloucester's castle - domestic setting]",
+    "play": "King Lear",
+    "act": 1,
+    "scene": 2,
+    "lineRef": "I.ii.1-50",
+    "speaker": "[Stage direction]",
+    "type": "mood",
+    "weather": "clear",
+    "time": "day",
+    "elements": [],
+    "intensity": 0.0,
+    "mood": "calm",
+    "notes": "Private conversation, no weather mentions"
+  },
+  {
+    "id": "lear-1.4.1",
+    "text": "How sharper than a serpent's tooth it is / To have a thankless child!",
+    "play": "King Lear",
+    "act": 1,
+    "scene": 4,
+    "lineRef": "I.iv.310-311",
+    "speaker": "LEAR",
+    "type": "metaphor",
+    "weather": "overcast",
+    "time": "day",
+    "elements": [
+      "emotional turmoil"
+    ],
+    "intensity": 0.3,
+    "mood": "rage",
+    "notes": "Lear's emotional storm begins; figurative language of emotional weather"
+  },
+  {
+    "id": "lear-1.5.1",
+    "text": "O, let me not be mad, not mad, sweet heaven!",
+    "play": "King Lear",
+    "act": 1,
+    "scene": 5,
+    "lineRef": "I.v.46",
+    "speaker": "LEAR",
+    "type": "mood",
+    "weather": "overcast",
+    "time": "evening",
+    "elements": [
+      "despair"
+    ],
+    "intensity": 0.4,
+    "mood": "foreboding",
+    "notes": "Lear begins to lose control; external storm approaching"
+  },
+  {
+    "id": "lear-2.4.1",
+    "text": "O, fool, I shall go mad!",
+    "play": "King Lear",
+    "act": 2,
+    "scene": 4,
+    "lineRef": "II.iv.289",
+    "speaker": "LEAR",
+    "type": "mood",
+    "weather": "overcast",
+    "time": "evening",
+    "elements": [
+      "wind"
+    ],
+    "intensity": 0.5,
+    "mood": "foreboding",
+    "notes": "Lear exits into the night; storm about to break"
+  },
+  {
+    "id": "lear-3.1.1",
+    "text": "Blow, winds, and crack your cheeks! Rage, blow!",
+    "play": "King Lear",
+    "act": 3,
+    "scene": 1,
+    "lineRef": "III.ii.1",
+    "speaker": "LEAR",
+    "type": "literal",
+    "weather": "stormy",
+    "time": "night",
+    "elements": [
+      "wind",
+      "rain"
+    ],
+    "intensity": 0.9,
+    "mood": "rage",
+    "notes": "Peak storm - Lear's opening command to the elements"
+  },
+  {
+    "id": "lear-3.1.2",
+    "text": "You cataracts and hurricanoes, spout / Till you have drench'd our steeples, drown'd the cocks!",
+    "play": "King Lear",
+    "act": 3,
+    "scene": 1,
+    "lineRef": "III.ii.2-3",
+    "speaker": "LEAR",
+    "type": "literal",
+    "weather": "stormy",
+    "time": "night",
+    "elements": [
+      "rain",
+      "wind",
+      "water"
+    ],
+    "intensity": 1.0,
+    "mood": "rage",
+    "notes": "Lear demands a deluge; explicit storm imagery"
+  },
+  {
+    "id": "lear-3.1.3",
+    "text": "You sulphurous and thought-executing fires, / Vaunt-couriers to oak-cleaving thunderbolts, / Singe my white head!",
+    "play": "King Lear",
+    "act": 3,
+    "scene": 1,
+    "lineRef": "III.ii.4-6",
+    "speaker": "LEAR",
+    "type": "literal",
+    "weather": "stormy",
+    "time": "night",
+    "elements": [
+      "lightning",
+      "thunder",
+      "fire"
+    ],
+    "intensity": 1.0,
+    "mood": "rage",
+    "notes": "Thunder and lightning explicitly invoked; cosmic rage"
+  },
+  {
+    "id": "lear-3.1.4",
+    "text": "Crack nature's moulding moulds, all germens spill / That make ingrateful man!",
+    "play": "King Lear",
+    "act": 3,
+    "scene": 1,
+    "lineRef": "III.ii.8-9",
+    "speaker": "LEAR",
+    "type": "metaphor",
+    "weather": "stormy",
+    "time": "night",
+    "elements": [
+      "destruction"
+    ],
+    "intensity": 0.9,
+    "mood": "madness",
+    "notes": "Lear's rage becomes cosmic; storm as metaphor for destroying ungrateful humans"
+  },
+  {
+    "id": "lear-3.1.5",
+    "text": "Rumble thy bellyful! Spit, fire! spout, rain!",
+    "play": "King Lear",
+    "act": 3,
+    "scene": 1,
+    "lineRef": "III.ii.14",
+    "speaker": "LEAR",
+    "type": "literal",
+    "weather": "stormy",
+    "time": "night",
+    "elements": [
+      "fire",
+      "rain",
+      "thunder"
+    ],
+    "intensity": 1.0,
+    "mood": "madness",
+    "notes": "Lear addresses the storm directly; literal precipitation and fire"
+  },
+  {
+    "id": "lear-3.1.6",
+    "text": "O! that this too, too solid flesh would melt, / Thaw and resolve itself into a dew!",
+    "play": "King Lear",
+    "act": 3,
+    "scene": 1,
+    "lineRef": "III.ii.36-37",
+    "speaker": "KENT",
+    "type": "metaphor",
+    "weather": "rainy",
+    "time": "night",
+    "elements": [
+      "rain",
+      "dew"
+    ],
+    "intensity": 0.6,
+    "mood": "despair",
+    "notes": "Kent's poetic response to the storm; dissolving into moisture"
+  },
+  {
+    "id": "lear-3.2.1",
+    "text": "Blow, winds, and crack your cheeks! Rage, blow! / You cataracts and hurricanoes, spout!",
+    "play": "King Lear",
+    "act": 3,
+    "scene": 2,
+    "lineRef": "III.ii.1-2",
+    "speaker": "LEAR",
+    "type": "literal",
+    "weather": "stormy",
+    "time": "night",
+    "elements": [
+      "wind",
+      "rain"
+    ],
+    "intensity": 0.95,
+    "mood": "madness",
+    "notes": "Lear's continued command to the elements; storm rages"
+  },
+  {
+    "id": "lear-3.2.2",
+    "text": "Here's the place, my lord; good my lord, enter. / The tyranny of the open night's too rough / For nature to endure.",
+    "play": "King Lear",
+    "act": 3,
+    "scene": 2,
+    "lineRef": "III.ii.40-42",
+    "speaker": "KENT",
+    "type": "literal",
+    "weather": "stormy",
+    "time": "night",
+    "elements": [
+      "wind",
+      "rain",
+      "cold"
+    ],
+    "intensity": 0.85,
+    "mood": "foreboding",
+    "notes": "Kent comments on the 'tyranny' of the open night; literal storm description"
+  },
+  {
+    "id": "lear-3.2.3",
+    "text": "My wits begin to turn. / Come on, my boy. How dost, my boy? Art cold?",
+    "play": "King Lear",
+    "act": 3,
+    "scene": 2,
+    "lineRef": "III.ii.66-67",
+    "speaker": "LEAR",
+    "type": "literal",
+    "weather": "stormy",
+    "time": "night",
+    "elements": [
+      "cold"
+    ],
+    "intensity": 0.8,
+    "mood": "madness",
+    "notes": "Lear notices the cold; physical sensations of the storm"
+  },
+  {
+    "id": "lear-3.2.4",
+    "text": "Thou thinkest 'tis much that this contentious storm / Invades us to the skin: so 'tis to thee; / But where the greater malady is fix'd, / The lesser is scarce felt.",
+    "play": "King Lear",
+    "act": 3,
+    "scene": 2,
+    "lineRef": "III.ii.72-75",
+    "speaker": "LEAR",
+    "type": "literal",
+    "weather": "stormy",
+    "time": "night",
+    "elements": [
+      "wind",
+      "rain"
+    ],
+    "intensity": 0.9,
+    "mood": "madness",
+    "notes": "Lear addresses the Fool; 'contentious storm' invades to skin"
+  },
+  {
+    "id": "lear-3.2.5",
+    "text": "Let the great gods, / That keep this dreadful pother o'er our heads, / Find out their enemies now.",
+    "play": "King Lear",
+    "act": 3,
+    "scene": 2,
+    "lineRef": "III.ii.49-51",
+    "speaker": "FOOL",
+    "type": "literal",
+    "weather": "stormy",
+    "time": "night",
+    "elements": [
+      "thunder",
+      "weather"
+    ],
+    "intensity": 0.85,
+    "mood": "foreboding",
+    "notes": "Fool calls the storm 'dreadful pother'; gods command the weather"
+  },
+  {
+    "id": "lear-3.3.1",
+    "text": "The king comes out of his madness to find no shelter; he rages with the weather",
+    "play": "King Lear",
+    "act": 3,
+    "scene": 3,
+    "lineRef": "III.iii.1-20",
+    "speaker": "[Scene direction]",
+    "type": "literal",
+    "weather": "stormy",
+    "time": "night",
+    "elements": [
+      "wind",
+      "rain"
+    ],
+    "intensity": 0.9,
+    "mood": "madness",
+    "notes": "Continuing storm; Gloucester plans rescue"
+  },
+  {
+    "id": "lear-3.4.1",
+    "text": "Thou think'st 'tis much that this contentious storm / Invades us to the skin; so 'tis to thee",
+    "play": "King Lear",
+    "act": 3,
+    "scene": 4,
+    "lineRef": "III.iv.6-7",
+    "speaker": "LEAR",
+    "type": "literal",
+    "weather": "stormy",
+    "time": "night",
+    "elements": [
+      "wind",
+      "rain",
+      "cold"
+    ],
+    "intensity": 0.95,
+    "mood": "madness",
+    "notes": "Lear on the heath; storm invades skin"
+  },
+  {
+    "id": "lear-3.4.2",
+    "text": "Unbutton here. [Tears off his clothes] / Come, unbutton here.\u2014Off, off, you lendings! Come; / Unbutton, unbutton!",
+    "play": "King Lear",
+    "act": 3,
+    "scene": 4,
+    "lineRef": "III.iv.106-108",
+    "speaker": "LEAR",
+    "type": "literal",
+    "weather": "stormy",
+    "time": "night",
+    "elements": [
+      "wind",
+      "rain",
+      "cold"
+    ],
+    "intensity": 1.0,
+    "mood": "madness",
+    "notes": "Lear strips in the storm; extreme weather reaction"
+  },
+  {
+    "id": "lear-3.4.3",
+    "text": "Is man no more than this? Consider him well. Thou owest the worm no silk, the beast no hide, the sheep no wool, the cat no perfume.",
+    "play": "King Lear",
+    "act": 3,
+    "scene": 4,
+    "lineRef": "III.iv.101-105",
+    "speaker": "LEAR",
+    "type": "metaphor",
+    "weather": "stormy",
+    "time": "night",
+    "elements": [
+      "cold",
+      "exposure"
+    ],
+    "intensity": 0.85,
+    "mood": "madness",
+    "notes": "Storm-driven madness; philosophical reflection amid weather"
+  },
+  {
+    "id": "lear-3.4.4",
+    "text": "There is the sulphurous pit\u2014burning, scalding, stinking, consumption! Fie, fie, fie! Pah, pah!",
+    "play": "King Lear",
+    "act": 3,
+    "scene": 4,
+    "lineRef": "III.iv.131-132",
+    "speaker": "LEAR",
+    "type": "metaphor",
+    "weather": "stormy",
+    "time": "night",
+    "elements": [
+      "fire",
+      "heat"
+    ],
+    "intensity": 0.8,
+    "mood": "madness",
+    "notes": "Storm-induced madness produces hellish visions"
+  },
+  {
+    "id": "lear-3.5.1",
+    "text": "[Scene: Cornwall's castle\u2014indoors, away from storm]",
+    "play": "King Lear",
+    "act": 3,
+    "scene": 5,
+    "lineRef": "III.v.1-30",
+    "speaker": "[Stage direction]",
+    "type": "mood",
+    "weather": "stormy",
+    "time": "night",
+    "elements": [
+      "contrast"
+    ],
+    "intensity": 0.7,
+    "mood": "foreboding",
+    "notes": "Interior scene; storm rages outside"
+  },
+  {
+    "id": "lear-3.6.1",
+    "text": "The foul fiend bites my back!",
+    "play": "King Lear",
+    "act": 3,
+    "scene": 6,
+    "lineRef": "III.vi.15",
+    "speaker": "EDGAR",
+    "type": "metaphor",
+    "weather": "stormy",
+    "time": "night",
+    "elements": [
+      "storm",
+      "wind"
+    ],
+    "intensity": 0.7,
+    "mood": "madness",
+    "notes": "Edgar's madness; storm-influenced visions"
+  },
+  {
+    "id": "lear-3.6.2",
+    "text": "Pray, innocent, and beware the foul fiend!",
+    "play": "King Lear",
+    "act": 3,
+    "scene": 6,
+    "lineRef": "III.vi.33",
+    "speaker": "EDGAR",
+    "type": "metaphor",
+    "weather": "stormy",
+    "time": "night",
+    "elements": [
+      "darkness"
+    ],
+    "intensity": 0.6,
+    "mood": "madness",
+    "notes": "Storm brings out madness in both Lear and Edgar"
+  },
+  {
+    "id": "lear-3.7.1",
+    "text": "[Scene: inside Gloucester's castle\u2014warm, lit]",
+    "play": "King Lear",
+    "act": 3,
+    "scene": 7,
+    "lineRef": "III.vii.1-100",
+    "speaker": "[Stage direction]",
+    "type": "mood",
+    "weather": "stormy",
+    "time": "night",
+    "elements": [
+      "contrast"
+    ],
+    "intensity": 0.5,
+    "mood": "despair",
+    "notes": "Interior scene; cruelty indoors while storm rages outside"
+  },
+  {
+    "id": "lear-4.1.1",
+    "text": "The worst is not / So long as we can say 'This is the worst.'",
+    "play": "King Lear",
+    "act": 4,
+    "scene": 1,
+    "lineRef": "IV.i.27-28",
+    "speaker": "EDGAR",
+    "type": "mood",
+    "weather": "partly-cloudy",
+    "time": "dawn",
+    "elements": [
+      "light returning"
+    ],
+    "intensity": 0.5,
+    "mood": "despair",
+    "notes": "Transition from storm; dawn breaking"
+  },
+  {
+    "id": "lear-4.1.2",
+    "text": "[Edgar guides Gloucester on the heath; the storm has passed]",
+    "play": "King Lear",
+    "act": 4,
+    "scene": 1,
+    "lineRef": "IV.i.40-80",
+    "speaker": "[Stage direction]",
+    "type": "mood",
+    "weather": "overcast",
+    "time": "dawn",
+    "elements": [
+      "gray light"
+    ],
+    "intensity": 0.4,
+    "mood": "calm",
+    "notes": "Storm aftermath; journey continues in gray dawn"
+  },
+  {
+    "id": "lear-4.4.1",
+    "text": "[Cordelia's retreat\u2014peaceful, contained]",
+    "play": "King Lear",
+    "act": 4,
+    "scene": 4,
+    "lineRef": "IV.iv.1-40",
+    "speaker": "[Stage direction]",
+    "type": "mood",
+    "weather": "clear",
+    "time": "day",
+    "elements": [
+      "calm"
+    ],
+    "intensity": 0.1,
+    "mood": "tenderness",
+    "notes": "Refuge from storm; Cordelia's compassion"
+  },
+  {
+    "id": "lear-4.6.1",
+    "text": "There is a cliff, whose high and bending head / Looks fearfully in the confined deep.",
+    "play": "King Lear",
+    "act": 4,
+    "scene": 6,
+    "lineRef": "IV.vi.11-12",
+    "speaker": "EDGAR",
+    "type": "literal",
+    "weather": "overcast",
+    "time": "day",
+    "elements": [
+      "wind",
+      "height"
+    ],
+    "intensity": 0.6,
+    "mood": "despair",
+    "notes": "Gloucester's supposed cliff; atmospheric description"
+  },
+  {
+    "id": "lear-4.6.2",
+    "text": "How fearful / And dizzy 'tis to cast one's eyes so low!",
+    "play": "King Lear",
+    "act": 4,
+    "scene": 6,
+    "lineRef": "IV.vi.12-13",
+    "speaker": "EDGAR",
+    "type": "metaphor",
+    "weather": "overcast",
+    "time": "day",
+    "elements": [
+      "height",
+      "wind"
+    ],
+    "intensity": 0.5,
+    "mood": "despair",
+    "notes": "Atmospheric vertigo; but the cliff is illusory"
+  },
+  {
+    "id": "lear-4.6.3",
+    "text": "There's a knell, methinks, / Struck from the world of dead.",
+    "play": "King Lear",
+    "act": 4,
+    "scene": 6,
+    "lineRef": "IV.vi.40-41",
+    "speaker": "[description]",
+    "type": "mood",
+    "weather": "overcast",
+    "time": "day",
+    "elements": [
+      "mist",
+      "fog"
+    ],
+    "intensity": 0.4,
+    "mood": "foreboding",
+    "notes": "Fog/mist imagery in the recovered scene"
+  },
+  {
+    "id": "lear-4.7.1",
+    "text": "[Lear sleeps peacefully, awakens in calm safety]",
+    "play": "King Lear",
+    "act": 4,
+    "scene": 7,
+    "lineRef": "IV.vii.1-50",
+    "speaker": "[Stage direction]",
+    "type": "mood",
+    "weather": "clear",
+    "time": "day",
+    "elements": [
+      "peace"
+    ],
+    "intensity": 0.0,
+    "mood": "tenderness",
+    "notes": "Lear recovers in Cordelia's care; calm after the storm"
+  },
+  {
+    "id": "lear-4.7.2",
+    "text": "You do me wrong / To take me out o' the grave: / Thou art a soul in bliss; but I am bound / Upon a wheel of fire, that mine own tears / Do scald like molten lead.",
+    "play": "King Lear",
+    "act": 4,
+    "scene": 7,
+    "lineRef": "IV.vii.45-49",
+    "speaker": "LEAR",
+    "type": "metaphor",
+    "weather": "clear",
+    "time": "day",
+    "elements": [
+      "fire",
+      "heat",
+      "tears"
+    ],
+    "intensity": 0.6,
+    "mood": "despair",
+    "notes": "Lear's emotional pain expressed as heat/fire; recovery moment"
+  },
+  {
+    "id": "lear-5.1.1",
+    "text": "[Outside tent\u2014day breaking, clear skies]",
+    "play": "King Lear",
+    "act": 5,
+    "scene": 1,
+    "lineRef": "V.i.1-50",
+    "speaker": "[Stage direction]",
+    "type": "mood",
+    "weather": "clear",
+    "time": "dawn",
+    "elements": [
+      "light"
+    ],
+    "intensity": 0.1,
+    "mood": "calm",
+    "notes": "Military preparations in clear dawn"
+  },
+  {
+    "id": "lear-5.2.1",
+    "text": "[The battle passes\u2014forces move across open ground]",
+    "play": "King Lear",
+    "act": 5,
+    "scene": 2,
+    "lineRef": "V.ii.1-20",
+    "speaker": "[Stage direction]",
+    "type": "mood",
+    "weather": "partly-cloudy",
+    "time": "day",
+    "elements": [],
+    "intensity": 0.1,
+    "mood": "calm",
+    "notes": "Brief battle scene; weather not foregrounded"
+  },
+  {
+    "id": "lear-5.3.1",
+    "text": "[The final tragedy unfolds indoors/pavilion tent\u2014darkness of despair]",
+    "play": "King Lear",
+    "act": 5,
+    "scene": 3,
+    "lineRef": "V.iii.1-50",
+    "speaker": "[Stage direction]",
+    "type": "mood",
+    "weather": "overcast",
+    "time": "evening",
+    "elements": [
+      "shadow"
+    ],
+    "intensity": 0.7,
+    "mood": "despair",
+    "notes": "The culmination; internal tragedy dominates"
+  },
+  {
+    "id": "lear-5.3.2",
+    "text": "Come, let's away to prison: / We two alone will sing like birds i' the cage: / When thou dost ask me blessing, I'll kneel down, / And ask of thee forgiveness.",
+    "play": "King Lear",
+    "act": 5,
+    "scene": 3,
+    "lineRef": "V.iii.8-11",
+    "speaker": "LEAR",
+    "type": "metaphor",
+    "weather": "clear",
+    "time": "evening",
+    "elements": [
+      "peace"
+    ],
+    "intensity": 0.1,
+    "mood": "tenderness",
+    "notes": "Lear and Cordelia's moment of grace; birdcage as refuge"
+  },
+  {
+    "id": "lear-5.3.3",
+    "text": "Cordelia, Cordelia! stay a little. Ha! / What is't thou say'st?\u2014Her voice was ever soft, / Gentle, and low, an excellent thing in woman.",
+    "play": "King Lear",
+    "act": 5,
+    "scene": 3,
+    "lineRef": "V.iii.271-273",
+    "speaker": "LEAR",
+    "type": "metaphor",
+    "weather": "clear",
+    "time": "evening",
+    "elements": [
+      "peace",
+      "gentleness"
+    ],
+    "intensity": 0.0,
+    "mood": "tenderness",
+    "notes": "Lear with dead Cordelia; softness contrasted with storm"
+  },
+  {
+    "id": "lear-5.3.4",
+    "text": "And my poor fool is hang'd! No, no, no life! / Why should a dog, a horse, a rat, have life, / And thou no breath at all?",
+    "play": "King Lear",
+    "act": 5,
+    "scene": 3,
+    "lineRef": "V.iii.305-307",
+    "speaker": "LEAR",
+    "type": "mood",
+    "weather": "overcast",
+    "time": "evening",
+    "elements": [
+      "darkness"
+    ],
+    "intensity": 1.0,
+    "mood": "despair",
+    "notes": "Lear's final despair; emotional darkness absolute"
+  }
+]
