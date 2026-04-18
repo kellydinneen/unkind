@@ -1,7 +1,7 @@
 {
   "name": "unkind",
   "version": "0.1.0",
-  "description": "Gives to airy nothing a local habitation — translates weather into Shakespeare.",
+  "description": "Translates weather to Shakespeare and vice versa.",
   "main": "src/unkind.js",
   "files": [
     "src/",
