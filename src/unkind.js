@@ -583,8 +583,13 @@
     // Trail length derived from speed — NOT independent
     var trailFrac = (speed - p.speedMin) / (p.speedMax - p.speedMin + 0.001);
     var trail = lerp(p.trailMin, p.trailMax, trailFrac);
+    // Extend spawn range upwind so wind-angled drops still cover the downwind corner.
+    // Drops travel horizontally by h * tan(windAngle) between spawn and the bottom.
+    var drift = Math.tan(p.windAngle) * h;
+    var leftMargin = Math.max(w * 0.2, drift + 50);
+    var rightMargin = 50;
     return {
-      x: Math.random() * w * 1.4 - w * 0.2,
+      x: Math.random() * (w + leftMargin + rightMargin) - leftMargin,
       y: randomY ? Math.random() * h : -Math.random() * 50,
       trail: trail,
       speed: speed,
@@ -618,10 +623,13 @@
       d.x += d.speed * dx;
       d.y += d.speed * dy;
 
-      if (d.y > H + 30 || d.x > W + 50 || d.x < -50) {
+      var drift = dx / (dy || 1) * H;
+      var leftMargin = Math.max(W * 0.2, drift + 50);
+      var rightMargin = 50;
+      if (d.y > H + 30 || d.x > W + rightMargin || d.x < -leftMargin) {
         // Recycle at top
         d.y = -d.trail - Math.random() * 40;
-        d.x = Math.random() * W * 1.4 - W * 0.2;
+        d.x = Math.random() * (W + leftMargin + rightMargin) - leftMargin;
         d.speed = Math.random() * (p.speedMax - p.speedMin) + p.speedMin;
         var trailFrac = (d.speed - p.speedMin) / (p.speedMax - p.speedMin + 0.001);
         d.trail = lerp(p.trailMin, p.trailMax, trailFrac);
@@ -666,8 +674,12 @@
 
   SnowLayer.prototype._createFlake = function (w, h, randomY) {
     var p = this._params;
+    var avgSpeed = (p.speedMin + p.speedMax) / 2 || 1;
+    // Accumulated horizontal drift over a full fall: per-frame drift * frames-to-fall.
+    var drift = p.windDrift * 0.3 * (h / avgSpeed);
+    var leftMargin = Math.max(20, drift + 20);
     return {
-      x: Math.random() * w,
+      x: Math.random() * (w + leftMargin + 20) - leftMargin,
       y: randomY ? Math.random() * h : -Math.random() * 20,
       size: Math.random() * (p.sizeMax - p.sizeMin) + p.sizeMin,
       speed: Math.random() * (p.speedMax - p.speedMin) + p.speedMin,
@@ -697,9 +709,12 @@
       s.y += s.speed;
       s.wobble += s.wobbleSpeed;
       s.x += Math.sin(s.wobble) * s.wobbleAmp + windDrift * 0.3;
-      if (s.y > H + 10) {
+      if (s.y > H + 10 || s.x > W + 20 || s.x < -W) {
         s.y = -10;
-        s.x = Math.random() * W;
+        var avgSpeed = (p.speedMin + p.speedMax) / 2 || 1;
+        var drift = windDrift * 0.3 * (H / avgSpeed);
+        var leftMargin = Math.max(20, drift + 20);
+        s.x = Math.random() * (W + leftMargin + 20) - leftMargin;
         s.size = Math.random() * (p.sizeMax - p.sizeMin) + p.sizeMin;
         s.speed = Math.random() * (p.speedMax - p.speedMin) + p.speedMin;
         s.opacity = Math.random() * (p.opacityMax - p.opacityMin) + p.opacityMin;

@@ -614,6 +614,7 @@
   </div>
 
 <script src="../src/unkind.js"></script>
+<script src="../src/indifferent.js"></script>
 <script>
 (function () {
 
@@ -638,27 +639,35 @@
   // CONCORDANCE LOADING
   // ─────────────────────────────────────────────
 
+  var CONCORDANCE_URL = '../concordance/shakespeare-weather-merged.json';
+
+  function entriesFromData(data) {
+    if (!data) return [];
+    if (Array.isArray(data)) return data;
+    return data.concordance || data.entries || [];
+  }
+
   function loadConcordanceData(callback) {
     // Try synchronous XHR first (works from http server)
     try {
       var xhr = new XMLHttpRequest();
-      xhr.open('GET', './unkind-concordance.json', false);
+      xhr.open('GET', CONCORDANCE_URL, false);
       xhr.send();
       if (xhr.status === 200 || xhr.status === 0) {
         var data = JSON.parse(xhr.responseText);
         Unkind.loadConcordance(data);
-        concordanceEntries = data.entries || [];
+        concordanceEntries = entriesFromData(data);
         callback();
         return;
       }
     } catch (e) { /* fall through */ }
 
     // Async fallback
-    fetch('./unkind-concordance.json')
+    fetch(CONCORDANCE_URL)
       .then(function (res) { return res.json(); })
       .then(function (data) {
         Unkind.loadConcordance(data);
-        concordanceEntries = data.entries || [];
+        concordanceEntries = entriesFromData(data);
       })
       .catch(function () {
         Unkind.loadConcordance([]);
@@ -744,8 +753,9 @@
   }
 
   function updateCommentary() {
-    var ls = sky.getLegacyState();
-    var text = commentary[ls.time + '\u00b7' + ls.weather] || '';
+    var state = sky.getState();
+    var weather = Unkind.classifyWeather ? Unkind.classifyWeather(state) : 'clear';
+    var text = commentary[state.time + '\u00b7' + weather] || '';
     commentaryEl.classList.add('fading');
     setTimeout(function () {
       commentaryEl.textContent = text;
