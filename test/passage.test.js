@@ -1,11 +1,5 @@
 'use strict';
 
-// fool() and prospero() — the sky ↔ verse bridge.
-//
-// These tests exercise the real canonical concordance shipped in the
-// package. If those files drift apart from the library's schema
-// assumptions, these tests fail loudly — which is exactly the regression
-// we want to catch.
 
 const { describe, it, before } = require('node:test');
 const assert = require('node:assert/strict');
@@ -32,7 +26,6 @@ describe('Unkind.fool', () => {
     const result = Unkind.fool(makeFakeSky({ time: 'night' }));
     assert.equal(result.passage, null);
     assert.equal(result.alternatives.length, 0);
-    // Restore for the rest of the suite.
     Unkind.loadConcordance(CANONICAL);
   });
 
@@ -43,15 +36,10 @@ describe('Unkind.fool', () => {
     assert.equal(typeof passage.speaker, 'string');
     assert.equal(typeof passage.play, 'string', 'play must be a string after normalization');
     assert.equal(typeof passage.lineRef, 'string', 'lineRef must be a string after normalization');
-    // Originals still available
     assert.ok(passage.source, 'source should be preserved');
   });
 
   it('matches a supernatural/stormy sky to a supernatural-mood entry', () => {
-    // This is the exact state from the bug-report screenshot: night with
-    // heavy fog (1.0) and active storm primitives. classifyMood returns
-    // 'supernatural' because fog > 0.6, and fool should find a
-    // supernatural-mood passage.
     const { passage } = Unkind.fool(makeFakeSky({
       time: 'night', mood: 'supernatural',
       rain: 0.31, snow: 0, clouds: 1.0, lightning: 0.54, wind: 0.76, fog: 1.0,
@@ -64,7 +52,6 @@ describe('Unkind.fool', () => {
     const result = Unkind.fool(makeFakeSky({ time: 'night' }));
     assert.ok(result.alternatives.length > 0);
     assert.ok(result.alternatives.length <= 4);
-    // Alternatives shouldn't include the top passage.
     for (const alt of result.alternatives) {
       assert.notEqual(alt, result.passage);
     }
@@ -78,7 +65,6 @@ describe('Unkind.fool', () => {
 
 describe('Unkind.prospero', () => {
   it('is a no-op when sky or entry is missing', () => {
-    // Should not throw.
     Unkind.prospero(null, { weather: 'stormy' });
     Unkind.prospero({ set: () => { throw new Error('should not be called'); } }, null);
   });
@@ -97,9 +83,6 @@ describe('Unkind.prospero', () => {
   });
 
   it('accepts a raw nested entry (defensive normalize)', () => {
-    // A user pulling an entry straight from the shipped JSON file — i.e.
-    // without going through loadConcordance — should still get correct
-    // behavior. This was the bandaid-in-the-demo scenario made right.
     const raw = {
       text: 't',
       source: { play: 'King Lear', act: 3, scene: 2 },

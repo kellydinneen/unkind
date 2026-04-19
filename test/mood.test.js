@@ -1,12 +1,5 @@
 'use strict';
 
-// classifyMood — weather primitives → mood label.
-//
-// Spot-check the specific boundaries the demo relies on (e.g. the fog > 0.6
-// rule that produces 'supernatural', which triggered the Casca match in
-// the bug screenshot). Not exhaustive — the function is a cascade of
-// thresholds, and we only pin the decisions real callers depend on.
-
 const { describe, it } = require('node:test');
 const assert = require('node:assert/strict');
 const { Unkind } = require('./_load');

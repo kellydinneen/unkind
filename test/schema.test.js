@@ -1,17 +1,5 @@
 'use strict';
 
-// Concordance schema handling — normalization + loader tolerance.
-//
-// These tests pin down two bugs caught during the v0.1.1 demo-bug sweep:
-//  1. `Array.prototype.entries` shadowed the wrapped-object `.entries`
-//     check in `loadConcordance`, so every plain-array call assigned the
-//     iterator function to `_concordanceEntries`. Regression-tested below
-//     via explicit "plain array" cases.
-//  2. The shipped concordance is in the canonical nested schema
-//     (`source.play`, `weatherState`, `timeOfDay`) but library internals
-//     read flat fields. Moved normalization into the library; the demo
-//     is now a pass-through consumer.
-
 const { describe, it } = require('node:test');
 const assert = require('node:assert/strict');
 const { Unkind, UnkindWeather } = require('./_load');
@@ -69,7 +57,7 @@ describe('normalizeEntry', () => {
     const out = normalize({
       source: { play: 'X', act: 1, scene: 3, lineStart: null, lineEnd: null },
     });
-    assert.equal(out.lineRef, '1.3'); // just act.scene, no trailing dot
+    assert.equal(out.lineRef, '1.3'); 
   });
 
   it('returns an empty lineRef when source has no structure', () => {
@@ -83,8 +71,6 @@ describe('normalizeEntry', () => {
   });
 
   it('does not overwrite existing flat fields when nesting is also present', () => {
-    // If both shapes coexist, the flat value wins. This matters if a
-    // caller has already hand-normalized part of an entry.
     const hybrid = { play: 'Explicit', source: { play: 'Nested' }, weatherState: 'clear' };
     const out = normalize(hybrid);
     assert.equal(out.play, 'Explicit');
@@ -100,9 +86,6 @@ describe('normalizeEntry', () => {
 
 describe('Unkind.loadConcordance', () => {
   it('accepts a plain array (regression: Array.prototype.entries shadow)', () => {
-    // This is THE bug that made the demo passage go blank. Before the fix,
-    // loadConcordance saw `arr.entries` (the iterator method) as truthy and
-    // assigned the function to _concordanceEntries, giving length === 0.
     Unkind.loadConcordance([{ id: 'a', text: 't', weather: 'clear', time: 'day' }]);
     assert.equal(Unkind.getConcordance().length, 1);
     assert.equal(Unkind.getConcordance()[0].id, 'a');
@@ -166,7 +149,6 @@ describe('UnkindWeather constructor', () => {
   });
 
   it('uses the shared Unkind._normalizeEntry helper', () => {
-    // Invariant: both modules must produce the same shape for the same input.
     Unkind.loadConcordance([nestedEntry]);
     const viaLoad = Unkind.getConcordance()[0];
     const viaBridge = new UnkindWeather([nestedEntry])._entries[0];
