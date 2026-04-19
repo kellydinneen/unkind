@@ -3,7 +3,9 @@
 *"Gives to airy nothing a local habitation."*
 — A Midsummer Night's Dream, V.i
 
-Unkind.js is a JavaScript library that translates between meteorological data, animated skies, and the Bard. No dependencies. 
+Unkind is a JavaScript library that translates between weather data, animated skies, and the Bard. No dependencies. 
+
+If you're not into Shakespeare, Unkind can be used to conjure meteorological backgrounds from any location or from weather primitives (rain, snow, wind, clouds, fog).
 
 ## the conceit
 
