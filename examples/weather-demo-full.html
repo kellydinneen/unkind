@@ -61,23 +61,12 @@
     margin-bottom: 6px;
   }
 
-  /* ── Wry commentary ── */
-  .commentary {
-    font-size: 14px; font-style: italic;
-    color: rgba(186, 196, 210, 0.3);
-    min-height: 24px;
-    margin-bottom: 14px;
-    text-align: center;
-    max-width: 400px;
-    transition: opacity 1.2s ease-in-out;
-  }
-  .commentary.fading { opacity: 0; }
-
   /* ── Shakespeare passage display ── */
   .passage-container {
     max-width: 560px; width: 100%;
-    min-height: 100px; /* fixed min-height prevents layout shift between passages */
-    margin-bottom: 18px;
+    min-height: 120px;
+    margin-top: 10px;
+    margin-bottom: 4px;
     text-align: center;
     opacity: 0;
     transition: opacity 1.6s ease-in-out;
@@ -85,7 +74,7 @@
   .passage-container.visible { opacity: 1; }
 
   .passage-text {
-    font-size: clamp(18px, 3.5vw, 24px);
+    font-size: clamp(12px, 3.5vw, 18px);
     line-height: 1.55;
     color: #d8d0c0;
     text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6), 0 0 20px rgba(0, 0, 0, 0.3);
@@ -123,7 +112,7 @@
     padding: 20px 24px;
     color: rgba(186, 196, 210, 0.6);
     white-space: pre; overflow-x: auto;
-    min-height: 110px; /* fixed height prevents resize jank between code states */
+    min-height: 200px; /* fixed height prevents resize jank between code states */
   }
   .code-inner {
     display: inline;
@@ -210,6 +199,24 @@
     visibility: visible;
     position: relative;
     pointer-events: auto;
+  }
+
+  /* ── Two-column grid for the Sky → Verse panel ── */
+  .controls-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 28px;
+    align-items: start;
+  }
+  .controls-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0; /* allow child overflow/shrink inside the grid track */
+  }
+  /* Collapse to a single column on narrow viewports */
+  @media (max-width: 760px) {
+    .controls-grid { grid-template-columns: 1fr; }
   }
 
   .control-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
@@ -459,12 +466,7 @@
   <div class="content-layer">
     <div class="library-name">unkind.js</div>
     <div class="hero-title">Unkind Weather</div>
-    <!-- <div class="hero-sub">
-      Weather data becomes a living sky.<br>
-      A living sky becomes Shakespeare.
-    </div> -->
     <div class="state-badge" id="badge">night</div>
-    <div class="commentary" id="commentary"></div>
 
     <div class="passage-container" id="passageContainer">
       <div class="passage-text" id="passageText"></div>
@@ -494,6 +496,10 @@
     <div class="panels-container">
     <!-- ── Panel 1: Controls (manual sliders + presets) ── -->
     <div class="mode-panel active" id="panel-controls">
+      <div class="controls-grid">
+
+      <!-- Left column: Presets, Time, Mood -->
+      <div class="controls-col">
       <div class="control-row">
         <label>Presets</label>
         <button class="control-btn preset-btn" data-preset="clear">Clear</button>
@@ -534,7 +540,10 @@
           </div>
         </div>
       </div>
+      </div><!-- /controls-col left -->
 
+      <!-- Right column: Fine-tune primitives, Live weather -->
+      <div class="controls-col">
       <div>
         <button class="disclosure-toggle" id="slidersToggle">
           <span class="chevron">&#9654;</span> Fine-tune primitives
@@ -595,11 +604,9 @@
           </div>
         </div>
       </div>
+      </div><!-- /controls-col right -->
 
-      <div class="control-row">
-        <button class="api-btn" id="apiReset">Reset</button>
-        <button class="api-btn" id="apiPalette">Toggle warm tint</button>
-      </div>
+      </div><!-- /controls-grid -->
     </div>
 
     <!-- ── Panel 3: Shakespeare → Sky ── -->
@@ -641,10 +648,40 @@
 
   var CONCORDANCE_URL = '../concordance/shakespeare-weather-merged.json';
 
+  /**
+   * Normalize a concordance entry from the canonical nested schema
+   * (source.play/act/scene/lineStart/lineEnd, weatherState, timeOfDay)
+   * into the flat shape the demo and library expect
+   * (play, lineRef, weather, time) — without losing the originals.
+   */
+  function normalizeEntry(e) {
+    if (!e) return e;
+    var src = e.source || {};
+    var out = {};
+    for (var k in e) { if (Object.prototype.hasOwnProperty.call(e, k)) out[k] = e[k]; }
+
+    if (out.play == null) out.play = src.play || e.play;
+    if (out.weather == null) out.weather = e.weatherState || e.weather;
+    if (out.time == null) out.time = e.timeOfDay || e.time;
+
+    if (out.lineRef == null) {
+      var parts = [];
+      if (src.act != null) parts.push(src.act);
+      if (src.scene != null) parts.push(src.scene);
+      if (src.lineStart != null) parts.push(src.lineStart);
+      var ref = parts.join('.');
+      if (src.lineEnd != null && src.lineEnd !== src.lineStart) ref += '-' + src.lineEnd;
+      out.lineRef = ref || e.lineRef || '';
+    }
+    return out;
+  }
+
   function entriesFromData(data) {
     if (!data) return [];
-    if (Array.isArray(data)) return data;
-    return data.concordance || data.entries || [];
+    var raw;
+    if (Array.isArray(data)) raw = data;
+    else raw = data.concordance || data.entries || [];
+    return raw.map(normalizeEntry);
   }
 
   function loadConcordanceData(callback) {
@@ -655,8 +692,8 @@
       xhr.send();
       if (xhr.status === 200 || xhr.status === 0) {
         var data = JSON.parse(xhr.responseText);
-        Unkind.loadConcordance(data);
         concordanceEntries = entriesFromData(data);
+        Unkind.loadConcordance(concordanceEntries);
         callback();
         return;
       }
@@ -666,8 +703,8 @@
     fetch(CONCORDANCE_URL)
       .then(function (res) { return res.json(); })
       .then(function (data) {
-        Unkind.loadConcordance(data);
         concordanceEntries = entriesFromData(data);
+        Unkind.loadConcordance(concordanceEntries);
       })
       .catch(function () {
         Unkind.loadConcordance([]);
@@ -770,10 +807,6 @@
 
     if (lastAction === 'setFromWeather') {
       code = "// Puck fetches the real weather\nconst mischief = await Unkind.puck(lat, lon)\nUnkind.set(sky, mischief.primitives)";
-    } else if (lastAction === 'palette-warm') {
-      code = "sky.updatePalette({\n  gradients: { /* warm tones */ },\n  stars: { color: { r: 230, g: 200, b: 180 } },\n});";
-    } else if (lastAction === 'palette-reset') {
-      code = "// Palette reset to Ghost Radio default\nsky.updatePalette(Unkind.DEFAULT_PALETTE);";
     } else if (lastAction === 'concordance') {
       code = "// Prospero speaks — the weather obeys\nUnkind.prospero(sky, entry)";
     } else {
@@ -953,42 +986,6 @@
       syncPresetButtons(null); // manual slider = no preset active
       refresh();
     });
-  });
-
-  document.getElementById('apiReset').addEventListener('click', function () {
-    sky.set({ time: 'night', mood: null, rain: 0, snow: 0, clouds: 0, lightning: 0, wind: 0, fog: 0 });
-    lastAction = 'set';
-    syncPresetButtons(null);
-    syncAll();
-  });
-
-  var warmApplied = false;
-  document.getElementById('apiPalette').addEventListener('click', function () {
-    if (!warmApplied) {
-      sky.updatePalette({
-        gradients: {
-          night:      'linear-gradient(180deg, #080404 0%, #100808 30%, #140c08 60%, #0a0604 100%)',
-          evening:    'linear-gradient(180deg, #100a06 0%, #14100a 30%, #1a1610 60%, #12100a 100%)',
-          'pre-dawn': 'linear-gradient(180deg, #0e0a08 0%, #141010 25%, #1a1214 50%, #1e1418 70%, #141010 100%)',
-          dawn:       'linear-gradient(180deg, #0e0a08 0%, #141010 20%, #1a1214 40%, #201818 55%, #2a2018 70%, #342820 82%, #3a3028 92%, #423430 100%)',
-          day:        'linear-gradient(180deg, #1e1814 0%, #24201a 30%, #2a2620 60%, #201e18 100%)',
-        },
-        stars: { color: { r: 230, g: 200, b: 180 } },
-        dust:  { color: { r: 215, g: 190, b: 170 } },
-      });
-      lastAction = 'palette-warm';
-      warmApplied = true;
-    } else {
-      sky.updatePalette({
-        gradients: Unkind.DEFAULT_PALETTE.gradients,
-        stars: Unkind.DEFAULT_PALETTE.stars,
-        dust:  Unkind.DEFAULT_PALETTE.dust,
-      });
-      lastAction = 'palette-reset';
-      warmApplied = false;
-    }
-    sky.set({ time: sky.getState().time, force: true });
-    refresh();
   });
 
   // ─────────────────────────────────────────────
