@@ -625,10 +625,40 @@
 
   var CONCORDANCE_URL = '../concordance/shakespeare-weather-merged.json';
 
+  /**
+   * Normalize a concordance entry from the canonical nested schema
+   * (source.play/act/scene/lineStart/lineEnd, weatherState, timeOfDay)
+   * into the flat shape the demo and library expect
+   * (play, lineRef, weather, time) — without losing the originals.
+   */
+  function normalizeEntry(e) {
+    if (!e) return e;
+    var src = e.source || {};
+    var out = {};
+    for (var k in e) { if (Object.prototype.hasOwnProperty.call(e, k)) out[k] = e[k]; }
+
+    if (out.play == null) out.play = src.play || e.play;
+    if (out.weather == null) out.weather = e.weatherState || e.weather;
+    if (out.time == null) out.time = e.timeOfDay || e.time;
+
+    if (out.lineRef == null) {
+      var parts = [];
+      if (src.act != null) parts.push(src.act);
+      if (src.scene != null) parts.push(src.scene);
+      if (src.lineStart != null) parts.push(src.lineStart);
+      var ref = parts.join('.');
+      if (src.lineEnd != null && src.lineEnd !== src.lineStart) ref += '-' + src.lineEnd;
+      out.lineRef = ref || e.lineRef || '';
+    }
+    return out;
+  }
+
   function entriesFromData(data) {
     if (!data) return [];
-    if (Array.isArray(data)) return data;
-    return data.concordance || data.entries || [];
+    var raw;
+    if (Array.isArray(data)) raw = data;
+    else raw = data.concordance || data.entries || [];
+    return raw.map(normalizeEntry);
   }
 
   function loadConcordanceData(callback) {
@@ -639,8 +669,8 @@
       xhr.send();
       if (xhr.status === 200 || xhr.status === 0) {
         var data = JSON.parse(xhr.responseText);
-        Unkind.loadConcordance(data);
         concordanceEntries = entriesFromData(data);
+        Unkind.loadConcordance(concordanceEntries);
         callback();
         return;
       }
@@ -650,8 +680,8 @@
     fetch(CONCORDANCE_URL)
       .then(function (res) { return res.json(); })
       .then(function (data) {
-        Unkind.loadConcordance(data);
         concordanceEntries = entriesFromData(data);
+        Unkind.loadConcordance(concordanceEntries);
       })
       .catch(function () {
         Unkind.loadConcordance([]);
