@@ -5,7 +5,6 @@
 
 Unkind.js is a JavaScript library that translates between meteorological data, animated skies, and the Bard. No dependencies. 
 
-
 ## the conceit
 
 All the world's a `stage`.
@@ -25,6 +24,16 @@ prospero(sky, weather.passage)                    // conjure weather from text
 const verse = fool(sky)                       // find words for the weather
 set(sky, { rain: 0.7, mood: 'despair' })     // direct the weather
 ```
+## some rehearsals
+
+**[Unkind Weather demo](https://kellydinneen.github.io/unkind/examples/weather-demo-full.html)** — play with weather primitives, fetch live weather, or conjure weather with a Shakespeare passage.
+
+<a href="https://kellydinneen.github.io/unkind/examples/weather-demo-full.html" target="_blank"><img width="858" height="451![Uploading Rain Demo.gif…]()
+" alt="image of an interface called Unkind Weather with snowy weather on a night sky, preview code, and multiple controls for different weather primitives" src="https://github.com/user-attachments/assets/96d5a20a-10f9-4e41-95e3-67c4052ee01d" /></a>
+
+**[King Lear scroll reader](https://kellydinneen.github.io/unkind/examples/lear-reader.html)** — Read through King Lear while the sky transitions through seven weather states.
+
+<a href="[https://kellydinneen.github.io/unkind/examples/weather-demo-full.html](https://kellydinneen.github.io/unkind/examples/lear-reader.html)" target="_blank"><img width="858" height="455" alt="image text of King Lear against stormy night background" src="https://github.com/user-attachments/assets/1b05dc3f-3147-40cc-b3d1-cf5a370ec629" /></a>
 
 ## the company
 
@@ -53,6 +62,8 @@ Or drop directly in the browser:
 <img width="175" height="159" alt="lightning and rainy night" src="https://github.com/user-attachments/assets/d839642d-5d0e-4e4c-bd7e-79968e36afd6" />
 <img width="175" height="159" alt="foggy day" src="https://github.com/user-attachments/assets/cc077902-8716-4166-acc3-96073a48af79" />
 <img width="175" height="159" alt="drifting clouds at dawn" src="https://github.com/user-attachments/assets/8af19360-a591-4301-b54b-7596d8de6bb6" />
+
+
 <img width="175" height="159" alt="rain at dawn" src="https://github.com/user-attachments/assets/eef63a84-56d3-4fde-8870-b5d1214c930e" />
 <img width="175" height="159" alt="partly cloudy night turns to dawn, then day, then back to night" src="https://github.com/user-attachments/assets/63d1546a-2fab-4dde-a816-61924d2c4e05" />
 <img width="175" height="159" alt="clear day with wind" src="https://github.com/user-attachments/assets/3ac9b7ca-72cc-44f3-ab4e-c439ae709c3e" />
@@ -144,13 +155,6 @@ Unkind.set(sky, { time: 'night' })  // 'night' | 'evening' | 'pre-dawn' | 'dawn'
 Plays include: King Lear, The Tempest, Macbeth, A Midsummer Night's Dream, Hamlet, Othello, Romeo and Juliet, Julius Caesar, The Winter's Tale, Twelfth Night, and more.
 
 The concordance is a JSON file (`concordance/shakespeare-weather-merged.json`) and can be used independently of the canvas renderer.
-
-
-## the rehearsals
-
-**[King Lear scroll reader](https://kellydinneen.github.io/unkind/examples/lear-reader.html)** — Read through King Lear while the sky transitions through seven weather states, following the storm at the play's center. Scroll-triggered.
-
-**[Weather demo](https://kellydinneen.github.io/unkind/examples/weather-demo-full.html)** — Live weather fetch + concordance matching. Requires location permission.
 
 
 ## the house
