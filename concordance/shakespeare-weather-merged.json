@@ -34,7 +34,7 @@
       ],
       "mood": "rage",
       "context": "Lear, cast out by his daughters, commands the storm to rage on the heath. He externalizes his inner fury onto the natural world.",
-      "annotation": "The storm is both literal and metaphorical\u2014Lear's madness mirrors the tempest. His imperative commands to the winds suggest he believes himself master of nature, even as it destroys him.",
+      "annotation": "The storm is both literal and metaphorical—Lear's madness mirrors the tempest. His imperative commands to the winds suggest he believes himself master of nature, even as it destroys him.",
       "confidence": "high"
     },
     {
@@ -58,7 +58,7 @@
       ],
       "mood": "concern",
       "context": "Kent urges Lear to seek shelter from the terrible night. The physical storm mirrors Lear's psychological tempest.",
-      "annotation": "Kent's practical concern contrasts with Lear's defiant rage\u2014the same storm means danger to Kent, tragedy to Lear, and revelation to the audience.",
+      "annotation": "Kent's practical concern contrasts with Lear's defiant rage—the same storm means danger to Kent, tragedy to Lear, and revelation to the audience.",
       "confidence": "high"
     },
     {
@@ -72,7 +72,7 @@
         "lineEnd": 36
       },
       "speaker": "Fool",
-      "weatherState": "night-stormy",
+      "weatherState": "stormy",
       "timeOfDay": "night",
       "intensity": 0.8,
       "elements": [
@@ -81,7 +81,7 @@
       ],
       "mood": "melancholy",
       "context": "The Fool comments on human suffering during the tempest. Even the night itself seems alive with Lear's suffering.",
-      "annotation": "The Fool's wisdom cuts through the storm\u2014the night is not merely dark, but made 'hideous' by human consciousness and pain.",
+      "annotation": "The Fool's wisdom cuts through the storm—the night is not merely dark, but made 'hideous' by human consciousness and pain.",
       "confidence": "high"
     },
     {
@@ -106,7 +106,7 @@
       ],
       "mood": "chaos",
       "context": "The play opens with a violent storm at sea. This supernatural tempest, conjured by Prospero, sets the entire plot in motion.",
-      "annotation": "The tempest is both meteorological and magical\u2014the boundary between nature and art collapses at the very threshold of the play.",
+      "annotation": "The tempest is both meteorological and magical—the boundary between nature and art collapses at the very threshold of the play.",
       "confidence": "high"
     },
     {
@@ -131,7 +131,7 @@
       ],
       "mood": "power",
       "context": "Prospero reveals to Miranda that he conjured the storm through magic. He claims dominion over the very elements.",
-      "annotation": "Prospero's syntax mirrors incantation\u2014the rhythm and vocabulary of power. His storm is simultaneously creation and curse.",
+      "annotation": "Prospero's syntax mirrors incantation—the rhythm and vocabulary of power. His storm is simultaneously creation and curse.",
       "confidence": "high"
     },
     {
@@ -155,7 +155,7 @@
       ],
       "mood": "fear",
       "context": "Alonso, shipwrecked, finds himself on the island. The storm has passed but left him disoriented in an alien landscape.",
-      "annotation": "The 'fearful country' personifies the island as threatening\u2014weather is psychological as well as physical.",
+      "annotation": "The 'fearful country' personifies the island as threatening—weather is psychological as well as physical.",
       "confidence": "high"
     },
     {
@@ -169,7 +169,7 @@
         "lineEnd": 313
       },
       "speaker": "Prospero",
-      "weatherState": "dusk",
+      "weatherState": "clear",
       "timeOfDay": "dusk",
       "intensity": 0.3,
       "elements": [
@@ -178,7 +178,7 @@
       ],
       "mood": "resolution",
       "context": "As the play nears its conclusion, Prospero invokes the dew of evening. The weather shifts toward calm and reconciliation.",
-      "annotation": "Dew as natural restorative\u2014the play's movement is from storm to clarity, from chaos to order marked by changing light.",
+      "annotation": "Dew as natural restorative—the play's movement is from storm to clarity, from chaos to order marked by changing light.",
       "confidence": "high"
     },
     {
@@ -202,7 +202,7 @@
       ],
       "mood": "ominous",
       "context": "The Witches appear in a thunderstorm. Their supernatural malevolence is announced through atmospheric disturbance.",
-      "annotation": "Thunder as the voice of fate\u2014the play's darkness is heralded by noise and storm, not light.",
+      "annotation": "Thunder as the voice of fate—the play's darkness is heralded by noise and storm, not light.",
       "confidence": "high"
     },
     {
@@ -226,7 +226,7 @@
       ],
       "mood": "foreboding",
       "context": "Macbeth arrives at the heath where the Witches await. His first words echo their paradoxical language about fair and foul.",
-      "annotation": "The oxymoronic weather mirrors the play's moral ambiguity\u2014fair and foul are indistinguishable, just as goodness and evil blur.",
+      "annotation": "The oxymoronic weather mirrors the play's moral ambiguity—fair and foul are indistinguishable, just as goodness and evil blur.",
       "confidence": "high"
     },
     {
@@ -240,7 +240,7 @@
         "lineEnd": 60
       },
       "speaker": "Macduff",
-      "weatherState": "night-stormy",
+      "weatherState": "stormy",
       "timeOfDay": "night",
       "intensity": 0.8,
       "elements": [
@@ -250,7 +250,7 @@
       ],
       "mood": "dread",
       "context": "After Duncan's murder, the night was turbulent. Nature itself recoils from the regicide.",
-      "annotation": "The understatement is Shakespearean\u2014'rough' carries weight beyond meteorology. The natural world protests Macbeth's crime.",
+      "annotation": "The understatement is Shakespearean—'rough' carries weight beyond meteorology. The natural world protests Macbeth's crime.",
       "confidence": "high"
     },
     {
@@ -264,7 +264,7 @@
         "lineEnd": 135
       },
       "speaker": "Macbeth",
-      "weatherState": "night-stormy",
+      "weatherState": "stormy",
       "timeOfDay": "night",
       "intensity": 0.6,
       "elements": [
@@ -273,7 +273,7 @@
       ],
       "mood": "dread",
       "context": "Macbeth's paranoia deepens. The night becomes a space of violence and consequence, where blood calls for blood.",
-      "annotation": "Darkness is not merely absence of light\u2014it's the space where violent necessity unfolds, where fate operates beyond human vision.",
+      "annotation": "Darkness is not merely absence of light—it's the space where violent necessity unfolds, where fate operates beyond human vision.",
       "confidence": "high"
     },
     {
@@ -297,7 +297,7 @@
       ],
       "mood": "malevolence",
       "context": "The Witches gather in their cavern as thunder marks their assembly. The supernatural and meteorological blur.",
-      "annotation": "Thunder signals not god but witchcraft\u2014the hierarchy of power is inverted in Macbeth's world.",
+      "annotation": "Thunder signals not god but witchcraft—the hierarchy of power is inverted in Macbeth's world.",
       "confidence": "high"
     },
     {
@@ -311,7 +311,7 @@
         "lineEnd": 1
       },
       "speaker": "Stage direction",
-      "weatherState": "night-clear",
+      "weatherState": "clear",
       "timeOfDay": "night",
       "intensity": 0.2,
       "elements": [
@@ -320,7 +320,7 @@
       ],
       "mood": "unease",
       "context": "The night is clear but Lady Macbeth walks in her madness. Light cannot dispel the darkness of conscience.",
-      "annotation": "Even a clear night offers no comfort\u2014the play's moral darkness persists regardless of meteorological conditions.",
+      "annotation": "Even a clear night offers no comfort—the play's moral darkness persists regardless of meteorological conditions.",
       "confidence": "high"
     },
     {
@@ -344,7 +344,7 @@
       ],
       "mood": "enchantment",
       "context": "Puck describes a secret place in the forest where Oberon and Titania meet. The night is luminous with magic.",
-      "annotation": "The weather is latent in the description\u2014verdant and moistly perfumed, the forest itself generates its own humid, fertile atmosphere.",
+      "annotation": "The weather is latent in the description—verdant and moistly perfumed, the forest itself generates its own humid, fertile atmosphere.",
       "confidence": "high"
     },
     {
@@ -358,7 +358,7 @@
         "lineEnd": 404
       },
       "speaker": "Puck",
-      "weatherState": "night-clear",
+      "weatherState": "clear",
       "timeOfDay": "night",
       "intensity": 0.4,
       "elements": [
@@ -367,7 +367,7 @@
       ],
       "mood": "mockery",
       "context": "Puck surveys the chaos of the lovers below under the moon. His commentary is cosmic and mischievous.",
-      "annotation": "Moonlight is theft, reflection, and artifice\u2014perfectly suited to Puck's world where identity and love are constantly misaligned.",
+      "annotation": "Moonlight is theft, reflection, and artifice—perfectly suited to Puck's world where identity and love are constantly misaligned.",
       "confidence": "high"
     },
     {
@@ -390,7 +390,7 @@
       ],
       "mood": "renewal",
       "context": "Dawn breaks over the forest. The enchanted night gives way to clarity and the lovers awake from their confusion.",
-      "annotation": "The progression from night to dawn mirrors moral clarification\u2014what was hidden becomes visible, what was chaotic becomes orderly.",
+      "annotation": "The progression from night to dawn mirrors moral clarification—what was hidden becomes visible, what was chaotic becomes orderly.",
       "confidence": "high"
     },
     {
@@ -413,7 +413,7 @@
       ],
       "mood": "melancholy",
       "context": "Orsino opens the play in a state of romantic melancholy, indulging in his own sorrow. The weather of his mind is gray.",
-      "annotation": "The play's opening atmosphere is interiority\u2014the weather is psychological, not meteorological, yet colors the entire mood.",
+      "annotation": "The play's opening atmosphere is interiority—the weather is psychological, not meteorological, yet colors the entire mood.",
       "confidence": "medium"
     },
     {
@@ -437,7 +437,7 @@
       ],
       "mood": "disorientation",
       "context": "Viola emerges from a shipwreck on the coast of Illyria. The storm has scattered her from her brother and left her stranded.",
-      "annotation": "The storm, like Prospero's tempest, is a device of plot\u2014maritime weather creates exile and new identity.",
+      "annotation": "The storm, like Prospero's tempest, is a device of plot—maritime weather creates exile and new identity.",
       "confidence": "high"
     },
     {
@@ -460,8 +460,8 @@
         "soft light"
       ],
       "mood": "longing",
-      "context": "Orsino is entranced by music. The metaphor describes soft, perfumed air\u2014the sensory weather of romance.",
-      "annotation": "Weather as synesthesia\u2014sound becomes breeze, becomes scent. The play's primary atmosphere is sensory and interior.",
+      "context": "Orsino is entranced by music. The metaphor describes soft, perfumed air—the sensory weather of romance.",
+      "annotation": "Weather as synesthesia—sound becomes breeze, becomes scent. The play's primary atmosphere is sensory and interior.",
       "confidence": "high"
     },
     {
@@ -485,7 +485,7 @@
       ],
       "mood": "terror",
       "context": "Antigonus abandons baby Perdita on the wild coast of Bohemia, pursued by a bear. The seacoast is violent and unforgiving.",
-      "annotation": "The bear and the storm are both metaphors for nature's indifference\u2014the weather of tragedy is untamed wilderness.",
+      "annotation": "The bear and the storm are both metaphors for nature's indifference—the weather of tragedy is untamed wilderness.",
       "confidence": "high"
     },
     {
@@ -508,7 +508,7 @@
       ],
       "mood": "acceptance",
       "context": "Autolycus sings of life's mixture. The Bohemian pastoral is pleasant but never entirely clear.",
-      "annotation": "The play's second half is weather of reconciliation\u2014not clear, but not stormy. Mixed, like character itself.",
+      "annotation": "The play's second half is weather of reconciliation—not clear, but not stormy. Mixed, like character itself.",
       "confidence": "medium"
     },
     {
@@ -532,7 +532,7 @@
       ],
       "mood": "abundance",
       "context": "Autolycus hawks his wares at the Bohemian festival. His song catalogues colors and textures against the winter backdrop.",
-      "annotation": "Snow is commodity and metaphor\u2014whiteness as purity and as blank slate, the canvas on which the play's restoration unfolds.",
+      "annotation": "Snow is commodity and metaphor—whiteness as purity and as blank slate, the canvas on which the play's restoration unfolds.",
       "confidence": "high"
     },
     {
@@ -555,7 +555,7 @@
       ],
       "mood": "wonder",
       "context": "News arrives of Hermione's resurrection and Perdita's finding. Winter breaks into spring, metaphorically and literally.",
-      "annotation": "Clearness and revelation coincide\u2014the play's movement from tragedy through winter to spring and clarity is meteorological as well as thematic.",
+      "annotation": "Clearness and revelation coincide—the play's movement from tragedy through winter to spring and clarity is meteorological as well as thematic.",
       "confidence": "high"
     },
     {
@@ -569,7 +569,7 @@
         "lineEnd": 3
       },
       "speaker": "Romeo",
-      "weatherState": "dawn",
+      "weatherState": "clear",
       "timeOfDay": "dawn",
       "intensity": 0.6,
       "elements": [
@@ -578,7 +578,7 @@
       ],
       "mood": "love",
       "context": "Romeo awaits Juliet on the balcony at dawn. The breaking light mirrors his awakening to love.",
-      "annotation": "Juliet is not merely like the sun\u2014she illuminates the entire play. Dawn in Romeo is not weather but revelation.",
+      "annotation": "Juliet is not merely like the sun—she illuminates the entire play. Dawn in Romeo is not weather but revelation.",
       "confidence": "high"
     },
     {
@@ -592,7 +592,7 @@
         "lineEnd": 3
       },
       "speaker": "Juliet",
-      "weatherState": "dawn",
+      "weatherState": "clear",
       "timeOfDay": "dawn",
       "intensity": 0.5,
       "elements": [
@@ -601,7 +601,7 @@
       ],
       "mood": "sorrow",
       "context": "Romeo and Juliet part at dawn after their wedding night. The approaching day forces their separation and marks the beginning of tragedy.",
-      "annotation": "The lark, herald of day, becomes herald of separation. Weather marks time's cruelty\u2014dawn destroys their night.",
+      "annotation": "The lark, herald of day, becomes herald of separation. Weather marks time's cruelty—dawn destroys their night.",
       "confidence": "high"
     },
     {
@@ -615,7 +615,7 @@
         "lineEnd": 33
       },
       "speaker": "Capulet",
-      "weatherState": "night-clear",
+      "weatherState": "clear",
       "timeOfDay": "night",
       "intensity": 0.3,
       "elements": [
@@ -624,7 +624,7 @@
       ],
       "mood": "foreboding",
       "context": "The night of Romeo and Juliet's death is still and starlit. The play's final tragedy unfolds in darkness.",
-      "annotation": "The night is clear but cannot illuminate the tragedy below\u2014consciousness is not enough to prevent suffering.",
+      "annotation": "The night is clear but cannot illuminate the tragedy below—consciousness is not enough to prevent suffering.",
       "confidence": "high"
     },
     {
@@ -638,7 +638,7 @@
         "lineEnd": 292
       },
       "speaker": "Prince",
-      "weatherState": "dusk",
+      "weatherState": "clear",
       "timeOfDay": "dusk",
       "intensity": 0.4,
       "elements": [
@@ -647,7 +647,7 @@
       ],
       "mood": "sorrow",
       "context": "As the play ends, daylight fades. The Prince surveys the wreckage of Romeo and Juliet's love.",
-      "annotation": "Dusk as closure\u2014the play ends not at night but in the liminal space between day and darkness, between hope and despair.",
+      "annotation": "Dusk as closure—the play ends not at night but in the liminal space between day and darkness, between hope and despair.",
       "confidence": "high"
     },
     {
@@ -661,7 +661,7 @@
         "lineEnd": 2
       },
       "speaker": "Bernardo",
-      "weatherState": "night-clear",
+      "weatherState": "clear",
       "timeOfDay": "night",
       "intensity": 0.6,
       "elements": [
@@ -671,7 +671,7 @@
       ],
       "mood": "unease",
       "context": "The play opens on the battlements of Elsinore at night. The cold watch and the ghost's appearance establish a mood of dread.",
-      "annotation": "Hamlet's world is nocturnal\u2014clear nights do not bring clarity but rather expose the unknowable. Stars witness the supernatural.",
+      "annotation": "Hamlet's world is nocturnal—clear nights do not bring clarity but rather expose the unknowable. Stars witness the supernatural.",
       "confidence": "high"
     },
     {
@@ -685,7 +685,7 @@
         "lineEnd": 11
       },
       "speaker": "Ghost",
-      "weatherState": "night-clear",
+      "weatherState": "clear",
       "timeOfDay": "night",
       "intensity": 0.7,
       "elements": [
@@ -694,7 +694,7 @@
         "supernatural light"
       ],
       "mood": "dread",
-      "context": "The Ghost reveals his torment\u2014he is bound to the night and cannot abide daylight. Night is his prison and punishment.",
+      "context": "The Ghost reveals his torment—he is bound to the night and cannot abide daylight. Night is his prison and punishment.",
       "annotation": "Night in Hamlet is not merely dark but charged with supernatural presence. The Ghost's testimony makes night luminous with invisible torment.",
       "confidence": "high"
     },
@@ -709,7 +709,7 @@
         "lineEnd": 280
       },
       "speaker": "Claudius",
-      "weatherState": "night-stormy",
+      "weatherState": "stormy",
       "timeOfDay": "night",
       "intensity": 0.6,
       "elements": [
@@ -719,7 +719,7 @@
       ],
       "mood": "panic",
       "context": "During the play-within-the-play, Claudius calls for light as his guilt is exposed. The metaphorical darkness becomes literal.",
-      "annotation": "Light and dark are reversed\u2014artificial light cannot dispel the darkness of conscience. Weather becomes moral.",
+      "annotation": "Light and dark are reversed—artificial light cannot dispel the darkness of conscience. Weather becomes moral.",
       "confidence": "high"
     },
     {
@@ -742,7 +742,7 @@
       ],
       "mood": "determination",
       "context": "Hamlet, seeing Fortinbras's army march past, reaffirms his commitment to revenge. The day is overcast, mirroring his darkening resolve.",
-      "annotation": "Overcast day as internal weather\u2014the sky mirrors Hamlet's psychological state of grim determination.",
+      "annotation": "Overcast day as internal weather—the sky mirrors Hamlet's psychological state of grim determination.",
       "confidence": "high"
     },
     {
@@ -765,7 +765,7 @@
       ],
       "mood": "foreboding",
       "context": "Before the Battle of Bosworth, Richard laments the overcast day. The weather is read as an ill omen.",
-      "annotation": "The sky's frown personifies nature as judgmental\u2014weather becomes prophecy of Richard's defeat.",
+      "annotation": "The sky's frown personifies nature as judgmental—weather becomes prophecy of Richard's defeat.",
       "confidence": "high"
     },
     {
@@ -789,7 +789,7 @@
       ],
       "mood": "desperation",
       "context": "Richard, surrounded by enemies on Bosworth Field, makes his famous cry. The day is dark with battle smoke and chaos.",
-      "annotation": "The overcast day becomes literal fog of war\u2014visibility and certainty collapse together on the battlefield.",
+      "annotation": "The overcast day becomes literal fog of war—visibility and certainty collapse together on the battlefield.",
       "confidence": "high"
     },
     {
@@ -813,7 +813,7 @@
       ],
       "mood": "aspiration",
       "context": "The Prologue invokes the Muses and begs the audience's imagination to elevate the play. The imagery is luminous.",
-      "annotation": "Brightness and fire are not meteorological but metaphorical\u2014the play will burn with heroic action.",
+      "annotation": "Brightness and fire are not meteorological but metaphorical—the play will burn with heroic action.",
       "confidence": "medium"
     },
     {
@@ -837,7 +837,7 @@
       ],
       "mood": "doubt",
       "context": "The night before Agincourt, Henry walks the camp in disguise. The cold night amplifies his anxiety.",
-      "annotation": "The overcast night before Agincourt contrasts with the illuminated morning\u2014darkness here is doubt, clarity will be resolution.",
+      "annotation": "The overcast night before Agincourt contrasts with the illuminated morning—darkness here is doubt, clarity will be resolution.",
       "confidence": "high"
     },
     {
@@ -851,7 +851,7 @@
         "lineEnd": 42
       },
       "speaker": "King Henry",
-      "weatherState": "dawn",
+      "weatherState": "clear",
       "timeOfDay": "dawn",
       "intensity": 0.4,
       "elements": [
@@ -860,7 +860,7 @@
       ],
       "mood": "inspiration",
       "context": "At dawn on Crispian's Day, Henry rallies his troops with his most famous speech. The day breaks clear over the field.",
-      "annotation": "Dawn as turning point\u2014the dark night of doubt gives way to the luminous clarity of St. Crispin's Day, a day that will be remembered.",
+      "annotation": "Dawn as turning point—the dark night of doubt gives way to the luminous clarity of St. Crispin's Day, a day that will be remembered.",
       "confidence": "high"
     },
     {
@@ -885,7 +885,7 @@
       ],
       "mood": "chaos",
       "context": "A violent storm has separated Othello's fleet. The tempest threatens to sink the entire Turkish fleet and delays Othello's arrival.",
-      "annotation": "The storm is a metaphor for the turbulence to come\u2014the play's romantic and tragic storms are anticipated by the literal tempest.",
+      "annotation": "The storm is a metaphor for the turbulence to come—the play's romantic and tragic storms are anticipated by the literal tempest.",
       "confidence": "high"
     },
     {
@@ -908,7 +908,7 @@
       ],
       "mood": "joy",
       "context": "After the storm, Othello has arrived safely. The day is now clear and Cassio celebrates Othello's arrival with relief.",
-      "annotation": "The shift from storm to clear day mirrors the play's trajectory\u2014initial relief will give way to the gathering storm of jealousy.",
+      "annotation": "The shift from storm to clear day mirrors the play's trajectory—initial relief will give way to the gathering storm of jealousy.",
       "confidence": "high"
     },
     {
@@ -922,7 +922,7 @@
         "lineEnd": 3
       },
       "speaker": "Othello",
-      "weatherState": "night-clear",
+      "weatherState": "clear",
       "timeOfDay": "night",
       "intensity": 0.5,
       "elements": [
@@ -932,7 +932,7 @@
       ],
       "mood": "tragedy",
       "context": "Othello stands over the sleeping Desdemona, about to murder her. The clear night stars witness his terrible act.",
-      "annotation": "The stars that were symbols of chastity and truth become witnesses to its perversion\u2014Othello invokes them even as he violates what they represent.",
+      "annotation": "The stars that were symbols of chastity and truth become witnesses to its perversion—Othello invokes them even as he violates what they represent.",
       "confidence": "high"
     },
     {
@@ -955,7 +955,7 @@
       ],
       "mood": "love",
       "context": "The Poet compares the beloved to a perfect summer's day, praising both beauty and constancy.",
-      "annotation": "Summer's day is the weather of perfect love\u2014temperate, constant, eternal through verse. The beloved transcends seasonal change.",
+      "annotation": "Summer's day is the weather of perfect love—temperate, constant, eternal through verse. The beloved transcends seasonal change.",
       "confidence": "high"
     },
     {
@@ -978,7 +978,7 @@
       ],
       "mood": "despair",
       "context": "The Poet laments his outcast state, troubled by fortune and isolation. The day is as dark as his mood.",
-      "annotation": "Internal weather\u2014the Poet's isolation is expressed through meteorological imagery of overcast abandonment.",
+      "annotation": "Internal weather—the Poet's isolation is expressed through meteorological imagery of overcast abandonment.",
       "confidence": "high"
     },
     {
@@ -1001,7 +1001,7 @@
       ],
       "mood": "melancholy",
       "context": "The Poet recalls past sorrows. His remembrance is stormy with grief, and tears fall like rain.",
-      "annotation": "Rain and tears become metaphorically indistinguishable\u2014emotion is weather, weather is emotion.",
+      "annotation": "Rain and tears become metaphorically indistinguishable—emotion is weather, weather is emotion.",
       "confidence": "high"
     },
     {
@@ -1023,7 +1023,7 @@
       ],
       "mood": "wonder",
       "context": "The Poet celebrates glorious mornings when the sun breaks through clouds to illuminate the earth.",
-      "annotation": "Partial clouds allow the sun's glory to be more dramatic\u2014beauty emerges through and against obstacle.",
+      "annotation": "Partial clouds allow the sun's glory to be more dramatic—beauty emerges through and against obstacle.",
       "confidence": "high"
     },
     {
@@ -1044,8 +1044,8 @@
         "clarity"
       ],
       "mood": "immortality",
-      "context": "The Poet asserts that verse is eternal, more durable than stone. The clarity is metaphorical\u2014eternity is luminous.",
-      "annotation": "The weather here is timelessness\u2014a day that never clouds, a clarity that outlasts monuments.",
+      "context": "The Poet asserts that verse is eternal, more durable than stone. The clarity is metaphorical—eternity is luminous.",
+      "annotation": "The weather here is timelessness—a day that never clouds, a clarity that outlasts monuments.",
       "confidence": "medium"
     },
     {
@@ -1067,8 +1067,8 @@
         "decay"
       ],
       "mood": "mortality",
-      "context": "The Poet meditates on time's destruction\u2014monuments crumble, towers fall. Weather is the agent of decay.",
-      "annotation": "Rain and time are allied agents of erosion\u2014the weather does not merely accompany destruction but enacts it.",
+      "context": "The Poet meditates on time's destruction—monuments crumble, towers fall. Weather is the agent of decay.",
+      "annotation": "Rain and time are allied agents of erosion—the weather does not merely accompany destruction but enacts it.",
       "confidence": "high"
     },
     {
@@ -1091,7 +1091,7 @@
       ],
       "mood": "acceptance",
       "context": "The Poet instructs the beloved not to mourn excessively. The day of the funeral is overcast with sorrow.",
-      "annotation": "Overcast day as conventional accompaniment to death\u2014the weather mirrors the mood, or vice versa.",
+      "annotation": "Overcast day as conventional accompaniment to death—the weather mirrors the mood, or vice versa.",
       "confidence": "high"
     },
     {
@@ -1113,7 +1113,7 @@
         "darkness"
       ],
       "mood": "longing",
-      "context": "The Poet's absence from the beloved is a metaphorical winter\u2014cold and dark and cheerless.",
+      "context": "The Poet's absence from the beloved is a metaphorical winter—cold and dark and cheerless.",
       "annotation": "Winter is not merely seasonal weather but psychological state. The Poet's suffering is meteorological.",
       "confidence": "high"
     },
@@ -1136,7 +1136,7 @@
       ],
       "mood": "admiration",
       "context": "The Poet celebrates the beloved's unchanging beauty. Time cannot age what is eternally fair.",
-      "annotation": "Fairness and clarity are aligned\u2014the beloved is weather that never changes, a clear day that never clouds.",
+      "annotation": "Fairness and clarity are aligned—the beloved is weather that never changes, a clear day that never clouds.",
       "confidence": "high"
     },
     {
@@ -1160,7 +1160,7 @@
       ],
       "mood": "contentment",
       "context": "The Duke Senior celebrates his exile in the Forest of Arden. Despite hardship, the forest offers freedom and peace.",
-      "annotation": "The Forest of Arden's weather is habitually fair\u2014exile here is paradise precisely because the natural world is benign.",
+      "annotation": "The Forest of Arden's weather is habitually fair—exile here is paradise precisely because the natural world is benign.",
       "confidence": "high"
     },
     {
@@ -1174,7 +1174,7 @@
         "lineEnd": 177
       },
       "speaker": "Amiens",
-      "weatherState": "windy",
+      "weatherState": "overcast",
       "timeOfDay": "winter",
       "intensity": 0.7,
       "elements": [
@@ -1184,7 +1184,7 @@
       ],
       "mood": "philosophy",
       "context": "Amiens sings of winter in the forest. The wind is harsh but honest, unlike human betrayal.",
-      "annotation": "The famous winter song frames weather as more trustworthy than human emotion\u2014the wind is unkind but not hypocritical.",
+      "annotation": "The famous winter song frames weather as more trustworthy than human emotion—the wind is unkind but not hypocritical.",
       "confidence": "high"
     },
     {
@@ -1206,8 +1206,8 @@
         "dappled light"
       ],
       "mood": "wisdom",
-      "context": "Jaques describes meeting a fool in the forest. The oak tree provides shade and shelter\u2014the weather is temperate.",
-      "annotation": "The forest's pleasant weather is backdrop to philosophical wisdom\u2014comfort enables contemplation.",
+      "context": "Jaques describes meeting a fool in the forest. The oak tree provides shade and shelter—the weather is temperate.",
+      "annotation": "The forest's pleasant weather is backdrop to philosophical wisdom—comfort enables contemplation.",
       "confidence": "high"
     },
     {
@@ -1231,7 +1231,7 @@
       ],
       "mood": "instruction",
       "context": "Belarius instructs his foster sons in the wilderness. The clear day is an occasion for physical and spiritual training.",
-      "annotation": "Clear weather enables virtue\u2014the open sky mirrors the open heart necessary for noble training.",
+      "annotation": "Clear weather enables virtue—the open sky mirrors the open heart necessary for noble training.",
       "confidence": "high"
     },
     {
@@ -1254,7 +1254,7 @@
       ],
       "mood": "hope",
       "context": "Imogen travels through Wales searching for Leonatus. The weather is mild and does not impede her quest.",
-      "annotation": "Mixed weather as transition\u2014Imogen's journey is physically arduous but not thwarted by extreme weather.",
+      "annotation": "Mixed weather as transition—Imogen's journey is physically arduous but not thwarted by extreme weather.",
       "confidence": "medium"
     },
     {
@@ -1277,7 +1277,7 @@
       ],
       "mood": "wonder",
       "context": "Jupiter departs after appearing to Posthumus. The divine presence leaves clarity and reassurance in its wake.",
-      "annotation": "The god's departure marks a shift from uncertainty to clarity\u2014supernatural weather gives way to natural peace.",
+      "annotation": "The god's departure marks a shift from uncertainty to clarity—supernatural weather gives way to natural peace.",
       "confidence": "high"
     },
     {
@@ -1302,7 +1302,7 @@
       ],
       "mood": "tragedy",
       "context": "The Prologue announces the shipwreck that will initiate Pericles' long exile. The storm is catastrophic.",
-      "annotation": "In Pericles, as in The Tempest and Othello, storms are agents of plot\u2014weather dispatches characters to new fates.",
+      "annotation": "In Pericles, as in The Tempest and Othello, storms are agents of plot—weather dispatches characters to new fates.",
       "confidence": "high"
     },
     {
@@ -1326,7 +1326,7 @@
       ],
       "mood": "desolation",
       "context": "Pericles survives the shipwreck and washes ashore. He is alone in a hostile coastal landscape.",
-      "annotation": "Post-storm landscape is desolate\u2014the weather's aftermath is as challenging as the storm itself.",
+      "annotation": "Post-storm landscape is desolate—the weather's aftermath is as challenging as the storm itself.",
       "confidence": "medium"
     },
     {
@@ -1350,7 +1350,7 @@
       ],
       "mood": "war",
       "context": "At the battle of Actium, the day is hot and dusty. Visibility is poor, adding to the confusion of war.",
-      "annotation": "Desert heat and dust as metaphor for clarity obscured\u2014in war, even proximity does not guarantee understanding.",
+      "annotation": "Desert heat and dust as metaphor for clarity obscured—in war, even proximity does not guarantee understanding.",
       "confidence": "medium"
     },
     {
@@ -1364,7 +1364,7 @@
         "lineEnd": 11
       },
       "speaker": "Antony",
-      "weatherState": "dusk",
+      "weatherState": "clear",
       "timeOfDay": "dusk",
       "intensity": 0.5,
       "elements": [
@@ -1374,7 +1374,7 @@
       ],
       "mood": "loss",
       "context": "As Antony approaches death, he meditates on the theft of light and beauty. The day fades as his life ebbs.",
-      "annotation": "Dusk as metaphor for mortality\u2014all light is borrowed, all beauty is fleeting, all power is theft.",
+      "annotation": "Dusk as metaphor for mortality—all light is borrowed, all beauty is fleeting, all power is theft.",
       "confidence": "high"
     },
     {
@@ -1388,7 +1388,7 @@
         "lineEnd": 285
       },
       "speaker": "Cleopatra",
-      "weatherState": "night-clear",
+      "weatherState": "clear",
       "timeOfDay": "night",
       "intensity": 0.4,
       "elements": [
@@ -1397,7 +1397,7 @@
       ],
       "mood": "despair",
       "context": "Cleopatra awaits death by her own hand. The night is clear but offers no consolation.",
-      "annotation": "Night clarity as cold witness\u2014the stars see human tragedy without sympathy, their light is unconcerned.",
+      "annotation": "Night clarity as cold witness—the stars see human tragedy without sympathy, their light is unconcerned.",
       "confidence": "high"
     },
     {
@@ -1411,7 +1411,7 @@
         "lineEnd": 3
       },
       "speaker": "Lorenzo",
-      "weatherState": "night-clear",
+      "weatherState": "clear",
       "timeOfDay": "night",
       "intensity": 0.4,
       "elements": [
@@ -1421,7 +1421,7 @@
       ],
       "mood": "romance",
       "context": "Lorenzo and Jessica celebrate their love under the clear night sky. The weather is soft and romantic.",
-      "annotation": "Clear night as ideal setting for love\u2014the moon witnesses and blesses romantic union.",
+      "annotation": "Clear night as ideal setting for love—the moon witnesses and blesses romantic union.",
       "confidence": "high"
     },
     {
@@ -1445,7 +1445,7 @@
       ],
       "mood": "enchantment",
       "context": "Titania, bewitched, courts the transformed Bottom in the enchanted forest. Mist surrounds the magical space.",
-      "annotation": "Fog as the atmosphere of magic\u2014when visibility is obscured, the impossible becomes possible.",
+      "annotation": "Fog as the atmosphere of magic—when visibility is obscured, the impossible becomes possible.",
       "confidence": "medium"
     },
     {
@@ -1467,7 +1467,7 @@
       ],
       "mood": "resolution",
       "context": "Katherina delivers her final speech on wifely duty. The resolution is clear, if contested.",
-      "annotation": "The clarity of day frames the play's problematic conclusion\u2014visibility does not guarantee agreement.",
+      "annotation": "The clarity of day frames the play's problematic conclusion—visibility does not guarantee agreement.",
       "confidence": "medium"
     },
     {
@@ -1490,7 +1490,7 @@
       ],
       "mood": "philosophy",
       "context": "Prospero's meditation on the insubstantiality of life and magic. The transience is meteorological.",
-      "annotation": "Clouds drifting across afternoon sky\u2014the image perfectly captures Prospero's theme of ephemerality and dissolution.",
+      "annotation": "Clouds drifting across afternoon sky—the image perfectly captures Prospero's theme of ephemerality and dissolution.",
       "confidence": "high"
     },
     {
@@ -1514,7 +1514,7 @@
       ],
       "mood": "irony",
       "context": "In the prison, Pompey comments on the indistinguishability of true and false. The play's moral overcast persists.",
-      "annotation": "Overcast day mirrors moral ambiguity\u2014in Measure for Measure, clarity is rarely available.",
+      "annotation": "Overcast day mirrors moral ambiguity—in Measure for Measure, clarity is rarely available.",
       "confidence": "medium"
     },
     {
@@ -1528,7 +1528,7 @@
         "lineEnd": 2
       },
       "speaker": "Proteus",
-      "weatherState": "night-clear",
+      "weatherState": "clear",
       "timeOfDay": "night",
       "intensity": 0.4,
       "elements": [
@@ -1538,7 +1538,7 @@
       ],
       "mood": "devotion",
       "context": "Proteus swears constancy to Julia under the night sky. His vow is false but the night is clear.",
-      "annotation": "Clear night as witness to broken vows\u2014the stars illuminate hypocrisy without judgment.",
+      "annotation": "Clear night as witness to broken vows—the stars illuminate hypocrisy without judgment.",
       "confidence": "medium"
     },
     {
@@ -1561,7 +1561,7 @@
       ],
       "mood": "melancholy",
       "context": "The play ends with unexpected news of death. The brightness of the court's play is darkened by reality.",
-      "annotation": "The shift from song to harsh words mirrors the shift from clear day to overcast evening\u2014beauty is temporary.",
+      "annotation": "The shift from song to harsh words mirrors the shift from clear day to overcast evening—beauty is temporary.",
       "confidence": "medium"
     },
     {
@@ -1584,7 +1584,7 @@
       ],
       "mood": "festivity",
       "context": "At a Messina garden party, the weather is pleasant for courtship and wit. The day itself is hospitable.",
-      "annotation": "Mixed weather\u2014partly cloudy\u2014suits a play of mixed comedy and romance, where light and shadow alternate.",
+      "annotation": "Mixed weather—partly cloudy—suits a play of mixed comedy and romance, where light and shadow alternate.",
       "confidence": "medium"
     },
     {
@@ -2096,7 +2096,7 @@
         "lineStart": null,
         "lineEnd": null
       },
-      "speaker": null,
+      "speaker": "Stage direction",
       "weatherState": "stormy",
       "timeOfDay": "day",
       "intensity": 0.9,
@@ -2352,7 +2352,7 @@
         "lineEnd": null
       },
       "speaker": "Lady Macbeth",
-      "weatherState": "night-stormy",
+      "weatherState": "stormy",
       "timeOfDay": "night",
       "intensity": 0.8,
       "elements": [
@@ -2383,7 +2383,7 @@
         "darkness"
       ],
       "mood": "supernatural",
-      "context": "Puck wandering the dark forest \u2014 disorientation and fairy magic in murky night. Fills foggy\u00d7supernatural.",
+      "context": "Puck wandering the dark forest — disorientation and fairy magic in murky night. Fills foggy×supernatural.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -2408,7 +2408,7 @@
         "dew"
       ],
       "mood": "calm",
-      "context": "Fairy lullaby \u2014 protective charm over a moonlit clearing. Calm night atmosphere.",
+      "context": "Fairy lullaby — protective charm over a moonlit clearing. Calm night atmosphere.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -2431,7 +2431,7 @@
         "moonlight"
       ],
       "mood": "foreboding",
-      "context": "Puck's night-poem \u2014 predators under a clear moon. Foreboding beneath apparent calm.",
+      "context": "Puck's night-poem — predators under a clear moon. Foreboding beneath apparent calm.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -2455,7 +2455,7 @@
         "embers"
       ],
       "mood": "dread",
-      "context": "Death imagery under a clear night sky \u2014 screech-owl and shrouds. Fills clear\u00d7dread.",
+      "context": "Death imagery under a clear night sky — screech-owl and shrouds. Fills clear×dread.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -2479,7 +2479,7 @@
         "darkness"
       ],
       "mood": "supernatural",
-      "context": "Ghosts in the churchyard \u2014 foggy night, spectral atmosphere. Deepens foggy\u00d7supernatural.",
+      "context": "Ghosts in the churchyard — foggy night, spectral atmosphere. Deepens foggy×supernatural.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -2503,7 +2503,7 @@
         "darkness"
       ],
       "mood": "supernatural",
-      "context": "Fairies following darkness \u2014 Hecate's moonlight domain. Extends clear\u00d7supernatural.",
+      "context": "Fairies following darkness — Hecate's moonlight domain. Extends clear×supernatural.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -2527,7 +2527,7 @@
         "embers"
       ],
       "mood": "tenderness",
-      "context": "Oberon's blessing of the house \u2014 gentle fairy light, warm resolution",
+      "context": "Oberon's blessing of the house — gentle fairy light, warm resolution",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -2551,7 +2551,7 @@
         "stillness"
       ],
       "mood": "reconciliation",
-      "context": "Fairies bless the wedding house until dawn \u2014 full reconciliation of supernatural and mortal worlds. Fills pre-dawn.",
+      "context": "Fairies bless the wedding house until dawn — full reconciliation of supernatural and mortal worlds. Fills pre-dawn.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -2574,7 +2574,7 @@
         "moonlight"
       ],
       "mood": "calm",
-      "context": "Mechanicals choosing their moonlit rehearsal spot \u2014 ordinary mortals in an enchanted clearing",
+      "context": "Mechanicals choosing their moonlit rehearsal spot — ordinary mortals in an enchanted clearing",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -2597,7 +2597,7 @@
         "moonlight"
       ],
       "mood": "calm",
-      "context": "Meta-theatrical moonlight \u2014 the mechanicals debate how to stage weather they're standing in",
+      "context": "Meta-theatrical moonlight — the mechanicals debate how to stage weather they're standing in",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -2620,7 +2620,7 @@
         "heat"
       ],
       "mood": "foreboding",
-      "context": "Jealousy ignites in a calm court \u2014 'too hot' is emotional, not meteorological, but the heat/fever imagery sets a mood against a clear, public day",
+      "context": "Jealousy ignites in a calm court — 'too hot' is emotional, not meteorological, but the heat/fever imagery sets a mood against a clear, public day",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -2641,7 +2641,7 @@
       "intensity": 0.4,
       "elements": [],
       "mood": "dread",
-      "context": "Poison-in-the-cup metaphor \u2014 the dread of invisible contamination. No weather, but the atmosphere is thick with suspicion.",
+      "context": "Poison-in-the-cup metaphor — the dread of invisible contamination. No weather, but the atmosphere is thick with suspicion.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -2664,7 +2664,7 @@
         "sleeplessness"
       ],
       "mood": "madness",
-      "context": "Leontes sleepless \u2014 day and night collapse into one unbroken grey. Insomnia as atmospheric state.",
+      "context": "Leontes sleepless — day and night collapse into one unbroken grey. Insomnia as atmospheric state.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -2687,7 +2687,7 @@
         "stars"
       ],
       "mood": "despair",
-      "context": "Paulina's cosmic image \u2014 the impossible (stars kissing valleys) as figure for absurd injustice. Clear skies, but no comfort in them.",
+      "context": "Paulina's cosmic image — the impossible (stars kissing valleys) as figure for absurd injustice. Clear skies, but no comfort in them.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -2710,7 +2710,7 @@
         "warmth"
       ],
       "mood": "reconciliation",
-      "context": "The statue of Hermione is warm \u2014 winter ends. 'Warm' is the play's final weather word, reversing the 16 years of cold.",
+      "context": "The statue of Hermione is warm — winter ends. 'Warm' is the play's final weather word, reversing the 16 years of cold.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -2734,7 +2734,7 @@
         "warmth"
       ],
       "mood": "supernatural",
-      "context": "The held breath before Hermione speaks \u2014 clear, still, uncanny. Supernatural not as storm but as impossible warmth.",
+      "context": "The held breath before Hermione speaks — clear, still, uncanny. Supernatural not as storm but as impossible warmth.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -2755,7 +2755,7 @@
       "intensity": 0.3,
       "elements": [],
       "mood": "tenderness",
-      "context": "Hermione's first words in 16 years \u2014 a mother's blessing poured down like rain, but the weather is clear. Grace, not precipitation.",
+      "context": "Hermione's first words in 16 years — a mother's blessing poured down like rain, but the weather is clear. Grace, not precipitation.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -2778,7 +2778,7 @@
         "stars"
       ],
       "mood": "despair",
-      "context": "Leontes on Hermione's eyes \u2014 stars vs. dead coals. The night sky is the only thing bright enough for the comparison. Grief made cosmic.",
+      "context": "Leontes on Hermione's eyes — stars vs. dead coals. The night sky is the only thing bright enough for the comparison. Grief made cosmic.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -2801,7 +2801,7 @@
         "heat"
       ],
       "mood": "rage",
-      "context": "Paulina rages at Leontes after Hermione's collapse \u2014 the heat imagery (fires, boiling, leads) is of torture, not weather, but the emotional atmosphere is scalding.",
+      "context": "Paulina rages at Leontes after Hermione's collapse — the heat imagery (fires, boiling, leads) is of torture, not weather, but the emotional atmosphere is scalding.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -2824,7 +2824,7 @@
         "stillness"
       ],
       "mood": "supernatural",
-      "context": "Paulina commands the statue to live \u2014 'be stone no more' inverts winter. The atmosphere is held, crystalline, then breaks into warmth.",
+      "context": "Paulina commands the statue to live — 'be stone no more' inverts winter. The atmosphere is held, crystalline, then breaks into warmth.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -2847,7 +2847,7 @@
         "cold"
       ],
       "mood": "foreboding",
-      "context": "The play names itself \u2014 a winter's tale needs winter weather. Mamillius' innocent ghost story is the play's own frame: cold evening, sprites, sadness to come.",
+      "context": "The play names itself — a winter's tale needs winter weather. Mamillius' innocent ghost story is the play's own frame: cold evening, sprites, sadness to come.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -2872,7 +2872,7 @@
         "lightning"
       ],
       "mood": "dread",
-      "context": "Casca opens the prodigy scene \u2014 literal storm, the earth shaking. He's a soldier who's seen storms before; this one is different.",
+      "context": "Casca opens the prodigy scene — literal storm, the earth shaking. He's a soldier who's seen storms before; this one is different.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -2898,14 +2898,14 @@
         "rain"
       ],
       "mood": "supernatural",
-      "context": "A tempest dropping fire \u2014 beyond natural weather. Casca distinguishes this from ordinary storms. Fire falling from the sky is prodigy, not meteorology.",
+      "context": "A tempest dropping fire — beyond natural weather. Casca distinguishes this from ordinary storms. Fire falling from the sky is prodigy, not meteorology.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
     },
     {
       "id": "caesar-1.3.3",
-      "text": "A common slave \u2014 you know him well by sight \u2014 / Held up his left hand, which did flame and burn / Like twenty torches join'd, and yet his hand, / Not sensible of fire, remain'd unscorch'd.",
+      "text": "A common slave — you know him well by sight — / Held up his left hand, which did flame and burn / Like twenty torches join'd, and yet his hand, / Not sensible of fire, remain'd unscorch'd.",
       "source": {
         "play": "Julius Caesar",
         "act": 1,
@@ -2922,14 +2922,14 @@
         "lightning"
       ],
       "mood": "supernatural",
-      "context": "St. Elmo's fire on a slave's hand \u2014 the storm produces impossible phenomena. Weather as portent, not just weather.",
+      "context": "St. Elmo's fire on a slave's hand — the storm produces impossible phenomena. Weather as portent, not just weather.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
     },
     {
       "id": "caesar-1.3.4",
-      "text": "Besides \u2014 I ha' not since put up my sword \u2014 / Against the Capitol I met a lion, / Who glared upon me, and went surly by, / Without annoying me",
+      "text": "Besides — I ha' not since put up my sword — / Against the Capitol I met a lion, / Who glared upon me, and went surly by, / Without annoying me",
       "source": {
         "play": "Julius Caesar",
         "act": 1,
@@ -2945,7 +2945,7 @@
         "thunder"
       ],
       "mood": "supernatural",
-      "context": "A lion loose in Rome during the storm \u2014 nature's order inverted. The storm is background here; the prodigy is in the foreground.",
+      "context": "A lion loose in Rome during the storm — nature's order inverted. The storm is background here; the prodigy is in the foreground.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -2968,7 +2968,7 @@
         "darkness"
       ],
       "mood": "supernatural",
-      "context": "An owl at noon \u2014 daytime darkness, natural order reversed. This is yesterday's prodigy, not tonight's storm, and implies an overcast day dark enough for an owl.",
+      "context": "An owl at noon — daytime darkness, natural order reversed. This is yesterday's prodigy, not tonight's storm, and implies an overcast day dark enough for an owl.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -2992,7 +2992,7 @@
         "lightning"
       ],
       "mood": "dread",
-      "context": "Casca insists the storm is not natural \u2014 portentous to 'the climate,' meaning both weather and political state. The pun is the play's thesis.",
+      "context": "Casca insists the storm is not natural — portentous to 'the climate,' meaning both weather and political state. The pun is the play's thesis.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -3015,7 +3015,7 @@
         "thunder"
       ],
       "mood": "calm",
-      "context": "Cicero's skepticism \u2014 the storm is real but its meaning is not fixed. The calmest voice in the play's wildest weather. A philosopher standing in rain.",
+      "context": "Cicero's skepticism — the storm is real but its meaning is not fixed. The calmest voice in the play's wildest weather. A philosopher standing in rain.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -3039,7 +3039,7 @@
         "lightning"
       ],
       "mood": "rage",
-      "context": "Cassius reads the storm as Caesar \u2014 the man IS the dreadful night. Weather becomes political metaphor in the speaker's mouth, not the playwright's.",
+      "context": "Cassius reads the storm as Caesar — the man IS the dreadful night. Weather becomes political metaphor in the speaker's mouth, not the playwright's.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -3062,7 +3062,7 @@
         "thunder"
       ],
       "mood": "rage",
-      "context": "Cassius' contempt \u2014 still standing in the storm but now using it as backdrop for political argument. The thunder underscores but doesn't drive the speech.",
+      "context": "Cassius' contempt — still standing in the storm but now using it as backdrop for political argument. The thunder underscores but doesn't drive the speech.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -3086,7 +3086,7 @@
         "thunder"
       ],
       "mood": "madness",
-      "context": "Cassius baring his chest to lightning \u2014 not metaphor, he literally stood in the flash. Suicidal defiance of the storm. The intensity is earned: he made himself the storm's target.",
+      "context": "Cassius baring his chest to lightning — not metaphor, he literally stood in the flash. Suicidal defiance of the storm. The intensity is earned: he made himself the storm's target.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -3110,7 +3110,7 @@
         "darkness"
       ],
       "mood": "foreboding",
-      "context": "Brutus can't see the stars \u2014 the storm clouds from I.iii still cover the sky. Pre-dawn, overcast, sleepless. He's trying to read the time and can't.",
+      "context": "Brutus can't see the stars — the storm clouds from I.iii still cover the sky. Pre-dawn, overcast, sleepless. He's trying to read the time and can't.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -3133,7 +3133,7 @@
         "darkness"
       ],
       "mood": "dread",
-      "context": "Brutus sleepless before the Ides \u2014 the interim between decision and action as hideous dream. Pre-dawn insomnia, the overcast hasn't broken.",
+      "context": "Brutus sleepless before the Ides — the interim between decision and action as hideous dream. Pre-dawn insomnia, the overcast hasn't broken.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -3157,7 +3157,7 @@
         "meteors"
       ],
       "mood": "foreboding",
-      "context": "Brutus reads by lightning-flash or meteor light \u2014 the storm's remnants still producing unnatural illumination. He's reading the conspiracy letter by prodigy-light.",
+      "context": "Brutus reads by lightning-flash or meteor light — the storm's remnants still producing unnatural illumination. He's reading the conspiracy letter by prodigy-light.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -3180,7 +3180,7 @@
         "sunrise"
       ],
       "mood": "foreboding",
-      "context": "Decius points his sword at the rising sun \u2014 conspirators orient themselves by dawn. The storm has passed but the sky isn't fully clear; March dawn, early spring.",
+      "context": "Decius points his sword at the rising sun — conspirators orient themselves by dawn. The storm has passed but the sky isn't fully clear; March dawn, early spring.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -3203,7 +3203,7 @@
         "darkness"
       ],
       "mood": "dread",
-      "context": "Conspiracy needs night's cover \u2014 Brutus addresses darkness as co-conspirator. The overcast pre-dawn is both literal (storm remnants) and moral.",
+      "context": "Conspiracy needs night's cover — Brutus addresses darkness as co-conspirator. The overcast pre-dawn is both literal (storm remnants) and moral.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -3226,7 +3226,7 @@
         "thunder"
       ],
       "mood": "dread",
-      "context": "Caesar confirms the storm lasted all night \u2014 'nor heaven nor earth at peace.' Calpurnia's cries blend with the thunder. Pre-dawn, storm still echoing.",
+      "context": "Caesar confirms the storm lasted all night — 'nor heaven nor earth at peace.' Calpurnia's cries blend with the thunder. Pre-dawn, storm still echoing.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -3251,7 +3251,7 @@
         "blood"
       ],
       "mood": "supernatural",
-      "context": "Calpurnia catalogues the night's prodigies \u2014 warriors in the clouds drizzling blood. The storm has become eschatological. 'Drizzled blood' is weather vocabulary applied to the impossible.",
+      "context": "Calpurnia catalogues the night's prodigies — warriors in the clouds drizzling blood. The storm has become eschatological. 'Drizzled blood' is weather vocabulary applied to the impossible.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -3296,7 +3296,7 @@
       "intensity": 0.4,
       "elements": [],
       "mood": "rage",
-      "context": "Antony alone with the body \u2014 'bleeding piece of earth' and 'tide of times' are elemental metaphors. Rage building under a controlled surface.",
+      "context": "Antony alone with the body — 'bleeding piece of earth' and 'tide of times' are elemental metaphors. Rage building under a controlled surface.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -3319,7 +3319,7 @@
         "blood"
       ],
       "mood": "violence",
-      "context": "Antony's prophecy of civil war \u2014 the storm from Act I returns as political forecast. 'Blood and destruction in use' is weather-as-new-normal.",
+      "context": "Antony's prophecy of civil war — the storm from Act I returns as political forecast. 'Blood and destruction in use' is weather-as-new-normal.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -3342,7 +3342,7 @@
         "tears"
       ],
       "mood": "despair",
-      "context": "Antony turning the crowd \u2014 tears as collective weather event. The Forum is outdoors; the rain is in the audience's eyes, not the sky, but the metaphor maps naturally.",
+      "context": "Antony turning the crowd — tears as collective weather event. The Forum is outdoors; the rain is in the audience's eyes, not the sky, but the metaphor maps naturally.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -3366,7 +3366,7 @@
         "sea"
       ],
       "mood": "foreboding",
-      "context": "Brutus' tide metaphor \u2014 maritime weather as political philosophy. The weather is figurative but the image is precise: flood tide vs. shallows, fortune vs. misery.",
+      "context": "Brutus' tide metaphor — maritime weather as political philosophy. The weather is figurative but the image is precise: flood tide vs. shallows, fortune vs. misery.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -3390,7 +3390,7 @@
         "flickering light"
       ],
       "mood": "supernatural",
-      "context": "Caesar's ghost appears \u2014 the taper burning badly, the tent dark. Brutus blames his eyes, not the supernatural. The atmosphere is close, dim, overcast night.",
+      "context": "Caesar's ghost appears — the taper burning badly, the tent dark. Brutus blames his eyes, not the supernatural. The atmosphere is close, dim, overcast night.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -3413,7 +3413,7 @@
         "morning light"
       ],
       "mood": "foreboding",
-      "context": "Cassius' farewell to Brutus before battle \u2014 invoking friendly gods on a clear morning. But it's a farewell disguised as a greeting; the foreboding is in the subtext.",
+      "context": "Cassius' farewell to Brutus before battle — invoking friendly gods on a clear morning. But it's a farewell disguised as a greeting; the foreboding is in the subtext.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -3437,7 +3437,7 @@
         "red light"
       ],
       "mood": "despair",
-      "context": "Titinius over Cassius' body at sunset \u2014 the literal red sun and the metaphorical 'sun of Rome' collapse into one image. The weather is the elegy.",
+      "context": "Titinius over Cassius' body at sunset — the literal red sun and the metaphorical 'sun of Rome' collapse into one image. The weather is the elegy.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -3460,7 +3460,7 @@
         "darkness"
       ],
       "mood": "despair",
-      "context": "Brutus' last words before suicide \u2014 'night hangs upon mine eyes' is both literal (battlefield at nightfall) and figurative (death approaching). The weather is closing in.",
+      "context": "Brutus' last words before suicide — 'night hangs upon mine eyes' is both literal (battlefield at nightfall) and figurative (death approaching). The weather is closing in.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -3483,7 +3483,7 @@
         "stillness"
       ],
       "mood": "reconciliation",
-      "context": "Antony's eulogy for Brutus \u2014 the fighting is over, the air has cleared. Not warmth but cessation: the storm of civil war finally spent.",
+      "context": "Antony's eulogy for Brutus — the fighting is over, the air has cleared. Not warmth but cessation: the storm of civil war finally spent.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -3506,7 +3506,7 @@
         "stillness"
       ],
       "mood": "tenderness",
-      "context": "Feste's song \u2014 night, stillness, the promise of meeting. The calm night is the song's native atmosphere: no wind, no threat, just the sweetness of what hasn't happened yet.",
+      "context": "Feste's song — night, stillness, the promise of meeting. The calm night is the song's native atmosphere: no wind, no threat, just the sweetness of what hasn't happened yet.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -3529,7 +3529,7 @@
         "sun"
       ],
       "mood": "madness",
-      "context": "Malvolio daydreaming in the garden \u2014 broad daylight, clear sky, totally deluded. The sun exposes what he can't see about himself. Madness in fair weather.",
+      "context": "Malvolio daydreaming in the garden — broad daylight, clear sky, totally deluded. The sun exposes what he can't see about himself. Madness in fair weather.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -3552,7 +3552,7 @@
         "sun"
       ],
       "mood": "foreboding",
-      "context": "Olivia watching Cesario leave \u2014 love exposed by noon light. 'Love's night is noon' collapses concealment. The clear day is the problem: nowhere to hide.",
+      "context": "Olivia watching Cesario leave — love exposed by noon light. 'Love's night is noon' collapses concealment. The clear day is the problem: nowhere to hide.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -3575,7 +3575,7 @@
         "darkness"
       ],
       "mood": "madness",
-      "context": "Feste tormenting Malvolio in the dark room \u2014 windows like barricades, light like ebony. Every word inverts itself. The darkness is real and imposed; the madness is other people's cruelty.",
+      "context": "Feste tormenting Malvolio in the dark room — windows like barricades, light like ebony. Every word inverts itself. The darkness is real and imposed; the madness is other people's cruelty.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -3598,7 +3598,7 @@
         "darkness"
       ],
       "mood": "dread",
-      "context": "Malvolio in the dark \u2014 genuinely terrifying. He's sane and locked in darkness while others insist he's mad. The overcast is literal for him: no light at all.",
+      "context": "Malvolio in the dark — genuinely terrifying. He's sane and locked in darkness while others insist he's mad. The overcast is literal for him: no light at all.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -3621,7 +3621,7 @@
         "light"
       ],
       "mood": "supernatural",
-      "context": "The twins revealed \u2014 Orsino's 'natural perspective' is an optical illusion caused by light itself. Not magic but something the clear day makes visible: two bodies, one face.",
+      "context": "The twins revealed — Orsino's 'natural perspective' is an optical illusion caused by light itself. Not magic but something the clear day makes visible: two bodies, one face.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -3644,7 +3644,7 @@
         "light"
       ],
       "mood": "reconciliation",
-      "context": "Sebastian calls the reunion a 'happy wreck' \u2014 the storm that opened the play resolved into clear daylight. The shipwreck was the means, not the obstacle.",
+      "context": "Sebastian calls the reunion a 'happy wreck' — the storm that opened the play resolved into clear daylight. The shipwreck was the means, not the obstacle.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -3668,7 +3668,7 @@
         "wind"
       ],
       "mood": "calm",
-      "context": "Feste's closing song, first verse \u2014 rain as the permanent condition of being alive. Not despair but acceptance: the rain rains every day and you grow up in it.",
+      "context": "Feste's closing song, first verse — rain as the permanent condition of being alive. Not despair but acceptance: the rain rains every day and you grow up in it.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -3692,7 +3692,7 @@
         "wind"
       ],
       "mood": "foreboding",
-      "context": "Second verse \u2014 gates shut against you in the rain. The world hardens. Same rain, darker meaning. The foreboding is adult: you're outside now.",
+      "context": "Second verse — gates shut against you in the rain. The world hardens. Same rain, darker meaning. The foreboding is adult: you're outside now.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -3716,7 +3716,7 @@
         "wind"
       ],
       "mood": "despair",
-      "context": "Third verse \u2014 marriage and failure in the rain. The same refrain gains weight with each repetition. Not dramatic despair but the small, chronic kind.",
+      "context": "Third verse — marriage and failure in the rain. The same refrain gains weight with each repetition. Not dramatic despair but the small, chronic kind.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -3740,7 +3740,7 @@
         "wind"
       ],
       "mood": "reconciliation",
-      "context": "Final verse \u2014 the rain has been falling since the world began, and the play ends inside it. 'But that's all one' is acceptance, not defeat. Reconciliation with weather as the condition of life.",
+      "context": "Final verse — the rain has been falling since the world began, and the play ends inside it. 'But that's all one' is acceptance, not defeat. Reconciliation with weather as the condition of life.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -3761,7 +3761,7 @@
       "intensity": 0.3,
       "elements": [],
       "mood": "despair",
-      "context": "Sebastian after the wreck \u2014 'malignancy' and 'distemper' are weather words applied to fate. He believes his sister is dead and his fortune is contagious.",
+      "context": "Sebastian after the wreck — 'malignancy' and 'distemper' are weather words applied to fate. He believes his sister is dead and his fortune is contagious.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -3785,7 +3785,7 @@
         "salt water"
       ],
       "mood": "tenderness",
-      "context": "Sebastian weeping for Viola \u2014 sea water and tears conflated. The drowning that killed her and the tears that mourn her are the same substance. Rainy not as weather but as the body's weather.",
+      "context": "Sebastian weeping for Viola — sea water and tears conflated. The drowning that killed her and the tears that mourn her are the same substance. Rainy not as weather but as the body's weather.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -3809,7 +3809,7 @@
         "wind"
       ],
       "mood": "foreboding",
-      "context": "Salarino imagines Antonio's ships \u2014 grand vessels on the open sea. The weather is fair enough to sail in, but the image carries anxiety: everything Antonio owns is on the water.",
+      "context": "Salarino imagines Antonio's ships — grand vessels on the open sea. The weather is fair enough to sail in, but the image carries anxiety: everything Antonio owns is on the water.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -3834,7 +3834,7 @@
         "rocks"
       ],
       "mood": "dread",
-      "context": "Imagined shipwreck \u2014 spices scattered on waves, silks enrobing roaring water. The storm is hypothetical but the dread is real: Salarino can't look at a building without seeing a reef.",
+      "context": "Imagined shipwreck — spices scattered on waves, silks enrobing roaring water. The storm is hypothetical but the dread is real: Salarino can't look at a building without seeing a reef.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -3857,7 +3857,7 @@
         "wind"
       ],
       "mood": "foreboding",
-      "context": "Blowing on soup and thinking of gales \u2014 domestic wind becomes oceanic threat. The foreboding is in the association: every breeze is a reminder that ships are at sea.",
+      "context": "Blowing on soup and thinking of gales — domestic wind becomes oceanic threat. The foreboding is in the association: every breeze is a reminder that ships are at sea.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -3882,7 +3882,7 @@
         "rocks"
       ],
       "mood": "calm",
-      "context": "Shylock's risk assessment \u2014 he lists the perils of sea trade with a bookkeeper's calm. Waters, winds, and rocks are not metaphor here; they're line items in a ledger of risk.",
+      "context": "Shylock's risk assessment — he lists the perils of sea trade with a bookkeeper's calm. Waters, winds, and rocks are not metaphor here; they're line items in a ledger of risk.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -3906,7 +3906,7 @@
         "cold"
       ],
       "mood": "rage",
-      "context": "Shylock's appeal to shared humanity \u2014 'warmed and cooled by the same winter and summer.' The weather here is universal: seasons as the condition all bodies share. The rage is that this needs saying.",
+      "context": "Shylock's appeal to shared humanity — 'warmed and cooled by the same winter and summer.' The weather here is universal: seasons as the condition all bodies share. The rage is that this needs saying.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -3929,7 +3929,7 @@
         "torchlight"
       ],
       "mood": "calm",
-      "context": "The masque departure \u2014 torch-lit Venetian night, Jessica escaping in disguise. Clear night, the kind you stage an elopement under. The calm is external; the stakes are high.",
+      "context": "The masque departure — torch-lit Venetian night, Jessica escaping in disguise. Clear night, the kind you stage an elopement under. The calm is external; the stakes are high.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -3952,7 +3952,7 @@
         "torchlight"
       ],
       "mood": "tenderness",
-      "context": "Lorenzo praising Jessica on the night of their flight \u2014 wise, fair, true. The tenderness is real even if the night's business is theft and betrayal of a father.",
+      "context": "Lorenzo praising Jessica on the night of their flight — wise, fair, true. The tenderness is real even if the night's business is theft and betrayal of a father.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -3975,7 +3975,7 @@
         "sea"
       ],
       "mood": "dread",
-      "context": "News of Antonio's lost ships reaches Belmont \u2014 the offstage storm arrives as a letter. The weather that wrecked the argosies is never described, only its consequence.",
+      "context": "News of Antonio's lost ships reaches Belmont — the offstage storm arrives as a letter. The weather that wrecked the argosies is never described, only its consequence.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -3998,7 +3998,7 @@
         "rain"
       ],
       "mood": "tenderness",
-      "context": "Mercy as gentle rain \u2014 the most famous weather metaphor in the play. Rain that blesses rather than destroys. The courtroom is indoors; the rain is imagined, falling from a heaven that may or may not be listening.",
+      "context": "Mercy as gentle rain — the most famous weather metaphor in the play. Rain that blesses rather than destroys. The courtroom is indoors; the rain is imagined, falling from a heaven that may or may not be listening.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -4021,7 +4021,7 @@
         "darkness"
       ],
       "mood": "foreboding",
-      "context": "Opening line \u2014 a dark Venetian street at night. No weather described, but the play starts in darkness and never really leaves it. Foreboding is in the secrecy of the hour.",
+      "context": "Opening line — a dark Venetian street at night. No weather described, but the play starts in darkness and never really leaves it. Foreboding is in the secrecy of the hour.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -4044,7 +4044,7 @@
         "darkness"
       ],
       "mood": "violence",
-      "context": "Iago shouting up at Brabantio's window \u2014 verbal violence in the dark. The night is Iago's element: he needs darkness to say what he says. The clarity of the sky makes the speech more exposed.",
+      "context": "Iago shouting up at Brabantio's window — verbal violence in the dark. The night is Iago's element: he needs darkness to say what he says. The clarity of the sky makes the speech more exposed.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -4068,7 +4068,7 @@
         "battle"
       ],
       "mood": "calm",
-      "context": "Othello recounting his life story to the Senate \u2014 floods and battles narrated with a soldier's calm. The storms are past tense, digested into autobiography. The calm is real: he's in command of his own story.",
+      "context": "Othello recounting his life story to the Senate — floods and battles narrated with a soldier's calm. The storms are past tense, digested into autobiography. The calm is real: he's in command of his own story.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -4089,7 +4089,7 @@
       "intensity": 0.3,
       "elements": [],
       "mood": "calm",
-      "context": "Othello's travelogue \u2014 vast caves, deserts, mountains touching the sky. Landscape, not weather, but the scale is atmospheric: clear views to impossible distances.",
+      "context": "Othello's travelogue — vast caves, deserts, mountains touching the sky. Landscape, not weather, but the scale is atmospheric: clear views to impossible distances.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -4112,7 +4112,7 @@
         "stillness"
       ],
       "mood": "tenderness",
-      "context": "The origin of their love \u2014 she pitied his suffering, he loved her pity. Told in a Senate chamber at night, but the emotion is clear and unobstructed. The simplest, warmest moment in the play.",
+      "context": "The origin of their love — she pitied his suffering, he loved her pity. Told in a Senate chamber at night, but the emotion is clear and unobstructed. The simplest, warmest moment in the play.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -4135,7 +4135,7 @@
         "darkness"
       ],
       "mood": "rage",
-      "context": "Othello woken by the alarm bell \u2014 the island 'frighted from her propriety.' The rage is controlled but real. Clear night, no weather excuse for the chaos: this is human failure.",
+      "context": "Othello woken by the alarm bell — the island 'frighted from her propriety.' The rage is controlled but real. Clear night, no weather excuse for the chaos: this is human failure.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -4159,7 +4159,7 @@
         "current"
       ],
       "mood": "rage",
-      "context": "Othello's vow \u2014 his thoughts as the Black Sea current, one-directional, compulsive. The icy water is both geographical (he knows these seas) and emotional: rage frozen into purpose. The storm is internal but the image is of real water.",
+      "context": "Othello's vow — his thoughts as the Black Sea current, one-directional, compulsive. The icy water is both geographical (he knows these seas) and emotional: rage frozen into purpose. The storm is internal but the image is of real water.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -4182,7 +4182,7 @@
         "rain"
       ],
       "mood": "despair",
-      "context": "Othello imagines afflictions rained on his bare head \u2014 heaven's rain as punishment. He could bear poverty, shame, captivity; what he can't bear is this. The rain is figurative but the exposure is real.",
+      "context": "Othello imagines afflictions rained on his bare head — heaven's rain as punishment. He could bear poverty, shame, captivity; what he can't bear is this. The rain is figurative but the exposure is real.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -4203,7 +4203,7 @@
       "intensity": 0.5,
       "elements": [],
       "mood": "despair",
-      "context": "The fountain drying up \u2014 Desdemona as the source of his life's current. If she's contaminated, everything downstream is poisoned. Water imagery without weather, but the emotional atmosphere is drought.",
+      "context": "The fountain drying up — Desdemona as the source of his life's current. If she's contaminated, everything downstream is poisoned. Water imagery without weather, but the emotional atmosphere is drought.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -4226,7 +4226,7 @@
         "stillness"
       ],
       "mood": "despair",
-      "context": "The Willow Song \u2014 Desdemona preparing for bed, singing her mother's maid's song. A figure by a tree, head on knee, sighing. The overcast is in the song's world, not the room, but the room absorbs it.",
+      "context": "The Willow Song — Desdemona preparing for bed, singing her mother's maid's song. A figure by a tree, head on knee, sighing. The overcast is in the song's world, not the room, but the room absorbs it.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -4250,7 +4250,7 @@
         "tears"
       ],
       "mood": "despair",
-      "context": "Fresh streams and salt tears \u2014 the song's weather is water: streams, tears, stones softened. Rainy not as sky but as the face and the ground. Desdemona sings it the night before she dies.",
+      "context": "Fresh streams and salt tears — the song's weather is water: streams, tears, stones softened. Rainy not as sky but as the face and the ground. Desdemona sings it the night before she dies.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -4275,7 +4275,7 @@
         "thunder"
       ],
       "mood": "dread",
-      "context": "Pericles' prayer during the birth storm \u2014 surges washing both heaven and hell. This is the most desperate storm in Shakespeare: his wife is dying in childbirth below deck. Intensity 1.0: the weather IS the scene.",
+      "context": "Pericles' prayer during the birth storm — surges washing both heaven and hell. This is the most desperate storm in Shakespeare: his wife is dying in childbirth below deck. Intensity 1.0: the weather IS the scene.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -4299,7 +4299,7 @@
         "lightning"
       ],
       "mood": "dread",
-      "context": "Pericles begging the storm to be gentle \u2014 'gently quench' is an impossible request. He's asking thunder to whisper. The dread is for Thaisa, not himself.",
+      "context": "Pericles begging the storm to be gentle — 'gently quench' is an impossible request. He's asking thunder to whisper. The dread is for Thaisa, not himself.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -4323,7 +4323,7 @@
         "wind"
       ],
       "mood": "tenderness",
-      "context": "Pericles invoking Lucina, goddess of childbirth, during the storm \u2014 asking her to board 'our dancing boat.' The tenderness is toward the baby being born and the wife dying. The boat dances on the waves: an unbearable image.",
+      "context": "Pericles invoking Lucina, goddess of childbirth, during the storm — asking her to board 'our dancing boat.' The tenderness is toward the baby being born and the wife dying. The boat dances on the waves: an unbearable image.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -4347,7 +4347,7 @@
         "waves"
       ],
       "mood": "tenderness",
-      "context": "The nurse brings the newborn to Pericles during the storm \u2014 'a thing too young for such a place.' The baby is alive; the mother appears dead. Tenderness in a storm at its most extreme: a newborn on a ship in a gale.",
+      "context": "The nurse brings the newborn to Pericles during the storm — 'a thing too young for such a place.' The baby is alive; the mother appears dead. Tenderness in a storm at its most extreme: a newborn on a ship in a gale.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -4371,7 +4371,7 @@
         "waves"
       ],
       "mood": "tenderness",
-      "context": "Pericles blessing Marina \u2014 naming her by contrast with her birth conditions. 'Mild may be thy life' against the blustrous birth. The tenderness is a wish spoken into a gale: may your life be the opposite of tonight.",
+      "context": "Pericles blessing Marina — naming her by contrast with her birth conditions. 'Mild may be thy life' against the blustrous birth. The tenderness is a wish spoken into a gale: may your life be the opposite of tonight.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -4396,7 +4396,7 @@
         "cold"
       ],
       "mood": "despair",
-      "context": "Pericles over Thaisa's body \u2014 'the unfriendly elements forgot thee utterly.' No light, no fire, no warmth: the storm denied her everything a birth needs. The weather is the cruelty.",
+      "context": "Pericles over Thaisa's body — 'the unfriendly elements forgot thee utterly.' No light, no fire, no warmth: the storm denied her everything a birth needs. The weather is the cruelty.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -4420,7 +4420,7 @@
         "waves"
       ],
       "mood": "violence",
-      "context": "The sailors demand Thaisa's body be thrown overboard \u2014 superstition and survival. The sea 'works high' and won't calm until the dead are gone. Violence of the practical: the storm forces the disposal of the beloved.",
+      "context": "The sailors demand Thaisa's body be thrown overboard — superstition and survival. The sea 'works high' and won't calm until the dead are gone. Violence of the practical: the storm forces the disposal of the beloved.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -4444,7 +4444,7 @@
         "sea"
       ],
       "mood": "despair",
-      "context": "Pericles consigning Thaisa to the sea \u2014 whale and humming water as her grave markers, shells for company. The elegy is spoken during the storm. He's sealing the chest while the ship heaves.",
+      "context": "Pericles consigning Thaisa to the sea — whale and humming water as her grave markers, shells for company. The elegy is spoken during the storm. He's sealing the chest while the ship heaves.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -4467,14 +4467,14 @@
         "wind dying"
       ],
       "mood": "calm",
-      "context": "Cerimon the morning after the storm \u2014 fire and meat for the storm's survivors. The calm is practical: a doctor restoring warmth. The turbulent night is just ending.",
+      "context": "Cerimon the morning after the storm — fire and meat for the storm's survivors. The calm is practical: a doctor restoring warmth. The turbulent night is just ending.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
     },
     {
       "id": "pericles-3.2.3",
-      "text": "FIRST GENTLEMAN: What's that? CERIMON: Wreck'd on the shore. \u2014 Come, let me see. \u2014 'Tis of some worth. / Set it down, let's look upon't.",
+      "text": "FIRST GENTLEMAN: What's that? CERIMON: Wreck'd on the shore. — Come, let me see. — 'Tis of some worth. / Set it down, let's look upon't.",
       "source": {
         "play": "Pericles",
         "act": 3,
@@ -4491,7 +4491,7 @@
         "wreckage"
       ],
       "mood": "foreboding",
-      "context": "The chest washes ashore \u2014 wreckage from the night's storm. Cerimon doesn't know what's inside yet. Partly-cloudy dawn: the storm's debris arriving on a clearing shore.",
+      "context": "The chest washes ashore — wreckage from the night's storm. Cerimon doesn't know what's inside yet. Partly-cloudy dawn: the storm's debris arriving on a clearing shore.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -4515,7 +4515,7 @@
         "warmth"
       ],
       "mood": "supernatural",
-      "context": "Cerimon revives Thaisa \u2014 her eyes opening like jewels. The storm gave her up for dead; medicine brings her back. Supernatural in the same register as The Winter's Tale: not magic, but something science can't quite explain either.",
+      "context": "Cerimon revives Thaisa — her eyes opening like jewels. The storm gave her up for dead; medicine brings her back. Supernatural in the same register as The Winter's Tale: not magic, but something science can't quite explain either.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -4538,7 +4538,7 @@
         "stillness"
       ],
       "mood": "calm",
-      "context": "Gower narrating the calm between storms \u2014 the wedding feast over, everyone asleep. The stillness before the voyage that will destroy everything. Calm as the weather of ignorance.",
+      "context": "Gower narrating the calm between storms — the wedding feast over, everyone asleep. The stillness before the voyage that will destroy everything. Calm as the weather of ignorance.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -4561,7 +4561,7 @@
         "wind"
       ],
       "mood": "reconciliation",
-      "context": "Gower's summary \u2014 'destruction's blast' and 'fortune fierce and keen' as weather of a whole life. The reconciliation is the chorus perspective: looking back, the storms had a shape.",
+      "context": "Gower's summary — 'destruction's blast' and 'fortune fierce and keen' as weather of a whole life. The reconciliation is the chorus perspective: looking back, the storms had a shape.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -4584,7 +4584,7 @@
         "wind"
       ],
       "mood": "despair",
-      "context": "Marina naming herself \u2014 born in a tempest, living in a lasting storm. The weather is biographical: she IS the storm's child. The metaphor isn't decorative; it's identity.",
+      "context": "Marina naming herself — born in a tempest, living in a lasting storm. The weather is biographical: she IS the storm's child. The metaphor isn't decorative; it's identity.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -4608,7 +4608,7 @@
         "waves"
       ],
       "mood": "tenderness",
-      "context": "Marina retelling her birth \u2014 the north wind, her father hauling ropes with his royal hands. The tenderness is toward a father she barely knows, imagined through his hands on the ropes.",
+      "context": "Marina retelling her birth — the north wind, her father hauling ropes with his royal hands. The tenderness is toward a father she barely knows, imagined through his hands on the ropes.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -4632,7 +4632,7 @@
         "stillness"
       ],
       "mood": "calm",
-      "context": "Pericles on his ship, still mute with grief \u2014 the sea is calm, the evening still. He hasn't spoken in months. The calm is both the weather and his withdrawal from the world.",
+      "context": "Pericles on his ship, still mute with grief — the sea is calm, the evening still. He hasn't spoken in months. The calm is both the weather and his withdrawal from the world.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -4655,7 +4655,7 @@
         "sea"
       ],
       "mood": "despair",
-      "context": "Pericles speaking for the first time \u2014 'great with woe' as pregnancy, delivering weeping. He doesn't know yet that Marina is his daughter. The evening sea is calm; his grief breaks the surface.",
+      "context": "Pericles speaking for the first time — 'great with woe' as pregnancy, delivering weeping. He doesn't know yet that Marina is his daughter. The evening sea is calm; his grief breaks the surface.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -4678,7 +4678,7 @@
         "sea"
       ],
       "mood": "reconciliation",
-      "context": "Pericles recognizing Marina \u2014 joy as a sea that might drown him. After years of real storms, the overwhelming force is happiness. He needs pain to anchor him. Reconciliation as flood.",
+      "context": "Pericles recognizing Marina — joy as a sea that might drown him. After years of real storms, the overwhelming force is happiness. He needs pain to anchor him. Reconciliation as flood.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -4702,7 +4702,7 @@
         "music"
       ],
       "mood": "supernatural",
-      "context": "Pericles hears the music of the spheres \u2014 only he can hear it. The evening sea, the reunion, the impossible music: the play's answer to all its storms. Supernatural as grace, not threat.",
+      "context": "Pericles hears the music of the spheres — only he can hear it. The evening sea, the reunion, the impossible music: the play's answer to all its storms. Supernatural as grace, not threat.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -4725,7 +4725,7 @@
         "warmth"
       ],
       "mood": "tenderness",
-      "context": "Pericles asking to melt \u2014 dissolve into the kiss. Past miseries become 'sports.' The melting is both ice thawing and self dissolving into joy. Clear day, no weather left to fight.",
+      "context": "Pericles asking to melt — dissolve into the kiss. Past miseries become 'sports.' The melting is both ice thawing and self dissolving into joy. Clear day, no weather left to fight.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -4749,7 +4749,7 @@
         "fire"
       ],
       "mood": "supernatural",
-      "context": "The Ghost's self-description \u2014 walking at night, burning by day. Two weathers for two states: cold dark freedom, hot bright punishment. The battlements are the ghost's permitted atmosphere.",
+      "context": "The Ghost's self-description — walking at night, burning by day. Two weathers for two states: cold dark freedom, hot bright punishment. The battlements are the ghost's permitted atmosphere.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -4772,7 +4772,7 @@
         "pre-dawn light"
       ],
       "mood": "supernatural",
-      "context": "The ghost fading at dawn \u2014 glow-worm paling as morning approaches. The supernatural must leave when the weather changes. Pre-dawn is a threshold: the ghost's last moment.",
+      "context": "The ghost fading at dawn — glow-worm paling as morning approaches. The supernatural must leave when the weather changes. Pre-dawn is a threshold: the ghost's last moment.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -4796,7 +4796,7 @@
         "thaw"
       ],
       "mood": "despair",
-      "context": "Hamlet's first soliloquy \u2014 wanting to melt like frost into dew. The thaw metaphor is weather applied to the body: solid to liquid, form to formlessness. Despair as a wish to become weather rather than person.",
+      "context": "Hamlet's first soliloquy — wanting to melt like frost into dew. The thaw metaphor is weather applied to the body: solid to liquid, form to formlessness. Despair as a wish to become weather rather than person.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -4817,14 +4817,14 @@
       "intensity": 0.4,
       "elements": [],
       "mood": "despair",
-      "context": "The world as unweeded garden \u2014 rank, gross, gone to seed. The overcast isn't weather but it is atmosphere: everything flat, stale, unprofitable. A mind in which nothing has light.",
+      "context": "The world as unweeded garden — rank, gross, gone to seed. The overcast isn't weather but it is atmosphere: everything flat, stale, unprofitable. A mind in which nothing has light.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
     },
     {
       "id": "hamlet-2.2.1",
-      "text": "I have of late \u2014 but wherefore I know not \u2014 lost all my mirth, forgone all custom of exercises; and indeed it goes so heavily with my disposition that this goodly frame, the earth, seems to me a sterile promontory, this most excellent canopy, the air, look you, this brave o'erhanging firmament, this majestical roof fretted with golden fire, why, it appears no other thing to me than a foul and pestilent congregation of vapours.",
+      "text": "I have of late — but wherefore I know not — lost all my mirth, forgone all custom of exercises; and indeed it goes so heavily with my disposition that this goodly frame, the earth, seems to me a sterile promontory, this most excellent canopy, the air, look you, this brave o'erhanging firmament, this majestical roof fretted with golden fire, why, it appears no other thing to me than a foul and pestilent congregation of vapours.",
       "source": {
         "play": "Hamlet",
         "act": 2,
@@ -4841,7 +4841,7 @@
         "cloud"
       ],
       "mood": "despair",
-      "context": "Hamlet's 'congregation of vapours' speech \u2014 the sky itself redescribed as foul mist. The firmament is golden fire to others; to him it's pestilent fog. Depression as weather: the same sky, different atmosphere.",
+      "context": "Hamlet's 'congregation of vapours' speech — the sky itself redescribed as foul mist. The firmament is golden fire to others; to him it's pestilent fog. Depression as weather: the same sky, different atmosphere.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -4865,7 +4865,7 @@
         "stillness"
       ],
       "mood": "despair",
-      "context": "Gertrude narrating Ophelia's drowning \u2014 the willow, the glassy stream, the garlands. The water is still, not flowing; the day is light enough to see hoar leaves reflected. Overcast because the light is silver, not gold: willow-light.",
+      "context": "Gertrude narrating Ophelia's drowning — the willow, the glassy stream, the garlands. The water is still, not flowing; the day is light enough to see hoar leaves reflected. Overcast because the light is silver, not gold: willow-light.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -4888,7 +4888,7 @@
         "water"
       ],
       "mood": "despair",
-      "context": "The branch breaks \u2014 Ophelia falls into the 'weeping brook.' The brook weeps; she doesn't. The water is personified but the weather is still: no wind, no storm, just gravity and a rotten branch.",
+      "context": "The branch breaks — Ophelia falls into the 'weeping brook.' The brook weeps; she doesn't. The water is personified but the weather is still: no wind, no storm, just gravity and a rotten branch.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -4912,7 +4912,7 @@
         "stillness"
       ],
       "mood": "supernatural",
-      "context": "Ophelia floating and singing \u2014 'native and indued unto that element.' She becomes water. The mermaid comparison and the singing make it supernatural: not drowning but transformation. The brook is still; she floats.",
+      "context": "Ophelia floating and singing — 'native and indued unto that element.' She becomes water. The mermaid comparison and the singing make it supernatural: not drowning but transformation. The brook is still; she floats.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -4936,7 +4936,7 @@
         "mud"
       ],
       "mood": "despair",
-      "context": "The garments drag her down \u2014 'muddy death.' From mermaid to mud. The weather hasn't changed; the water's nature has. The overcast stillness is what makes the death so quiet.",
+      "context": "The garments drag her down — 'muddy death.' From mermaid to mud. The weather hasn't changed; the water's nature has. The overcast stillness is what makes the death so quiet.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -4960,7 +4960,7 @@
         "cold"
       ],
       "mood": "despair",
-      "context": "Caesar's clay patching a wall against the wind \u2014 the body becomes weather-proofing. 'Winter's flaw' is a literal blast of cold air. Despair that's also comedy: the greatest man becomes insulation.",
+      "context": "Caesar's clay patching a wall against the wind — the body becomes weather-proofing. 'Winter's flaw' is a literal blast of cold air. Despair that's also comedy: the greatest man becomes insulation.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -4983,7 +4983,7 @@
         "stillness"
       ],
       "mood": "reconciliation",
-      "context": "Horatio's farewell \u2014 'good night' to a dead prince. The play that started in cold midnight ends with a wished-for flight to rest. The clear night is Horatio's hope for Hamlet: angels, not ghosts, this time.",
+      "context": "Horatio's farewell — 'good night' to a dead prince. The play that started in cold midnight ends with a wished-for flight to rest. The clear night is Horatio's hope for Hamlet: angels, not ghosts, this time.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -5007,7 +5007,7 @@
         "forest"
       ],
       "mood": "calm",
-      "context": "Amiens' greenwood song \u2014 the only enemy is winter and rough weather. The song's weather is real (outdoor, exposed) but the mood is cheerful: weather is the only enemy, and it's preferable to human enemies.",
+      "context": "Amiens' greenwood song — the only enemy is winter and rough weather. The song's weather is real (outdoor, exposed) but the mood is cheerful: weather is the only enemy, and it's preferable to human enemies.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -5030,7 +5030,7 @@
         "sun"
       ],
       "mood": "calm",
-      "context": "Second verse \u2014 living in the sun, eating what you find. The weather has shifted to fair within the same song: sun, contentment, simplicity. The 'rough weather' refrain is winter remembered, not winter present.",
+      "context": "Second verse — living in the sun, eating what you find. The weather has shifted to fair within the same song: sun, contentment, simplicity. The 'rough weather' refrain is winter remembered, not winter present.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -5053,7 +5053,7 @@
         "forest"
       ],
       "mood": "calm",
-      "context": "Touchstone and Audrey in the forest \u2014 poetry vs. honesty. A clear day in Arden: the comic subplot has its own weather, which is fair and simple. Touchstone's wit needs no atmosphere.",
+      "context": "Touchstone and Audrey in the forest — poetry vs. honesty. A clear day in Arden: the comic subplot has its own weather, which is fair and simple. Touchstone's wit needs no atmosphere.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -5076,7 +5076,7 @@
         "moonlight"
       ],
       "mood": "tenderness",
-      "context": "Orlando hanging poems on trees by moonlight \u2014 addressing Diana/the moon as witness to his love for Rosalind. The clear night is the poem's native atmosphere: moonlight, forest, lovesickness made public on bark.",
+      "context": "Orlando hanging poems on trees by moonlight — addressing Diana/the moon as witness to his love for Rosalind. The clear night is the poem's native atmosphere: moonlight, forest, lovesickness made public on bark.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -5099,7 +5099,7 @@
         "wind"
       ],
       "mood": "tenderness",
-      "context": "Orlando's poem found on a tree \u2014 Rosalind's worth carried on the wind worldwide. The wind is the poem's courier. Bad verse, genuine feeling, and the forest as bulletin board.",
+      "context": "Orlando's poem found on a tree — Rosalind's worth carried on the wind worldwide. The wind is the poem's courier. Bad verse, genuine feeling, and the forest as bulletin board.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -5122,7 +5122,7 @@
         "sun"
       ],
       "mood": "tenderness",
-      "context": "Phebe quoting Marlowe \u2014 love at first sight in a sunlit forest clearing. The pastoral is in full bloom: shepherdesses falling in love, clear weather, open air. The tenderness is literary as much as emotional.",
+      "context": "Phebe quoting Marlowe — love at first sight in a sunlit forest clearing. The pastoral is in full bloom: shepherdesses falling in love, clear weather, open air. The tenderness is literary as much as emotional.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -5145,7 +5145,7 @@
         "forest"
       ],
       "mood": "foreboding",
-      "context": "Oliver sleeping under a mossy oak \u2014 the ancient tree, the ragged man, the lioness watching. The forest turns dangerous: Arden has teeth as well as songs. Foreboding in deep forest.",
+      "context": "Oliver sleeping under a mossy oak — the ancient tree, the ragged man, the lioness watching. The forest turns dangerous: Arden has teeth as well as songs. Foreboding in deep forest.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -5168,7 +5168,7 @@
         "forest"
       ],
       "mood": "dread",
-      "context": "The hungry lioness waiting \u2014 udders drawn dry, watching for movement. Arden is not only songs and love poems; it has starving predators. The dread is animal and immediate.",
+      "context": "The hungry lioness waiting — udders drawn dry, watching for movement. Arden is not only songs and love poems; it has starving predators. The dread is animal and immediate.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -5193,7 +5193,7 @@
         "spring"
       ],
       "mood": "tenderness",
-      "context": "The spring love song \u2014 green cornfields, birdsong, lovers walking. Winter is over: the play has moved from 'blow, blow, thou winter wind' to this. The weather arc of the whole comedy in one song.",
+      "context": "The spring love song — green cornfields, birdsong, lovers walking. Winter is over: the play has moved from 'blow, blow, thou winter wind' to this. The weather arc of the whole comedy in one song.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -5217,7 +5217,7 @@
         "warmth"
       ],
       "mood": "calm",
-      "context": "Second verse \u2014 lovers lying between fields of rye. The spring is the resolution weather: open sky, warm ground, the ring time (for weddings). Calm as earned seasonal reward.",
+      "context": "Second verse — lovers lying between fields of rye. The spring is the resolution weather: open sky, warm ground, the ring time (for weddings). Calm as earned seasonal reward.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -5240,7 +5240,7 @@
         "sun"
       ],
       "mood": "foreboding",
-      "context": "Third verse \u2014 a life is but a flower. The carpe diem shadow returns: spring is pretty because it's brief. Same sun, same field, but mortality underneath. Foreboding worn so lightly it barely registers.",
+      "context": "Third verse — a life is but a flower. The carpe diem shadow returns: spring is pretty because it's brief. Same sun, same field, but mortality underneath. Foreboding worn so lightly it barely registers.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -5264,7 +5264,7 @@
         "heat"
       ],
       "mood": "foreboding",
-      "context": "Fair Verona \u2014 the word 'fair' is both the city and its weather. Civil blood under a clear sky. The foreboding is structural: we know the end before the beginning.",
+      "context": "Fair Verona — the word 'fair' is both the city and its weather. Civil blood under a clear sky. The foreboding is structural: we know the end before the beginning.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -5288,7 +5288,7 @@
         "heat"
       ],
       "mood": "violence",
-      "context": "Benvolio's weather report before Mercutio's death \u2014 the heat IS the violence. Hot days stir mad blood. The clear sky is the problem: nowhere to cool off, nowhere to hide.",
+      "context": "Benvolio's weather report before Mercutio's death — the heat IS the violence. Hot days stir mad blood. The clear sky is the problem: nowhere to cool off, nowhere to hide.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -5311,7 +5311,7 @@
         "heat"
       ],
       "mood": "violence",
-      "context": "Mercutio teasing Benvolio about quarreling \u2014 turning everything combative in the heat. The mood is playful but the atmosphere is already violent: heat and wit sharpening toward the same point.",
+      "context": "Mercutio teasing Benvolio about quarreling — turning everything combative in the heat. The mood is playful but the atmosphere is already violent: heat and wit sharpening toward the same point.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -5334,7 +5334,7 @@
         "darkness"
       ],
       "mood": "despair",
-      "context": "Montague describing Romeo shutting out daylight \u2014 making himself an artificial night. The weather is fair outside; Romeo manufactures his own overcast. His father watches him steal away from light at dawn.",
+      "context": "Montague describing Romeo shutting out daylight — making himself an artificial night. The weather is fair outside; Romeo manufactures his own overcast. His father watches him steal away from light at dawn.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -5357,7 +5357,7 @@
         "stars"
       ],
       "mood": "foreboding",
-      "context": "Romeo's premonition before the ball \u2014 consequence hanging in the stars. The stars are literal (clear evening, visible sky) and astrological (fate written overhead). He reads the weather as prophecy.",
+      "context": "Romeo's premonition before the ball — consequence hanging in the stars. The stars are literal (clear evening, visible sky) and astrological (fate written overhead). He reads the weather as prophecy.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -5380,7 +5380,7 @@
         "torchlight"
       ],
       "mood": "tenderness",
-      "context": "Romeo seeing Juliet for the first time \u2014 she teaches torches, hangs on the cheek of night. Brightness against darkness: the ball is indoors but the metaphor is nocturnal. Tenderness as illumination.",
+      "context": "Romeo seeing Juliet for the first time — she teaches torches, hangs on the cheek of night. Brightness against darkness: the ball is indoors but the metaphor is nocturnal. Tenderness as illumination.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -5404,7 +5404,7 @@
         "clouds"
       ],
       "mood": "calm",
-      "context": "The Friar's dawn \u2014 grey-eyed morn, chequered eastern clouds, flecked darkness reeling like a drunk. One of Shakespeare's most detailed dawn descriptions. Partly-cloudy because the clouds are specifically named: streaked with light, not fully clear.",
+      "context": "The Friar's dawn — grey-eyed morn, chequered eastern clouds, flecked darkness reeling like a drunk. One of Shakespeare's most detailed dawn descriptions. Partly-cloudy because the clouds are specifically named: streaked with light, not fully clear.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -5428,7 +5428,7 @@
         "sunrise"
       ],
       "mood": "calm",
-      "context": "The Friar gathering herbs before the sun dries the dew \u2014 practical dawn, working outdoors. The sun's 'burning eye' hasn't risen fully. Dew is literal moisture; the herbs are both baleful and precious.",
+      "context": "The Friar gathering herbs before the sun dries the dew — practical dawn, working outdoors. The sun's 'burning eye' hasn't risen fully. Dew is literal moisture; the herbs are both baleful and precious.",
       "annotation": null,
       "confidence": "imported",
       "type": "literal"
@@ -5451,7 +5451,7 @@
         "heat"
       ],
       "mood": "rage",
-      "context": "Mercutio dying in the heat \u2014 the curse on both houses. The hot day he warned about has done its work. Rage at the waste: dying for a quarrel that isn't his, in weather that made it inevitable.",
+      "context": "Mercutio dying in the heat — the curse on both houses. The hot day he warned about has done its work. Rage at the waste: dying for a quarrel that isn't his, in weather that made it inevitable.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -5474,7 +5474,7 @@
         "heat"
       ],
       "mood": "foreboding",
-      "context": "Romeo reading the day's fate \u2014 'this day's black fate.' The day is bright and hot; the blackness is in what it's produced. Foreboding as recognition: this is a hinge, and more death follows.",
+      "context": "Romeo reading the day's fate — 'this day's black fate.' The day is bright and hot; the blackness is in what it's produced. Foreboding as recognition: this is a hinge, and more death follows.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"
@@ -5497,7 +5497,7 @@
         "frost"
       ],
       "mood": "despair",
-      "context": "Capulet finding Juliet 'dead' \u2014 an untimely frost on the sweetest flower. The frost metaphor is precise: death that comes too early in the season, killing what should have had more time. Same image as Titania's, but personal.",
+      "context": "Capulet finding Juliet 'dead' — an untimely frost on the sweetest flower. The frost metaphor is precise: death that comes too early in the season, killing what should have had more time. Same image as Titania's, but personal.",
       "annotation": null,
       "confidence": "imported",
       "type": "metaphor"
@@ -5520,7 +5520,7 @@
         "sun"
       ],
       "mood": "foreboding",
-      "context": "Romeo in Mantua \u2014 cheerful dreams, light spirit. The clear day is ironic: he's about to hear Juliet is dead. The good weather makes the bad news worse. Foreboding because we know what he doesn't.",
+      "context": "Romeo in Mantua — cheerful dreams, light spirit. The clear day is ironic: he's about to hear Juliet is dead. The good weather makes the bad news worse. Foreboding because we know what he doesn't.",
       "annotation": null,
       "confidence": "imported",
       "type": "mood"

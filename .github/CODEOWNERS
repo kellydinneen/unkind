@@ -1,0 +1,11 @@
+# Code ownership for the unkind repository.
+#
+# Every line is a file pattern followed by one or more owners. The
+# rightmost matching pattern takes precedence. Pair this with a branch
+# protection rule that requires review from code owners before a PR
+# can merge into main.
+#
+# Docs: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-security/customizing-your-repository/about-code-owners
+
+# Default — every file in the repo requires review from @kellydinneen.
+* @kellydinneen
