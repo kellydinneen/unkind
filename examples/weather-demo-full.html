@@ -201,6 +201,24 @@
     pointer-events: auto;
   }
 
+  /* ── Two-column grid for the Sky → Verse panel ── */
+  .controls-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 28px;
+    align-items: start;
+  }
+  .controls-col {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: 0; /* allow child overflow/shrink inside the grid track */
+  }
+  /* Collapse to a single column on narrow viewports */
+  @media (max-width: 760px) {
+    .controls-grid { grid-template-columns: 1fr; }
+  }
+
   .control-row { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
   .control-row label {
     font-family: 'Poiret One', sans-serif;
@@ -478,6 +496,10 @@
     <div class="panels-container">
     <!-- ── Panel 1: Controls (manual sliders + presets) ── -->
     <div class="mode-panel active" id="panel-controls">
+      <div class="controls-grid">
+
+      <!-- Left column: Presets, Time, Mood -->
+      <div class="controls-col">
       <div class="control-row">
         <label>Presets</label>
         <button class="control-btn preset-btn" data-preset="clear">Clear</button>
@@ -518,7 +540,10 @@
           </div>
         </div>
       </div>
+      </div><!-- /controls-col left -->
 
+      <!-- Right column: Fine-tune primitives, Live weather -->
+      <div class="controls-col">
       <div>
         <button class="disclosure-toggle" id="slidersToggle">
           <span class="chevron">&#9654;</span> Fine-tune primitives
@@ -579,11 +604,9 @@
           </div>
         </div>
       </div>
+      </div><!-- /controls-col right -->
 
-      <div class="control-row">
-        <button class="api-btn" id="apiReset">Reset</button>
-        <button class="api-btn" id="apiPalette">Toggle warm tint</button>
-      </div>
+      </div><!-- /controls-grid -->
     </div>
 
     <!-- ── Panel 3: Shakespeare → Sky ── -->
@@ -784,10 +807,6 @@
 
     if (lastAction === 'setFromWeather') {
       code = "// Puck fetches the real weather\nconst mischief = await Unkind.puck(lat, lon)\nUnkind.set(sky, mischief.primitives)";
-    } else if (lastAction === 'palette-warm') {
-      code = "sky.updatePalette({\n  gradients: { /* warm tones */ },\n  stars: { color: { r: 230, g: 200, b: 180 } },\n});";
-    } else if (lastAction === 'palette-reset') {
-      code = "// Palette reset to Ghost Radio default\nsky.updatePalette(Unkind.DEFAULT_PALETTE);";
     } else if (lastAction === 'concordance') {
       code = "// Prospero speaks — the weather obeys\nUnkind.prospero(sky, entry)";
     } else {
@@ -967,42 +986,6 @@
       syncPresetButtons(null); // manual slider = no preset active
       refresh();
     });
-  });
-
-  document.getElementById('apiReset').addEventListener('click', function () {
-    sky.set({ time: 'night', mood: null, rain: 0, snow: 0, clouds: 0, lightning: 0, wind: 0, fog: 0 });
-    lastAction = 'set';
-    syncPresetButtons(null);
-    syncAll();
-  });
-
-  var warmApplied = false;
-  document.getElementById('apiPalette').addEventListener('click', function () {
-    if (!warmApplied) {
-      sky.updatePalette({
-        gradients: {
-          night:      'linear-gradient(180deg, #080404 0%, #100808 30%, #140c08 60%, #0a0604 100%)',
-          evening:    'linear-gradient(180deg, #100a06 0%, #14100a 30%, #1a1610 60%, #12100a 100%)',
-          'pre-dawn': 'linear-gradient(180deg, #0e0a08 0%, #141010 25%, #1a1214 50%, #1e1418 70%, #141010 100%)',
-          dawn:       'linear-gradient(180deg, #0e0a08 0%, #141010 20%, #1a1214 40%, #201818 55%, #2a2018 70%, #342820 82%, #3a3028 92%, #423430 100%)',
-          day:        'linear-gradient(180deg, #1e1814 0%, #24201a 30%, #2a2620 60%, #201e18 100%)',
-        },
-        stars: { color: { r: 230, g: 200, b: 180 } },
-        dust:  { color: { r: 215, g: 190, b: 170 } },
-      });
-      lastAction = 'palette-warm';
-      warmApplied = true;
-    } else {
-      sky.updatePalette({
-        gradients: Unkind.DEFAULT_PALETTE.gradients,
-        stars: Unkind.DEFAULT_PALETTE.stars,
-        dust:  Unkind.DEFAULT_PALETTE.dust,
-      });
-      lastAction = 'palette-reset';
-      warmApplied = false;
-    }
-    sky.set({ time: sky.getState().time, force: true });
-    refresh();
   });
 
   // ─────────────────────────────────────────────
