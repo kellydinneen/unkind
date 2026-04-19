@@ -1591,6 +1591,8 @@
 
   function prospero(sky, entry, options) {
     if (!sky || !entry) return;
+    // Accept either the canonical nested schema or the flat shape.
+    entry = normalizeEntry(entry);
     options = options || {};
     var transition = options.transition != null ? options.transition : 4000;
 
@@ -1621,14 +1623,55 @@
 
   var _concordanceEntries = [];
 
-  function loadConcordance(concordance) {
-    if (concordance && concordance.concordance) {
-      _concordanceEntries = concordance.concordance;
-    } else if (concordance && concordance.entries) {
-      _concordanceEntries = concordance.entries;
-    } else if (Array.isArray(concordance)) {
-      _concordanceEntries = concordance;
+  /**
+   * Normalize a concordance entry from the canonical nested schema
+   * (`source.play/act/scene/lineStart/lineEnd`, `weatherState`, `timeOfDay`)
+   * into the flat shape the library's internals read (`play`, `lineRef`,
+   * `weather`, `time`). Original fields are preserved, so consumers that
+   * prefer the nested form can still access it.
+   */
+  function normalizeEntry(e) {
+    if (!e || typeof e !== 'object') return e;
+    // If already flat and nothing to derive, skip the copy.
+    var hasNested = e.source || e.weatherState != null || e.timeOfDay != null;
+    var missingFlat = e.play == null || e.weather == null || e.time == null || e.lineRef == null;
+    if (!hasNested && !missingFlat) return e;
+
+    var src = e.source || {};
+    var out = {};
+    for (var k in e) { if (Object.prototype.hasOwnProperty.call(e, k)) out[k] = e[k]; }
+
+    if (out.play == null) out.play = src.play;
+    if (out.weather == null) out.weather = e.weatherState;
+    if (out.time == null) out.time = e.timeOfDay;
+
+    if (out.lineRef == null) {
+      var parts = [];
+      if (src.act != null) parts.push(src.act);
+      if (src.scene != null) parts.push(src.scene);
+      if (src.lineStart != null) parts.push(src.lineStart);
+      var ref = parts.join('.');
+      if (src.lineEnd != null && src.lineEnd !== src.lineStart) ref += '-' + src.lineEnd;
+      out.lineRef = ref || '';
     }
+    return out;
+  }
+
+  function loadConcordance(concordance) {
+    // NOTE: Array.isArray check MUST come first. Arrays have an inherited
+    // `.entries()` iterator method, so `arr.entries` is truthy and would
+    // otherwise match the `.entries` property check below.
+    var raw;
+    if (Array.isArray(concordance)) {
+      raw = concordance;
+    } else if (concordance && Array.isArray(concordance.concordance)) {
+      raw = concordance.concordance;
+    } else if (concordance && Array.isArray(concordance.entries)) {
+      raw = concordance.entries;
+    } else {
+      raw = [];
+    }
+    _concordanceEntries = raw.map(normalizeEntry);
   }
 
   // ─── EXPORTS ─────────────────────────────────────────────────────────────────
@@ -1650,6 +1693,11 @@
   Unkind.loadConcordance = loadConcordance;
 
   Unkind.getConcordance = function () { return _concordanceEntries; };
+
+  // Internal helper — canonicalizes a concordance entry for downstream use.
+  // Exposed so the sibling `indifferent.js` module can reuse a single
+  // definition rather than duplicate the schema logic.
+  Unkind._normalizeEntry = normalizeEntry;
 
   // ── Constants ──
   Unkind.TIMES = TIMES;

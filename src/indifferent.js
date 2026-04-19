@@ -218,16 +218,27 @@
   // Attaches Unkind.puck when loaded alongside unkind.js.
 
   function UnkindWeather(concordance) {
-    this._entries = [];
-    if (concordance && concordance.concordance) {
+    // NOTE: Array.isArray check MUST come first. Arrays have an inherited
+    // `.entries()` iterator method, so `arr.entries` is truthy and would
+    // otherwise match the `.entries` property check below.
+    var raw;
+    if (Array.isArray(concordance)) {
+      raw = concordance;
+    } else if (concordance && Array.isArray(concordance.concordance)) {
       // Canonical schema: { metadata, concordance: [...] }
-      this._entries = concordance.concordance;
-    } else if (concordance && concordance.entries) {
+      raw = concordance.concordance;
+    } else if (concordance && Array.isArray(concordance.entries)) {
       // Legacy schema: { meta, entries: [...] }
-      this._entries = concordance.entries;
-    } else if (Array.isArray(concordance)) {
-      this._entries = concordance;
+      raw = concordance.entries;
+    } else {
+      raw = [];
     }
+    // Normalize using the shared helper from unkind.js so there's one
+    // canonical definition of the flat schema. If unkind.js isn't loaded,
+    // fall back to identity — entries will still work for any flat-schema
+    // concordance passed in directly.
+    var norm = (root.Unkind && root.Unkind._normalizeEntry) || function (e) { return e; };
+    this._entries = raw.map(norm);
   }
 
   UnkindWeather.prototype.fetchWeather = function (lat, lon) {
