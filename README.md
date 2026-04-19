@@ -49,11 +49,16 @@ Or drop directly in the browser:
 
 **Bridges real weather.** `indifferent.js` fetches from Open-Meteo (free, no API key), converts meteorological data to primitives, and returns a passage from the Shakespeare concordance. Real rain in London → Lear on the heath.
 
-<img width="175" height="159" alt="Unkind Snow" src="https://github.com/user-attachments/assets/0f753705-db12-4f04-8aac-8ba1ba1c5a16" />
-<img width="175" height="159" alt="Unkind Storm" src="https://github.com/user-attachments/assets/d839642d-5d0e-4e4c-bd7e-79968e36afd6" />
-<img width="175" height="159" alt="Unkind Foggy" src="https://github.com/user-attachments/assets/cc077902-8716-4166-acc3-96073a48af79" />
-<img width="175" height="159" alt="dawn clouds" src="https://github.com/user-attachments/assets/8af19360-a591-4301-b54b-7596d8de6bb6" />
-<img width="175" height="159" alt="Dawn Rain" src="https://github.com/user-attachments/assets/eef63a84-56d3-4fde-8870-b5d1214c930e" />
+<img width="175" height="159" alt="partly cloudy, snowy day" src="https://github.com/user-attachments/assets/0f753705-db12-4f04-8aac-8ba1ba1c5a16" />
+<img width="175" height="159" alt="lightning and rainy night" src="https://github.com/user-attachments/assets/d839642d-5d0e-4e4c-bd7e-79968e36afd6" />
+<img width="175" height="159" alt="foggy day" src="https://github.com/user-attachments/assets/cc077902-8716-4166-acc3-96073a48af79" />
+<img width="175" height="159" alt="drifting clouds at dawn" src="https://github.com/user-attachments/assets/8af19360-a591-4301-b54b-7596d8de6bb6" />
+<img width="175" height="159" alt="rain at dawn" src="https://github.com/user-attachments/assets/eef63a84-56d3-4fde-8870-b5d1214c930e" />
+<img width="175" height="159" alt="partly cloudy night turns to dawn, then day, then back to night" src="https://github.com/user-attachments/assets/63d1546a-2fab-4dde-a816-61924d2c4e05" />
+<img width="175" height="159" alt="clear day with wind" src="https://github.com/user-attachments/assets/3ac9b7ca-72cc-44f3-ab4e-c439ae709c3e" />
+<img width="175" height="159" alt="rainy day, partly cloudt" src="https://github.com/user-attachments/assets/3a1205b3-a96d-412e-a96d-455f2c83cdcc" />
+
+*Note that the preview images above are best viewed in dark mode. Unkind's weather states are quite dark, even for daytime settings, and are difficult to see in small containers against a light background*
 
 ## the stage directions
 
