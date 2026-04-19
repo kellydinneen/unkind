@@ -47,25 +47,20 @@ describe('concordance asset (shakespeare-weather-merged.json)', () => {
     }
   });
 
-  // ─── Tripwires ─────────────────────────────────────────────────────────
-
-  it('has a known, bounded set of entries with non-canonical weather values', () => {
-    const KNOWN_NON_CANONICAL_WEATHER_COUNT = 21;
+  it('uses only canonical weather values', () => {
+    // Anything outside Unkind.WEATHERS scores as a generic fallback in
+    // concordanceToApproxPrimitives — i.e. silently degrades matching.
     const known = new Set(Unkind.WEATHERS);
-    const offenders = entries.filter((e) => e.weather && !known.has(e.weather));
-    assert.equal(
-      offenders.length, KNOWN_NON_CANONICAL_WEATHER_COUNT,
-      'non-canonical weather count changed — review the data and update this tripwire',
-    );
+    const offenders = entries
+      .filter((e) => e.weather && !known.has(e.weather))
+      .map((e) => `${e.id}:${e.weather}`);
+    assert.deepEqual(offenders, [],
+      'entries must use a weather value from Unkind.WEATHERS');
   });
 
-  it('has a known, bounded set of entries with a null speaker', () => {
-    const KNOWN_NULL_SPEAKER_COUNT = 1;
-    const bad = entries.filter((e) => e.speaker == null);
-    assert.equal(
-      bad.length, KNOWN_NULL_SPEAKER_COUNT,
-      'null-speaker count changed — review the data and update this tripwire',
-    );
+  it('has a speaker on every entry', () => {
+    const bad = entries.filter((e) => e.speaker == null).map((e) => e.id);
+    assert.deepEqual(bad, [], 'every entry must declare a speaker');
   });
 
   it('uses only known mood values for entries that declare a mood', () => {
