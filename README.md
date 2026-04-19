@@ -1,8 +1,7 @@
 # Unkind
 
-> *"Gives to airy nothing a local habitation."*
-> 
-> — A Midsummer Night's Dream, V.i
+*"Gives to airy nothing a local habitation."*
+— A Midsummer Night's Dream, V.i
 
 Unkind.js is a JavaScript library that translates between meteorological data, animated skies, and the Bard. No dependencies. 
 
@@ -50,13 +49,16 @@ Or drop directly in the browser:
 
 **Bridges real weather.** `indifferent.js` fetches from Open-Meteo (free, no API key), converts meteorological data to primitives, and returns a passage from the Shakespeare concordance. Real rain in London → Lear on the heath.
 
+<img width="175" height="159" alt="Unkind Snow" src="https://github.com/user-attachments/assets/0f753705-db12-4f04-8aac-8ba1ba1c5a16" />
+<img width="175" height="159" alt="Unkind Storm" src="https://github.com/user-attachments/assets/d839642d-5d0e-4e4c-bd7e-79968e36afd6" />
+<img width="175" height="159" alt="Unkind Foggy" src="https://github.com/user-attachments/assets/cc077902-8716-4166-acc3-96073a48af79" />
+<img width="175" height="159" alt="dawn clouds" src="https://github.com/user-attachments/assets/8af19360-a591-4301-b54b-7596d8de6bb6" />
+<img width="175" height="159" alt="Dawn Rain" src="https://github.com/user-attachments/assets/eef63a84-56d3-4fde-8870-b5d1214c930e" />
 
 ## the stage directions
 
 #### `stage(container, options?)`
-> *Piece out our imperfections with your thoughts.*
-> 
-> — Chorus, Henry V, Prologue
+*Piece out our imperfections with your thoughts.* — Chorus, Henry V, Prologue
 
 Mount the weather renderer on a DOM element. Returns a `sky` object.
 
@@ -65,9 +67,7 @@ const sky = Unkind.stage(document.getElementById('weather'))
 ```
 
 #### `prospero(sky, passage)`
-> *I have bedimm'd the noontide sun, call'd forth the mutinous winds, and 'twixt the green sea and the azured vault set roaring war.*
->
->  — Prospero, The Tempest, V.i
+*I have bedimm'd the noontide sun, call'd forth the mutinous winds, and 'twixt the green sea and the azured vault set roaring war.* — Prospero, The Tempest, V.i
 
 Passage → sky. Reads a Shakespeare passage and conjures the sky to match.
 
@@ -76,9 +76,7 @@ Unkind.prospero(sky, passage)
 ```
 
 #### `fool(sky)`
-> *The rain it raineth every day.*
-> 
-> — King Lear, III.ii
+*The rain it raineth every day.* — King Lear, III.ii
 
 Sky → Shakespeare. Returns the closest-match concordance passage for the current state.
 
@@ -88,9 +86,7 @@ const passage = Unkind.fool(sky)
 ```
 
 #### `puck(lat, lon)`
-> *I'll put a girdle round about the earth / In forty minutes.*
-> 
->  - A Midsummer Night's Dream, II.i
+*I'll put a girdle round about the earth / In forty minutes.* - A Midsummer Night's Dream, II.i
 
 Fetch real weather and return primitives + passage. Requires `indifferent.js`.
 
@@ -104,9 +100,7 @@ const result = await bridge.autoWeather()
 ```
 
 #### `set(sky, primitives)`
-> *[Storm still]*
-> 
->  - King Lear, III.ii
+*[Storm still]* - King Lear, III.ii
 
 Direct the weather. Accepts a preset name, a set of primitives, or both.
 
@@ -134,9 +128,7 @@ Unkind.set(sky, { time: 'night' })  // 'night' | 'evening' | 'pre-dawn' | 'dawn'
 ```
 
 ## the concordance
-> *What is the cause of thunder?*
-> 
-> — King Lear, III.iv
+*What is the cause of thunder?* — King Lear, III.iv
 
 235 passages from 24 plays, each tagged with:
 - Weather state and intensity (0–1)
@@ -159,7 +151,6 @@ The concordance is a JSON file (`concordance/shakespeare-weather-merged.json`) a
 ## the house
 
 Compatible with Chrome 90+, Firefox 88+, Safari 14+, Edge 90+. Uses Canvas API, CSS custom properties, and `fetch`. No IE.
-
 
 
 ## the terms
