@@ -449,7 +449,6 @@
     .mode-panel,
     .code-inner,
     .passage-container,
-    .commentary,
     .disclosure-content,
     .disclosure-toggle .chevron,
     .control-btn,
@@ -634,7 +633,6 @@
 
   var badge        = document.getElementById('badge');
   var codeEl       = document.getElementById('liveCode');
-  var commentaryEl = document.getElementById('commentary');
   var passageContainer = document.getElementById('passageContainer');
   var passageText  = document.getElementById('passageText');
   var passageAttr  = document.getElementById('passageAttr');
@@ -715,48 +713,6 @@
   }
 
   // ─────────────────────────────────────────────
-  // COMMENTARY
-  // ─────────────────────────────────────────────
-
-  var commentary = {
-    'night·clear':           'The kind of sky that makes you confess things.',
-    'night·partly-cloudy':   'Clouds drifting through like half-remembered dreams.',
-    'night·overcast':        'A ceiling. The sky has a ceiling tonight.',
-    'night·rainy':           'Rain on a dark window. The oldest lullaby.',
-    'night·snowy':           'Snow falling into darkness — where does it go?',
-    'night·stormy':          'The electricity bill of the gods.',
-    'evening·clear':         'That hour when the streetlights argue with the sunset.',
-    'evening·partly-cloudy': 'Clouds blushing on the way out.',
-    'evening·overcast':      'Gray on gray. Even the sky is tired.',
-    'evening·rainy':         'Umbrellas bloom like dark flowers.',
-    'evening·snowy':         'Snowflakes in lamplight. Cheap magic, still magic.',
-    'evening·stormy':        'Something Shakespearean is happening out there.',
-    'pre-dawn·clear':        'Only insomniacs and bakers see this sky.',
-    'pre-dawn·partly-cloudy':'The clouds are early. Or very, very late.',
-    'pre-dawn·overcast':     'Dawn cancelled. Check back later.',
-    'pre-dawn·rainy':        'Rain before sunrise. Someone is being punished.',
-    'pre-dawn·snowy':        'Snow in the dark. The world is being gift-wrapped.',
-    'pre-dawn·stormy':       'A storm at 5 AM is a personal affront.',
-    'dawn·clear':            'The part of the movie where things start to turn around.',
-    'dawn·partly-cloudy':    'A few clouds — just enough to catch the color.',
-    'dawn·overcast':         'Sunrise by rumor only.',
-    'dawn·rainy':            'The sun and the rain arguing over who goes first.',
-    'dawn·snowy':            'First light on fresh snow. Criminally beautiful.',
-    'dawn·stormy':           'Where is it you live that thunders in the morning?',
-    'day·clear':             'Blue enough to sell real estate.',
-    'day·partly-cloudy':     'Postcard weather. Suspicious.',
-    'day·overcast':          'The official sky of getting work done.',
-    'day·rainy':             'Everyone suddenly has opinions about their umbrella.',
-    'day·snowy':             'Offices everywhere losing productivity to windows.',
-    'day·stormy':            'The sky doing its whole thing.',
-    'night·foggy':           'The world has been redacted.',
-    'evening·foggy':         'Streetlights become rumors of streetlights.',
-    'pre-dawn·foggy':        'Even the fog doesn\'t know what time it is.',
-    'dawn·foggy':            'The sun is in there somewhere. Allegedly.',
-    'day·foggy':             'Fair is foul, and foul is fair.',
-  };
-
-  // ─────────────────────────────────────────────
   // UTILS
   // ─────────────────────────────────────────────
 
@@ -787,17 +743,6 @@
       if (state[primNames[i]] > 0) parts.push(primNames[i] + ' ' + state[primNames[i]].toFixed(2));
     }
     badge.textContent = parts.join(' \u00b7 ');
-  }
-
-  function updateCommentary() {
-    var state = sky.getState();
-    var weather = Unkind.classifyWeather ? Unkind.classifyWeather(state) : 'clear';
-    var text = commentary[state.time + '\u00b7' + weather] || '';
-    commentaryEl.classList.add('fading');
-    setTimeout(function () {
-      commentaryEl.textContent = text;
-      commentaryEl.classList.remove('fading');
-    }, 600);
   }
 
   function updateCode() {
@@ -879,7 +824,6 @@
 
   function refresh() {
     updateBadge();
-    updateCommentary();
     updateCode();
     showPassageForCurrentSky();
   }
